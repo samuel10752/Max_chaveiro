@@ -6,7 +6,7 @@
 <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML">
     <img aligh='center' alt='HTML5' src='https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white'/>
 </a>
-
+    
 <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS">
     <img aligh='center' alt='CSS' src='https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white'/>
 </a>
@@ -32,4 +32,14 @@
 # De uma Visita ai site em desenvolvimento.
 
 Link: https://maxchaveiro.lovestoblog.com
+<img src="https://github.com/samuel10752/Max_chaveiro/blob/master/site_max_chaveiro/assets/img/Captura%20de%20tela_20230124_182132.png"/>
+<img src="https://github.com/samuel10752/Max_chaveiro/blob/master/site_max_chaveiro/assets/img/Captura%20de%20tela_20230124_182211.png"/>
+<img src="https://github.com/samuel10752/Max_chaveiro/blob/master/site_max_chaveiro/assets/img/Captura%20de%20tela_20230124_182229.png"/>    
+<img src="https://github.com/samuel10752/Max_chaveiro/blob/master/site_max_chaveiro/assets/img/Captura%20de%20tela_20230124_182238.png"/>
+<img src="https://github.com/samuel10752/Max_chaveiro/blob/master/site_max_chaveiro/assets/img/Captura%20de%20tela_20230124_182253.png"/>    
+<img src="https://github.com/samuel10752/Max_chaveiro/blob/master/site_max_chaveiro/assets/img/Captura%20de%20tela_20230124_182309.png"/>    
+<img src="https://github.com/samuel10752/Max_chaveiro/blob/master/site_max_chaveiro/assets/img/Captura%20de%20tela_20230124_182321.png"/>    
+<img src="https://github.com/samuel10752/Max_chaveiro/blob/master/site_max_chaveiro/assets/img/Captura%20de%20tela_20230124_182337.png"/>    
+<img src="https://github.com/samuel10752/Max_chaveiro/blob/master/site_max_chaveiro/assets/img/Captura%20de%20tela_20230124_182348.png"/>        
+    
 </div>
