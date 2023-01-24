@@ -32,6 +32,9 @@
 # De uma Visita ai site em desenvolvimento.
 
 Link: https://maxchaveiro.lovestoblog.com
+
+Preview do projeto:
+
 <img src="https://github.com/samuel10752/Max_chaveiro/blob/master/img/Captura%20de%20tela_20230124_182132.png"/>
 <img src="https://github.com/samuel10752/Max_chaveiro/blob/master/img/Captura%20de%20tela_20230124_182211.png"/>
 <img src="https://github.com/samuel10752/Max_chaveiro/blob/master/img/Captura%20de%20tela_20230124_182229.png"/>    
