@@ -2,30 +2,45 @@
 # Site Criado para uma loja do Ramo de Chaveiro, assim o site ainda está em desenvolvimento.
 #Linguagens usados para a criaçáo do site!
 
-<div style='display: inline_block'><br/>
-<a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML">
-    <img aligh='center' alt='HTML5' src='https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white'/>
-</a>
-    
-<a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS">
-    <img aligh='center' alt='CSS' src='https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white'/>
-</a>
-
 <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript">
-    <img aligh='center' alt='JavaScript' src='https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black'/>
+    <img aligh='center' alt='JavaScript' src='https://www.topgadget.com.br/wp-content/uploads/2020/09/html-css-js-1.jpg'/>
 </a>
 </div>
 
 ##
-#Blibiotecas usados?
+###Blibiotecas usados!
 
 <div style='display: inline_block'><br/>
 <a href="https://api.jquery.com">
-    <img aligh='center' alt='JQuery' src='https://img.shields.io/badge/JQuery-E34F26?style=for-the-badge&logo=jh,jquery5&logoColor=white'/>
+    <img aligh='center' alt='JQuery' src='https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Logo_jQuery.svg/1200px-Logo_jQuery.svg.png'/>
 </a>
 
  <a href="https://getbootstrap.com/docs/5.3/getting-started/introduction/">
-    <img aligh='center' alt='Boostrap' src='https://img.shields.io/badge/Boostrap-239120?&style=for-the-badge&logo=Boostrap3&logoColor=white'/>
+    <img aligh='center' alt='Boostrap' src='https://www.alura.com.br/artigos/assets/bootstrap/bootstrap.png'/>
+</a>
+
+ <a href="https://nodejs.org/en/docs/">
+    <img aligh='center' alt='node js' src='https://blog.geekhunter.com.br/wp-content/uploads/2021/02/1_mp91A9RzagntGGjBnwu4Yw.png'/>
+</a>
+
+
+##Usado Hospedagem do site e update de no servidor remoto e entre outros!
+
+<a href="https://www.infinityfree.net">
+    <img aligh='center' alt='infinityfree' src='https://tecsierra.com/content/images/2021/04/wordpress-bg-medblue-1.jpg'/>
+</a>
+
+<a href="https://formsubmit.co">
+    <img aligh='center' alt='formsubmit' src='https://miro.medium.com/max/1400/1*ZyodbhzGKb55dvLQi1GNqA.jpeg'/>
+</a>
+
+
+<a href="https://filezilla-project.org">
+    <img aligh='center' alt='filezilla' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTieRq-ZN9zizb8fC6mb6MNSw6SAR_hJfSt_uaaZhm5Gr83S4bPkrdw8tPVqfWEHPb1luA&usqp=CAU'/>
+</a>
+
+<a href="https://www.codingnepalweb.com/cookie-consent-box-using-html-css-javascript/">
+    <img aligh='center' alt='filezilla' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRt0VH3ZcccFwRsCHoq0Ya5LrwatwK22Y-QFcLWI7JA99UoLaX5LAe7pzNQ49ybUTqV3ow&usqp=CAU'/>
 </a>
 
 
