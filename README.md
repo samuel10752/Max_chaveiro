@@ -8,7 +8,7 @@
 </div>
 
 ##
-###Blibiotecas usados!
+###Blibiotecas usadas!
 
 <div style='display: inline_block'><br/>
 <a href="https://api.jquery.com">
@@ -24,7 +24,7 @@
 </a>
 
 
-##Usado Hospedagem do site e update de no servidor remoto e entre outros!
+##Usado Hospedagem do site e update no servidor remotamente e entre outros!
 
 <a href="https://www.infinityfree.net">
     <img aligh='center' alt='infinityfree' src='https://tecsierra.com/content/images/2021/04/wordpress-bg-medblue-1.jpg'/>
