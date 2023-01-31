@@ -1,11 +1,11 @@
 # Web_Max_chaveiro
 # Site Criado para uma loja do Ramo de Chaveiro, assim o site ainda está em desenvolvimento.
 #Linguagens usados para a criaçáo do site!
-
+<div style='display: inline_block'><br/>
 <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript">
-    <img aligh='center' alt='JavaScript' src='https://www.topgadget.com.br/wp-content/uploads/2020/09/html-css-js-1.jpg'/>
+    <img aligh='center' alt='JavaScript' src='https://www.alura.com.br/artigos/assets/html-css-js/html-css-e-js-definicoes.png'/>
 </a>
-</div>
+
 
 ##
 ###Blibiotecas usadas!
