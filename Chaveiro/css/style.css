@@ -7,19 +7,17 @@ body {
 }
 
 /* teste  */
-#likeButton action-box{
-  background-color: white;
-  border: 1px solid gray;
+#like-button {
+  background-color: #3b5998;
+  color: white;
+  padding: 10px 15px;
+  border: none;
   border-radius: 5px;
-  padding: 10px 20px;
-  font-size: 16px;
   cursor: pointer;
-  display: flex;
-  align-items: center;
 }
 
-#likeButton i {
-  margin-right: 10px;
+#like-button:hover {
+  background-color: #444;
 }
 
 
