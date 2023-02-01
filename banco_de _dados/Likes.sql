@@ -1,0 +1,4 @@
+CREATE TABLE likes (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  like_count INT NOT NULL
+);
