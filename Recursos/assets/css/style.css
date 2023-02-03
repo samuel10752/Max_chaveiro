@@ -6,75 +6,6 @@ body {
   background-color: #ffffff;
 }
 
-/* botao do like no primeiro card   */
-.like_1like-button1 {
-  background-color: #fff transparent;
-  color: rgb(0, 4, 255);
-  border: none;
-  cursor: pointer;
-}
-
-.like_1fa-heart-o, .like_1fa-heart i{
-  background-color: #fff transparent;
-  margin-top: 5px;
-  color: rgb(0, 4, 255);
-  font-size: 20px;
-  margin-right: 5px;
-}
-
-
-.like_1like-count1 span{
-  background-color: #fff transparent;
-  color: rgb(0, 4, 255);
-  font-size: 20px;
-}
-
-/* botao do like no primeiro card 2 */
-.like_2like-button2 {
-  background-color: #fff transparent;
-  color: rgb(0, 4, 255);
-  border: none;
-  cursor: pointer;
-}
-
-.like_2fa-heart-o, .like_2fa-heart i{
-  background-color: #fff transparent;
-  margin-top: 5px;
-  color: rgb(0, 4, 255);
-  font-size: 20px;
-  margin-right: 5px;
-}
-
-
-.like_2like-count2 span{
-  background-color: #fff transparent;
-  color: rgb(0, 4, 255);
-  font-size: 20px;
-}
-
-
-/* botao do like no primeiro card 3 */
-.like_3like-button3 {
-  background-color: #fff transparent;
-  color: rgb(0, 4, 255);
-  border: none;
-  cursor: pointer;
-}
-
-.like_3fa-heart-o, .like_3fa-heart i{
-  background-color: #fff transparent;
-  margin-top: 5px;
-  color: rgb(0, 4, 255);
-  font-size: 20px;
-  margin-right: 5px;
-}
-
-
-.like_3like-count3 span{
-  background-color: #fff transparent;
-  color: rgb(0, 4, 255);
-  font-size: 20px;
-}
 
 
 .loader_bg{
@@ -519,7 +450,7 @@ a:focus {
 }
 
 .custom_nav-container .navbar-toggler .navbar-toggler-icon {
-  background-image: url(../images/menu.png);
+  background-image: url(/Recursos/assets/icon/icon_navbar/menu.png);
   background-size: 40px;
 }
 
@@ -1279,5 +1210,76 @@ a:focus {
 .buttons a{
   color: #0b1aeb;
 }
+
+/* botao do like no primeiro card   */
+.like_1like-button1 {
+  background-color: #fff transparent;
+  color: rgb(0, 4, 255);
+  border: none;
+  cursor: pointer;
+}
+
+.like_1fa-heart-o, .like_1fa-heart i{
+  background-color: #fff transparent;
+  margin-top: 5px;
+  color: rgb(0, 4, 255);
+  font-size: 20px;
+  margin-right: 5px;
+}
+
+
+.like_1like-count1 span{
+  background-color: #fff transparent;
+  color: rgb(0, 4, 255);
+  font-size: 20px;
+}
+
+/* botao do like no primeiro card 2 */
+.like_2like-button2 {
+  background-color: #fff transparent;
+  color: rgb(0, 4, 255);
+  border: none;
+  cursor: pointer;
+}
+
+.like_2fa-heart-o, .like_2fa-heart i{
+  background-color: #fff transparent;
+  margin-top: 5px;
+  color: rgb(0, 4, 255);
+  font-size: 20px;
+  margin-right: 5px;
+}
+
+
+.like_2like-count2 span{
+  background-color: #fff transparent;
+  color: rgb(0, 4, 255);
+  font-size: 20px;
+}
+
+
+/* botao do like no primeiro card 3 */
+.like_3like-button3 {
+  background-color: #fff transparent;
+  color: rgb(0, 4, 255);
+  border: none;
+  cursor: pointer;
+}
+
+.like_3fa-heart-o, .like_3fa-heart i{
+  background-color: #fff transparent;
+  margin-top: 5px;
+  color: rgb(0, 4, 255);
+  font-size: 20px;
+  margin-right: 5px;
+}
+
+
+.like_3like-count3 span{
+  background-color: #fff transparent;
+  color: rgb(0, 4, 255);
+  font-size: 20px;
+}
+
 /* seção de cookis */
 /*# sourceMappingURL=style.css.map */
