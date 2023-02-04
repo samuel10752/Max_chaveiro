@@ -1212,6 +1212,17 @@ a:focus {
 }
 
 /* botao do like no primeiro card   */
+
+.button_count{
+  margin-left: 100px;
+  max-width: 100px;
+  min-height: 400px;
+}
+
+.fb-like{
+  left: 20%;
+}
+
 .like_1like-button1 {
   background-color: #fff transparent;
   color: rgb(0, 4, 255);
