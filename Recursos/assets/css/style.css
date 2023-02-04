@@ -1214,15 +1214,14 @@ a:focus {
 /* botao do like no primeiro card   */
 
 .button_count{
-  margin-left: 100px;
-  max-width: 100px;
+  margin-left: 80px;
   min-height: 400px;
 }
 
 .fb-like{
-  left: 20%;
+  left: 10%;
 }
-
+/* 
 .like_1like-button1 {
   background-color: #fff transparent;
   color: rgb(0, 4, 255);
@@ -1246,7 +1245,7 @@ a:focus {
 }
 
 /* botao do like no primeiro card 2 */
-.like_2like-button2 {
+/* .like_2like-button2 {
   background-color: #fff transparent;
   color: rgb(0, 4, 255);
   border: none;
@@ -1266,11 +1265,11 @@ a:focus {
   background-color: #fff transparent;
   color: rgb(0, 4, 255);
   font-size: 20px;
-}
+} */
 
 
 /* botao do like no primeiro card 3 */
-.like_3like-button3 {
+/* .like_3like-button3 {
   background-color: #fff transparent;
   color: rgb(0, 4, 255);
   border: none;
@@ -1290,7 +1289,7 @@ a:focus {
   background-color: #fff transparent;
   color: rgb(0, 4, 255);
   font-size: 20px;
-}
+} */ 
 
 /* seção de cookis */
 /*# sourceMappingURL=style.css.map */
