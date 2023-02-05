@@ -245,7 +245,7 @@ font-size: 10px;
 
 
   .scrollToTop {
-    top: 810px;
+    top: 750px;
     right: 10px;
     display: none;
   }
@@ -301,8 +301,7 @@ font-size: 10px;
   }
 
   .scrollToTop {
-    position: fixed;
-    top: 805px;
+    top: 780px;
     right: 10px;
     display: none;
   }
@@ -336,8 +335,7 @@ font-size: 10px;
   }
 
   .scrollToTop {
-    position: fixed;
-    top: 805px;
+    top: 780px;
     right: 10px;
     display: none;
   }
@@ -350,7 +348,7 @@ font-size: 10px;
     left: 36%;
   }
   .scrollToTop {
-    top: 80px;
+    top: 780px;
     right: 10px;
   }
 

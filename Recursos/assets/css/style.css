@@ -1213,83 +1213,48 @@ a:focus {
 
 /* botao do like no primeiro card   */
 
-.button_count{
-  margin-left: 80px;
-  min-height: 400px;
-}
-
-.fb-like{
-  left: 10%;
-}
-/* 
-.like_1like-button1 {
-  background-color: #fff transparent;
-  color: rgb(0, 4, 255);
-  border: none;
+#LikeButton1 {
+  background-color: blue;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  align-items: center;
+  font-size: 0.9em;
   cursor: pointer;
 }
 
-.like_1fa-heart-o, .like_1fa-heart i{
-  background-color: #fff transparent;
-  margin-top: 5px;
-  color: rgb(0, 4, 255);
-  font-size: 20px;
-  margin-right: 5px;
+#LikeButton1 i {
+  margin-right: 10px;
+  font-size: 1.5em;
 }
 
-
-.like_1like-count1 span{
-  background-color: #fff transparent;
-  color: rgb(0, 4, 255);
-  font-size: 20px;
-}
-
-/* botao do like no primeiro card 2 */
-/* .like_2like-button2 {
-  background-color: #fff transparent;
-  color: rgb(0, 4, 255);
-  border: none;
+#LikeButton2 {
+  background-color: blue;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  align-items: center;
+  font-size: 0.9em;
   cursor: pointer;
 }
 
-.like_2fa-heart-o, .like_2fa-heart i{
-  background-color: #fff transparent;
-  margin-top: 5px;
-  color: rgb(0, 4, 255);
-  font-size: 20px;
-  margin-right: 5px;
+#LikeButton2 i {
+  margin-right: 10px;
+  font-size: 1.5em;
 }
 
 
-.like_2like-count2 span{
-  background-color: #fff transparent;
-  color: rgb(0, 4, 255);
-  font-size: 20px;
-} */
-
-
-/* botao do like no primeiro card 3 */
-/* .like_3like-button3 {
-  background-color: #fff transparent;
-  color: rgb(0, 4, 255);
-  border: none;
+#LikeButton3 {
+  background-color: blue;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  align-items: center;
+  font-size: 0.9em;
   cursor: pointer;
 }
 
-.like_3fa-heart-o, .like_3fa-heart i{
-  background-color: #fff transparent;
-  margin-top: 5px;
-  color: rgb(0, 4, 255);
-  font-size: 20px;
-  margin-right: 5px;
+#LikeButton3 i {
+  margin-right: 10px;
+  font-size: 1.5em;
 }
-
-
-.like_3like-count3 span{
-  background-color: #fff transparent;
-  color: rgb(0, 4, 255);
-  font-size: 20px;
-} */ 
-
-/* seção de cookis */
-/*# sourceMappingURL=style.css.map */
