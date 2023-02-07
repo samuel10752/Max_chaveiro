@@ -1,7 +1,4 @@
-<?php
-include('like.php')
-?>
-
+<?php include 'like.php' ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -43,5 +40,7 @@ include('like.php')
     });
   </script>
 
+
+  
 </body>
 </html>

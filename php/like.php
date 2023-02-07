@@ -4,5 +4,4 @@
     file_put_contents($file, $_POST["like-count"]);
   }
   $likeCount = file_get_contents($file);
-  echo $likeCount;
 ?>

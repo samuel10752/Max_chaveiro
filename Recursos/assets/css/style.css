@@ -6,8 +6,6 @@ body {
   background-color: #ffffff;
 }
 
-
-
 .loader_bg{
   min-height: 100vh;
   display: flex;
@@ -1219,13 +1217,22 @@ a:focus {
   padding: 5px 10px;
   border-radius: 5px;
   align-items: center;
-  font-size: 0.9em;
+  max-width: 60px;
+  max-height: 30px;
+  font-size: 0.7em;
   cursor: pointer;
 }
 
 #LikeButton1 i {
-  margin-right: 10px;
+  margin-right: 40px;
   font-size: 1.5em;
+}
+
+#LikeButton1 p{
+  margin-top: -28px;
+  margin-left: 25px;
+  font-size: 2.0em;
+
 }
 
 #LikeButton2 {
