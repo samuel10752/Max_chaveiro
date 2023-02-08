@@ -1229,9 +1229,9 @@ a:focus {
 }
 
 #LikeButton1 p{
-  margin-top: -28px;
+  margin-top: -24px;
   margin-left: 25px;
-  font-size: 2.0em;
+  font-size: 1.7em;
 
 }
 
@@ -1241,15 +1241,23 @@ a:focus {
   padding: 5px 10px;
   border-radius: 5px;
   align-items: center;
-  font-size: 0.9em;
+  max-width: 60px;
+  max-height: 30px;
+  font-size: 0.7em;
   cursor: pointer;
 }
 
 #LikeButton2 i {
-  margin-right: 10px;
+  margin-right: 40px;
   font-size: 1.5em;
 }
 
+#LikeButton2 p{
+  margin-top: -24px;
+  margin-left: 25px;
+  font-size: 1.7em;
+
+}
 
 #LikeButton3 {
   background-color: blue;
@@ -1257,11 +1265,20 @@ a:focus {
   padding: 5px 10px;
   border-radius: 5px;
   align-items: center;
-  font-size: 0.9em;
+  max-width: 60px;
+  max-height: 30px;
+  font-size: 0.7em;
   cursor: pointer;
 }
 
 #LikeButton3 i {
-  margin-right: 10px;
+  margin-right: 40px;
   font-size: 1.5em;
+}
+
+#LikeButton3 p{
+  margin-top: -24px;
+  margin-left: 25px;
+  font-size: 1.7em;
+
 }

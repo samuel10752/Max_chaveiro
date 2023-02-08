@@ -92,13 +92,13 @@
             <div class="d-flex mx-auto flex-column flex-lg-row align-items-center">
               <ul class="navbar-nav  ">
                 <li class="nav-item active">
-                  <a class="nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="index.php">Inicio <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#sobre">Sobre </a>
+                  <a class="nav-link" href="sobre.php">Sobre </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#servico">Serviço </a>
+                  <a class="nav-link" href="servico.php">Serviço </a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#portfolio"> Portfolio</a>
@@ -266,7 +266,7 @@
   <!-- Featred Ends Here -->
 
   <!-- sobre a seção -->
-  <section class="about_section layout_padding">
+  <!-- <section class="about_section layout_padding">
     <div class="container">
       <div class="row">
         <div class="col-md-6">
@@ -298,14 +298,14 @@
       </div>
 
     </div>
-  </section>
+  </section> -->
 
 
   <!-- Fim sobre a seção -->
 
   <!-- seção de serviço -->
 
-  <section class="service_section layout_padding">
+  <!-- <section class="service_section layout_padding">
     <div class="container">
       <div class="d-flex flex-column align-items-end">
         <div class="custom_heading-container">
@@ -394,7 +394,7 @@
         Mais informação
       </a>
     </div>
-  </section>
+  </section> -->
 
   <!-- fim da seção de serviço -->
 
@@ -496,7 +496,7 @@
               <a>  
                 <button id="LikeButton1">
                   <i class="fa fa-thumbs-up"></i>
-                  <p id="like-count"><?php   echo $likeCount; ?></p>
+                  <p id="like-count1"><?php   echo $likeCount1; ?></p>
                 </button>
               </a>
                 
@@ -538,13 +538,12 @@
               <div class="action">
 
 
-                <a>  
-                  <button id="LikeButton2">
-                    <i class="fa fa-thumbs-up"></i>
-                      like
-                  </button>
-  
-                </a>
+              <a>  
+                <button id="LikeButton2">
+                  <i class="fa fa-thumbs-up"></i>
+                  <p id="like-count2"><?php   echo $likeCount2; ?></p>
+                </button>
+              </a>
   
                 <!-- <a href="https://www.instagram.com/max_chaveiro/">
                   <img src="Recursos/assets/icon/icon_card_noticias/comment.png"alt="">
@@ -579,13 +578,12 @@
             <div class="action-box">
               <div class="action">
 
-                <a>  
-                  <button id="LikeButton3">
-                    <i class="fa fa-thumbs-up"></i>
-                      like
-                  </button>
-                </a>
-                
+              <a>  
+                <button id="LikeButton3">
+                  <i class="fa fa-thumbs-up"></i>
+                  <p id="like-count3"><?php   echo $likeCount3; ?></p>
+                </button>
+              </a>
                 <!-- <a href="https://www.instagram.com/max_chaveiro/">
                   <img src="Recursos/assets/icon/icon_card_noticias/comment.png" alt="">
                 </a> -->
@@ -898,8 +896,8 @@
     <div class="info_social1">
       <ul>
         <!-- <li><a href="#">Inicio</a></li> -->
-        <li><a href="politica.html">Política de Privacidade</a></li>
-        <li><a href="termos.html">Termos e Condições</a></li>
+        <li><a href="politica.php">Política de Privacidade</a></li>
+        <li><a href="termos.php">Termos e Condições</a></li>
       </ul>
     </div>
   </section>
@@ -945,19 +943,7 @@
   </div>
   
   <!-- seção de contador de likes-->
-  <script>
-    var likeButton = document.getElementById("LikeButton1");
-var likeCount = document.getElementById("like-count");
 
-likeButton.addEventListener("click", function() {
-  var count = parseInt(likeCount.innerHTML) + 1;
-  likeCount.innerHTML = count;
-  var xhr = new XMLHttpRequest();
-  xhr.open("POST", window.location.href, true);
-  xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-  xhr.send("like-count=" + count);
-});
-  </script>
 
   <!-- Bootstrap core JavaScript -->
   <script src="Recursos/assets/js/js_blibioteca/js/jquery/jquery.min.js"></script>
@@ -965,7 +951,6 @@ likeButton.addEventListener("click", function() {
   <script type="text/javascript" src="Recursos/assets/js/js_blibioteca/js/bootstrap.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 
- <!-- Api do Fece de botao de like JavaScript -->
 
   <!-- Additional Scripts -->
   <script src="Recursos/assets/js/preloder.js"></script>

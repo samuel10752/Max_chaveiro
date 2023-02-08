@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="Recursos/assets/icon/icon_navbar/logo1.jpg" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
 
-    <title>Política Privacidade</title>
+    <title>Termos Condições</title>
 
     <!-- Bootstrap core CSS -->
     <link href="Recursos/assets/css/bootstrap.css" rel="stylesheet">
@@ -21,15 +21,16 @@
     <link rel="stylesheet" href="Recursos/assets/css/tooplate-main.css">
     <link rel="stylesheet" href="Recursos/assets/css/flex-slider.css"> 
     <link rel="stylesheet" href="Recursos/assets/css/owl.css">
+<!--
 
+-->
   </head>
 
   <body>
-
+    
   <!-- slider stylesheet -->
   <link rel="stylesheet" type="text/css"
     href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
-
   <!-- fontes style -->
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Roboto:400,700&display=swap" rel="stylesheet">
   <!-- Estilos personalizados para este modelo -->
@@ -91,28 +92,28 @@
             <div class="d-flex mx-auto flex-column flex-lg-row align-items-center">
               <ul class="navbar-nav  ">
                 <li class="nav-item active">
-                  <a class="nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="index.php">Inicio <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="index.html">Sobre </a>
+                  <a class="nav-link" href="sobre.php">Sobre </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="index.html">Serviço </a>
+                  <a class="nav-link" href="servico.php">Serviço </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="index.html"> Portfolio</a>
+                  <a class="nav-link" href="index.php"> Portfolio</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="index.html">Novidades </a>
+                  <a class="nav-link" href="index.php">Novidades </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="index.html">Contato</a>
+                  <a class="nav-link" href="index.php">Contato</a>
                 </li>
               </ul>
             </div>
             <div class="quote_btn-container  d-flex justify-content-center">
               <a href="tel:+5535999853337">
-                <img src="/Chaveiro/images/call.png" alt="">
+                <img src="Recursos/assets/icon/icon_navbar/call.png" alt="">
                 Telefone : +55 (35) 99985-3337
               </a>
               <a href="mailto:max.prestacao@gmail.com?subject=Servico de chaves, fechaduras e abertura de automoveis.">
@@ -134,50 +135,42 @@
       <div class="col-md-12">
         <div class="right-content">
             <br><br><br>
-<h2><span style="color: rgb(68, 68, 68);">Política Privacidade</span></h2><p><span style="color: rgb(68, 68, 68);">A sua privacidade é importante para nós. É política do Maxchaveiro respeitar a sua privacidade em relação a qualquer informação sua que possamos coletar no site <a href="https://maxchaveiro.lovestoblog.com">Maxchaveiro</a>, e outros sites que possuímos e operamos.</span></p><p><span style="color: rgb(68, 68, 68);">Solicitamos informações pessoais apenas quando realmente precisamos delas para lhe fornecer um serviço. Fazemo-lo por meios justos e legais, com o seu conhecimento e consentimento. Também informamos por que estamos coletando e como será usado.</span></p><p><span style="color: rgb(68, 68, 68);">Apenas retemos as informações coletadas pelo tempo necessário para fornecer o serviço solicitado. Quando armazenamos dados, protegemos dentro de meios comercialmente aceitáveis ​​para evitar perdas e roubos, bem como acesso, divulgação, cópia, uso ou modificação não autorizados.</span></p><p><span style="color: rgb(68, 68, 68);">Não compartilhamos informações de identificação pessoal publicamente ou com terceiros, exceto quando exigido por lei.</span></p><p><span style="color: rgb(68, 68, 68);">O nosso site pode ter links para sites externos que não são operados por nós. Esteja ciente de que não temos controle sobre o conteúdo e práticas desses sites e não podemos aceitar responsabilidade por suas respectivas&nbsp;</span><a href="https://politicaprivacidade.com/" rel="noopener noreferrer" target="_blank" style="background-color: transparent; color: rgb(68, 68, 68);">políticas de privacidade</a><span style="color: rgb(68, 68, 68);">.</span></p><p><span style="color: rgb(68, 68, 68);">Você é livre para recusar a nossa solicitação de informações pessoais, entendendo que talvez não possamos fornecer alguns dos serviços desejados.</span></p><p><span style="color: rgb(68, 68, 68);">O uso continuado de nosso site será considerado como aceitação de nossas práticas em torno de privacidade e informações pessoais. Se você tiver alguma dúvida sobre como lidamos com dados do usuário e informações pessoais, entre em contacto connosco.</span></p><p><span style="color: rgb(68, 68, 68);"><ul><li><span style="color: rgb(68, 68, 68);">O serviço Google AdSense que usamos para veicular publicidade usa um cookie DoubleClick para veicular anúncios mais relevantes em toda a Web e limitar o número de vezes que um determinado anúncio é exibido para você.</span></li><li><span style="color: rgb(68, 68, 68);">Para mais informações sobre o Google AdSense, consulte as FAQs oficiais sobre privacidade do Google AdSense.</span></li><li><span style="color: rgb(68, 68, 68);">Utilizamos anúncios para compensar os custos de funcionamento deste site e fornecer financiamento para futuros desenvolvimentos. Os cookies de publicidade comportamental usados ​​por este site foram projetados para garantir que você forneça os anúncios mais relevantes sempre que possível, rastreando anonimamente seus interesses e apresentando coisas semelhantes que possam ser do seu interesse.</span></li><li><span style="color: rgb(68, 68, 68);">Vários parceiros anunciam em nosso nome e os cookies de rastreamento de afiliados simplesmente nos permitem ver se nossos clientes acessaram o site através de um dos sites de nossos parceiros, para que possamos creditá-los adequadamente e, quando aplicável, permitir que nossos parceiros afiliados ofereçam qualquer promoção que pode fornecê-lo para fazer uma compra.</span></li></ul><p><br></p></span></p><h3><span style="color: rgb(68, 68, 68);">Compromisso do Usuário</span></h3><p><span style="color: rgb(68, 68, 68);">O usuário se compromete a fazer uso adequado dos conteúdos e da informação que o Maxchaveiro oferece no site e com caráter enunciativo, mas não limitativo:</span></p><ul><li><span style="color: rgb(68, 68, 68);">A) Não se envolver em atividades que sejam ilegais ou contrárias à boa fé a à ordem pública;</span></li><li><span style="color: rgb(68, 68, 68);">B) Não difundir propaganda ou conteúdo de natureza racista, xenofóbica, </span><span style="color: rgb(33, 37, 41);"><a href='https://apostasonline.guru/bet365-apostas/' style='color:inherit !important; text-decoration: none !important; font-size: inherit !important;'> pix bet365</a></span><span style="color: rgb(68, 68, 68);"> ou azar, qualquer tipo de pornografia ilegal, de apologia ao terrorismo ou contra os direitos humanos;</span></li><li><span style="color: rgb(68, 68, 68);">C) Não causar danos aos sistemas físicos (hardwares) e lógicos (softwares) do Maxchaveiro, de seus fornecedores ou terceiros, para introduzir ou disseminar vírus informáticos ou quaisquer outros sistemas de hardware ou software que sejam capazes de causar danos anteriormente mencionados.</span></li></ul><h3><span style="color: rgb(68, 68, 68);">Mais informações</span></h3><p><span style="color: rgb(68, 68, 68);">Esperemos que esteja esclarecido e, como mencionado anteriormente, se houver algo que você não tem certeza se precisa ou não, geralmente é mais seguro deixar os cookies ativados, caso interaja com um dos recursos que você usa em nosso site.</span></p><p><span style="color: rgb(68, 68, 68);">Esta política é efetiva a partir de&nbsp;30 Janeiro 2023 23:22</span></p>
+<h2><span style="color: rgb(68, 68, 68);">1. Termos</span></h2><p><span style="color: rgb(68, 68, 68);">Ao acessar ao site <a href="https://maxchaveiro.lovestoblog.com">Maxchaveiro</a>, concorda em cumprir estes termos de serviço, todas as leis e regulamentos aplicáveis ​​e concorda que é responsável pelo cumprimento de todas as leis locais aplicáveis. Se você não concordar com algum desses termos, está proibido de usar ou acessar este site. Os materiais contidos neste site são protegidos pelas leis de direitos autorais e marcas comerciais aplicáveis.</span></p><h2><span style="color: rgb(68, 68, 68);">2. Uso de Licença</span></h2><p><span style="color: rgb(68, 68, 68);">É concedida permissão para baixar temporariamente uma cópia dos materiais (informações ou software) no site Maxchaveiro , apenas para visualização transitória pessoal e não comercial. Esta é a concessão de uma licença, não uma transferência de título e, sob esta licença, você não pode:&nbsp;</span></p><ol><li><span style="color: rgb(68, 68, 68);">modificar ou copiar os materiais;&nbsp;</span></li><li><span style="color: rgb(68, 68, 68);">usar os materiais para qualquer finalidade comercial ou para exibição pública (comercial ou não comercial);&nbsp;</span></li><li><span style="color: rgb(68, 68, 68);">tentar descompilar ou fazer engenharia reversa de qualquer software contido no site Maxchaveiro;&nbsp;</span></li><li><span style="color: rgb(68, 68, 68);">remover quaisquer direitos autorais ou outras notações de propriedade dos materiais; ou&nbsp;</span></li><li><span style="color: rgb(68, 68, 68);">transferir os materiais para outra pessoa ou 'espelhe' os materiais em qualquer outro servidor.</span></li></ol><p><span style="color: rgb(68, 68, 68);">Esta licença será automaticamente rescindida se você violar alguma dessas restrições e poderá ser rescindida por Maxchaveiro a qualquer momento. Ao encerrar a visualização desses materiais ou após o término desta licença, você deve apagar todos os materiais baixados em sua posse, seja em formato eletrónico ou impresso.</span></p><h2><span style="color: rgb(68, 68, 68);">3. Isenção de responsabilidade</span></h2><ol><li><span style="color: rgb(68, 68, 68);">Os materiais no site da Maxchaveiro são fornecidos 'como estão'. Maxchaveiro não oferece garantias, expressas ou implícitas, e, por este meio, isenta e nega todas as outras garantias, incluindo, sem limitação, garantias implícitas ou condições de comercialização, adequação a um fim específico ou não violação de propriedade intelectual ou outra violação de direitos.</span></li><li><span style="color: rgb(68, 68, 68);">Além disso, o Maxchaveiro não garante ou faz qualquer representação relativa à precisão, aos resultados prováveis ​​ou à confiabilidade do uso dos materiais em seu site ou de outra forma relacionado a esses materiais ou em sites vinculados a este site.</span></li></ol><h2><span style="color: rgb(68, 68, 68);">4. Limitações</span></h2><p><span style="color: rgb(68, 68, 68);">Em nenhum caso o Maxchaveiro ou seus fornecedores serão responsáveis ​​por quaisquer danos (incluindo, sem limitação, danos por perda de dados ou lucro ou devido a interrupção dos negócios) decorrentes do uso ou da incapacidade de usar os materiais em Maxchaveiro, mesmo que Maxchaveiro ou um representante autorizado da Maxchaveiro tenha sido notificado oralmente ou por escrito da possibilidade de tais danos. Como algumas jurisdições não permitem limitações em garantias implícitas, ou limitações de responsabilidade por danos conseqüentes ou incidentais, essas limitações podem não se aplicar a você.</span></p><h2><span style="color: rgb(68, 68, 68);">5. Precisão dos materiais</span></h2><p><span style="color: rgb(68, 68, 68);">Os materiais exibidos no site da Maxchaveiro podem incluir erros técnicos, tipográficos ou fotográficos. Maxchaveiro não garante que qualquer material em seu site seja preciso, completo ou atual. Maxchaveiro pode fazer alterações nos materiais contidos em seu site a qualquer momento, sem aviso prévio. No entanto, Maxchaveiro não se compromete a atualizar os materiais.</span></p><h2><span style="color: rgb(68, 68, 68);">6. Links</span></h2><p><span style="color: rgb(68, 68, 68);">O Maxchaveiro não analisou todos os sites vinculados ao seu site e não é responsável pelo conteúdo de nenhum site vinculado. A inclusão de qualquer link não implica endosso por Maxchaveiro do site. O uso de qualquer site vinculado é por conta e risco do usuário.</span></p><p><br></p><h3><span style="color: rgb(68, 68, 68);">Modificações</span></h3><p><span style="color: rgb(68, 68, 68);">O Maxchaveiro pode revisar estes termos de serviço do site a qualquer momento, sem aviso prévio. Ao usar este site, você concorda em ficar vinculado à versão atual desses termos de serviço.</span></p><h3><span style="color: rgb(68, 68, 68);">Lei aplicável</span></h3><p><span style="color: rgb(68, 68, 68);">Estes termos e condições são regidos e interpretados de acordo com as leis do Maxchaveiro e você se submete irrevogavelmente à jurisdição exclusiva dos tribunais naquele estado ou localidade.</span></p>
         </div>
       </div>
     </div>
   </div>
 <!-- Sobre a página termina aqui -->
   
-    <!-- seção de botão ao topo -->
-    <a href="#topo" class="scrollToTop">
-        <img src="Recursos/assets/icon/icon_topo/topo.png" alt="">
-      </a>
-    
-  
-    <!-- seção de botão ao topo -->
 
-
-         <!-- seção de informações -->
-         <section class="info_section layout_padding">
-          <div class="container">
-            <div class="info_social">
-              <div>
-                <a href="https://www.facebook.com/Maximiano.jr">
-                  <img src="Recursos/assets/icon/icon_card_info/facebook.png" alt="">
-                </a>
-              </div>
-              <div>
-                <a href="mailto:max.prestacao@gmail.com?subject=Servico de chaves, fechaduras e abertura de automoveis.">
-                  <img src="Recursos/assets/icon/icon_card_info/gmail.png" alt="">
-                </a>
-              </div>
-              <div>
-                <a
-                  href="https://wa.me/5535999853337?text=Serviço%20de%20chaves%20,%20fechaduras%20e%20abertura%20de%20automóveis%20.%20">
-                  <img src="Recursos/assets/icon/icon_card_info/whatsapp.png" alt="">
-                </a>
-              </div>
-              <div>
-                <a href="https://www.instagram.com/max_chaveiro/">
-                  <img src="Recursos/assets/icon/icon_card_info/instagram.png" alt="">
-                </a>
-              </div>
-            </div>
-            <div>
-              <p>
+     <!-- seção de informações -->
+     <section class="info_section layout_padding">
+      <div class="container">
+        <div class="info_social">
+          <div>
+            <a href="https://www.facebook.com/Maximiano.jr">
+              <img src="Recursos/assets/icon/icon_card_info/facebook.png" alt="">
+            </a>
+          </div>
+          <div>
+            <a href="mailto:max.prestacao@gmail.com?subject=Servico de chaves, fechaduras e abertura de automoveis.">
+              <img src="Recursos/assets/icon/icon_card_info/gmail.png" alt="">
+            </a>
+          </div>
+          <div>
+            <a
+              href="https://wa.me/5535999853337?text=Serviço%20de%20chaves%20,%20fechaduras%20e%20abertura%20de%20automóveis%20.%20">
+              <img src="Recursos/assets/icon/icon_card_info/whatsapp.png" alt="">
+            </a>
+          </div>
+          <div>
+            <a href="https://www.instagram.com/max_chaveiro/">
+              <img src="Recursos/assets/icon/icon_card_info/instagram.png" alt="">
+            </a>
+          </div>
+        </div>
+        <div>
+          <p>
           Se você está precisa de uma chave nova para seu carro, vamos te fornecer a marca e modelo do carro e tomar as
           medidas necessárias para cortar uma nova chave, e uma chave para sua casa, marca da fechadura e tomar as
           medidas necessárias para cortar uma nova chave.
@@ -187,8 +180,8 @@
     <div class="info_social1">
       <ul>
         <!-- <li><a href="#">Inicio</a></li> -->
-        <li><a href="politica.html">Política de Privacidade</a></li>
-        <li><a href="termos.html">Termos e Condições</a></li>
+        <li><a href="politica.php">Política de Privacidade</a></li>
+        <li><a href="termosphp">Termos e Condições</a></li>
       </ul>
     </div>
   </section>
@@ -209,6 +202,13 @@
     </p>
   </section>
 
+      <!-- seção de botão ao topo -->
+      <a href="#topo" class="scrollToTop">
+        <img src="Recursos/assets/icon/icon_topo/topo.png" alt="">
+      </a>
+    
+  
+    <!-- seção de botão ao topo -->
   <!-- seção de rodapé -->
 
     <!-- Bootstrap core JavaScript -->
@@ -216,7 +216,6 @@
     <script type="text/javascript" src="Recursos/assets/js/js_blibioteca/js/jquery/jquery-3.4.1.min.js "></script>
     <script type="text/javascript" src="Recursos/assets/js/js_blibioteca/js/bootstrap.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-  
 
 
     <!-- Additional Scripts -->
