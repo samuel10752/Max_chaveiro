@@ -214,7 +214,7 @@
     <!-- Bootstrap core JavaScript -->
     <script src="Recursos/assets/js/js_blibioteca/js/jquery/jquery.min.js"></script>
     <script type="text/javascript" src="Recursos/assets/js/js_blibioteca/js/jquery/jquery-3.4.1.min.js "></script>
-    <script type="text/javascript" src="Recursos/assets/js/js_blibioteca/js/bootstrap.js"></script>
+    <!-- <script type="text/javascript" src="Recursos/assets/js/js_blibioteca/js/bootstrap.js"></script> -->
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
   
 

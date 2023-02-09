@@ -4,7 +4,6 @@
 <head>
  <!-- Basico -->
   <meta charset="utf-8"/>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <!-- Icon do toppo do site  -->
   <link rel="shortcut icon" href="Recursos/assets/icon/icon_navbar/logo1.jpg" type="image/x-icon">
   <!-- Mobile Metas -->
@@ -324,8 +323,6 @@
   <script src="Recursos/assets/js/cookis.js "></script>
   <script src="Recursos/assets/js/custom.js"></script>
   <script src="Recursos/assets/js/owl.js"></script>
-  <script src="Recursos/assets/js/armazena_like/like_armazena.js"></script>
-  <script src="Recursos/assets/js/armazena_like/like.js"></script>
 
 </body>
 </body>

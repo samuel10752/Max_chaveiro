@@ -1,5 +1,5 @@
 <?php
-  $file = "C:\Users\Samuel\Documents\Meus Sites\Max_chaveiro\php\armazena_likes\like-count1.txt";
+  $file = "like-count1.txt";
   if (isset($_POST["like-count1"])) {
     file_put_contents($file, $_POST["like-count1"]);
   }
@@ -7,7 +7,7 @@
 ?>
 
 <?php
-  $file = "C:\Users\Samuel\Documents\Meus Sites\Max_chaveiro\php\armazena_likes\like-count2.txt";
+  $file = "like-count2.txt";
   if (isset($_POST["like-count2"])) {
     file_put_contents($file, $_POST["like-count2"]);
   }
@@ -16,7 +16,7 @@
 
 
 <?php
-  $file = "C:\Users\Samuel\Documents\Meus Sites\Max_chaveiro\php\armazena_likes\like-count3.txt";
+  $file = "like-count3.txt";
   if (isset($_POST["like-count3"])) {
     file_put_contents($file, $_POST["like-count3"]);
   }

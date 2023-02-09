@@ -1,12 +1,12 @@
-<?php include 'php/like.php' ?>
 
 <!DOCTYPE html>
 <html lang="pt-BR">
 
+<?php include 'php/like.php' ?>
+
 <head>
   <!-- Basico -->
   <meta charset="utf-8"/>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <!-- Icon do toppo do site  -->
   <link rel="shortcut icon" href="Recursos/assets/icon/icon_navbar/logo1.jpg" type="image/x-icon">
   <!-- Mobile Metas -->
@@ -496,7 +496,7 @@
               <a>  
                 <button id="LikeButton1">
                   <i class="fa fa-thumbs-up"></i>
-                  <p id="like-count1"><?php   echo $likeCount1; ?></p>
+                  <p id="like-count1"><?php  echo $likeCount1; ?></p>
                 </button>
               </a>
                 
@@ -537,11 +537,88 @@
             <div class="action-box">
               <div class="action">
 
+              <style>
+
+#LikeButton1 {
+  background-color: blue;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  align-items: center;
+  max-width: 60px;
+  max-height: 30px;
+  font-size: 0.7em;
+  cursor: pointer;
+}
+
+#LikeButton1 i {
+  margin-right: 40px;
+  font-size: 1.5em;
+}
+
+#LikeButton1 p{
+  margin-top: -24px;
+  margin-left: 25px;
+  font-size: 1.7em;
+
+}
+
+#LikeButton2 {
+  background-color: blue;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  align-items: center;
+  max-width: 60px;
+  max-height: 30px;
+  font-size: 0.7em;
+  cursor: pointer;
+}
+
+#LikeButton2 i {
+  margin-right: 40px;
+  font-size: 1.5em;
+}
+
+#LikeButton2 p{
+  margin-top: -24px;
+  margin-left: 25px;
+  font-size: 1.7em;
+
+}
+
+#LikeButton3 {
+  background-color: blue;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  align-items: center;
+  max-width: 60px;
+  max-height: 30px;
+  font-size: 0.7em;
+  cursor: pointer;
+}
+
+#LikeButton3 i {
+  margin-right: 40px;
+  font-size: 1.5em;
+}
+
+#LikeButton3 p{
+  margin-top: -24px;
+  margin-left: 25px;
+  font-size: 1.7em;
+
+}
+
+</style>
+
+
 
               <a>  
                 <button id="LikeButton2">
                   <i class="fa fa-thumbs-up"></i>
-                  <p id="like-count2"><?php   echo $likeCount2; ?></p>
+                  <p id="like-count2"><?php  echo $likeCount2; ?></p>
                 </button>
               </a>
   
@@ -581,7 +658,7 @@
               <a>  
                 <button id="LikeButton3">
                   <i class="fa fa-thumbs-up"></i>
-                  <p id="like-count3"><?php   echo $likeCount3; ?></p>
+                  <p id="like-count3"><?php  echo $likeCount3; ?></p>
                 </button>
               </a>
                 <!-- <a href="https://www.instagram.com/max_chaveiro/">
@@ -937,19 +1014,18 @@
       <p>Este site usa cookies para garantir que você obtenha a melhor experiência em nosso site.</p>
       <div class="buttons">
         <button class="item">Aceitar</button>
-        <a href="politica.html" class="item">Saiba mais</a>
+        <a href="politica.php" class="item">Saiba mais</a>
       </div>
     </div>
   </div>
-  
-  <!-- seção de contador de likes-->
 
+  <!-- seção de contador de likes-->
 
   <!-- Bootstrap core JavaScript -->
   <script src="Recursos/assets/js/js_blibioteca/js/jquery/jquery.min.js"></script>
   <script type="text/javascript" src="Recursos/assets/js/js_blibioteca/js/jquery/jquery-3.4.1.min.js "></script>
-  <script type="text/javascript" src="Recursos/assets/js/js_blibioteca/js/bootstrap.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+  <script type="text/javascript" src="Recursos/assets/js/js_blibioteca/js/bootstrap.js"></script>
 
 
   <!-- Additional Scripts -->
@@ -959,9 +1035,7 @@
   <script src="Recursos/assets/js/cookis.js "></script>
   <script src="Recursos/assets/js/custom.js"></script>
   <script src="Recursos/assets/js/owl.js"></script>
-  <script src="Recursos/assets/js/armazena_like/like_armazena.js"></script>
-  <script src="Recursos/assets/js/armazena_like/like.js"></script>
-
+  <script src="Recursos/assets/js/armazena_like/like_1.js"></script>
 
 </body>
 </body>

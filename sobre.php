@@ -4,7 +4,6 @@
 <head>
   <!-- Basico -->
   <meta charset="utf-8"/>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <!-- Icon do toppo do site  -->
   <link rel="shortcut icon" href="Recursos/assets/icon/icon_navbar/logo1.jpg" type="image/x-icon">
   <!-- Mobile Metas -->
