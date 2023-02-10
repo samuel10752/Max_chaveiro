@@ -8,22 +8,12 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="shortcut icon" href="Recursos/assets/icon/icon_navbar/logo1.jpg" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
 
     <title>Termos Condições</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="Recursos/assets/css/bootstrap.css" rel="stylesheet">
 
-
-    <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="Recursos/assets/css/fontawesome.css">
-    <link rel="stylesheet" href="Recursos/assets/css/tooplate-main.css">
-    <link rel="stylesheet" href="Recursos/assets/css/flex-slider.css"> 
-    <link rel="stylesheet" href="Recursos/assets/css/owl.css">
-<!--
-
--->
+    <link rel="stylesheet" type="text/css" href="Recursos/assets/css/boostrap/bootstrap.min.css" />
   </head>
 
   <body>
@@ -181,7 +171,7 @@
       <ul>
         <!-- <li><a href="#">Inicio</a></li> -->
         <li><a href="politica.php">Política de Privacidade</a></li>
-        <li><a href="termosphp">Termos e Condições</a></li>
+        <li><a href="termos.php">Termos e Condições</a></li>
       </ul>
     </div>
   </section>
@@ -208,33 +198,33 @@
       </a>
     
   
-    <!-- seção de botão ao topo -->
+  
+  <!-- seção de cookis -->
+  <div class="wrapper">
+    <img src="Recursos/assets/icon/icon_cookis/cookie.png" alt="">
+    <div class="content">
+      <header>Consentimento de Cookies</header>
+      <p>Este site usa cookies para garantir que você obtenha a melhor experiência em nosso site.</p>
+      <div class="buttons">
+        <button class="item">Aceitar</button>
+        <a href="politica.php" class="item">Saiba mais</a>
+      </div>
+    </div>
+  </div>
   <!-- seção de rodapé -->
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="Recursos/assets/js/js_blibioteca/js/jquery/jquery.min.js"></script>
-    <script type="text/javascript" src="Recursos/assets/js/js_blibioteca/js/jquery/jquery-3.4.1.min.js "></script>
-    <script type="text/javascript" src="Recursos/assets/js/js_blibioteca/js/bootstrap.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script src="Recursos/assets/js/js_blibioteca/js/jquery/jquery.min.js"></script>
+  <script type="text/javascript" src="Recursos/assets/js/js_blibioteca/js/jquery/jquery-3.4.1.min.js "></script>
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+  <script type="text/javascript" src="Recursos/assets/js/boostrap/bootstrap.bundle.min.js"></script>
 
 
     <!-- Additional Scripts -->
     <script src="Recursos/assets/js/preloder.js"></script>
     <script src="Recursos/assets/js/scrolltopo.js"></script>
+    <script src="Recursos/assets/js/cookis.js "></script>
 
-  >
-
-
-    <script language = "text/Javascript"> 
-      cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
-      function clearField(t){                   //declaring the array outside of the
-      if(! cleared[t.id]){                      // function makes it static and global
-          cleared[t.id] = 1;  // you could use true and false, but that's more typing
-          t.value='';         // with more chance of typos
-          t.style.color='#fff';
-          }
-      }
-    </script>
 
 
   </body>

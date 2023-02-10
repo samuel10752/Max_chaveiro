@@ -16,18 +16,11 @@
 
   <title> Pagina Sobre</title>
 
+  <link href="Recursos/assets/css/boostrap/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Additional CSS Files -->
-  <link rel="stylesheet" href="Recursos/assets/css/fontawesome.css">
-  <link rel="stylesheet" href="Recursos/assets/css/tooplate-main.css">
-  <link rel="stylesheet" href="Recursos/assets/css/flex-slider.css"> 
-  <link rel="stylesheet" href="Recursos/assets/css/owl.css">
 
   <link rel="stylesheet" type="text/css"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
-
-  <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="Recursos/assets/css/bootstrap.css" />
 
   <!-- fontes style -->
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Roboto:400,700&display=swap" rel="stylesheet">
@@ -99,13 +92,13 @@
                   <a class="nav-link" href="servico.php">Serviço </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#portfolio"> Portfolio</a>
+                  <a class="nav-link" href="index.php"> Portfolio</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#noticias">Novidades </a>
+                  <a class="nav-link" href="index.php">Novidades </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#contato">Contato</a>
+                  <a class="nav-link" href="index.php">Contato</a>
                 </li>
               </ul>
             </div>
@@ -240,7 +233,7 @@
       <p>Este site usa cookies para garantir que você obtenha a melhor experiência em nosso site.</p>
       <div class="buttons">
         <button class="item">Aceitar</button>
-        <a href="politica.html" class="item">Saiba mais</a>
+        <a href="politica.php" class="item">Saiba mais</a>
       </div>
     </div>
   </div>
@@ -249,8 +242,8 @@
   <!-- Bootstrap core JavaScript -->
   <script src="Recursos/assets/js/js_blibioteca/js/jquery/jquery.min.js"></script>
   <script type="text/javascript" src="Recursos/assets/js/js_blibioteca/js/jquery/jquery-3.4.1.min.js "></script>
-  <script type="text/javascript" src="Recursos/assets/js/js_blibioteca/js/bootstrap.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+  <script type="text/javascript" src="Recursos/assets/js/boostrap/bootstrap.bundle.min.js"></script>
 
   <!-- Additional Scripts -->
   <script src="Recursos/assets/js/preloder.js"></script>

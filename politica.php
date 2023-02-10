@@ -8,27 +8,17 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="shortcut icon" href="Recursos/assets/icon/icon_navbar/logo1.jpg" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
 
     <title>Política Privacidade</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="Recursos/assets/css/bootstrap.css" rel="stylesheet">
-
-
-    <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="Recursos/assets/css/fontawesome.css">
-    <link rel="stylesheet" href="Recursos/assets/css/tooplate-main.css">
-    <link rel="stylesheet" href="Recursos/assets/css/flex-slider.css"> 
-    <link rel="stylesheet" href="Recursos/assets/css/owl.css">
+    <link href="Recursos/assets/css/boostrap/bootstrap.min.css" rel="stylesheet">
 
   </head>
 
   <body>
 
   <!-- slider stylesheet -->
-  <link rel="stylesheet" type="text/css"
-    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
 
   <!-- fontes style -->
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Roboto:400,700&display=swap" rel="stylesheet">
@@ -112,7 +102,7 @@
             </div>
             <div class="quote_btn-container  d-flex justify-content-center">
               <a href="tel:+5535999853337">
-                <img src="/Chaveiro/images/call.png" alt="">
+              <img src="Recursos/assets/icon/icon_navbar/call.png" alt="">
                 Telefone : +55 (35) 99985-3337
               </a>
               <a href="mailto:max.prestacao@gmail.com?subject=Servico de chaves, fechaduras e abertura de automoveis.">
@@ -211,14 +201,11 @@
 
   <!-- seção de rodapé -->
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="Recursos/assets/js/js_blibioteca/js/jquery/jquery.min.js"></script>
-    <script type="text/javascript" src="Recursos/assets/js/js_blibioteca/js/jquery/jquery-3.4.1.min.js "></script>
-    <script type="text/javascript" src="Recursos/assets/js/js_blibioteca/js/bootstrap.js"></script>
-    <script
-  src="https://code.jquery.com/jquery-3.6.3.slim.min.js"
-  integrity="sha256-ZwqZIVdD3iXNyGHbSYdsmWP//UBokj2FHAxKuSBKDSo="
-  crossorigin="anonymous"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script src="Recursos/assets/js/js_blibioteca/js/jquery/jquery.min.js"></script>
+  <script type="text/javascript" src="Recursos/assets/js/js_blibioteca/js/jquery/jquery-3.4.1.min.js "></script>
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+  <script type="text/javascript" src="Recursos/assets/js/boostrap/bootstrap.bundle.min.js"></script>
 
 
     <!-- Additional Scripts -->

@@ -1039,7 +1039,6 @@
   <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
   <script type="text/javascript" src="Recursos/assets/js/boostrap/bootstrap.bundle.min.js"></script>
 
-
   <!-- Additional Scripts -->
   <script src="Recursos/assets/js/preloder.js"></script>
   <script src="Recursos/assets/js/share.js"></script>
