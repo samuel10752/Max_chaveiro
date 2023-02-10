@@ -18,10 +18,10 @@
 
   <title>Max Chaveiro</title>
 
+  <link rel="stylesheet" href="Recursos/assets/css/flex-slider.css"> 
   <!-- Additional CSS Files -->
   <link rel="stylesheet" href="Recursos/assets/css/fontawesome.css">
   <link rel="stylesheet" href="Recursos/assets/css/tooplate-main.css">
-  <link rel="stylesheet" href="Recursos/assets/css/flex-slider.css"> 
   <link rel="stylesheet" href="Recursos/assets/css/owl.css">
 
   <!-- slider stylesheet -->
@@ -29,7 +29,7 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
 
   <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="Recursos/assets/css/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" href="Recursos/assets/css/boostrap/bootstrap.min.css" />
 
   <!-- fontes style -->
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Roboto:400,700&display=swap" rel="stylesheet">
@@ -1019,13 +1019,25 @@
     </div>
   </div>
 
+
+  <script language = "text/Javascript"> 
+      cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
+      function clearField(t){                   //declaring the array outside of the
+      if(! cleared[t.id]){                      // function makes it static and global
+          cleared[t.id] = 1;  // you could use true and false, but that's more typing
+          t.value='';         // with more chance of typos
+          t.style.color='#fff';
+          }
+      }
+    </script>
+
   <!-- seção de contador de likes-->
 
   <!-- Bootstrap core JavaScript -->
   <script src="Recursos/assets/js/js_blibioteca/js/jquery/jquery.min.js"></script>
   <script type="text/javascript" src="Recursos/assets/js/js_blibioteca/js/jquery/jquery-3.4.1.min.js "></script>
   <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-  <script type="text/javascript" src="Recursos/assets/js/js_blibioteca/js/bootstrap.js"></script>
+  <script type="text/javascript" src="Recursos/assets/js/boostrap/bootstrap.bundle.min.js"></script>
 
 
   <!-- Additional Scripts -->
@@ -1033,8 +1045,15 @@
   <script src="Recursos/assets/js/share.js"></script>
   <script src="Recursos/assets/js/scrolltopo.js"></script>
   <script src="Recursos/assets/js/cookis.js "></script>
+
+  <!-- CArousel de produto -->
   <script src="Recursos/assets/js/custom.js"></script>
   <script src="Recursos/assets/js/owl.js"></script>
+  <script src="Recursos/assets/js/isotope.js"></script>
+  <script src="Recursos/assets/js/flex-slider.js"></script>
+
+
+    <!-- Script de like para fazer a contagem -->
   <script src="Recursos/assets/js/armazena_like/like_1.js"></script>
 
 </body>

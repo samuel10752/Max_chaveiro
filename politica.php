@@ -214,9 +214,11 @@
     <!-- Bootstrap core JavaScript -->
     <script src="Recursos/assets/js/js_blibioteca/js/jquery/jquery.min.js"></script>
     <script type="text/javascript" src="Recursos/assets/js/js_blibioteca/js/jquery/jquery-3.4.1.min.js "></script>
-    <!-- <script type="text/javascript" src="Recursos/assets/js/js_blibioteca/js/bootstrap.js"></script> -->
-    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-  
+    <script type="text/javascript" src="Recursos/assets/js/js_blibioteca/js/bootstrap.js"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.6.3.slim.min.js"
+  integrity="sha256-ZwqZIVdD3iXNyGHbSYdsmWP//UBokj2FHAxKuSBKDSo="
+  crossorigin="anonymous"></script>
 
 
     <!-- Additional Scripts -->
