@@ -21,7 +21,7 @@
 
   .scrollToTop {
     position: fixed;
-    top: 820px;
+    top: 770px;
     right: 10px;
     display: none;
   }
@@ -125,7 +125,7 @@
 
   .scrollToTop {
     position: fixed;
-    top: 820px;
+    top: 750px;
     right: 5px;
     display: none;
   }
@@ -187,8 +187,8 @@ font-size: 15px;
 
   .scrollToTop {
     position: fixed;
-    top: 820px;
-    right: 0px;
+    top: 770px;
+    right: 10px;
     display: none;
   }
 
@@ -245,7 +245,7 @@ font-size: 10px;
 
 
   .scrollToTop {
-    top: 750px;
+    top: 770px;
     right: 10px;
     display: none;
   }
