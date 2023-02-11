@@ -7,10 +7,11 @@
     <h1>Chatbot</h1>
     <p>Por favor, escolha uma das opções abaixo:</p>
     <ol>
-      <li>Pergunta 1</li>
-      <li>Pergunta 2</li>
-      <li>Pergunta 3</li>
+      <li>Conservar com o vendendor.</li>
+      <li>Deseja ver nossas novidades?</li>
+      <li>Ver nossas redes socias!</li>
     </ol>
+
     <form action="index.php" method="post">
       <input type="text" name="input">
       <input type="submit" value="Enviar">
@@ -20,13 +21,15 @@
         $message = intval($_POST['input']);
         switch ($message) {
           case 1:
-            echo "A resposta à pergunta 1 é X. <a href='https://www.example.com/pergunta1'>Clique aqui para mais informações</a>.";
+            echo "Aqui esta o contato do nosso vendendor.  <a href='https://wa.me/5535999853337?text=Serviço%20de%20chaves%20,%20fechaduras%20e%20abertura%20de%20automóveis%20.%20'>Clique aqui para ir no Whatsapp</a>.";
             break;
           case 2:
-            echo "A resposta à pergunta 2 é Y. <a href='https://www.example.com/pergunta2'>Clique aqui para mais informações</a>.";
+            echo "Aqui esta as novidades. <a href='http://localhost/meus_sites/Max_chaveiro/'>Clique aqui para mais informações</a>.";
             break;
           case 3:
-            echo "A resposta à pergunta 3 é Z. <a href='https://www.example.com/pergunta3'>Clique aqui para mais informações</a>.";
+            echo "<br> Nossas redes sociais. <br><br> <a
+            href='https://wa.me/5535999853337?text=Serviço%20de%20chaves%20,%20fechaduras%20e%20abertura%20de%20automóveis%20.%20'>
+            <img src='whatsapp.png'";
             break;
           default:
             echo "Desculpe, você deve digitar apenas os números 1, 2 ou 3.";
