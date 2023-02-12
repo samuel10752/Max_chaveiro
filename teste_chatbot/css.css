@@ -1,0 +1,59 @@
+ /* Estilos gerais */
+ body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+  }
+
+  /* Estilo para o título */
+  h1 {
+    text-align: center;
+    color: #333;
+    margin-top: 10px;
+  }
+
+  /* Estilo para a descrição */
+  p {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  /* Estilo para a lista de opções */
+  ol {
+    list-style-type: decimal;
+    margin: 0 auto;
+    padding: 10px;
+    width: 180px;
+    text-align: center;
+  }
+
+  /* Estilo para o formulário */
+  form {
+    margin: 5 auto;
+    width: 150px;
+    height: 120px;
+    text-align: center;
+  }
+
+  /* Estilo para o campo de entrada */
+  input[type="text"] {
+    margin-left: 120px;
+    width: 10%;
+    height: 10%;
+    padding: 10px;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  /* Estilo para o botão de envio */
+  input[type="submit"] {
+    margin-left: 60px;
+    padding: 10px 60px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+  }
