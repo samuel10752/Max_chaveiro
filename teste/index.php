@@ -8,29 +8,37 @@
 </head>
 <body>
 
-<img src="imagem.png" class="like-icon">
-
-<form action="add_comment.php" method="post" style="display: none;">
-  <div id="comments">
-    <!-- Comentários serão carregados aqui -->
+<div class="container">
+  <div class="like-icon">
+    <i class="fa fa-comment-o" aria-hidden="true"></i><img src="imagem.png" alt="">
   </div>
-  <div id="profile-picture">
-    <img src="icons.png" alt="" id="profile-icon">
-  </div>
-  <input type="text" name="username" placeholder="Seu nome" required onchange="updateProfilePicture(this.value)">
-  <textarea name="comment" required></textarea>
-  <input type="submit" value="Adicionar comentário">
-</form>
+  <form action="add_comment.php" method="post">
+    <div id="comments">
+      <!-- Comentários serão carregados aqui -->
+    </div>
+    <div id="profile-picture">
+      <img src="icons/padrao.png" alt="" id="profile-icon">
+    </div>
+    <select name="icon" id="icon-select" onchange="updateProfilePicture(this.value)">
+      <option value="padrao">Padrão</option>
+      <option value="f">F</option>
+      <option value="m">M</option>
+    </select>
+    <input type="text" name="username" placeholder="Seu nome" required>
+    <textarea name="comment" required></textarea>
+    <input type="submit" value="Adicionar comentário">
+  </form>
+</div>
 
-<!-- Código JavaScript -->
+
 <script>
-  function showProfilePicture() {
-    var profileIcon = document.getElementById("profile-icon");
-    var username = document.querySelector("input[name='username']").value;
-    profileIcon.src = "icons" + username + ".png";
-    profileIcon.alt = username + " profile picture";
+  function updateProfilePicture(icon) {
+    // Atualiza a imagem de perfil com base na seleção do usuário
+    document.getElementById("profile-icon").src = "icons/" + icon + ".png";
   }
 </script>
+
+<!-- Código JavaScript -->
 
 <script>
   document.querySelector('.like-icon').addEventListener('click', function() {
@@ -38,40 +46,53 @@
       document.querySelector('form').style.display === 'none' ? 'block' : 'none';
   });
 
-  document.querySelector('form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    var xhr = new XMLHttpRequest();
-    xhr.open("POST", "add_comment.php", true);
-    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    xhr.onreadystatechange = function() {
-      if (xhr.readyState == 4 && xhr.status == 200) {
-        loadComments();
-      }
-    };
-    xhr.send("username=" + encodeURIComponent(document.querySelector('input[name="username"]').value) + "&comment=" + encodeURIComponent(document.querySelector('textarea[name="comment"]').value));
-  });
-
-  // Carrega os comentários ao carregar a página
-  window.onload = function() {
-    loadComments();
-  };
-
-  // Função para carregar os comentários
-  function loadComments() {
-    var xhr = new XMLHttpRequest();
-    xhr.open("GET", "get_comments.php", true);
-    xhr.onreadystatechange = function() {
-      if (xhr.readyState == 4 && xhr.status == 200) {
-        document.getElementById("comments").innerHTML = xhr.responseText;
-      }
-    };
-    xhr.send();
+   function updateProfilePicture(icon) {
+    document.getElementById('profile-icon').src = 'icons/' + icon + '.png';
   }
+
+  // Adicionar comentário com o ícone selecionado
+  document.querySelector('form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    // Recuperar dados do formulário
+    var username = document.querySelector('input[name="username"]').value;
+    var comment = document.querySelector('textarea[name="comment"]').value;
+    var icon = document.querySelector('#icon-select').value;
+
+    // Criar elemento HTML para o comentário
+    var commentElement = document.createElement('div');
+    commentElement.innerHTML = '<img src="icons/' + icon + '.png" alt="">' + username + ': ' + comment;
+
+    // Adicionar o comentário ao div de comentários
+    document.getElementById('comments').appendChild(commentElement);
+
+    // Limpar o formulário
+    document.querySelector('input[name="username"]').value = '';
+    document.querySelector('textarea[name="comment"]').value = '';
+  });
 </script>
 
 
 
+
 <style>
+
+  #icon-select{
+    margin-top: 15px;
+  }
+
+  #profile-picture {
+  float: left;
+  margin-right: 10px;
+}
+
+#profile-picture img {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+}
+
+
   form {
     background-color: #f2f2f2;
     border-radius: 10px;
