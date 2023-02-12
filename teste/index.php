@@ -8,19 +8,29 @@
 </head>
 <body>
 
-
-<form action="add_comment.php" method="post" style="display: none;">
-<div id="comments">
-  <!-- Comentários serão carregados aqui -->
-</div>
-  <textarea name="comment" required></textarea>
-  <input type="submit" value="Adicionar comentário">
-
-</form>
-
-
 <img src="imagem.png" class="like-icon">
 
+<form action="add_comment.php" method="post" style="display: none;">
+  <div id="comments">
+    <!-- Comentários serão carregados aqui -->
+  </div>
+  <div id="profile-picture">
+    <img src="icons.png" alt="" id="profile-icon">
+  </div>
+  <input type="text" name="username" placeholder="Seu nome" required onchange="updateProfilePicture(this.value)">
+  <textarea name="comment" required></textarea>
+  <input type="submit" value="Adicionar comentário">
+</form>
+
+<!-- Código JavaScript -->
+<script>
+  function showProfilePicture() {
+    var profileIcon = document.getElementById("profile-icon");
+    var username = document.querySelector("input[name='username']").value;
+    profileIcon.src = "icons" + username + ".png";
+    profileIcon.alt = username + " profile picture";
+  }
+</script>
 
 <script>
   document.querySelector('.like-icon').addEventListener('click', function() {
@@ -38,7 +48,7 @@
         loadComments();
       }
     };
-    xhr.send("comment=" + encodeURIComponent(document.querySelector('textarea[name="comment"]').value));
+    xhr.send("username=" + encodeURIComponent(document.querySelector('input[name="username"]').value) + "&comment=" + encodeURIComponent(document.querySelector('textarea[name="comment"]').value));
   });
 
   // Carrega os comentários ao carregar a página
@@ -60,6 +70,7 @@
 </script>
 
 
+
 <style>
   form {
     background-color: #f2f2f2;
@@ -67,12 +78,24 @@
     padding: 20px;
     position: fixed;
     bottom: 100;
-    right: 1250px;
+    right: 1470px;
     left: 0;
-    width: 500px;
+    width: 300px;
     margin: auto;
     box-shadow: 0px 0px 10px #ccc;
     display: none;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    resize: none;
+    margin-top: 10px;
   }
 
   textarea {
@@ -90,7 +113,7 @@
   input[type="submit"] {
     background-color: #4CAF50;
     color: white;
-    padding: 15px 190px;
+    padding: 15px 90px;
     border: none;
     border-radius: 4px;
     margin-right: 0px;

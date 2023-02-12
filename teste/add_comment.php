@@ -1,17 +1,12 @@
-<!-- <?php
-// Verifica se o formulário foi enviado
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  // Lê o conteúdo do arquivo de comentários
-  $comments = file_get_contents("comments.txt");
+<?php
 
-  // Adiciona o novo comentário ao final do arquivo
-  $comments .= $_POST["comment"] . "\n";
+if (isset($_POST['comment']) && isset($_POST['username'])) {
+  $comment = $_POST['comment'];
+  $name = $_POST['username'];
 
-  // Salva o arquivo de comentários
-  file_put_contents("comments.txt", $comments);
+  $file = fopen("comments.txt", "a");
+  fwrite($file, $name . ": " . $comment . "\n");
+  fclose($file);
 }
 
-// Redireciona de volta para a página principal
-header("Location: index.php");
-?> -->
-
+?>
