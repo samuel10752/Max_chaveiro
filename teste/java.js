@@ -48,7 +48,7 @@ function updateProfilePicture(icon) {
   
 
    // Adicionar comentário com o ícone selecionado
-   document.querySelector('form').addEventListener('submit', function(event) {
+  document.querySelector('form').addEventListener('submit', function(event) {
     event.preventDefault();
 
     // Recuperar dados do formulário
