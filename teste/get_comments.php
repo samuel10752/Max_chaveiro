@@ -11,9 +11,9 @@ foreach ($comments as $comment) {
   // Verifica se a linha tem pelo menos três elementos
   $parts = explode(" ", $comment);
   if (count($parts) >= 3) {
-    // Separa o nome do usuário, o ícone e o comentário em variáveis distintas
-    list($username, $icon, $comment) = $parts;
-    echo "<li><img src='icons/" . htmlspecialchars($icon) . ".png'> " . htmlspecialchars($username) . ": " . htmlspecialchars($comment) . "</li>";
+    // Separa o ícone, nome do usuário e o comentário em variáveis distintas
+    list($icon, $username, $comment) = $parts;
+    echo "<img src='icons/" . htmlspecialchars($icon) . ".png'> &emsp;<strong>" . htmlspecialchars($username) . "&emsp;</strong>: " . htmlspecialchars($comment) . "<br>";
   }
 }
 echo "</ul>";
