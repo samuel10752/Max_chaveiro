@@ -1,16 +1,4 @@
 <?php
-// Verifica se o formulário foi enviado
-if (isset($_POST["username"]) && isset($_POST["comment"])) {
-  // Lê o arquivo de comentários
-  $comments = file_get_contents("comments.txt");
-
-  // Adiciona o novo comentário ao final do arquivo
-  $comments .= $_POST["username"] . " " . $_POST["icon"] . " " . $_POST["comment"] . "\n";
-
-  // Salva o arquivo de comentários
-  file_put_contents("comments.txt", $comments);
-}
-
 // Lê o arquivo de comentários
 $comments = file_get_contents("comments.txt");
 

@@ -31,25 +31,46 @@
 </div>
 
 
+<!-- Código JavaScript -->
+
 <script>
   function updateProfilePicture(icon) {
-    // Atualiza a imagem de perfil com base na seleção do usuário
     document.getElementById("profile-icon").src = "icons/" + icon + ".png";
   }
-</script>
 
-<!-- Código JavaScript -->
+</script>
 
 <script>
   document.querySelector('.like-icon').addEventListener('click', function() {
     document.querySelector('form').style.display = 
       document.querySelector('form').style.display === 'none' ? 'block' : 'none';
   });
+</script>
 
-   function updateProfilePicture(icon) {
-    document.getElementById('profile-icon').src = 'icons/' + icon + '.png';
-  }
+<script>
 
+  // salvar o comentario
+  
+  document.querySelector('form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  var xhr = new XMLHttpRequest();
+  xhr.open("POST", "add_comment.php", true);
+  xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState == 4 && xhr.status == 200) {
+      loadComments();
+    }
+  };
+  var comment = document.querySelector('textarea[name="comment"]').value;
+  var username = document.querySelector('input[name="username"]').value;
+  var icon = document.querySelector('select[name="icon"]').value;
+  xhr.send("comment=" + encodeURIComponent(comment) + "&username=" + encodeURIComponent(username) + "&icon=" + encodeURIComponent(icon));
+});
+
+</script>
+
+<script>
+     
   // Adicionar comentário com o ícone selecionado
   document.querySelector('form').addEventListener('submit', function(event) {
     event.preventDefault();
@@ -71,7 +92,6 @@
     document.querySelector('textarea[name="comment"]').value = '';
   });
 </script>
-
 
 
 
