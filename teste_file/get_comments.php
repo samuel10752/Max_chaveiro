@@ -11,7 +11,7 @@
     if (count($parts) >= 3) {
       // Separa o ícone, nome do usuário e o comentário em variáveis distintas
       list($icon, $username, $comment) = $parts;
-      echo "<li><img src='profile_pictures/" . htmlspecialchars($icon) . "'>  <strong>" . htmlspecialchars($username) . " </strong>: " . htmlspecialchars($comment) . "</li>";
+      echo "<img src='data:image" . htmlspecialchars($icon) . "'>  <strong>" . htmlspecialchars($username) . " </strong>: " . htmlspecialchars($comment) . "<br>";
     }
   }
   ?>

@@ -18,7 +18,7 @@
       <!-- Comentários serão carregados aqui -->
     </div>
     <div id="profile-picture">
-      <img src="icons/padrao.png" alt="" id="profile-icon">
+      <img src="" alt="" id="profile-icon">
     </div>
     <input type="file" accept="profile_pictures/*" name="profile-picture" id="profile-picture-input">
     <input type="text" name="username" placeholder="Seu nome" required>
