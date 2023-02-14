@@ -13,7 +13,7 @@
   <div class="like-icon">
     <i class="fa fa-comment-o" aria-hidden="true"></i><img src="imagem.png" alt="">
   </div>
-  <form action="add_comment.php" method="post">
+  <form class="form" action="add_comment.php" method="post">
     <div id="comments">
       <!-- Comentários serão carregados aqui -->
     </div>
