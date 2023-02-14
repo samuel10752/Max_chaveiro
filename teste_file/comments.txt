@@ -1,2 +1,2 @@
- 12 12
- qw qw
+padrao.png as as
+padrao.png as i

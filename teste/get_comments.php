@@ -13,7 +13,7 @@ foreach ($comments as $comment) {
   if (count($parts) >= 3) {
     // Separa o ícone, nome do usuário e o comentário em variáveis distintas
     list($icon, $username, $comment) = $parts;
-    echo "<img src='icons/" . htmlspecialchars($icon) . ".png'> &emsp;<strong>" . htmlspecialchars($username) . "&emsp;</strong>: " . htmlspecialchars($comment) . "<br>";
+    echo "<img src='icons/" . htmlspecialchars($icon) . ".png'> <strong>" . htmlspecialchars($username) . "</strong>: " . htmlspecialchars($comment) . "<br>";
   }
 }
 echo "</ul>";

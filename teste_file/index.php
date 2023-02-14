@@ -18,28 +18,23 @@
       <!-- Comentários serão carregados aqui -->
     </div>
     <div id="profile-picture">
-      <img src="" alt="" id="profile-icon">
+      <img src="icons/padrao.png" alt="" id="profile-icon">
     </div>
-    <input type="file" accept="profile_pictures/*" name="profile-picture" id="profile-picture-input">
+    <input type="file" accept="profile_pictures/*" name="profile-picture" id="profile- picture-input">
     <input type="text" name="username" placeholder="Seu nome" required>
     <textarea name="comment" placeholder="Adicionar Comentario" required></textarea>
     <input type="submit" value="Adicionar comentário">
   </form>
 </div>
 
-
-
 <script>
-  document.getElementById('profile-picture-input').addEventListener('change', function() {
+  document.getElementById('profile- picture-input').addEventListener('change', function() {
     var reader = new FileReader();
     reader.onload = function(e) {
       document.getElementById('profile-icon').src = e.target.result;
     };
     reader.readAsDataURL(this.files[0]);
   });
-</script>
-
-
 </script>
 
 <script src="java.js"></script>

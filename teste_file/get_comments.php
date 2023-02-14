@@ -1,18 +1,21 @@
-<ul>
-  <?php
-  // Lê o arquivo de comentários
-  $comments = file_get_contents("comments.txt");
-  // Converte cada linha em um item de lista
-  $comments = explode("\n", $comments);
+<?php
+// Obtém todas as linhas do arquivo de comentários
+$lines = file("comments.txt");
 
-  foreach ($comments as $comment) {
-    // Verifica se a linha tem pelo menos três elementos
-    $parts = explode(" ", $comment);
-    if (count($parts) >= 3) {
-      // Separa o ícone, nome do usuário e o comentário em variáveis distintas
-      list($icon, $username, $comment) = $parts;
-      echo "<img src='data:image" . htmlspecialchars($icon) . "'>  <strong>" . htmlspecialchars($username) . " </strong>: " . htmlspecialchars($comment) . "<br>";
-    }
-  }
-  ?>
-</ul>
+// Loop pelas linhas do arquivo
+foreach ($lines as $line) {
+  // Divide a linha em partes
+  list($icon, $username, $comment) = explode(" ", $line, 3);
+  
+  // Exibe o comentário na tela
+  echo "
+    <div class='comment'>
+      <div class='comment-header'>
+        <img src='$icon' alt=''>
+        <h3>$username</h3>
+      </div>
+      <p>$comment</p>
+    </div>
+  ";
+}
+?>
