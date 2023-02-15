@@ -501,9 +501,9 @@
               </a>
                 
 
-                <a href="https://www.instagram.com/max_chaveiro/">
+                <!-- <a href="https://www.instagram.com/max_chaveiro/">
                   <img src="Recursos/assets/icon/icon_card_noticias/comment.png"alt="">
-                </a>
+                </a> -->
 
                 <a href="javascript:void(0)" onclick="share()">
                   <img src="Recursos/assets/icon/icon_card_noticias/share.png" alt="">
