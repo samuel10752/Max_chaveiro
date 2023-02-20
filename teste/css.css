@@ -1,12 +1,23 @@
 
-.like-icon{
-    margin-left: 250px;
+  body{
+    background-color: #a2a096;
   }
 
-  #profile-picture {
-  float: left;
-  margin-right: 10px;
-}
+  #comments{
+    margin-left: -10%;
+    font-size: 15px;
+    margin-top: 1%;
+    width: 112%;
+    height: 200px;
+    overflow-y: scroll;
+    word-wrap: break-word;
+  }
+
+.like-icon{
+    margin-left: 850px;
+    margin-top: 300px;
+  }
+
 
 #profile-picture img {
   width: 50px;
@@ -14,14 +25,20 @@
   border-radius: 25px;
 }
 
+#icon-select{
+  width: 80px;
+  height: 25px;
+  margin-top: 0%;
+}
+
 
   form {
+    margin-top: 10%;
     background-color: #f2f2f2;
-    border-radius: 10px;
-    padding: 20px;
+    padding: 25px;
     position: fixed;
     bottom: 100;
-    right: 1320px;
+    right: 70px;
     left: 0;
     width: 300px;
     margin: auto;
@@ -56,125 +73,14 @@
 
 
   input[type="submit"] {
+    width: 100%;
+    margin: 10px 0;
     background-color: #4CAF50;
     color: white;
-    padding: 15px 90px;
+    padding: 10px 20px;
+    font-size: 1em;
     border: none;
-    border-radius: 4px;
-    margin-right: 0px;
+    border-radius: 5px;
     cursor: pointer;
-    float: right;
-    margin-top: 10px;
-  }
-
-  #comments {
-    word-wrap: break-word;
-    margin-left: -30PX;
-  }
-
-
-
-
-  @media (max-width: 1200px) {
-    #form {
-    margin-left: 100px;
-    
-    }
-  }
-
-  @media (max-width: 1120px) {
-    #form {
-    margin-left: 100px;
-    
-    }
-  }
-
-
-  @media (max-width: 480px) {
-
-    #icon-select{
-      margin-top: 18px;
-    }
-
-    .like-icon {
-      text-align: left;
-      margin-left: 45%;
-  
-      }
-
-    .form {
-    max-width: 300px;
-    margin-left: 8%;
-    }
-
-  
-  }
-
-  @media (max-width: 420px) {
-
-    #icon-select{
-      margin-top: 18px;
-    }
-
-    .like-icon {
-      text-align: left;
-      margin-left: 45%;
-  
-      }
-
-    .form {
-    max-width: 300px;
-    margin-left: 8%;
-    }
-
-  
   }
   
-  @media (max-width: 380px) {
-
-    #icon-select{
-      margin-top: 18px;
-    }
-
-    .like-icon {
-      text-align: left;
-      margin-left: 45%;
-  
-      }
-
-      .form input[type="submit"] {
-        margin-right: 0px;
-        background-color: #4CAF50;
-        color: white;
-        padding: 15px 73px;
-        margin-top: 10px;
-      }
-
-    .form {
-    max-width: 270px;
-    }
-  }
-
-
-  @media (max-width: 300px) {
-
-    .form input[type="submit"] {
-      background-color: #4CAF50;
-      color: white;
-      padding: 15px 30px;
-      margin-top: 10px;
-    }
-  
-
-    .form {
-    width: 70%;
-    margin-left: 7%;
-
-    }
-
-    .like-icon {
-    text-align: left;
-    margin-left: 45%;
-
-    }
-  }

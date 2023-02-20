@@ -26,8 +26,6 @@ function updateProfilePicture(icon) {
     loadComments();
   };
 
-
-
    // salvar o comentario
 
    document.querySelector('form').addEventListener('submit', function(e) {
@@ -46,24 +44,31 @@ function updateProfilePicture(icon) {
     xhr.send("comment=" + encodeURIComponent(comment) + "&username=" + encodeURIComponent(username) + "&icon=" + encodeURIComponent(icon));
   });
 
+// Adicionar comentário com o ícone selecionado
+document.querySelector('form').addEventListener('submit', function(event) {
+  event.preventDefault();
 
-   // Adicionar comentário com o ícone selecionado
-   document.querySelector('form').addEventListener('submit', function(event) {
-    event.preventDefault();
+  // Recuperar dados do formulário
+  var username = document.querySelector('input[name="username"]').value;
+  var comment = document.querySelector('textarea[name="comment"]').value;
+  var icon = document.querySelector('#icon-select').value;
 
-    // Recuperar dados do formulário
-    var username = document.querySelector('input[name="username"]').value;
-    var comment = document.querySelector('textarea[name="comment"]').value;
-    var icon = document.querySelector('#icon-select').value;
+  // Criar elemento HTML para o comentário
+  var commentElement = document.createElement('div');
+  commentElement.innerHTML = '<img src="icons/' + icon + '.png" alt="">' + username + ': ' + comment;
 
-    // Criar elemento HTML para o comentário
-    var commentElement = document.createElement('div');
-    commentElement.innerHTML = '<img src="icons/' + icon + '.png" alt="">' + username + ': ' + comment;
+  // Adicionar o comentário ao div de comentários
+  document.getElementById('comments').appendChild(commentElement);
 
-    // Adicionar o comentário ao div de comentários
-    document.getElementById('comments').appendChild(commentElement);
+  // Obter o elemento da última mensagem adicionada
+  var lastMessage = document.getElementById('last-message');
 
-    // Limpar o formulário
-    document.querySelector('input[name="username"]').value = '';
-    document.querySelector('textarea[name="comment"]').value = '';
-  });
+  // Rolar a página até a última mensagem adicionada
+  lastMessage.scrollIntoView({ behavior: 'smooth' });
+
+  // Limpar o formulário
+  document.querySelector('input[name="username"]').value = '';
+  document.querySelector('textarea[name="comment"]').value = '';
+});
+
+
