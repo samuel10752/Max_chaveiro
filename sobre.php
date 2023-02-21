@@ -92,13 +92,13 @@
                   <a class="nav-link" href="servico.php">Serviço </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="index.php"> Portfolio</a>
+                  <a class="nav-link" href="portfolio.php"> Portfolio</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="index.php">Novidades </a>
+                  <a class="nav-link" href="noticias.php">Novidades </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="index.php">Contato</a>
+                  <a class="nav-link" href="contato.php">Contato</a>
                 </li>
               </ul>
             </div>

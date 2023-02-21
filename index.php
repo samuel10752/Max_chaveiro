@@ -154,7 +154,7 @@
 
           </p>
           <div>
-            <a href="#contato" class="slider-link">
+            <a href="contato.php" class="slider-link">
               Contato
             </a>
           </div>
