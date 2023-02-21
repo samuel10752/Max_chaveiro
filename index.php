@@ -1,9 +1,6 @@
 
 <!DOCTYPE html>
 <html lang="pt-BR">
-
-<?php include 'php/like.php' ?>
-
 <head>
   <!-- Basico -->
   <meta charset="utf-8"/>
