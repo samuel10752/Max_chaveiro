@@ -1,14 +1,12 @@
-
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html>
 
 <?php include 'php/like.php' ?>
 
 <head>
-  <!-- Basico -->
-  <meta charset="utf-8"/>
-  <!-- Icon do toppo do site  -->
-  <link rel="shortcut icon" href="Recursos/assets/icon/icon_navbar/logo1.jpg" type="image/x-icon">
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <!-- Mobile Metas -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <!-- Site Metas -->
@@ -16,7 +14,8 @@
   <meta name="description" content="" />
   <meta name="author" content="" />
 
-  <title>Max Chaveiro</title>
+  <title>Pagina de Novidades</title>
+
 
   <link rel="stylesheet" href="Recursos/assets/css/flex-slider.css"> 
   <!-- Additional CSS Files -->
@@ -39,10 +38,8 @@
   <link href="Recursos/assets/css/responsive.css" rel="stylesheet" />
 </head>
 
-<body>
-
-  <!-- início do preloader -->
-  <div class="loader_bg">
+ <!-- início do preloader -->
+ <div class="loader_bg">
     <div class="img-container">
       <img class="cap" src="Recursos/assets/images/pre-loader/cap.png" alt="">
       <img class="cog-01" src="Recursos/assets/images/pre-loader/cog-01.png" alt="">
@@ -128,291 +125,156 @@
       </div>
     </header>
     <!-- fim da seção do cabeçalho -->
-    <!-- seção deslizante -->
-    <section class=" slider_section position-relative">
-
-      <div class="slider_bg-container">
-
-      </div>
-      <div class="slider-container">
-
-        <div class="detail-box">
-          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-            <span class="sr-only">Next</span>
-          </a>
-          <h1>
-            Está Precisando <br>
-            De Uma Copia? <br>
-            Temos Aqui!
-          </h1>
-          <p>
-            Oferecemos serviços de segurança, fechadura de alta qualidade, <br>
-            portas, janelas e automoveis.
-
-          </p>
-          <div>
-            <a href="#contato" class="slider-link">
-              Contato
-            </a>
-          </div>
-        </div>
-        <div class="img-box">
-          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="Recursos/assets/images/card/card_chaveiro_1.jpg" alt="">
-              </div>
-              <div class="carousel-item">
-                <img src="Recursos/assets/images/card/card_chaveiro_2.jpg" alt="">
-              </div>
-              <div class="carousel-item">
-                <img src="Recursos/assets/images/card/card_chaveiro_3.jpg" alt="">
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-      </div>
-
-    </section>
-    <!-- fim da seção do controle deslizante -->
-  </div>
 
 
-  <!-- Featured Starts Here -->
-  <div class="featured-items">
+<!-- seção de notícias -->
+
+<section class="news_section layout_padding">
     <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="section-heading">
-            <div class="line-dec"></div>
-            <h1>Futuros Itens</h1>
-          </div>
+      <div class="d-flex flex-column align-items-end">
+        <div class="custom_heading-container">
+          <hr>
+          <h2 id="noticias">
+            Últimas Notícias
+          </h2>
+
         </div>
-        <div class="col-md-12">
-          <div class="owl-carousel owl-theme">
-            <a href="single-product.html">
-              <div class="featured-item">
-                <img src="Recursos/assets/images/card_produtos/produto-1.png" alt="Item 1">
-                <h4>Proin vel ligula</h4>
-                <h6>R$15.00</h6>
-              </div>
-            </a>
-            <a href="single-product.html">
-              <div class="featured-item">
-                <img src="Recursos/assets/images/card_produtos/produto-2.png" alt="Item 2">
-                <h4>Erat odio rhoncus</h4>
-                <h6>R$25.00</h6>
-              </div>
-            </a>
-            <a href="single-product.html">
-              <div class="featured-item">
-                <img src="Recursos/assets/images/card_produtos/produto-3.png" alt="Item 3">
-                <h4>Integer vel turpis</h4>
-                <h6>R$35.00</h6>
-              </div>
-            </a>
-            <a href="single-product.html">
-              <div class="featured-item">
-                <img src="Recursos/assets/images/card_produtos/produto-4.png" alt="Item 4">
-                <h4>Sed purus quam</h4>
-                <h6>R$45.00</h6>
-              </div>
-            </a>
-            <a href="single-product.html">
-              <div class="featured-item">
-                <img src="Recursos/assets/images/card_produtos/produto-5.png" alt="Item 5">
-                <h4>Morbi aliquet</h4>
-                <h6>R$55.00</h6>
-              </div>
-            </a>
-            <a href="single-product.html">
-              <div class="featured-item">
-                <img src="Recursos/assets/images/card_produtos/produto-6.png" alt="Item 6">
-                <h4>Urna ac diam</h4>
-                <h6>R$65.00</h6>
-              </div>
-            </a>
-            <a href="single-product.html">
-              <div class="featured-item">
-                <img src="Recursos/assets/images/card_produtos/produto-1.png" alt="Item 7">
-                <h4>Proin eget imperdiet</h4>
-                <h6>R$75.00</h6>
-              </div>
-            </a>
-            <a href="single-product.html">
-              <div class="featured-item">
-                <img src="Recursos/assets/images/card_produtos/produto-2.png" alt="Item 8">
-                <h4>Nullam risus nisl</h4>
-                <h6>R$85.00</h6>
-              </div>
-            </a>
-            <a href="single-product.html">
-              <div class="featured-item">
-                <img src="Recursos/assets/images/card_produtos/produto-3.png" alt="Item 9">
-                <h4>Cras tempus</h4>
-                <h6>R$95.00</h6>
-              </div>
-            </a>
-          </div>
-        </div>
+        <p>
+          Confira as Ultimas Noticias sobre o que está por vim muito em breve.
+        </p>
       </div>
-    </div>
-  </div>
-
-
-  <!-- seção de inscrição -->
-
-  <section class="subscribe_section layout_padding">
-    <div class="container">
       <div class="row">
         <div class="col-md-4">
-          <h2>
-            Assine nosso <br>
-            <span>
-              Boletim de Notícias
-            </span>
-          </h2>
-        </div>
-        <div class="col-md-8">
-          <form action="https://formsubmit.co/el/hopuja">
-            <input type="text" placeholder="Inseri seu e-mail">
-            <button type="submit">
-              inscrever
-            </button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
+          <div class="box">
+            <div class="img-box">
+              <img src="Recursos/assets/images/card_ultimas_noticias/n-1.png" alt="">
+            </div>
+            
+            <div class="action-box">
+              <div class="action">
 
-  <!-- fim da seção de assinatura -->
+              <a>  
+                <button id="LikeButton1">
+                  <i class="fa fa-thumbs-up"></i>
+                  <p id="like-count1"><?php  echo $likeCount1; ?></p>
+                </button>
+              </a>
+                
 
-  <!-- seção do cliente -->
+                <!-- <a href="https://www.instagram.com/max_chaveiro/">
+                  <img src="Recursos/assets/icon/icon_card_noticias/comment.png"alt="">
+                </a> -->
 
-  <section class="client_section layout_padding">
-    <div class="container">
-      <div class="custom_heading-container">
-        <h2 id="clientes">
-          O QUE DIZEM NOSSOS CLIENTES
-        </h2>
-        <hr>
-      </div>
-      <div class="client_container layout_padding-top">
-        <div id="carouselExample2Controls" class="carousel slide" data-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <div class="box">
-                <div class="detail-box">
-                  <p>
-                    Eu fiquei muito satisfeito com o serviço prestado, tudo foi feito com muita rapidez e eficiência.
-                    Essa equipe foi incrível, sempre disponível para me ajudar e resolver qualquer problema.
-                  </p>
-                </div>
-                <div class="client-id">
-                  <div class="img-box">
-                    <img src="Recursos/assets/images/card_clientes/cliente_1.png" alt="">
-                  </div>
-                  <div class="name">
-                    <h5>
-                      STEPHANIE
-                    </h5>
-                    <h6>
-                      Advogada
-                    </h6>
-                  </div>
-                </div>
+                <a href="javascript:void(0)" onclick="share()">
+                  <img src="Recursos/assets/icon/icon_card_noticias/share.png" alt="">
+                </a>
               </div>
             </div>
-            <div class="carousel-item">
-              <div class="box">
-                <div class="detail-box">
-                  <p>
-                    A qualidade do serviço foi excepcional, eu recomendo a todos,
-                    fiquei impressionado com a atenção aos detalhes e a dedicação da equipe,
-                    mas a equipe foi incansável em me ajudar a entender tudo.
-                  </p>
-                </div>
-                <div class="client-id">
-                  <div class="img-box">
-                    <img src="Recursos/assets/images/card_clientes/cliente_2.png" alt="">
-                  </div>
-                  <div class="name">
-                    <h5>
-                      Kelly Maximiano
-                    </h5>
-                    <h6>
-                      Empresaria
-                    </h6>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="box">
-                <div class="detail-box">
-                  <p>
-                    A qualidade do serviço foi excepcional, eu recomendo a todos,
-                    fiquei impressionado com a atenção aos detalhes e a dedicação da equipe,
-                    mas a equipe foi incansável em me ajudar a entender tudo.
-                  </p>
-                </div>
-                <div class="client-id">
-                  <div class="img-box">
-                    <img src="Recursos/assets/images/card_clientes/cliente_4.png" alt="">
-                  </div>
-                  <div class="name">
-                    <h5>
-                      Suellen Barbosa
-                    </h5>
-                    <h6>
-                      Técnica em Marketing
-                    </h6>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="box">
-                <div class="detail-box">
-                  <p>
-                    Eu não poderia estar mais satisfeito com o serviço prestado, tudo foi além das minhas expectativas,
-                    a equipe foi incrivelmente profissional e sempre disponível para me ajudar,
-                    nunca tive um serviço tão bom, eu recomendo a todos.
-                  </p>
-                </div>
-                <div class="client-id">
-                  <div class="img-box">
-                    <img src="Recursos/assets/images/card_clientes/cliente_3.png" alt="">
-                  </div>
-                  <div class="name">
-                    <h5>
-                      Edgard Barbosa
-                    </h5>
-                    <h6>
-                      Barbeiro Profissiona
-                    </h6>
-                  </div>
-                </div>
+            <div class="detail-box">
+              <h4>
+                Novos Locais
+              </h4>
+              <p>
+                Agora temos disponibilidade para a Cidade de Pouso Alegre, você agendar conosco pelas as redes
+                sociais ou pela a forma de contato no campo mais abaixo.
+              </p>
+              <div>
+                <a href="#contato">
+                  Mais informação
+                </a>
               </div>
             </div>
           </div>
-          <a class="carousel-control-prev" href="#carouselExample2Controls" role="button" data-slide="prev">
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#carouselExample2Controls" role="button" data-slide="next">
-            <span class="sr-only">Next</span>
-          </a>
         </div>
 
+
+      
+        <div class="col-md-4">
+          <div class="box">
+            <div class="img-box">
+              <img src="Recursos/assets/images/card_ultimas_noticias/n-2.png" alt="">
+            </div>
+            <div class="action-box">
+              <div class="action">
+
+
+              <a>  
+                <button id="LikeButton2">
+                  <i class="fa fa-thumbs-up"></i>
+                  <p id="like-count2"><?php  echo $likeCount2; ?></p>
+                </button>
+              </a>
+  
+                <!-- <a href="https://www.instagram.com/max_chaveiro/">
+                  <img src="Recursos/assets/icon/icon_card_noticias/comment.png"alt="">
+                </a> -->
+
+                <a href="javascript:void(0)" onclick="share()">
+                  <img src="Recursos/assets/icon/icon_card_noticias/share.png" alt="">
+                </a>
+              </div>
+            </div>
+            <div class="detail-box">
+              <h4>
+                Atendimento Personal
+              </h4>
+              <p>
+                Uma forma disposto a fazer o que for necessário
+                para atendê-lo da melhor maneira possível.
+              </p>
+              <div>
+                <a href="#contato">
+                  Mais informação
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="box">
+            <div class="img-box">
+              <img src="Recursos/assets/images/card_ultimas_noticias/n-3.png" alt="">
+            </div>
+            <div class="action-box">
+              <div class="action">
+
+              <a>  
+                <button id="LikeButton3">
+                  <i class="fa fa-thumbs-up"></i>
+                  <p id="like-count3"><?php  echo $likeCount3; ?></p>
+                </button>
+              </a>
+                <!-- <a href="https://www.instagram.com/max_chaveiro/">
+                  <img src="Recursos/assets/icon/icon_card_noticias/comment.png" alt="">
+                </a> -->
+
+                <a href="javascript:void(0)" onclick="share()">
+                  <img src="Recursos/assets/icon/icon_card_noticias/share.png" alt="">
+                </a>
+              </div>
+            </div>
+            <div class="detail-box">
+              <h4>
+                Novos Equipamentos
+              </h4>
+              <p>
+                Temos novidades incríveis! Acabamos de receber uma nova linha de produtos que você vai adorar.
+              </p>
+              <div>
+                <a href="#contato">
+                  Mais informação
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
-  <!-- seção do cliente final -->
+
+  <!-- fim da seção de notícias -->
+
+
 
   <!-- seção de informações -->
   <section class="info_section layout_padding">
