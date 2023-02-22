@@ -11,6 +11,14 @@
     right: 10px;
     display: none;
   }
+
+
+  #comments {
+    margin-left: -10%;
+    width: 115%;
+  }
+
+
 }
 
 
@@ -45,6 +53,10 @@
   .content p{
     color: #858585;
     margin: 1px 0 5px 0;
+  }
+
+  form {
+    max-width: 300px;
   }
 
 }
@@ -156,6 +168,21 @@ font-size: 15px;
   .buttons .item{
     margin: 0 5px;
   }
+
+  form {
+    max-width: 200px;
+  }
+
+  #comments {
+    margin-left: -25%;
+    width: 135%;
+  }
+
+  input[type="submit"] {
+    width: 100%;
+    margin: 10px 0;
+  }
+
 }
 
 @media (max-width: 768px) {
@@ -219,6 +246,17 @@ font-size: 10px;
     margin: 0 5px;
   }
 
+  form {
+    min-width: 500px;
+  }
+
+  #comments {
+    margin-left: -10%;
+    width: 115%;
+  }
+
+
+
 }
 
 @media (max-width: 576px) {
@@ -278,6 +316,16 @@ font-size: 10px;
     margin: 0 5px;
   }
 
+  form {
+    width: 530px;
+  }
+
+  #comments {
+    margin-left: -10%;
+    width: 115%;
+  }
+
+
 }
 
 @media (max-width: 480px) {
@@ -318,6 +366,16 @@ font-size: 10px;
     margin-left: -0%;
   }
 
+  
+  form {
+    min-width: 430px;
+  }
+
+  #comments {
+    margin-left: -10%;
+    width: 115%;
+  }
+
 }
 
 @media (max-width: 420px) {
@@ -338,6 +396,15 @@ font-size: 10px;
     top: 780px;
     right: 10px;
     display: none;
+  }
+
+  form {
+    min-width: 380px;
+  }
+
+  #comments {
+    margin-left: -10%;
+    width: 115%;
   }
 
 }
@@ -365,5 +432,16 @@ font-size: 10px;
   .contact_section h2{
     margin-left: -70%;
   }
+
+  form {
+    min-width: 300px;
+  }
+
+  #comments {
+    margin-left: -10%;
+    width: 115%;
+  }
+
+
 }
 

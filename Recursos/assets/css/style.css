@@ -452,7 +452,7 @@ a:focus {
 }
 
 .custom_nav-container .navbar-toggler .navbar-toggler-icon {
-  background-image: url(/Recursos/assets/icon/icon_navbar/menu.png);
+  background-image: url(../icon/icon_navbar/menu.png);
   background-size: 40px;
 }
 
@@ -793,7 +793,6 @@ a:focus {
 
 .news_section .box .action-box a {
   margin-left: 15px;
-  opacity: 0.6;
 }
 
 .news_section .box .action-box a img {
@@ -1216,6 +1215,7 @@ a:focus {
 /* botao do like no primeiro card   */
 
 #LikeButton1 {
+  margin-left: -20%;
   background-color: blue;
   color: white;
   padding: 5px 10px;
@@ -1287,3 +1287,83 @@ a:focus {
 
 }
 
+
+/* teste de comentario */
+
+#comments {
+  margin-left: -15%;
+  font-size: 15px;
+  margin-top: 1%;
+  width: 120%;
+  height: 200px;
+  overflow-y: scroll;
+  word-wrap: break-word;
+}
+
+
+.like-icon img{
+  margin-top: 15%;
+  width: 40px;
+  height: 30px;
+}
+
+
+#profile-picture img{
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+}
+
+#icon-select {
+  width: 110px;
+  height: 25px;
+  margin-top: 0%;
+}
+
+form {
+  background-color: #ccc;
+  padding: 20px;
+  position: static;
+  bottom: 100;
+  left: 19.5%;
+  width: 360px;
+  margin: auto;
+  display: none;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  resize: none;
+  margin-top: 10px;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  resize: none;
+  margin-top: 10px;
+  word-wrap: break-word;
+}
+
+input[type="submit"] {
+  width: 100%;
+  margin: 10px 0;
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

@@ -526,10 +526,6 @@
   <script src="Recursos/assets/js/isotope.js"></script>
   <script src="Recursos/assets/js/flex-slider.js"></script>
 
-
-    <!-- Script de like para fazer a contagem -->
-  <script src="Recursos/assets/js/armazena_like/like_1.js"></script>
-
 </body>
 </body>
 
