@@ -163,265 +163,294 @@
 
 
                 <a class="share" href="javascript:void(0)" onclick="share()">
-                <img src="Recursos/assets/icon/icon_card_noticias/share.png" alt="">
-              </a>
+                  <img src="Recursos/assets/icon/icon_card_noticias/share.png" alt="">
+                </a>
 
-                            
-              <a>
-                  <img class="like-icon" src="Recursos/assets/icon/icon_card_noticias/comment.png">              
-              </a>
-            
 
+                <a>
+                  <img class="like-icon" src="Recursos/assets/icon/icon_card_noticias/comentario.png">
+                </a>
+
+
+              </div>
             </div>
-          </div>
-          <div class="detail-box">
-            <h4>
-              Novos Locais
-            </h4>
-            <p>
-              Agora temos disponibilidade para a Cidade de Pouso Alegre, você agendar conosco pelas as redes
-              sociais ou pela a forma de contato no campo mais abaixo.
-            </p>
-            <div>
-              <a href="#contato">
-                Mais informação
-              </a>
-            </div>
-
-            <a>
-            <form class="form" action="php/add_comment.php" method="post">
-                    <div id="comments">
-                      <!-- Comentários serão carregados aqui -->
-                    </div>
-
-                    <div id="profile-picture">
-                      <img src="Recursos/assets/icon/icon_card_noticias/padrao.png" alt="" id="profile-icon">
-                      <select name="icon" id="icon-select" onchange="updateProfilePicture(this.value)">
-                        <option value="padrao">Padrao</option>
-                        <option value="f">Feminino</option>
-                        <option value="m">Masculino</option>
-                      </select>
-                    </div>
-
-                    <input type="text" name="username" placeholder="Seu primeiro nome" required>
-                    <textarea name="comment" placeholder="Adicionar Comentario" required></textarea>
-                    <input type="submit" value="Adicionar">
-              </form>
-            </a>
-
-          </div>
-        </div>
-      </div>
-
-
-
-      <div class="col-md-4">
-        <div class="box">
-          <div class="img-box">
-            <img src="Recursos/assets/images/card_ultimas_noticias/n-2.png" alt="">
-          </div>
-          <div class="action-box">
-            <div class="action">
-
+            <div class="detail-box">
+              <h4>
+                Novos Locais
+              </h4>
+              <p>
+                Agora temos disponibilidade para a Cidade de Pouso Alegre, você agendar conosco pelas as redes
+                sociais ou pela a forma de contato no campo mais abaixo.
+              </p>
+              <div>
+                <a href="#contato">
+                  Mais informação
+                </a>
+              </div>
 
               <a>
-                <button id="LikeButton2">
-                  <i class="fa fa-thumbs-up"></i>
-                  <p id="like-count2"><?php echo $likeCount2; ?></p>
-                </button>
+                <form class="form" action="php/add_comment.php" method="post">
+                  <div id="comments">
+                    <!-- Comentários serão carregados aqui -->
+                  </div>
+
+                  <div id="profile-picture">
+                    <img src="Recursos/assets/icon/icon_card_noticias/padrao.png" alt="" id="profile-icon">
+                    <select name="icon" id="icon-select" onchange="updateProfilePicture(this.value)">
+                      <option value="padrao">Padrao</option>
+                      <option value="f">Feminino</option>
+                      <option value="m">Masculino</option>
+                    </select>
+                  </div>
+
+                  <input type="text" name="username" placeholder="Seu primeiro nome" required>
+                  <textarea name="comment" placeholder="Adicionar Comentario" required></textarea>
+                  <input type="submit" value="Adicionar">
+                </form>
               </a>
 
-              <!-- <a href="https://www.instagram.com/max_chaveiro/">
-                  <img src="Recursos/assets/icon/icon_card_noticias/comment.png"alt="">
-                </a> -->
-
-              <a href="javascript:void(0)" onclick="share()">
-                <img src="Recursos/assets/icon/icon_card_noticias/share.png" alt="">
-              </a>
-            </div>
-          </div>
-          <div class="detail-box">
-            <h4>
-              Atendimento Personal
-            </h4>
-            <p>
-              Uma forma disposto a fazer o que for necessário
-              para atendê-lo da melhor maneira possível.
-            </p>
-            <div>
-              <a href="#contato">
-                Mais informação
-              </a>
             </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-4">
-        <div class="box">
-          <div class="img-box">
-            <img src="Recursos/assets/images/card_ultimas_noticias/n-3.png" alt="">
-          </div>
-          <div class="action-box">
-            <div class="action">
 
-              <a>
-                <button id="LikeButton3">
-                  <i class="fa fa-thumbs-up"></i>
-                  <p id="like-count3"><?php echo $likeCount3; ?></p>
-                </button>
-              </a>
-              <!-- <a href="https://www.instagram.com/max_chaveiro/">
+
+
+        <div class="col-md-4">
+          <div class="box">
+            <div class="img-box">
+              <img src="Recursos/assets/images/card_ultimas_noticias/n-2.png" alt="">
+            </div>
+            <div class="action-box">
+              <div class="action">
+
+
+                <a>
+                  <button id="LikeButton2">
+                    <i class="fa fa-thumbs-up"></i>
+                    <p id="like-count2"><?php echo $likeCount2; ?></p>
+                  </button>
+                </a>
+
+                <a href="javascript:void(0)" onclick="share()">
+                  <img src="Recursos/assets/icon/icon_card_noticias/share.png" alt="">
+                </a>
+
+                <a>
+                  <img class="like-icon2" src="Recursos/assets/icon/icon_card_noticias/comentario.png">
+                </a>
+
+
+              </div>
+            </div>
+
+            <div class="detail-box">
+              <h4>
+                Atendimento Personal
+              </h4>
+              <p>
+                Uma forma disposto a fazer o que for necessário
+                para atendê-lo da melhor maneira possível.
+              </p>
+              <div>
+                <a href="#contato">
+                  Mais informação
+                </a>
+              </div>
+
+                <a>
+                <form class="form2" action="php/add_comment2.php" method="post">
+                  <div id="comments2">
+                    <!-- Comentários serão carregados aqui -->
+                  </div>
+
+                  <div id="profile-picture2">
+                    <img src="Recursos/assets/icon/icon_card_noticias/padrao.png" id="profile-icon2">
+                    <select name="icon2" id="icon-select2" onchange="updateProfilePicture2(this.value)">
+                      <option value="padrao">Padrao</option>
+                      <option value="f">Feminino</option>
+                      <option value="m">Masculino</option>
+                    </select>
+                  </div>
+
+                  <input type="text" name="username2" placeholder="Seu primeiro nome" required>
+                  <textarea name="comment2" placeholder="Adicionar Comentario" required></textarea>
+                  <input type="submit" value="Adicionar">
+                </form>
+                </a>
+
+
+
+
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="box">
+            <div class="img-box">
+              <img src="Recursos/assets/images/card_ultimas_noticias/n-3.png" alt="">
+            </div>
+            <div class="action-box">
+              <div class="action">
+
+                <a>
+                  <button id="LikeButton3">
+                    <i class="fa fa-thumbs-up"></i>
+                    <p id="like-count3"><?php echo $likeCount3; ?></p>
+                  </button>
+                </a>
+                <!-- <a href="https://www.instagram.com/max_chaveiro/">
                   <img src="Recursos/assets/icon/icon_card_noticias/comment.png" alt="">
                 </a> -->
 
-              <a href="javascript:void(0)" onclick="share()">
-                <img src="Recursos/assets/icon/icon_card_noticias/share.png" alt="">
-              </a>
+                <a href="javascript:void(0)" onclick="share()">
+                  <img src="Recursos/assets/icon/icon_card_noticias/share.png" alt="">
+                </a>
+              </div>
             </div>
-          </div>
-          <div class="detail-box">
-            <h4>
-              Novos Equipamentos
-            </h4>
-            <p>
-              Temos novidades incríveis! Acabamos de receber uma nova linha de produtos que você vai adorar.
-            </p>
-            <div>
-              <a href="#contato">
-                Mais informação
-              </a>
+            <div class="detail-box">
+              <h4>
+                Novos Equipamentos
+              </h4>
+              <p>
+                Temos novidades incríveis! Acabamos de receber uma nova linha de produtos que você vai adorar.
+              </p>
+              <div>
+                <a href="#contato">
+                  Mais informação
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-</div>
-</section>
+  </section>
 
-<!-- fim da seção de notícias -->
-
+  <!-- fim da seção de notícias -->
 
 
-<!-- seção de informações -->
-<section class="info_section layout_padding">
-  <div class="container">
-    <div class="info_social">
-      <div>
-        <a href="https://www.facebook.com/Maximiano.jr">
-          <img src="Recursos/assets/icon/icon_card_info/facebook.png" alt="">
-        </a>
+
+  <!-- seção de informações -->
+  <section class="info_section layout_padding">
+    <div class="container">
+      <div class="info_social">
+        <div>
+          <a href="https://www.facebook.com/Maximiano.jr">
+            <img src="Recursos/assets/icon/icon_card_info/facebook.png" alt="">
+          </a>
+        </div>
+        <div>
+          <a href="mailto:max.prestacao@gmail.com?subject=Servico de chaves, fechaduras e abertura de automoveis.">
+            <img src="Recursos/assets/icon/icon_card_info/gmail.png" alt="">
+          </a>
+        </div>
+        <div>
+          <a href="https://wa.me/5535999853337?text=Serviço%20de%20chaves%20,%20fechaduras%20e%20abertura%20de%20automóveis%20.%20">
+            <img src="Recursos/assets/icon/icon_card_info/whatsapp.png" alt="">
+          </a>
+        </div>
+        <div>
+          <a href="https://www.instagram.com/max_chaveiro/">
+            <img src="Recursos/assets/icon/icon_card_info/instagram.png" alt="">
+          </a>
+        </div>
       </div>
       <div>
-        <a href="mailto:max.prestacao@gmail.com?subject=Servico de chaves, fechaduras e abertura de automoveis.">
-          <img src="Recursos/assets/icon/icon_card_info/gmail.png" alt="">
-        </a>
-      </div>
-      <div>
-        <a href="https://wa.me/5535999853337?text=Serviço%20de%20chaves%20,%20fechaduras%20e%20abertura%20de%20automóveis%20.%20">
-          <img src="Recursos/assets/icon/icon_card_info/whatsapp.png" alt="">
-        </a>
-      </div>
-      <div>
-        <a href="https://www.instagram.com/max_chaveiro/">
-          <img src="Recursos/assets/icon/icon_card_info/instagram.png" alt="">
-        </a>
+        <p>
+          Se você está precisa de uma chave nova para seu carro, vamos te fornecer a marca e modelo do carro e tomar as
+          medidas necessárias para cortar uma nova chave, e uma chave para sua casa, marca da fechadura e tomar as
+          medidas necessárias para cortar uma nova chave.
+        </p>
       </div>
     </div>
-    <div>
-      <p>
-        Se você está precisa de uma chave nova para seu carro, vamos te fornecer a marca e modelo do carro e tomar as
-        medidas necessárias para cortar uma nova chave, e uma chave para sua casa, marca da fechadura e tomar as
-        medidas necessárias para cortar uma nova chave.
-      </p>
+    <div class="info_social1">
+      <ul>
+        <!-- <li><a href="#">Inicio</a></li> -->
+        <li><a href="politica.php">Política de Privacidade</a></li>
+        <li><a href="termos.php">Termos e Condições</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Fim seção de informações -->
+
+  <!-- seção de rodapé -->
+  <section class="container-fluid footer_section">
+    <p>
+      Copyright &copy; 2023 Todos os direitos reservados por
+      Max Chaveiro
+    </p>
+
+    <p>
+      Copyright &copy; Desenvolvido por
+      <a href="https://www.instagram.com/samuelbarbosasl/">
+        Samuel Cauã Barbosa
+      </a>
+    </p>
+  </section>
+
+  <!-- seção de rodapé -->
+
+  <!-- seção de botão ao topo -->
+  <a href="#topo" class="scrollToTop">
+    <img src="Recursos/assets/icon/icon_topo/topo.png" alt="">
+  </a>
+
+
+  <!-- seção de botão ao topo -->
+
+  <!-- seção de cookis -->
+  <div class="wrapper">
+    <img src="Recursos/assets/icon/icon_cookis/cookie.png" alt="">
+    <div class="content">
+      <header>Consentimento de Cookies</header>
+      <p>Este site usa cookies para garantir que você obtenha a melhor experiência em nosso site.</p>
+      <div class="buttons">
+        <button class="item">Aceitar</button>
+        <a href="politica.php" class="item">Saiba mais</a>
+      </div>
     </div>
   </div>
-  <div class="info_social1">
-    <ul>
-      <!-- <li><a href="#">Inicio</a></li> -->
-      <li><a href="politica.php">Política de Privacidade</a></li>
-      <li><a href="termos.php">Termos e Condições</a></li>
-    </ul>
-  </div>
-</section>
-
-<!-- Fim seção de informações -->
-
-<!-- seção de rodapé -->
-<section class="container-fluid footer_section">
-  <p>
-    Copyright &copy; 2023 Todos os direitos reservados por
-    Max Chaveiro
-  </p>
-
-  <p>
-    Copyright &copy; Desenvolvido por
-    <a href="https://www.instagram.com/samuelbarbosasl/">
-      Samuel Cauã Barbosa
-    </a>
-  </p>
-</section>
-
-<!-- seção de rodapé -->
-
-<!-- seção de botão ao topo -->
-<a href="#topo" class="scrollToTop">
-  <img src="Recursos/assets/icon/icon_topo/topo.png" alt="">
-</a>
 
 
-<!-- seção de botão ao topo -->
-
-<!-- seção de cookis -->
-<div class="wrapper">
-  <img src="Recursos/assets/icon/icon_cookis/cookie.png" alt="">
-  <div class="content">
-    <header>Consentimento de Cookies</header>
-    <p>Este site usa cookies para garantir que você obtenha a melhor experiência em nosso site.</p>
-    <div class="buttons">
-      <button class="item">Aceitar</button>
-      <a href="politica.php" class="item">Saiba mais</a>
-    </div>
-  </div>
-</div>
-
-
-<script language="text/Javascript">
-  cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
-  function clearField(t) { //declaring the array outside of the
-    if (!cleared[t.id]) { // function makes it static and global
-      cleared[t.id] = 1; // you could use true and false, but that's more typing
-      t.value = ''; // with more chance of typos
-      t.style.color = '#fff';
+  <script language="text/Javascript">
+    cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
+    function clearField(t) { //declaring the array outside of the
+      if (!cleared[t.id]) { // function makes it static and global
+        cleared[t.id] = 1; // you could use true and false, but that's more typing
+        t.value = ''; // with more chance of typos
+        t.style.color = '#fff';
+      }
     }
-  }
-</script>
+  </script>
 
-<!-- seção de contador de likes-->
+  <!-- seção de contador de likes-->
 
-<!-- Bootstrap core JavaScript -->
-<script src="Recursos/assets/js/js_blibioteca/js/jquery/jquery.min.js"></script>
-<script type="text/javascript" src="Recursos/assets/js/js_blibioteca/js/jquery/jquery-3.4.1.min.js "></script>
-<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-<script type="text/javascript" src="Recursos/assets/js/boostrap/bootstrap.bundle.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script src="Recursos/assets/js/js_blibioteca/js/jquery/jquery.min.js"></script>
+  <script type="text/javascript" src="Recursos/assets/js/js_blibioteca/js/jquery/jquery-3.4.1.min.js "></script>
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+  <script type="text/javascript" src="Recursos/assets/js/boostrap/bootstrap.bundle.min.js"></script>
 
-<!-- Additional Scripts -->
-<script src="Recursos/assets/js/preloder.js"></script>
-<script src="Recursos/assets/js/share.js"></script>
-<script src="Recursos/assets/js/scrolltopo.js"></script>
-<script src="Recursos/assets/js/cookis.js "></script>
+  <!-- Additional Scripts -->
+  <script src="Recursos/assets/js/preloder.js"></script>
+  <script src="Recursos/assets/js/share.js"></script>
+  <script src="Recursos/assets/js/scrolltopo.js"></script>
+  <script src="Recursos/assets/js/cookis.js "></script>
 
-<!-- CArousel de produto -->
-<script src="Recursos/assets/js/custom.js"></script>
-<script src="Recursos/assets/js/owl.js"></script>
-<script src="Recursos/assets/js/isotope.js"></script>
-<script src="Recursos/assets/js/flex-slider.js"></script>
+  <!-- CArousel de produto -->
+  <script src="Recursos/assets/js/custom.js"></script>
+  <script src="Recursos/assets/js/owl.js"></script>
+  <script src="Recursos/assets/js/isotope.js"></script>
+  <script src="Recursos/assets/js/flex-slider.js"></script>
 
 
-<!-- Script de like para fazer a contagem -->
-<script src="Recursos/assets/js/armazena_like/like_1.js"></script>
-<script src="Recursos/assets/js/comments.js"></script>
+  <!-- Script de like para fazer a contagem -->
+  <script src="Recursos/assets/js/armazena_like/like_1.js"></script>
+  <script src="Recursos/assets/js/comments.js"></script>
+  <script src="Recursos/assets/js/comments2.js"></script>
 
-</body>
-</body>
+  </body>
+  </body>
 
 </html>

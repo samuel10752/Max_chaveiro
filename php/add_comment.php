@@ -16,4 +16,6 @@ if (isset($_POST["username"]) && isset($_POST["comment"])) {
   // Salva o arquivo de comentários
   file_put_contents("../Recursos/assets/comments/comments1.txt", $comments);
 }
+
 ?>
+
