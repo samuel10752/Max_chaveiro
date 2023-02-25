@@ -168,7 +168,7 @@
 
 
                 <a>
-                  <img class="like-icon" src="Recursos/assets/icon/icon_card_noticias/comentario.png">
+                  <img class="like-icon1" src="Recursos/assets/icon/icon_card_noticias/comentario.png">
                 </a>
 
 
@@ -195,7 +195,7 @@
                   </div>
 
                   <div id="profile-picture1">
-                    <img src="Recursos/assets/icon/icon_card_noticias/padrao.png" alt="" id="profile-icon">
+                    <img src="Recursos/assets/icon/icon_card_noticias/padrao.png"  id="profile-icon1">
                     <select name="icon1" id="icon-select1" onchange="updateProfilePicture1(this.value)">
                       <option value="padrao">Padrao</option>
                       <option value="f">Feminino</option>
@@ -472,9 +472,9 @@
 
   <!-- Script de like para fazer a contagem -->
   <script src="Recursos/assets/js/armazena_like/like_1.js"></script>
-  <script src="Recursos/assets/js/comments.js"></script>
+  <script src="Recursos/assets/js/comments1.js"></script>
   <script src="Recursos/assets/js/comments2.js"></script>
-  <script src="Recursos/assets/js/comments2.js"></script>
+  <script src="Recursos/assets/js/comments3.js"></script>
 
   </body>
   </body>

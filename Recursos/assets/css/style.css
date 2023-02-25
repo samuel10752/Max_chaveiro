@@ -860,9 +860,11 @@ a:focus {
 }
 
 .subscribe_section form button {
+  margin-left: 9px;
+  margin-top: 2px;
   border: none;
-  padding: 0 60px;
-  height: 40px;
+  padding: 0 70px;
+  height: 58px;
   border-radius: 35px;
   color: #ffffff;
   background-color: #0000ff;
@@ -1291,10 +1293,10 @@ a:focus {
 /* teste de comentario */
 
 #comments1 {
-  margin-left: -15%;
+  margin-left: -10%;
   font-size: 15px;
   margin-top: 1%;
-  width: 120%;
+  width: 105%;
   height: 200px;
   overflow-y: scroll;
   word-wrap: break-word;
@@ -1373,10 +1375,10 @@ input[type="submit"] {
 /* teste de comentario */
 
 #comments2 {
-  margin-left: -15%;
+  margin-left: -10%;
   font-size: 15px;
   margin-top: 1%;
-  width: 120%;
+  width: 105%;
   height: 200px;
   overflow-y: scroll;
   word-wrap: break-word;
@@ -1453,10 +1455,10 @@ input[type="submit"] {
 /* teste de comentario */
 
 #comments3 {
-  margin-left: -15%;
+  margin-left: -10%;
   font-size: 15px;
   margin-top: 1%;
-  width: 120%;
+  width: 105%;
   height: 200px;
   overflow-y: scroll;
   word-wrap: break-word;

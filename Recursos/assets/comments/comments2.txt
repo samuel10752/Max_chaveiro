@@ -1,3 +1,1 @@
-padrao s ola
-f sue ola
-m samue bolo
+f ola ola mundo
