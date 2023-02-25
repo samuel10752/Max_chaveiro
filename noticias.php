@@ -189,22 +189,22 @@
               </div>
 
               <a>
-                <form class="form" action="php/add_comment.php" method="post">
-                  <div id="comments">
+                <form class="form1" action="php/add_comment1.php" method="post">
+                  <div id="comments1">
                     <!-- Comentários serão carregados aqui -->
                   </div>
 
-                  <div id="profile-picture">
+                  <div id="profile-picture1">
                     <img src="Recursos/assets/icon/icon_card_noticias/padrao.png" alt="" id="profile-icon">
-                    <select name="icon" id="icon-select" onchange="updateProfilePicture(this.value)">
+                    <select name="icon1" id="icon-select1" onchange="updateProfilePicture1(this.value)">
                       <option value="padrao">Padrao</option>
                       <option value="f">Feminino</option>
                       <option value="m">Masculino</option>
                     </select>
                   </div>
 
-                  <input type="text" name="username" placeholder="Seu primeiro nome" required>
-                  <textarea name="comment" placeholder="Adicionar Comentario" required></textarea>
+                  <input type="text" name="username1" placeholder="Seu primeiro nome" required>
+                  <textarea name="comment1" placeholder="Adicionar Comentario" required></textarea>
                   <input type="submit" value="Adicionar">
                 </form>
               </a>
@@ -298,13 +298,16 @@
                     <p id="like-count3"><?php echo $likeCount3; ?></p>
                   </button>
                 </a>
-                <!-- <a href="https://www.instagram.com/max_chaveiro/">
-                  <img src="Recursos/assets/icon/icon_card_noticias/comment.png" alt="">
-                </a> -->
 
                 <a href="javascript:void(0)" onclick="share()">
                   <img src="Recursos/assets/icon/icon_card_noticias/share.png" alt="">
                 </a>
+
+
+                <a>
+                  <img class="like-icon3" src="Recursos/assets/icon/icon_card_noticias/comentario.png">
+                </a>
+
               </div>
             </div>
             <div class="detail-box">
@@ -321,6 +324,28 @@
               </div>
             </div>
           </div>
+          
+          <a>
+                <form class="form3" action="php/add_comment3.php" method="post">
+                  <div id="comments3">
+                    <!-- Comentários serão carregados aqui -->
+                  </div>
+
+                  <div id="profile-picture3">
+                    <img src="Recursos/assets/icon/icon_card_noticias/padrao.png" id="profile-icon3">
+                    <select name="icon3" id="icon-select3" onchange="updateProfilePicture3(this.value)">
+                      <option value="padrao">Padrao</option>
+                      <option value="f">Feminino</option>
+                      <option value="m">Masculino</option>
+                    </select>
+                  </div>
+
+                  <input type="text" name="username3" placeholder="Seu primeiro nome" required>
+                  <textarea name="comment3" placeholder="Adicionar Comentario" required></textarea>
+                  <input type="submit" value="Adicionar">
+                </form>
+                </a>
+
         </div>
       </div>
     </div>
@@ -448,6 +473,7 @@
   <!-- Script de like para fazer a contagem -->
   <script src="Recursos/assets/js/armazena_like/like_1.js"></script>
   <script src="Recursos/assets/js/comments.js"></script>
+  <script src="Recursos/assets/js/comments2.js"></script>
   <script src="Recursos/assets/js/comments2.js"></script>
 
   </body>

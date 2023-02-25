@@ -326,6 +326,12 @@
   <script src="Recursos/assets/js/scrolltopo.js"></script>
   <script src="Recursos/assets/js/cookis.js "></script>
 
+    <!-- CArousel de produto -->
+    <script src="Recursos/assets/js/custom.js"></script>
+  <script src="Recursos/assets/js/owl.js"></script>
+  <script src="Recursos/assets/js/isotope.js"></script>
+  <script src="Recursos/assets/js/flex-slider.js"></script>
+
 
   </body>
   </body>

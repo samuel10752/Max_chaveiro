@@ -13,7 +13,7 @@
   }
 
 
-  form {
+  form1 {
     max-width: 350px;
   }
 
@@ -27,7 +27,7 @@
 
 @media (max-width: 1200px) {
 
-  form {
+  form1 {
     max-width: 250px;
   }
 
@@ -72,7 +72,7 @@
     margin: 1px 0 5px 0;
   }
 
-  form {
+  form1 {
     max-width: 300px;
   }
 
@@ -187,7 +187,7 @@ font-size: 15px;
     margin: 0 5px;
   }
 
-  form {
+  form1 {
     max-width: 200px;
   }
 
@@ -264,7 +264,7 @@ font-size: 10px;
     margin: 0 5px;
   }
 
-  form {
+  form1 {
     min-width: 500px;
   }
 
@@ -338,7 +338,7 @@ font-size: 10px;
     margin: 0 5px;
   }
 
-  form {
+  form1 {
     width: 530px;
   }
 
@@ -395,7 +395,7 @@ font-size: 10px;
   }
 
   
-  form {
+  form1 {
     min-width: 430px;
   }
 
@@ -431,7 +431,7 @@ font-size: 10px;
     display: none;
   }
 
-  form {
+  form1 {
     min-width: 380px;
   }
 
@@ -466,7 +466,7 @@ font-size: 10px;
     margin-left: -70%;
   }
 
-  form {
+  form1 {
     min-width: 300px;
   }
 
