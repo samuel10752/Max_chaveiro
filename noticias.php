@@ -463,12 +463,6 @@
   <script src="Recursos/assets/js/scrolltopo.js"></script>
   <script src="Recursos/assets/js/cookis.js "></script>
 
-  <!-- CArousel de produto -->
-  <script src="Recursos/assets/js/custom.js"></script>
-  <script src="Recursos/assets/js/owl.js"></script>
-  <script src="Recursos/assets/js/isotope.js"></script>
-  <script src="Recursos/assets/js/flex-slider.js"></script>
-
 
   <!-- Script de like para fazer a contagem -->
   <script src="Recursos/assets/js/armazena_like/like_1.js"></script>

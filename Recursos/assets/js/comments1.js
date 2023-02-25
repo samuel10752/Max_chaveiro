@@ -5,8 +5,8 @@ function updateProfilePicture1(icon1) {
   
   // Função para exibir/ocultar o formulário de comentários
   document.querySelector('.like-icon1').addEventListener('click', function () {
-    var form1 = document.querySelector('.form1');
-    form1.style.display = form1.style.display === 'none' ? 'block' : 'none';
+    var form = document.querySelector('.form1');
+    form.style.display = form.style.display === 'none' ? 'block' : 'none';
   });
   
   // Função para carregar os comentários
