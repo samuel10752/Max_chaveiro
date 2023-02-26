@@ -21,7 +21,6 @@
   <link rel="stylesheet" href="Recursos/assets/css/fontawesome.css">
   <link rel="stylesheet" href="Recursos/assets/css/tooplate-main.css">
   <link rel="stylesheet" href="Recursos/assets/css/owl.css">
-
   <!-- slider stylesheet -->
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
 
@@ -137,6 +136,8 @@
         </div>
       </div>
     </div>
+    <br>
+    <br>
 
     <!-- Page Content -->
     <!-- Single Starts Here -->

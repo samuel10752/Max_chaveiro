@@ -122,6 +122,7 @@
         </nav>
       </div>
     </header>
+    
     <!-- fim da seção do cabeçalho -->
     <!-- seção deslizante -->
     <section class=" slider_section position-relative">
