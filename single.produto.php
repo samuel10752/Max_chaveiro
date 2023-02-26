@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 
 <head>
   <!-- Basico -->
@@ -13,10 +13,11 @@
   <meta name="description" content="" />
   <meta name="author" content="" />
 
-  <title>Max Chaveiro</title>
+  <title>Pixie - Product Detail</title>
 
-  <link rel="stylesheet" href="Recursos/assets/css/flex-slider.css">
+
   <!-- Additional CSS Files -->
+  <link rel="stylesheet" href="Recursos/assets/css/flex-slider.css">
   <link rel="stylesheet" href="Recursos/assets/css/fontawesome.css">
   <link rel="stylesheet" href="Recursos/assets/css/tooplate-main.css">
   <link rel="stylesheet" href="Recursos/assets/css/owl.css">
@@ -33,6 +34,7 @@
   <link href="Recursos/assets/css/style.css" rel="stylesheet" />
   <!-- responsivel style -->
   <link href="Recursos/assets/css/responsive.css" rel="stylesheet" />
+
 </head>
 
 <body>
@@ -66,6 +68,7 @@
   </div>
 
   <!-- fim do preloader -->
+
 
   <div class="hero_area" id="topo">
 
@@ -123,62 +126,95 @@
       </div>
     </header>
     <!-- fim da seção do cabeçalho -->
-    <!-- seção deslizante -->
-    <section class=" slider_section position-relative">
 
-      <div class="slider_bg-container">
-
-      </div>
-      <div class="slider-container">
-
-        <div class="detail-box">
-          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-            <span class="sr-only">Next</span>
-          </a>
-          <h1>
-            Está Precisando <br>
-            De Uma Copia? <br>
-            Temos Aqui!
-          </h1>
-          <p>
-            Oferecemos serviços de segurança, fechadura de alta qualidade, <br>
-            portas, janelas e automoveis.
-
-          </p>
-          <div>
-            <a href="contato.php" class="slider-link">
-              Contato
-            </a>
+    <!-- Pre Header -->
+    <div id="pre-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <span>Suspendisse laoreet magna vel diam lobortis imperdiet</span>
           </div>
         </div>
-        <div class="img-box">
-          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="Recursos/assets/images/card/card_chaveiro_1.jpg" alt="">
+      </div>
+    </div>
+
+    <!-- Page Content -->
+    <!-- Single Starts Here -->
+    <div class="single-product">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-heading">
+              <div class="line-dec"></div>
+              <h1>Single Product</h1>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="product-slider">
+              <div id="slider" class="flexslider">
+                <ul class="slides">
+                  <li>
+                    <img src="Recursos/assets/images/card_produtos/produto-1.png" />
+                  </li>
+                  <li>
+                    <img src="Recursos/assets/images/card_produtos/produto-1.png" />
+                  </li>
+                  <li>
+                    <img src="Recursos/assets/images/card_produtos/produto-1.png" />
+                  </li>
+                  <li>
+                    <img src="Recursos/assets/images/card_produtos/produto-1.png" />
+                  </li>
+                  <!-- items mirrored twice, total of 12 -->
+                </ul>
               </div>
-              <div class="carousel-item">
-                <img src="Recursos/assets/images/card/card_chaveiro_2.jpg" alt="">
-              </div>
-              <div class="carousel-item">
-                <img src="Recursos/assets/images/card/card_chaveiro_3.jpg" alt="">
+              <div id="carousel" class="flexslider">
+                <ul class="slides">
+                  <li>
+                    <img src="Recursos/assets/images/card_produtos/produto-1.png" />
+                  </li>
+                  <li>
+                    <img src="Recursos/assets/images/card_produtos/produto-1.png" />
+                  </li>
+                  <li>
+                    <img src="Recursos/assets/images/card_produtos/produto-1.png" />
+                  </li>
+                  <li>
+                    <img src="Recursos/assets/images/card_produtos/produto-1.png" />
+                  </li>
+                  <!-- items mirrored twice, total of 12 -->
+                </ul>
               </div>
             </div>
-
           </div>
-
+          <div class="col-md-6">
+            <div class="right-content">
+              <h4>Single Product Name</h4>
+              <h6>$55.00</h6>
+              <p>Proin commodo, diam a ultricies sagittis, erat odio rhoncus metus, eu feugiat lorem lacus aliquet arcu. Curabitur in gravida nisi, non placerat nibh. Praesent sit amet diam ultrices, commodo turpis id, dignissim leo. Suspendisse mauris massa, porttitor non fermentum vel, ullamcorper scelerisque velit. </p>
+              <span>7 left on stock</span>
+              <form action="" method="get">
+                <label for="quantity">Quantity:</label>
+                <input name="quantity" type="quantity" class="quantity-text" id="quantity" onfocus="if(this.value == '1') { this.value = ''; }" onBlur="if(this.value == '') { this.value = '1';}" value="1">
+                <input type="submit" class="button" value="Order Now!">
+              </form>
+              <div class="down-content">
+                <div class="categories">
+                  <h6>Category: <span><a href="#">Pants</a>,<a href="#">Women</a>,<a href="#">Lifestyle</a></span></h6>
+                </div>
+                <div class="share">
+                  <h6>Share: <span><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-linkedin"></i></a><a href="#"><i class="fa fa-twitter"></i></a></span></h6>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-
-    </section>
-    <!-- fim da seção do controle deslizante -->
-  </div>
+    </div>
+    <!-- Single Page Ends Here -->
 
 
-  <!-- Featured Starts Here -->
+   <!-- Featured Starts Here -->
   <div class="featured-items">
     <div class="container">
       <div class="row">
@@ -260,154 +296,44 @@
   </div>
 
 
-  <!-- seção de inscrição -->
 
-  <section class="subscribe_section layout_padding">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4">
-          <h2>
-            Assine nosso <br>
-            <span>
-              Boletim de Notícias
-            </span>
-          </h2>
-        </div>
-        <div class="col-md-8">
-          <form action="https://formsubmit.co/el/hopuja">
-            <input type="text" placeholder="Inseri seu e-mail">
-            <button type="submit">
-              inscrever
-            </button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- fim da seção de assinatura -->
-
-  <!-- seção do cliente -->
-
-  <section class="client_section layout_padding">
-    <div class="container">
-      <div class="custom_heading-container">
-        <h2 id="clientes">
-          O QUE DIZEM NOSSOS CLIENTES
-        </h2>
-        <hr>
-      </div>
-      <div class="client_container layout_padding-top">
-        <div id="carouselExample2Controls" class="carousel slide" data-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <div class="box">
-                <div class="detail-box">
-                  <p>
-                    Eu fiquei muito satisfeito com o serviço prestado, tudo foi feito com muita rapidez e eficiência.
-                    Essa equipe foi incrível, sempre disponível para me ajudar e resolver qualquer problema.
-                  </p>
-                </div>
-                <div class="client-id">
-                  <div class="img-box">
-                    <img src="Recursos/assets/images/card_clientes/cliente_1.png" alt="">
-                  </div>
-                  <div class="name">
-                    <h5>
-                      STEPHANIE
-                    </h5>
-                    <h6>
-                      Advogada
-                    </h6>
-                  </div>
-                </div>
-              </div>
+    <!-- Subscribe Form Starts Here -->
+    <!-- <div class="subscribe-form">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-heading">
+              <div class="line-dec"></div>
+              <h1>Subscribe on PIXIE now!</h1>
             </div>
-            <div class="carousel-item">
-              <div class="box">
-                <div class="detail-box">
-                  <p>
-                    A qualidade do serviço foi excepcional, eu recomendo a todos,
-                    fiquei impressionado com a atenção aos detalhes e a dedicação da equipe,
-                    mas a equipe foi incansável em me ajudar a entender tudo.
-                  </p>
-                </div>
-                <div class="client-id">
-                  <div class="img-box">
-                    <img src="Recursos/assets/images/card_clientes/cliente_2.png" alt="">
+          </div>
+          <div class="col-md-8 offset-md-2">
+            <div class="main-content">
+              <p>Godard four dollar toast prism, authentic heirloom raw denim messenger bag gochujang put a bird on it celiac readymade vice.</p>
+              <div class="container">
+                <form id="subscribe" action="" method="get">
+                  <div class="row">
+                    <div class="col-md-7">
+                      <fieldset>
+                        <input name="email" type="text" class="form-control" id="email" onfocus="if(this.value == 'Your Email...') { this.value = ''; }" onBlur="if(this.value == '') { this.value = 'Your Email...';}" value="Your Email..." required="">
+                      </fieldset>
+                    </div>
+                    <div class="col-md-5">
+                      <fieldset>
+                        <button type="submit" id="form-submit" class="button">Subscribe Now!</button>
+                      </fieldset>
+                    </div>
                   </div>
-                  <div class="name">
-                    <h5>
-                      Kelly Maximiano
-                    </h5>
-                    <h6>
-                      Empresaria
-                    </h6>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="box">
-                <div class="detail-box">
-                  <p>
-                    A qualidade do serviço foi excepcional, eu recomendo a todos,
-                    fiquei impressionado com a atenção aos detalhes e a dedicação da equipe,
-                    mas a equipe foi incansável em me ajudar a entender tudo.
-                  </p>
-                </div>
-                <div class="client-id">
-                  <div class="img-box">
-                    <img src="Recursos/assets/images/card_clientes/cliente_4.png" alt="">
-                  </div>
-                  <div class="name">
-                    <h5>
-                      Suellen Barbosa
-                    </h5>
-                    <h6>
-                      Técnica em Marketing
-                    </h6>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="box">
-                <div class="detail-box">
-                  <p>
-                    Eu não poderia estar mais satisfeito com o serviço prestado, tudo foi além das minhas expectativas,
-                    a equipe foi incrivelmente profissional e sempre disponível para me ajudar,
-                    nunca tive um serviço tão bom, eu recomendo a todos.
-                  </p>
-                </div>
-                <div class="client-id">
-                  <div class="img-box">
-                    <img src="Recursos/assets/images/card_clientes/cliente_3.png" alt="">
-                  </div>
-                  <div class="name">
-                    <h5>
-                      Edgard Barbosa
-                    </h5>
-                    <h6>
-                      Barbeiro Profissiona
-                    </h6>
-                  </div>
-                </div>
+                </form>
               </div>
             </div>
           </div>
-          <a class="carousel-control-prev" href="#carouselExample2Controls" role="button" data-slide="prev">
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#carouselExample2Controls" role="button" data-slide="next">
-            <span class="sr-only">Next</span>
-          </a>
         </div>
-
       </div>
-    </div>
-  </section>
-  <!-- seção do cliente final -->
+    </div> -->
+    <!-- Subscribe Form Ends Here -->
+
+
 
   <!-- seção de informações -->
   <section class="info_section layout_padding">
@@ -503,27 +429,41 @@
     }
   </script>
 
-  <!-- seção de contador de likes-->
+    </script>
 
-  <!-- Bootstrap core JavaScript -->
-  <script src="Recursos/assets/js/js_blibioteca/js/jquery/jquery.min.js"></script>
-  <script type="text/javascript" src="Recursos/assets/js/js_blibioteca/js/jquery/jquery-3.4.1.min.js "></script>
-  <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-  <script type="text/javascript" src="Recursos/assets/js/boostrap/bootstrap.bundle.min.js"></script>
+    <!-- seção de contador de likes-->
 
-  <!-- Additional Scripts -->
-  <script src="Recursos/assets/js/preloder.js"></script>
-  <script src="Recursos/assets/js/share.js"></script>
-  <script src="Recursos/assets/js/scrolltopo.js"></script>
-  <script src="Recursos/assets/js/cookis.js "></script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="Recursos/assets/js/js_blibioteca/js/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="Recursos/assets/js/js_blibioteca/js/jquery/jquery-3.4.1.min.js "></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script type="text/javascript" src="Recursos/assets/js/boostrap/bootstrap.bundle.min.js"></script>
 
-  <!-- CArousel de produto -->
-  <script src="Recursos/assets/js/custom.js"></script>
-  <script src="Recursos/assets/js/owl.js"></script>
-  <script src="Recursos/assets/js/isotope.js"></script>
-  <script src="Recursos/assets/js/flex-slider.js"></script>
 
-</body>
+    <!-- Additional Scripts -->
+    <script src="Recursos/assets/js/preloder.js"></script>
+    <script src="Recursos/assets/js/share.js"></script>
+    <script src="Recursos/assets/js/scrolltopo.js"></script>
+    <script src="Recursos/assets/js/cookis.js "></script>
+
+    <!-- CArousel de produto -->
+    <script src="Recursos/assets/js/custom.js"></script>
+    <script src="Recursos/assets/js/owl.js"></script>
+    <script src="Recursos/assets/js/isotope.js"></script>
+    <script src="Recursos/assets/js/flex-slider.js"></script>
+
+    <script language="text/Javascript">
+      cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
+      function clearField(t) { //declaring the array outside of the
+        if (!cleared[t.id]) { // function makes it static and global
+          cleared[t.id] = 1; // you could use true and false, but that's more typing
+          t.value = ''; // with more chance of typos
+          t.style.color = '#fff';
+        }
+      }
+    </script>
+
+
 </body>
 
 </html>
