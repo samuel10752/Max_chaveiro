@@ -191,63 +191,63 @@
         </div>
         <div class="col-md-12">
           <div class="owl-carousel owl-theme">
-            <a href="single.produto.php">
+            <a href="p/produto_1.php">
               <div class="featured-item">
-                <img src="Recursos/assets/images/card_produtos/produto-1.png" alt="Item 1">
-                <h4>Proin vel ligula</h4>
-                <h6>R$15.00</h6>
+                <img src="Recursos/assets/images/card_produtos/Chaveiro_Luxo/chaveiro.png" alt="Item 1">
+                <h4>Chaveiro Luxo Couro Nissan</h4>
+                <h6>R$65.00</h6>
               </div>
             </a>
-            <a href="single.produto.php">
+            <a href="p/single-2.php">
               <div class="featured-item">
                 <img src="Recursos/assets/images/card_produtos/produto-2.png" alt="Item 2">
                 <h4>Erat odio rhoncus</h4>
                 <h6>R$25.00</h6>
               </div>
             </a>
-            <a href="single.produto.php">
+            <a href="p/single-3.php">
               <div class="featured-item">
                 <img src="Recursos/assets/images/card_produtos/produto-3.png" alt="Item 3">
                 <h4>Integer vel turpis</h4>
                 <h6>R$35.00</h6>
               </div>
             </a>
-            <a href="single.produto.php">
+            <a href="p/single-4.php">
               <div class="featured-item">
                 <img src="Recursos/assets/images/card_produtos/produto-4.png" alt="Item 4">
                 <h4>Sed purus quam</h4>
                 <h6>R$45.00</h6>
               </div>
             </a>
-            <a href="single.produto.php">
+            <a href="p/single-5.php">
               <div class="featured-item">
                 <img src="Recursos/assets/images/card_produtos/produto-5.png" alt="Item 5">
                 <h4>Morbi aliquet</h4>
                 <h6>R$55.00</h6>
               </div>
             </a>
-            <a href="single.produto.php">
+            <a href="p/single-6.php">
               <div class="featured-item">
                 <img src="Recursos/assets/images/card_produtos/produto-6.png" alt="Item 6">
                 <h4>Urna ac diam</h4>
                 <h6>R$65.00</h6>
               </div>
             </a>
-            <a href="single.produto.php">
+            <a href="p/single-7.php">
               <div class="featured-item">
                 <img src="Recursos/assets/images/card_produtos/produto-1.png" alt="Item 7">
                 <h4>Proin eget imperdiet</h4>
                 <h6>R$75.00</h6>
               </div>
             </a>
-            <a href="single.produto.php">
+            <a href="p/single-8.php">
               <div class="featured-item">
                 <img src="Recursos/assets/images/card_produtos/produto-2.png" alt="Item 8">
                 <h4>Nullam risus nisl</h4>
                 <h6>R$85.00</h6>
               </div>
             </a>
-            <a href="single.produto.php">
+            <a href="p/single-9.php">
               <div class="featured-item">
                 <img src="Recursos/assets/images/card_produtos/produto-3.png" alt="Item 9">
                 <h4>Cras tempus</h4>

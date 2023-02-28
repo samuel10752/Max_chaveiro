@@ -415,7 +415,8 @@
 	border: 1px solid #eee;
 }
 .single-product .right-content .button {
-	margin-left: 15px;
+	margin-top: 10px;
+	margin-left: 0px;
 	cursor: pointer;
 	background-color: #3a8bcd;
 	outline: none;
