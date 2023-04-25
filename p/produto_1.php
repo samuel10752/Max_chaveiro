@@ -293,6 +293,11 @@ function sendToWhatsApp() {
   window.open(link, '_blank');
   document.getElementById("shipping-cost").innerHTML = `R$${valorFrete.toFixed(2)}`;
   document.getElementById("total-cost").innerHTML = `R$${valorTotal.toFixed(2)}`;
+
+  document.getElementById("comprar").addEventListener("click", function() {
+  sendToWhatsApp();
+});
+
 }
 
 

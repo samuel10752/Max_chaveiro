@@ -159,13 +159,13 @@
           <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="Recursos/assets/images/card/card_chaveiro_1.jpg" alt="">
+                <img src="Recursos/assets/images/card/card_1.png" alt="card1">
               </div>
               <div class="carousel-item">
-                <img src="Recursos/assets/images/card/card_chaveiro_2.jpg" alt="">
+                <img src="Recursos/assets/images/card/card_2.png" alt="card2">
               </div>
               <div class="carousel-item">
-                <img src="Recursos/assets/images/card/card_chaveiro_3.jpg" alt="">
+                <img src="Recursos/assets/images/card/card_1.png" alt="card3">
               </div>
             </div>
 
