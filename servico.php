@@ -225,23 +225,22 @@
       <div class="info_social">
         <div>
           <a href="https://www.facebook.com/Maximiano.jr">
-            <img src="Recursos/assets/icon/icon_card_info/facebook.png" alt="">
+            <img src="Recursos/assets/icon/icon_card_info/fb.png" alt="">
           </a>
         </div>
-        <div>
+        <!-- <div>
           <a href="mailto:max.prestacao@gmail.com?subject=Servico de chaves, fechaduras e abertura de automoveis.">
             <img src="Recursos/assets/icon/icon_card_info/gmail.png" alt="">
           </a>
-        </div>
+        </div> -->
         <div>
-          <a
-            href="https://wa.me/5535999853337?text=Serviço%20de%20chaves%20,%20fechaduras%20e%20abertura%20de%20automóveis%20.%20">
-            <img src="Recursos/assets/icon/icon_card_info/whatsapp.png" alt="">
+          <a href="https://wa.me/5535999853337?text=Serviço%20de%20chaves%20,%20fechaduras%20e%20abertura%20de%20automóveis%20.%20">
+            <img src="Recursos/assets/icon/icon_card_info/whats.png" alt="">
           </a>
         </div>
         <div>
           <a href="https://www.instagram.com/max_chaveiro/">
-            <img src="Recursos/assets/icon/icon_card_info/instagram.png" alt="">
+            <img src="Recursos/assets/icon/icon_card_info/insta.png" alt="">
           </a>
         </div>
       </div>

@@ -219,27 +219,36 @@
               <p>
 
                 Bem-vindo à LOJA OFICIAL Max Chaveiro! Oferecemos PRONTA ENTREGA, NOTA FISCAL e ENVIO PARA TODO O BRASIL com uma GARANTIA DE 90 DIAS.
+                <br>                <br>
                 Se você está procurando um chaveiro elegante e estiloso para transportar suas chaves Nissan, nosso chaveiro em Couro e Liga de Zinco com o logo da Nissan é o acessório indispensável.
+                <br>                <br>
                 A liga de Zinco é resistente à corrosão, tração, choques e desgaste e tem uma tonalidade cinza, perfeita para chave Nissan Frontier, Versa, Kicks, Sentra, March e Leaf.
+                <br>                <br>
                 O chaveiro tem uma altura de 9cm e largura de 2,3cm e vem com um chave de fenda miniatura.
-                Compre com confiança sabendo que você receberá um produto de qualidade com NOTA FISCAL e garantia.
+                <br>                <br>
+                Compre com confiança sabendo que você receberá um produto de qualidade com NOTA FISCAL e garantia.]
+                <br>                <br>
                 Entre em contato conosco se tiver alguma dúvida e teremos o prazer de ajudá-lo.
+                <br>
                 Att Max Chaveiro.</p>
               <span>25 deixado em estoque</span>
+
               <form>
-                <label for="quantity">Quantidade:</label>
-                <input name="quantity" type="quantity" class="quantity-text" id="quantity" onfocus="if(this.value == '1') { this.value = ''; }" onBlur="if(this.value == '') { this.value = '1';}" value="1">
-                <label for="cep">Digite o CEP:</label>
-                <input type="text" id="cep" name="cep" required>
+    <label for="quantity">Quantidade:</label>
+    <input name="quantity" type="quantity" class="quantity-text" id="quantity" onfocus="if(this.value == '1') { this.value = ''; }" onBlur="if(this.value == '') { this.value = '1';}" value="1">
+    <label for="cep">Digite o CEP:</label>
+    <input type="text" id="cep" name="cep" required>
 
-                <button type="button" class="button" onclick="calcularFrete()">Calcular Frete</button>
-                <button type="button" class="button" onclick="sendToWhatsApp()">Comprar!</button>
+    <button type="button" class="button" id="calcular-btn">Calcular Frete</button>
 
-                <p>Valor do produto: R$65,00</p>
-                <p>Valor do frete: <span id="shipping-cost">R$ 0,00</span></p>
-                <p>Valor total da compra: <span id="total-cost">R$65,00</span></p>
+    <button type="button" class="button" onclick="sendToWhatsApp()">Comprar!</button>
 
-              </form>
+    <p>Valor do produto: R$65,00</p>
+    <p>Valor do frete: <span id="shipping-cost">R$ 0,00</span></p>
+    <p>Valor total da compra: <span id="total-cost">R$65,00</span></p>
+
+  </form>
+              
               <div class="down-content">
                 <div class="categories">
                   <h6>Categoria: <span><a href="#">Chaveiro</a>,<a href="#">Acessórios para Veículos</a>,<a href="#">Merchandising</a></span></h6>
@@ -272,62 +281,72 @@
       </div>
     </div>
 
-
     <script>
-function sendToWhatsApp() {
-  var productName = "Chaveiro Luxo Couro Nissan";
-  var productPrice = "R$65.00";
-  var quantity = document.getElementById("quantity").value;
-  var cep = document.getElementById("cep").value;
-  const cepRegex = /^\d{5}-?\d{3}$/;
-  if (!cepRegex.test(cep)) {
-    alert("CEP inválido");
-    return;
-  }
-  const valorFrete = 30.00;
-  const valorProduto = 65.00;
-  const valorTotal = valorProduto + valorFrete;
-  var message = "Olá, gostaria de comprar " + quantity + " " + productName + " por " + productPrice + ". Meu CEP é " + cep + " e o valor total com frete é R$" + valorTotal.toFixed(2) + ". Veja o produto aqui: https://maxchaveiro.lovestoblog.com/single.produto.php";
-  var encodedMessage = encodeURIComponent(message);
-  var link = "https://web.whatsapp.com/send?phone=5535999853337&text=" + encodedMessage;
-  window.open(link, '_blank');
-  document.getElementById("shipping-cost").innerHTML = `R$${valorFrete.toFixed(2)}`;
-  document.getElementById("total-cost").innerHTML = `R$${valorTotal.toFixed(2)}`;
+    // ...
+    
+    function sendToWhatsApp() {
+      var productName = "Chaveiro Luxo Couro Nissan";
+      var productPrice = "R$65.00";
+      var quantity = document.getElementById("quantity").value;
+      var cep = document.getElementById("cep").value;
+      const cepRegex = /^\d{5}-?\d{3}$/;
+      if (!cepRegex.test(cep)) {
+        alert("CEP inválido");
+        return;
+      }
 
-  document.getElementById("comprar").addEventListener("click", function() {
-  sendToWhatsApp();
-});
+      const valorFrete = parseFloat(document.getElementById("shipping-cost").innerText.slice(2));
+      const valorTotal = parseFloat(document.getElementById("total-cost").innerText.slice(2));
 
-}
+      var message = "Olá, gostaria de comprar " + quantity + " " + productName + " por " + productPrice + ". Meu CEP é " + cep + " e o valor total com frete é R$" + valorTotal.toFixed(2) + ". Veja o produto aqui: https://maxchaveiro.lovestoblog.com/single.produto.php";
+      var encodedMessage = encodeURIComponent(message);
+      var link = "https://web.whatsapp.com/send?phone=5535999853337&text=" + encodedMessage;
+      window.open(link, '_blank');
+    }
 
-
-    </script>
+    // ...
+  </script>
 
 <script>
+  const calcularBtn = document.getElementById("calcular-btn");
+  calcularBtn.addEventListener("click", calcularFreteOnce);
 
-function calcularFrete() {
-  const cep = document.getElementById("cep").value;
-  
-  // Verifica se o CEP é válido
-  const cepRegex = /^\d{5}-?\d{3}$/;
-  if (!cepRegex.test(cep)) {
-    alert("CEP inválido");
-    return;
+  async function calcularFreteOnce() {
+    await calcularFrete();
+    calcularBtn.removeEventListener("click", calcularFreteOnce);
   }
-  
-  // Define o valor fixo do frete
-  const valorFrete = 30.00;
-  
-  // Calcula o valor total da compra
-  const valorProduto = 65.00;
-  const valorTotal = valorProduto + valorFrete;
-  
-  // Exibe os valores na página
-  document.getElementById("shipping-cost").innerHTML = `R$${valorFrete.toFixed(2)}`;
-  document.getElementById("total-cost").innerHTML = `R$${valorTotal.toFixed(2)}`;
-}
 
+  async function calcularFrete() {
+    const cep = document.getElementById("cep").value;
 
+    // Verifica se o CEP é válido
+    const cepRegex = /^\d{5}-?\d{3}$/;
+    if (!cepRegex.test(cep)) {
+      alert("CEP inválido");
+      return;
+    }
+
+    // Consulta a API do ViaCEP para obter informações sobre o CEP
+    const response = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
+    const cepData = await response.json();
+
+    if (cepData.erro) {
+      alert("CEP não encontrado");
+      return;
+    }
+
+    // Simula o cálculo do frete com base na distância entre o vendedor e o cliente
+    const distancia = Math.floor(Math.random() * 500); // Distância em km
+    const valorFrete = 2.00 * distancia; // R$2,00 por km
+
+    // Calcula o valor total da compra
+    const valorProduto = 65.00;
+    const valorTotal = valorProduto + valorFrete;
+
+    // Exibe os valores na página
+    document.getElementById("shipping-cost").innerHTML = `R$${valorFrete.toFixed(2)}`;
+    document.getElementById("total-cost").innerHTML = `R$${valorTotal.toFixed(2)}`;
+  }
 </script>
     <!-- Single Page Ends Here -->
 
@@ -415,85 +434,47 @@ function calcularFrete() {
 
 
 
-    <!-- Subscribe Form Starts Here -->
-    <!-- <div class="subscribe-form">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="section-heading">
-              <div class="line-dec"></div>
-              <h1>Subscribe on PIXIE now!</h1>
-            </div>
-          </div>
-          <div class="col-md-8 offset-md-2">
-            <div class="main-content">
-              <p>Godard four dollar toast prism, authentic heirloom raw denim messenger bag gochujang put a bird on it celiac readymade vice.</p>
-              <div class="container">
-                <form id="subscribe" action="" method="get">
-                  <div class="row">
-                    <div class="col-md-7">
-                      <fieldset>
-                        <input name="email" type="text" class="form-control" id="email" onfocus="if(this.value == 'Your Email...') { this.value = ''; }" onBlur="if(this.value == '') { this.value = 'Your Email...';}" value="Your Email..." required="">
-                      </fieldset>
-                    </div>
-                    <div class="col-md-5">
-                      <fieldset>
-                        <button type="submit" id="form-submit" class="button">Subscribe Now!</button>
-                      </fieldset>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
-    <!-- Subscribe Form Ends Here -->
-
-
-
     <!-- seção de informações -->
-    <section class="info_section layout_padding">
-      <div class="container">
-        <div class="info_social">
-          <div>
-            <a href="https://www.facebook.com/Maximiano.jr">
-              <img src="../Recursos/assets/icon/icon_card_info/facebook.png" alt="">
-            </a>
-          </div>
-          <div>
-            <a href="mailto:max.prestacao@gmail.com?subject=Servico de chaves, fechaduras e abertura de automoveis.">
-              <img src="../Recursos/assets/icon/icon_card_info/gmail.png" alt="">
-            </a>
-          </div>
-          <div>
-            <a href="https://wa.me/5535999853337?text=Serviço%20de%20chaves%20,%20fechaduras%20e%20abertura%20de%20automóveis%20.%20">
-              <img src="../Recursos/assets/icon/icon_card_info/whatsapp.png" alt="">
-            </a>
-          </div>
-          <div>
-            <a href="https://www.instagram.com/max_chaveiro/">
-              <img src="../Recursos/assets/icon/icon_card_info/instagram.png" alt="">
-            </a>
-          </div>
+  <section class="info_section layout_padding">
+    <div class="container">
+      <div class="info_social">
+        <div>
+          <a href="https://www.facebook.com/Maximiano.jr">
+            <img src="../Recursos/assets/icon/icon_card_info/fb.png" alt="">
+          </a>
+        </div>
+        <!-- <div>
+          <a href="mailto:max.prestacao@gmail.com?subject=Servico de chaves, fechaduras e abertura de automoveis.">
+            <img src="Recursos/assets/icon/icon_card_info/gmail.png" alt="">
+          </a>
+        </div> -->
+        <div>
+          <a href="https://wa.me/5535999853337?text=Serviço%20de%20chaves%20,%20fechaduras%20e%20abertura%20de%20automóveis%20.%20">
+            <img src="../Recursos/assets/icon/icon_card_info/whats.png" alt="">
+          </a>
         </div>
         <div>
-          <p>
-            Se você está precisa de uma chave nova para seu carro, vamos te fornecer a marca e modelo do carro e tomar as
-            medidas necessárias para cortar uma nova chave, e uma chave para sua casa, marca da fechadura e tomar as
-            medidas necessárias para cortar uma nova chave.
-          </p>
+          <a href="https://www.instagram.com/max_chaveiro/">
+            <img src="../Recursos/assets/icon/icon_card_info/insta.png" alt="">
+          </a>
         </div>
       </div>
-      <div class="info_social1">
-        <ul>
-          <!-- <li><a href="#">Inicio</a></li> -->
-          <li><a href="../politica.php">Política de Privacidade</a></li>
-          <li><a href="../termos.php">Termos e Condições</a></li>
-        </ul>
+      <div>
+        <p>
+          Se você está precisa de uma chave nova para seu carro, vamos te fornecer a marca e modelo do carro e tomar as
+          medidas necessárias para cortar uma nova chave, e uma chave para sua casa, marca da fechadura e tomar as
+          medidas necessárias para cortar uma nova chave.
+        </p>
       </div>
-    </section>
+    </div>
+    <div class="info_social1">
+      <ul>
+        <!-- <li><a href="#">Inicio</a></li> -->
+        <li><a href="politica.php">Política de Privacidade</a></li>
+        <li><a href="termos.php">Termos e Condições</a></li>
+      </ul>
+    </div>
+  </section>
 
     <!-- Fim seção de informações -->
 
