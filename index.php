@@ -74,7 +74,7 @@
       <div class="container-fluid">
         <nav class="navbar navbar-expand-lg custom_nav-container ">
           <a class="navbar-brand" href="index.html">
-            <img src="Recursos/assets/icon/icon_navbar/logo1.jpg" alt="">
+            <img src="Recursos/assets/icon/icon_navbar/logo.png" alt="">
             <span>
               Max Chaveiro
             </span>
