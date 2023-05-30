@@ -82,10 +82,12 @@
 /* Featured Style */
 .featured-items {
 	margin-bottom: 70px;
+	position: relative;
+	z-index: 10;
 }
 .featured-item {
 	border-radius: 5px;
-	border: 1px solid #eee;
+	border: 1px solid #eee; 
 	padding: 20px;
 	transition: all 0.5s;
 }
@@ -104,12 +106,14 @@
 }
 .featured-item:hover h4 {
 	color: #3a8bcd;
+
 }
 .featured-item h6 {
 	color: #3a8bcd;
 	font-size: 15px;
 	font-weight: 700;
 	margin-bottom: 0px;
+
 }
 .owl-theme .owl-dots {
 	text-align: center;
@@ -285,6 +289,7 @@
 }
 .featured .featured-item:hover h4 {
 	color: #3a8bcd;
+
 }
 #filter button {
 	outline: none;

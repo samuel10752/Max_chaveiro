@@ -16,7 +16,7 @@
     <title>Max Chaveiro</title>
 
     <link rel="stylesheet" href="Recursos/assets/css/flex-slider.css">
-
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -43,11 +43,11 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Roboto:400,700&display=swap" rel="stylesheet">
     <!-- Estilos personalizados para este modelo -->
     <link href="Recursos/assets/css/style.css" rel="stylesheet" />
-    <link href="Recursos/assets/css/styles.css"  rel="stylesheet"  />
+    <link href="Recursos/assets/css/styles.css" rel="stylesheet" />
 
     <!-- responsivel style -->
     <link href="Recursos/assets/css/responsive.css" rel="stylesheet" />
-    
+
 </head>
 
 <body>
@@ -80,7 +80,7 @@
         </div>
     </div>
 
-    
+
 
     <div class="hero_area" id="topo">
 
@@ -123,7 +123,7 @@
                                     <a class="nav-link" href="contato.php">Contato</a>
                                 </li>
                             </ul>
-                          </div>
+                        </div>
 
 
                         <div class="quote_btn-container  d-flex justify-content-center">
@@ -142,7 +142,8 @@
 
                     </div>
 
-                   <div class="icon-cart">  <img class="cart-icon" src="Recursos/assets/images/produtos/carrinho-de-compras (1).png"></div>
+                    <div class="icon-cart"> <img class="cart-icon"
+                            src="Recursos/assets/images/produtos/carrinho-de-compras (1).png"></div>
                 </nav>
             </div>
         </header>
@@ -150,7 +151,7 @@
         <!-- fim da seção do cabeçalho -->
         <!-- seção deslizante -->
         <section class=" slider_section position-relative">
-            
+
             <div class="slider_bg-container">
 
             </div>
@@ -202,26 +203,43 @@
         <!-- fim da seção do controle deslizante -->
     </div>
 
-    
- 
-    <div id="pordut" class="col-md-12">
-        <div class="section-heading">
-            <div class="line-dec"></div>
-            <h1>Produtos Novos</h1>
-        </div>
-    </div>
-     
+
     <div class="container">
-        <!-- Product List -->
-        <div class="products-list">
-            <!-- Product -->
+
+        <!-- <div class="products-list">
+
             <div class="product">
-                <!-- Product Image -->
+
                 <div class="product__image">
                     <img src="Recursos/assets/images/produtos/product-image.webp" class="product__image" />
                     <button class="cart__button cart__button--list" data-add-product>Add</button>
                 </div>
-                <!-- End Product Image -->
+
+                <div class="product__title">Chaveiro Luxo Couro Nissan</div>
+                <div class="product__price">R$65.00</div>
+                <div class="product__rating">
+                    <div class="rating">
+                        <span class="rating__star"> star </span>
+
+                        <span class="rating__star"> star </span>
+
+                        <span class="rating__star"> star </span>
+
+                        <span class="rating__star"> star </span>
+
+                        <span class="rating__star"> star </span>
+                    </div>
+                    <div class="rating__total">(8)</div>
+                </div>
+            </div>
+
+            <div class="product">
+               
+                <div class="product__image">
+                    <img src="Recursos/assets/images/produtos/product-image.webp" class="product__image" />
+                    <button class="cart__button cart__button--list" data-add-product>Add</button>
+                </div>
+              
                 <div class="product__title">Apollo Running Short</div>
                 <div class="product__price">$50.00</div>
                 <div class="product__rating">
@@ -239,15 +257,14 @@
                     <div class="rating__total">(8)</div>
                 </div>
             </div>
-            <!-- End Product -->
-            <!-- Product -->
+  
             <div class="product">
-                <!-- Product Image -->
+             
                 <div class="product__image">
                     <img src="Recursos/assets/images/produtos/product-image.webp" class="product__image" />
                     <button class="cart__button cart__button--list" data-add-product>Add</button>
                 </div>
-                <!-- End Product Image -->
+     
                 <div class="product__title">Apollo Running Short</div>
                 <div class="product__price">$50.00</div>
                 <div class="product__rating">
@@ -265,15 +282,14 @@
                     <div class="rating__total">(8)</div>
                 </div>
             </div>
-            <!-- End Product -->
-            <!-- Product -->
+  
             <div class="product">
-                <!-- Product Image -->
+          
                 <div class="product__image">
                     <img src="Recursos/assets/images/produtos/product-image.webp" class="product__image" />
                     <button class="cart__button cart__button--list" data-add-product>Add</button>
                 </div>
-                <!-- End Product Image -->
+
                 <div class="product__title">Apollo Running Short</div>
                 <div class="product__price">$50.00</div>
                 <div class="product__rating">
@@ -291,15 +307,13 @@
                     <div class="rating__total">(8)</div>
                 </div>
             </div>
-            <!-- End Product -->
-            <!-- Product -->
+
             <div class="product">
-                <!-- Product Image -->
-                <div class="product__image">
+        <div class="product__image">
                     <img src="Recursos/assets/images/produtos/product-image.webp" class="product__image" />
                     <button class="cart__button cart__button--list" data-add-product>Add</button>
                 </div>
-                <!-- End Product Image -->
+
                 <div class="product__title">Apollo Running Short</div>
                 <div class="product__price">$50.00</div>
                 <div class="product__rating">
@@ -317,15 +331,14 @@
                     <div class="rating__total">(8)</div>
                 </div>
             </div>
-            <!-- End Product -->
-            <!-- Product -->
+
             <div class="product">
-                <!-- Product Image -->
+
                 <div class="product__image">
                     <img src="Recursos/assets/images/produtos/product-image.webp" class="product__image" />
                     <button class="cart__button cart__button--list" data-add-product>Add</button>
                 </div>
-                <!-- End Product Image -->
+
                 <div class="product__title">Apollo Running Short</div>
                 <div class="product__price">$50.00</div>
                 <div class="product__rating">
@@ -343,15 +356,14 @@
                     <div class="rating__total">(8)</div>
                 </div>
             </div>
-            <!-- End Product -->
-            <!-- Product -->
+
             <div class="product">
-                <!-- Product Image -->
+
                 <div class="product__image">
                     <img src="Recursos/assets/images/produtos/product-image.webp" class="product__image" />
                     <button class="cart__button cart__button--list" data-add-product>Add</button>
                 </div>
-                <!-- End Product Image -->
+
                 <div class="product__title">Apollo Running Short</div>
                 <div class="product__price">$50.00</div>
                 <div class="product__rating">
@@ -369,15 +381,14 @@
                     <div class="rating__total">(8)</div>
                 </div>
             </div>
-            <!-- End Product -->
-            <!-- Product -->
+
             <div class="product">
-                <!-- Product Image -->
+
                 <div class="product__image">
                     <img src="Recursos/assets/images/produtos/product-image.webp" class="product__image" />
                     <button class="cart__button cart__button--list" data-add-product>Add</button>
                 </div>
-                <!-- End Product Image -->
+
                 <div class="product__title">Apollo Running Short</div>
                 <div class="product__price">$50.00</div>
                 <div class="product__rating">
@@ -395,34 +406,7 @@
                     <div class="rating__total">(8)</div>
                 </div>
             </div>
-            <!-- End Product -->
-            <!-- Product -->
-            <div class="product">
-                <!-- Product Image -->
-                <div class="product__image">
-                    <img src="Recursos/assets/images/produtos/product-image.webp" class="product__image" />
-                    <button class="cart__button cart__button--list" data-add-product>Add</button>
-                </div>
-                <!-- End Product Image -->
-                <div class="product__title">Apollo Running Short</div>
-                <div class="product__price">$50.00</div>
-                <div class="product__rating">
-                    <div class="rating">
-                        <span class="rating__star"> star </span>
-
-                        <span class="rating__star"> star </span>
-
-                        <span class="rating__star"> star </span>
-
-                        <span class="rating__star"> star </span>
-
-                        <span class="rating__star"> star </span>
-                    </div>
-                    <div class="rating__total">(8)</div>
-                </div>
-            </div>
-            <!-- End Product -->
-        </div>
+        </div> -->
         <!-- End Product List -->
 
         <!-- Cart -->
@@ -443,7 +427,7 @@
                         <div class="empty__title">Sua bolsa está vazia</div>
 
                         <div class="empty__subtitle">
-                        Parece que você ainda não adicionou nenhum item à sacola. Começar
+                            Parece que você ainda não adicionou nenhum item à sacola. Começar
                             compras para preenchê-lo.
                         </div>
                     </div>
@@ -460,10 +444,32 @@
 
                 <!-- Cart Actions -->
                 <div class="cart__actions">
-                    <a href="#pordut"><button class="cart__button" data-empty-cart>Comece a fazer compras</button></a>
-                    <button class="cart__button cart__button-secondary" data-not-empty-cart>
-                        ir para o checkout
-                    </button>
+                    <a class="produt" href="#pordut"><button class="cart__button" data-empty-cart>Comece a fazer
+                            compras</button></a>
+
+                        <div class="cart__button1 cart__button-secondary" data-not-empty-cart>
+                            <button class="checkout-btn">
+                                <span class="checkout-btn__icon material-icons-outlined">
+                                    shopping_cart
+                                </span>
+                                <span class="checkout-btn__text">
+                                   Ir para o Checkout
+                                </span>
+                                <span class="checkout-btn__success">
+                                    <span class="material-icons-outlined">
+                                        done
+                                    </span>
+                                    Obrigado pelo seu pedido!
+                                </span>
+                                <span class="checkout-btn__failure">
+                                    <span class="material-icons-outlined">
+                                        error_outline
+                                    </span>
+                                    Não foi possível processar o pedido.
+                                </span>
+                            </button>
+                        </div>
+
                     <div class="cart__summary" data-not-empty-cart>
                         <!-- Summary Item -->
                         <div class="summary__item">
@@ -503,86 +509,132 @@
     <!-- End Container -->
     <br><br>
 
+    <!-- <div class="container">
+  <button class="checkout-btn">
+    <span class="checkout-btn__icon material-icons-outlined">
+      shopping_cart
+    </span>
+    <span class="checkout-btn__text">
+      Checkout
+    </span>
+    <span class="checkout-btn__success">
+      <span class="material-icons-outlined">
+        done
+      </span>
+      Thank you for your order!
+    </span>
+    <span class="checkout-btn__failure">
+      <span class="material-icons-outlined">
+        error_outline
+      </span>
+      Order was unable to process.
+    </span>
+  </button>
+</div> -->
+
     <!-- Featured Starts Here -->
-    <!-- <div class="featured-items">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="section-heading">
-            <div class="line-dec"></div>
-            <h1>Futuros Itens</h1>
-          </div>
+    <div class="featured-items">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="pordut"></div>
+                    <div class="section-heading">
+                        <div class="line-dec"></div>
+                        <h1>Produtos Novos</h1>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="owl-carousel owl-theme">
+                        <!-- Product -->
+                        <div class="featured-item">
+                            <div class="product">
+                                <div class="product__image">
+                                    <img src="Recursos/assets/images/card_produtos/produto-1.png" alt="Item 2">
+                                    <button class="cart__button cart__button--list" data-add-product>Add</button>
+                                </div>
+                                <a href="p/produto_1.php">
+                                    <!-- End Product Image -->
+                                    <h4 class="product__title">Chaveiro Luxo Couro Nissan</h4>
+                                    <div class="product__price">R$65.00</div>
+                                    <div class="product__rating">
+                                        <div class="rating">
+                                            <span class="rating__star"> star </span>
+
+                                            <span class="rating__star"> star </span>
+
+                                            <span class="rating__star"> star </span>
+
+                                            <span class="rating__star"> star </span>
+
+                                            <span class="rating__star"> star </span>
+                                        </div>
+                                        <div class="rating__total">(8)</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <a href="p/single-2.php">
+                            <div class="featured-item">
+                                <img src="Recursos/assets/images/card_produtos/produto-2.png" alt="Item 2">
+                                <h4>Erat odio rhoncus</h4>
+                                <h6>R$25.00</h6>
+                            </div>
+                        </a>
+                        <a href="p/single-3.php">
+                            <div class="featured-item">
+                                <img src="Recursos/assets/images/card_produtos/produto-3.png" alt="Item 3">
+                                <h4>Integer vel turpis</h4>
+                                <h6>R$35.00</h6>
+                            </div>
+                        </a>
+                        <a href="p/single-4.php">
+                            <div class="featured-item">
+                                <img src="Recursos/assets/images/card_produtos/produto-4.png" alt="Item 4">
+                                <h4>Sed purus quam</h4>
+                                <h6>R$45.00</h6>
+                            </div>
+                        </a>
+                        <a href="p/single-5.php">
+                            <div class="featured-item">
+                                <img src="Recursos/assets/images/card_produtos/produto-5.png" alt="Item 5">
+                                <h4>Morbi aliquet</h4>
+                                <h6>R$55.00</h6>
+                            </div>
+                        </a>
+                        <a href="p/single-6.php">
+                            <div class="featured-item">
+                                <img src="Recursos/assets/images/card_produtos/produto-6.png" alt="Item 6">
+                                <h4>Urna ac diam</h4>
+                                <h6>R$65.00</h6>
+                            </div>
+                        </a>
+                        <a href="p/single-7.php">
+                            <div class="featured-item">
+                                <img src="Recursos/assets/images/card_produtos/produto-1.png" alt="Item 7">
+                                <h4>Proin eget imperdiet</h4>
+                                <h6>R$75.00</h6>
+                            </div>
+                        </a>
+                        <a href="p/single-8.php">
+                            <div class="featured-item">
+                                <img src="Recursos/assets/images/card_produtos/produto-2.png" alt="Item 8">
+                                <h4>Nullam risus nisl</h4>
+                                <h6>R$85.00</h6>
+                            </div>
+                        </a>
+                        <a href="p/single-9.php">
+                            <div class="featured-item">
+                                <img src="Recursos/assets/images/card_produtos/produto-3.png" alt="Item 9">
+                                <h4>Cras tempus</h4>
+                                <h6>R$95.00</h6>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-md-12">
-          <div class="owl-carousel owl-theme">
-            <a href="p/produto_1.php">
-              <div class="featured-item">
-                <img src="Recursos/assets/images/card_produtos/Chaveiro_Luxo/chaveiro.png" alt="Item 1">
-                <h4>Chaveiro Luxo Couro Nissan</h4>
-                <h6>R$65.00</h6>
-              </div>
-            </a>
-            <a href="p/single-2.php">
-              <div class="featured-item">
-                <img src="Recursos/assets/images/card_produtos/produto-2.png" alt="Item 2">
-                <h4>Erat odio rhoncus</h4>
-                <h6>R$25.00</h6>
-              </div>
-            </a>
-            <a href="p/single-3.php">
-              <div class="featured-item">
-                <img src="Recursos/assets/images/card_produtos/produto-3.png" alt="Item 3">
-                <h4>Integer vel turpis</h4>
-                <h6>R$35.00</h6>
-              </div>
-            </a>
-            <a href="p/single-4.php">
-              <div class="featured-item">
-                <img src="Recursos/assets/images/card_produtos/produto-4.png" alt="Item 4">
-                <h4>Sed purus quam</h4>
-                <h6>R$45.00</h6>
-              </div>
-            </a>
-            <a href="p/single-5.php">
-              <div class="featured-item">
-                <img src="Recursos/assets/images/card_produtos/produto-5.png" alt="Item 5">
-                <h4>Morbi aliquet</h4>
-                <h6>R$55.00</h6>
-              </div>
-            </a>
-            <a href="p/single-6.php">
-              <div class="featured-item">
-                <img src="Recursos/assets/images/card_produtos/produto-6.png" alt="Item 6">
-                <h4>Urna ac diam</h4>
-                <h6>R$65.00</h6>
-              </div>
-            </a>
-            <a href="p/single-7.php">
-              <div class="featured-item">
-                <img src="Recursos/assets/images/card_produtos/produto-1.png" alt="Item 7">
-                <h4>Proin eget imperdiet</h4>
-                <h6>R$75.00</h6>
-              </div>
-            </a>
-            <a href="p/single-8.php">
-              <div class="featured-item">
-                <img src="Recursos/assets/images/card_produtos/produto-2.png" alt="Item 8">
-                <h4>Nullam risus nisl</h4>
-                <h6>R$85.00</h6>
-              </div>
-            </a>
-            <a href="p/single-9.php">
-              <div class="featured-item">
-                <img src="Recursos/assets/images/card_produtos/produto-3.png" alt="Item 9">
-                <h4>Cras tempus</h4>
-                <h6>R$95.00</h6>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
     </div>
-  </div> -->
 
 
     <!-- seção de inscrição -->
@@ -631,7 +683,8 @@
                                     <p>
                                         Eu fiquei muito satisfeito com o serviço prestado, tudo foi feito com muita
                                         rapidez e eficiência.
-                                        Essa equipe foi incrível, sempre disponível para me ajudar e resolver qualquer
+                                        Essa equipe foi incrível, sempre disponível para me ajudar e resolver
+                                        qualquer
                                         problema.
                                     </p>
                                 </div>
@@ -702,7 +755,8 @@
                             <div class="box">
                                 <div class="detail-box">
                                     <p>
-                                        Eu não poderia estar mais satisfeito com o serviço prestado, tudo foi além das
+                                        Eu não poderia estar mais satisfeito com o serviço prestado, tudo foi além
+                                        das
                                         minhas expectativas,
                                         a equipe foi incrivelmente profissional e sempre disponível para me ajudar,
                                         nunca tive um serviço tão bom, eu recomendo a todos.
@@ -765,7 +819,8 @@
             </div>
             <div>
                 <p>
-                    Se você está precisa de uma chave nova para seu carro, vamos te fornecer a marca e modelo do carro e
+                    Se você está precisa de uma chave nova para seu carro, vamos te fornecer a marca e modelo do
+                    carro e
                     tomar as
                     medidas necessárias para cortar uma nova chave, e uma chave para sua casa, marca da fechadura e
                     tomar as
@@ -841,6 +896,8 @@
     <script type="text/javascript" src="Recursos/assets/js/js_blibioteca/js/jquery/jquery-3.4.1.min.js "></script>
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
     <script type="text/javascript" src="Recursos/assets/js/boostrap/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
 
     <!-- Additional Scripts -->
     <script src="Recursos/assets/js/preloder.js"></script>
@@ -855,7 +912,7 @@
     <script src="Recursos/assets/js/isotope.js"></script>
     <script src="Recursos/assets/js/flex-slider.js"></script>
 
-    </body>
+</body>
 </body>
 
 </html>
