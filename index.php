@@ -142,10 +142,17 @@
 
                     </div>
 
+                    <div id="cart" class="cart1" data-totalitems="0">
+                        <div class="icon-cart"> <img class="cart-icon"
+                                src="Recursos/assets/images/produtos/carrinho-de-compras (1).png"></div>
+                    </div>
+                    <!-- 
                     <div class="icon-cart"> <img class="cart-icon"
-                            src="Recursos/assets/images/produtos/carrinho-de-compras (1).png"></div>
+                            src="Recursos/assets/images/produtos/carrinho-de-compras (1).png"></div> -->
                 </nav>
             </div>
+
+
         </header>
 
         <!-- fim da seção do cabeçalho -->
@@ -447,28 +454,28 @@
                     <a class="produt" href="#pordut"><button class="cart__button" data-empty-cart>Comece a fazer
                             compras</button></a>
 
-                        <div class="cart__button1 cart__button-secondary" data-not-empty-cart>
-                            <button class="checkout-btn">
-                                <span class="checkout-btn__icon material-icons-outlined">
-                                    shopping_cart
+                    <div class="cart__button1 cart__button-secondary" data-not-empty-cart>
+                        <button class="checkout-btn">
+                            <span class="checkout-btn__icon material-icons-outlined">
+                                shopping_cart
+                            </span>
+                            <span class="checkout-btn__text">
+                                Ir para o Checkout
+                            </span>
+                            <span class="checkout-btn__success">
+                                <span class="material-icons-outlined">
+                                    done
                                 </span>
-                                <span class="checkout-btn__text">
-                                   Ir para o Checkout
+                                Obrigado pelo seu pedido!
+                            </span>
+                            <span class="checkout-btn__failure">
+                                <span class="material-icons-outlined">
+                                    error_outline
                                 </span>
-                                <span class="checkout-btn__success">
-                                    <span class="material-icons-outlined">
-                                        done
-                                    </span>
-                                    Obrigado pelo seu pedido!
-                                </span>
-                                <span class="checkout-btn__failure">
-                                    <span class="material-icons-outlined">
-                                        error_outline
-                                    </span>
-                                    Não foi possível processar o pedido.
-                                </span>
-                            </button>
-                        </div>
+                                Não foi possível processar o pedido.
+                            </span>
+                        </button>
+                    </div>
 
                     <div class="cart__summary" data-not-empty-cart>
                         <!-- Summary Item -->
@@ -532,6 +539,55 @@
   </button>
 </div> -->
 
+    <!-- mensagem de sucesso popup -->
+    <!-- mensagem de erro de poup -->
+    <!-- <div id="error-box">
+    <div class="dot"></div>
+    <div class="dot two"></div>
+    <div class="face2">
+      <div class="eye"></div>
+      <div class="eye right"></div>
+      <div class="mouth sad"></div>
+    </div>
+    <div class="shadow move"></div>
+    <div class="message"><h1 class="alert">Error!</h1><p class="message_txt">oh não, algo deu errado.</div>
+    <button class="button-box"><h1 class="red">tente novamente</h1></button>
+  </div> -->
+
+
+    <!-- <div id="container">
+        <div id="success-box" class="hidden">
+            <div class="dot"></div>
+            <div class="dot two"></div>
+            <div class="face">
+                <div class="eye"></div>
+                <div class="eye right"></div>
+                <div class="mouth happy"></div>
+            </div>
+            <div class="shadow scale"></div>
+            <div class="message">
+                <h1 class="alert">Success!</h1>
+                <p class="message_txt">Foi adicionado ao carrinho.</p>
+            </div>
+            <button class="button-box">
+                <h1 class="green">Ir para o carrinho</h1>
+            </button>
+        </div>
+    </div> -->
+
+
+
+
+    <div id="successPopup">
+        <div class="cart__close_1">
+            <span id="closePopup" class="close-icon1"> close </span>
+        </div>
+        <h1>Sucesso!</h1>
+        <p>Foi adicionado ao carrinho.</p>
+        <button class="cart-icon1" id="aber">Ir para o Carrinho</button>
+    </div>
+
+
     <!-- Featured Starts Here -->
     <div class="featured-items">
         <div class="container">
@@ -550,7 +606,9 @@
                             <div class="product">
                                 <div class="product__image">
                                     <img src="Recursos/assets/images/card_produtos/produto-1.png" alt="Item 2">
-                                    <button class="cart__button cart__button--list" data-add-product>Add</button>
+                                    <button id="addtocart" class="cart__button cart__button--list"
+                                        data-add-product>Add</button>
+                                    <span class="cart-item"></span>
                                 </div>
                                 <a href="p/produto_1.php">
                                     <!-- End Product Image -->
@@ -888,6 +946,7 @@
         }
     }
     </script>
+
 
     <!-- seção de contador de likes-->
 

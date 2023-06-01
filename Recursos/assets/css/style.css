@@ -513,7 +513,7 @@ a:focus {
 .slider_section .img-box img {
   width: 100%;
   position: relative;
-  z-index: 2;
+  z-index: 14;
 }
 
 .slider_section .slider_bg-container {
@@ -545,6 +545,7 @@ a:focus {
   top: 50%;
   -webkit-transform: translate(-50%, 0);
   transform: translate(-50%, 0);
+  z-index: 2; /* Valor alto para garantir que a animação fique na frente */
 }
 
 .slider_section .carousel-control-next {
@@ -553,6 +554,7 @@ a:focus {
   top: calc(50% - 30px);
   -webkit-transform: translate(0, -50%);
   transform: translate(0, -50%);
+  z-index: 2; /* Valor alto para garantir que a animação fique na frente */
 }
 
 .about_section {
@@ -956,11 +958,13 @@ a:focus {
   background-position: center;
   opacity: 1;
   background-color: #2e02fe;
+  z-index: 2; /* Valor alto para garantir que a animação fique na frente */
 }
 
 .client_section .carousel-control-prev:hover,
 .client_section .carousel-control-next:hover {
   background-color: #464646;
+  z-index: 2; /* Valor alto para garantir que a animação fique na frente */
 }
 
 .client_section .carousel-control-prev {

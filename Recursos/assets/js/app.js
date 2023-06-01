@@ -1,6 +1,7 @@
 (() => {
   const cartItems = [];
   const cartButton = document.querySelector("img.cart-icon");
+  const cartButton1 = document.querySelector("button.cart-icon1");
   const closeCartButton = document.querySelector("span.close-icon");
   const closeCartButton1 = document.querySelector("a.produt");
   const addButtons = document.querySelectorAll("[data-add-product]");
@@ -60,7 +61,7 @@
     const image = document.createElement("img");
 
     image.classList.add("cart__product-image");
-    image.src = "assets/images/product-image.webp";
+    image.src = "Recursos/assets/images/produtos/product-image.webp";
 
     sizeOptionName.innerText = "Size:";
     sizeOptionValue.innerText = item.size;
@@ -216,19 +217,21 @@
         quantity: 1,
       };
       const newCartItem = createCartItem(item);
-
+  
       cartItems.push(newCartItem);
       cartProducts.appendChild(newCartItem);
       toggleItems(cartItems);
-      openCart();
       updateTotals(cartItems, item);
     });
   });
+  
 
   toggleItems(cartItems);
 
   // Ao clicar no cartButton a gente abre o carrinho
   cartButton.addEventListener("click", openCart);
+
+  cartButton1.addEventListener("click", openCart);
 
   // Ao clicar no closeCartButton a gente esconde o carrinho
   closeCartButton.onclick = () => {
@@ -318,5 +321,48 @@ checkoutBtns.forEach((btn, index) => {
     }, 6000);
   });
 });
+
+// animacao de adicao ao carrinho
+$(document).ready(function(){
+  $('#addtocart').on('click',function(){
+    
+    var button = $(this);
+    var cart = $('#cart');
+    var cartTotal = cart.attr('data-totalitems');
+    var newCartTotal = parseInt(cartTotal) + 1;
+    
+    button.addClass('sendtocart');
+    setTimeout(function(){
+      button.removeClass('sendtocart');
+      cart.addClass('shake').attr('data-totalitems', newCartTotal);
+      setTimeout(function(){
+        cart.removeClass('shake');
+      },500)
+    },1000)
+  })
+})
+
+
+
+document.getElementById('addtocart').addEventListener('click', function() {
+  document.getElementById('successPopup').style.display = 'block';
+
+  // Adiciona um atraso de 10 segundos (10000 milissegundos) antes de ocultar o pop-up
+  setTimeout(function() {
+    document.getElementById('successPopup').style.display = 'none';
+  }, 5500);
+});
+
+document.getElementById('aber').addEventListener('click', function() {
+  document.getElementById('successPopup').style.display = 'none';
+});
+
+
+
+document.getElementById('closePopup').addEventListener('click', function() {
+  document.getElementById('successPopup').style.display = 'none';
+});
+
+
 
 })();
