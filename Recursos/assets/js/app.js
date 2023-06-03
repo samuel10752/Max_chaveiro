@@ -1,7 +1,7 @@
 (() => {
   const cartItems = [];
   const cartButton = document.querySelector("img.cart-icon");
-  const cartButton1 = document.querySelector("button.cart-icon1");
+  const cartButton1 = document.querySelector("button.button-box");
   const closeCartButton = document.querySelector("span.close-icon");
   const closeCartButton1 = document.querySelector("a.produt");
   const addButtons = document.querySelectorAll("[data-add-product]");
@@ -104,10 +104,14 @@
     cartProduct.appendChild(productImage);
     cartProduct.appendChild(productDetails);
 
+
+
+
     const removeItem = (e) => {
       const element = e.target;
       const parentProduct = element.closest(".cart__product");
       const cartProducts = document.querySelector(".cart__products");
+      const cart = document.getElementById('cart'); // Adicionado esta linha
       const itemIndex = cartItems.findIndex(
         (element) => element === parentProduct
       );
@@ -116,7 +120,18 @@
       cartItems.splice(itemIndex, 1);
       updateTotals(cartItems, item, "remove");
       toggleItems(cartItems);
+
+      // Atualizando a contagem total de itens no carrinho
+      const cartTotal = parseInt(cart.getAttribute('data-totalitems'), 10);
+      const newCartTotal = cartTotal - 1;
+      cart.setAttribute('data-totalitems', newCartTotal >= 0 ? newCartTotal : 0);
     };
+
+
+
+    // updateTotals(cartItems, item, "remove");
+    // toggleItems(cartItems);
+
 
     closeIcon.addEventListener("click", removeItem);
 
@@ -207,24 +222,24 @@
     grandTotal.innerText = `$${newGrandTotalValue.toFixed(2)}`;
   };
 
-  addButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      const item = {
-        color: "white",
-        size: "XS",
-        title: "Cotton dress",
-        price: 50.0,
-        quantity: 1,
-      };
-      const newCartItem = createCartItem(item);
-  
-      cartItems.push(newCartItem);
-      cartProducts.appendChild(newCartItem);
-      toggleItems(cartItems);
-      updateTotals(cartItems, item);
-    });
-  });
-  
+  // addButtons.forEach((button) => {
+  //   button.addEventListener("click", () => {
+  //     const item = {
+  //       color: "white",
+  //       size: "XS",
+  //       title: "Cotton dress",
+  //       price: 50.0,
+  //       quantity: 1,
+  //     };
+  //     const newCartItem = createCartItem(item);
+
+  //     cartItems.push(newCartItem);
+  //     cartProducts.appendChild(newCartItem);
+  //     toggleItems(cartItems);
+  //     updateTotals(cartItems, item);
+  //   });
+  // });
+
 
   toggleItems(cartItems);
 
@@ -238,130 +253,174 @@
     const cart = document.querySelector(".cart");
 
     cart.style.display = "none";
-  }; 
+  };
 
   closeCartButton1.onclick = () => {
     const cart = document.querySelector(".cart");
 
     cart.style.display = "none";
-  }; 
+  };
 
   const checkoutBtns = document.querySelectorAll(".checkout-btn");
 
-checkoutBtns.forEach((btn, index) => {
-  const checkoutTL = new gsap.timeline({
-    paused: true
-  });
+  checkoutBtns.forEach((btn, index) => {
+    const checkoutTL = new gsap.timeline({
+      paused: true
+    });
 
-  const btnText = btn.querySelector(".checkout-btn__text");
-  const btnIcon = btn.querySelector(".checkout-btn__icon");
-  const btnSuccess = btn.querySelector(".checkout-btn__success");
-  const btnFailure = btn.querySelector(".checkout-btn__failure");
+    const btnText = btn.querySelector(".checkout-btn__text");
+    const btnIcon = btn.querySelector(".checkout-btn__icon");
+    const btnSuccess = btn.querySelector(".checkout-btn__success");
+    const btnFailure = btn.querySelector(".checkout-btn__failure");
 
-  checkoutTL
-    .to(btnText, {
-      opacity: 0,
-      duration: 0.75,
-      ease: "power4.in"
-    })
-    .to(
-      btnIcon,
-      {
-        x: 150,
-        delay: 0.25,
-        duration: 0.75,
+    checkoutTL
+      .to(btnText, {
         opacity: 0,
-        ease: "back.in(1.7)"
-      },
-      "<"
-    );
-  btn.addEventListener("click", () => {
-    if (index === 0) {
-      checkoutTL
-        .to(btn, {
-          background: "#27ae60",
-          ease: "power4.out",
-          width: 500
-        })
-        .to(
-          btnSuccess,
-          {
-            opacity: 1,
+        duration: 0.75,
+        ease: "power4.in"
+      })
+      .to(
+        btnIcon,
+        {
+          x: 150,
+          delay: 0.25,
+          duration: 0.75,
+          opacity: 0,
+          ease: "back.in(1.7)"
+        },
+        "<"
+      );
+    btn.addEventListener("click", () => {
+      if (index === 0) {
+        checkoutTL
+          .to(btn, {
+            background: "#27ae60",
             ease: "power4.out",
-            delay: 0.55,
-            onComplete: () => {
-              window.location.href = "https://github.com/samuel10752";
-            }
-          },
-          "<"
-        );
-    } else {
-      checkoutTL
-        .to(btn, {
-          background: "#c0392b",
-          ease: "power4.out",
-          width: 300
-        })
-        .to(
-          btnFailure,
-          {
-            opacity: 1,
+            width: 500
+          })
+          .to(
+            btnSuccess,
+            {
+              opacity: 1,
+              ease: "power4.out",
+              delay: 0.55,
+              onComplete: () => {
+                window.location.href = "https://github.com/samuel10752";
+              }
+            },
+            "<"
+          );
+      } else {
+        checkoutTL
+          .to(btn, {
+            background: "#c0392b",
             ease: "power4.out",
-            delay: 0.25
-          },
-          "<"
-        );
-    }
+            width: 300
+          })
+          .to(
+            btnFailure,
+            {
+              opacity: 1,
+              ease: "power4.out",
+              delay: 0.25
+            },
+            "<"
+          );
+      }
 
-    checkoutTL.play();
+      checkoutTL.play();
 
-    setTimeout(() => {
-      checkoutTL.restart();
-      checkoutTL.pause();
-    }, 6000);
+      setTimeout(() => {
+        checkoutTL.restart();
+        checkoutTL.pause();
+      }, 6000);
+    });
   });
-});
 
-// animacao de adicao ao carrinho
-$(document).ready(function(){
-  $('#addtocart').on('click',function(){
-    
-    var button = $(this);
+  // animacao de adicao ao carrinho
+
+
+// Função para adicionar ao carrinho e mostrar a animação
+function addToCart(button, item) {
+  // Mostra a animação
+  button.addClass('sendtocart');
+  setTimeout(function () {
+    button.removeClass('sendtocart');
     var cart = $('#cart');
     var cartTotal = cart.attr('data-totalitems');
     var newCartTotal = parseInt(cartTotal) + 1;
-    
-    button.addClass('sendtocart');
-    setTimeout(function(){
-      button.removeClass('sendtocart');
-      cart.addClass('shake').attr('data-totalitems', newCartTotal);
-      setTimeout(function(){
-        cart.removeClass('shake');
-      },500)
-    },1000)
-  })
-})
+    cart.addClass('shake').attr('data-totalitems', newCartTotal);
+    setTimeout(function () {
+      cart.removeClass('shake');
+    }, 500);
+  }, 1000);
 
-
-
-document.getElementById('addtocart').addEventListener('click', function() {
+  // Mostra o pop-up de sucesso
   document.getElementById('successPopup').style.display = 'block';
-
-  // Adiciona um atraso de 10 segundos (10000 milissegundos) antes de ocultar o pop-up
-  setTimeout(function() {
+  setTimeout(function () {
     document.getElementById('successPopup').style.display = 'none';
   }, 5500);
+
+  // Adiciona um novo produto ao carrinho
+  const newCartItem = createCartItem(item);
+  cartItems.push(newCartItem);
+  cartProducts.appendChild(newCartItem);
+  toggleItems(cartItems);
+  updateTotals(cartItems, item);
+}
+
+$(document).ready(function () {
+  // Adiciona o ouvinte de evento original
+  $('.cart__button--list').each(function() {
+    const item = {
+      color: "white",
+      size: "XS",
+      title: "Cotton dress",
+      price: 50.0,
+      quantity: 1,
+    };
+
+    $(this).on('click', function () {
+      addToCart($(this), item);
+    });
+  });
+
+  // Adiciona novos ouvintes de evento quando os slides são movidos
+  $('.owl-carousel').on('translated.owl.carousel', function (event) {
+    // Remove todos os ouvintes de eventos 'click' dos elementos '.cart__button--list'
+    $('.cart__button--list').off('click');
+
+    // Adiciona novos ouvintes de evento 'click'
+    $('.cart__button--list').each(function() {
+      const item = {
+        color: "white",
+        size: "XS",
+        title: "Cotton dress",
+        price: 50.0,
+        quantity: 1,
+      };
+
+      $(this).on('click', function () {
+        addToCart($(this), item);
+      });
+    });
+  });
 });
 
-document.getElementById('aber').addEventListener('click', function() {
-  document.getElementById('successPopup').style.display = 'none';
-});
 
 
 
-document.getElementById('closePopup').addEventListener('click', function() {
-  document.getElementById('successPopup').style.display = 'none';
-});
+  document.getElementById('aber').addEventListener('click', function () {
+    document.getElementById('successPopup').style.display = 'none';
+  });
+
+
+
+  document.getElementById('closePopup').addEventListener('click', function () {
+    document.getElementById('successPopup').style.display = 'none';
+  });
+
+
 
 
 

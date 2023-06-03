@@ -556,7 +556,7 @@
 
 
     <!-- <div id="container">
-        <div id="success-box" class="hidden">
+        <div id="success-box">
             <div class="dot"></div>
             <div class="dot two"></div>
             <div class="face">
@@ -567,14 +567,22 @@
             <div class="shadow scale"></div>
             <div class="message">
                 <h1 class="alert">Success!</h1>
-                <p class="message_txt">Foi adicionado ao carrinho.</p>
+                <p>yay, everything is working.</p>
             </div>
-            <button class="button-box">
-                <h1 class="green">Ir para o carrinho</h1>
-            </button>
-        </div>
-    </div> -->
-
+            <button class="button-box"><h1 class="green">continue</h1></button>
+        </div> -->
+    <!-- <div id="error-box">
+    <div class="dot"></div>
+    <div class="dot two"></div>
+    <div class="face2">
+      <div class="eye"></div>
+      <div class="eye right"></div>
+      <div class="mouth sad"></div>
+    </div>
+    <div class="shadow move"></div>
+    <div class="message"><h1 class="alert">Error!</h1><p>oh no, something went wrong.</div>
+    <button class="button-box"><h1 class="red">try again</h1></button>
+  </div> -->
 
 
 
@@ -582,10 +590,27 @@
         <div class="cart__close_1">
             <span id="closePopup" class="close-icon1"> close </span>
         </div>
-        <h1>Sucesso!</h1>
-        <p>Foi adicionado ao carrinho.</p>
-        <button class="cart-icon1" id="aber">Ir para o Carrinho</button>
+        <div class="container_2">
+            <div id="success-box">
+                <div class="dot"></div>
+                <div class="dot two"></div>
+                <div class="face">
+                    <div class="eye"></div>
+                    <div class="eye right"></div>
+                    <div class="mouth happy"></div>
+                </div>
+                <div class="shadow scale"></div>
+                <div class="message">
+                    <h1 class="alert">Sucesso!</h1>
+                    <p>Adicionado ao Carrinho</p>
+                </div>
+                <button class="button-box" id="aber">
+                    <h1 class="green">Carrinho</h1>
+                </button>
+            </div>
+        </div>
     </div>
+
 
 
     <!-- Featured Starts Here -->
@@ -606,8 +631,8 @@
                             <div class="product">
                                 <div class="product__image">
                                     <img src="Recursos/assets/images/card_produtos/produto-1.png" alt="Item 2">
-                                    <button id="addtocart" class="cart__button cart__button--list"
-                                        data-add-product>Add</button>
+                                    <button id="addtocart_1" class="cart__button cart__button--list" data-add-product>Add</button>
+
                                     <span class="cart-item"></span>
                                 </div>
                                 <a href="p/produto_1.php">
@@ -630,7 +655,9 @@
                                     </div>
                                 </a>
                             </div>
+
                         </div>
+
 
                         <a href="p/single-2.php">
                             <div class="featured-item">

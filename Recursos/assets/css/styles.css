@@ -49,6 +49,7 @@
 
 .product:hover > .product__image > .cart__button--list {
   display: flex;
+  z-index: 96;
 }
 
 .products-list {
@@ -58,6 +59,7 @@
 }
 
 .product__image {
+  position: relative;
   margin-right: 2100px;
   width: 228px;
   height: 247px;
@@ -203,6 +205,7 @@
   font-size: 16px;
   line-height: 120%;
   color: var(--white);
+  z-index: 90;
 }
 
 .cart__button1 {
@@ -234,6 +237,7 @@
   top: -80px;
   display: none;
   cursor: pointer;
+  z-index: 92;
 }
 
 .cart__product {
@@ -487,16 +491,18 @@
 }
 
 /* mensagem de sucesso e de erro */
-#container {
+.container_2 {
   position: relative;
   margin: auto;
   overflow: hidden;
   width: 700px;
   height: 250px;
+  right: 35%;
 }
-h1 {
+
+.message h1 {
   font-size: 0.9em;
-  font-weight: 100;
+  font-weight: 400;
   letter-spacing: 3px;
   padding-top: 5px;
   color: #fcfcfc;
@@ -509,28 +515,22 @@ h1 {
 .red {
   color: #e96075;
 }
-.alert {
-  font-size: 0.9em;
-  font-weight: 100;
-  letter-spacing: 3px;
-  padding-top: 5px;
-  color: #fcfcfc;
-  padding-bottom: 5px;
-  text-transform: uppercase;
+/* .alert {
   font-weight: 700;
   letter-spacing: 5px;
-}
-.message_txt p {
+} */
+.message p {
   margin-top: -5px;
-  font-size: 0.5em;
-  font-weight: 100;
-  color: #5e5e5e;
+  font-size: 1.0em;
+  font-weight: 400;
+  color: #fcfcfc;
   letter-spacing: 1px;
 }
-button,
+.message button,
 .dot {
   cursor: pointer;
 }
+
 #success-box {
   position: absolute;
   width: 35%;
@@ -541,6 +541,7 @@ button,
   box-shadow: 5px 5px 20px rgba(203, 205, 211, 10);
   perspective: 40px;
 }
+
 #error-box {
   position: absolute;
   width: 35%;
@@ -647,16 +648,27 @@ button,
 }
 .button-box {
   position: absolute;
-  background: #fcfcfc;
-  width: 90%;
-  height: 10%;
+  background: #f6f6f8;
+  width: 50%;
+  height: 13%;
   border-radius: 20px;
-  top: 78%;
-  left: 5%;
+  top: 77%;
+  left: 25%;
   outline: 0;
   border: none;
   box-shadow: 2px 2px 10px rgba(119, 119, 119, 0.5);
   transition: all 0.5s ease-in-out;
+}
+
+.button-box h1{
+  font-size: 1.0em;
+  font-weight: 600;
+  letter-spacing: 3px;
+  padding-top: 5px;
+  color: #00ff159c;
+  padding-bottom: 15px;
+  text-transform: unset;
+
 }
 .button-box:hover {
   background: #efefef;
@@ -698,58 +710,34 @@ button,
     left: 25%;
   }
 }
-
 #successPopup {
   display: none;
   position: fixed;
-  width: 20%;
+  width: 13%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #ffffff;
-  padding: 20px;
-  border-radius:10px;
+  padding: 0px;
+  border-radius: 17px;
   text-align: center;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   z-index: 99;
 }
 
-#successPopup h1 {
-  color: #27ae60;
-  z-index: 99;
-}
-
-#successPopup p {
-  margin-bottom: 10px;
-  z-index: 99;
-}
-
-#successPopup button {
-  background-color: #0011ff;
-  color: #fff;
-  border: none;
-  width: 300px;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  z-index: 99;
-}
-
-
-
 .cart__close_1 {
-  height: 22px;
-  width: 22px;
+  height: 15px;
+  width: 15px;
   position: fixed;
   float: right;
-  top: 5px;
-  right: 5px;
+  top: 8px;
+  right: 10px;
   z-index: 5;
 }
 
-.cart__close_1{
+.cart__close_1 {
   border-radius: 50%;
-  background-color: var(--blue);
+  background-color: var(--gray);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -760,6 +748,7 @@ button,
   z-index: 5;
   font-family: Material Icons, sans-serif;
   color: var(--white);
-  font-size: 1.0rem;
+  font-size: 0.7rem;
   cursor: pointer;
 }
+
