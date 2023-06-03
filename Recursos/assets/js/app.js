@@ -129,10 +129,6 @@
 
 
 
-    // updateTotals(cartItems, item, "remove");
-    // toggleItems(cartItems);
-
-
     closeIcon.addEventListener("click", removeItem);
 
     removeIcon.addEventListener("click", (e) => {
@@ -359,7 +355,8 @@ function addToCart(button, item) {
   document.getElementById('successPopup').style.display = 'block';
   setTimeout(function () {
     document.getElementById('successPopup').style.display = 'none';
-  }, 5500);
+  }, 10000);
+  
 
   // Adiciona um novo produto ao carrinho
   const newCartItem = createCartItem(item);

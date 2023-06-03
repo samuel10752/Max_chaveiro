@@ -1,5 +1,4 @@
 :root {
-  --emerald: #5ece7b;
   --porcelain: #f1f2f3;
   --white: #ffffff;
   --gray: rgba(0, 0, 0, 0.5);
@@ -194,18 +193,40 @@
   flex-direction: column-reverse;
 }
 
+
 .cart__button {
-  width: 100%;
-  height: 52px;
-  background-color: var(--blue);
-  text-transform: uppercase;
-  border: none;
-  font-style: normal;
-  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid #115dd8;
+  padding: 14px 60px;
+  border-radius: 200px;
+  color: #fff;
+  background: #115dd8;
+  font-family: "Open Sans", sans-serif;
   font-size: 16px;
-  line-height: 120%;
-  color: var(--white);
-  z-index: 90;
+  transition: 200ms;
+}
+
+.cart__button:hover {
+  background-color: var(--white);
+  color: var(--blue);
+}
+
+.cart__button2 {
+  cursor: pointer;
+  border: 1px solid #115dd8;
+  width: 100%;
+  padding: 10px;
+  border-radius: 200px;
+  color: #fff;
+  background: #115dd8;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  transition: 200ms;
+}
+
+.cart__button2:hover {
+  background-color: var(--white);
+  color: var(--blue);
 }
 
 .cart__button1 {
@@ -521,7 +542,7 @@
 } */
 .message p {
   margin-top: -5px;
-  font-size: 1.0em;
+  font-size: 1em;
   font-weight: 400;
   color: #fcfcfc;
   letter-spacing: 1px;
@@ -660,15 +681,14 @@
   transition: all 0.5s ease-in-out;
 }
 
-.button-box h1{
-  font-size: 1.0em;
+.button-box h1 {
+  font-size: 1em;
   font-weight: 600;
   letter-spacing: 3px;
   padding-top: 5px;
   color: #00ff159c;
   padding-bottom: 15px;
   text-transform: unset;
-
 }
 .button-box:hover {
   background: #efefef;
@@ -751,4 +771,3 @@
   font-size: 0.7rem;
   cursor: pointer;
 }
-
