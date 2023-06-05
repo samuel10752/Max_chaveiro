@@ -214,208 +214,6 @@
 
 
     <div class="container">
-
-        <!-- <div class="products-list">
-
-            <div class="product">
-
-                <div class="product__image">
-                    <img src="Recursos/assets/images/produtos/product-image.webp" class="product__image" />
-                    <button class="cart__button cart__button--list" data-add-product>Add</button>
-                </div>
-
-                <div class="product__title">Chaveiro Luxo Couro Nissan</div>
-                <div class="product__price">R$65.00</div>
-                <div class="product__rating">
-                    <div class="rating">
-                        <span class="rating__star"> star </span>
-
-                        <span class="rating__star"> star </span>
-
-                        <span class="rating__star"> star </span>
-
-                        <span class="rating__star"> star </span>
-
-                        <span class="rating__star"> star </span>
-                    </div>
-                    <div class="rating__total">(8)</div>
-                </div>
-            </div>
-
-            <div class="product">
-               
-                <div class="product__image">
-                    <img src="Recursos/assets/images/produtos/product-image.webp" class="product__image" />
-                    <button class="cart__button cart__button--list" data-add-product>Add</button>
-                </div>
-              
-                <div class="product__title">Apollo Running Short</div>
-                <div class="product__price">$50.00</div>
-                <div class="product__rating">
-                    <div class="rating">
-                        <span class="rating__star"> star </span>
-
-                        <span class="rating__star"> star </span>
-
-                        <span class="rating__star"> star </span>
-
-                        <span class="rating__star"> star </span>
-
-                        <span class="rating__star"> star </span>
-                    </div>
-                    <div class="rating__total">(8)</div>
-                </div>
-            </div>
-  
-            <div class="product">
-             
-                <div class="product__image">
-                    <img src="Recursos/assets/images/produtos/product-image.webp" class="product__image" />
-                    <button class="cart__button cart__button--list" data-add-product>Add</button>
-                </div>
-     
-                <div class="product__title">Apollo Running Short</div>
-                <div class="product__price">$50.00</div>
-                <div class="product__rating">
-                    <div class="rating">
-                        <span class="rating__star"> star </span>
-
-                        <span class="rating__star"> star </span>
-
-                        <span class="rating__star"> star </span>
-
-                        <span class="rating__star"> star </span>
-
-                        <span class="rating__star"> star </span>
-                    </div>
-                    <div class="rating__total">(8)</div>
-                </div>
-            </div>
-  
-            <div class="product">
-          
-                <div class="product__image">
-                    <img src="Recursos/assets/images/produtos/product-image.webp" class="product__image" />
-                    <button class="cart__button cart__button--list" data-add-product>Add</button>
-                </div>
-
-                <div class="product__title">Apollo Running Short</div>
-                <div class="product__price">$50.00</div>
-                <div class="product__rating">
-                    <div class="rating">
-                        <span class="rating__star"> star </span>
-
-                        <span class="rating__star"> star </span>
-
-                        <span class="rating__star"> star </span>
-
-                        <span class="rating__star"> star </span>
-
-                        <span class="rating__star"> star </span>
-                    </div>
-                    <div class="rating__total">(8)</div>
-                </div>
-            </div>
-
-            <div class="product">
-        <div class="product__image">
-                    <img src="Recursos/assets/images/produtos/product-image.webp" class="product__image" />
-                    <button class="cart__button cart__button--list" data-add-product>Add</button>
-                </div>
-
-                <div class="product__title">Apollo Running Short</div>
-                <div class="product__price">$50.00</div>
-                <div class="product__rating">
-                    <div class="rating">
-                        <span class="rating__star"> star </span>
-
-                        <span class="rating__star"> star </span>
-
-                        <span class="rating__star"> star </span>
-
-                        <span class="rating__star"> star </span>
-
-                        <span class="rating__star"> star </span>
-                    </div>
-                    <div class="rating__total">(8)</div>
-                </div>
-            </div>
-
-            <div class="product">
-
-                <div class="product__image">
-                    <img src="Recursos/assets/images/produtos/product-image.webp" class="product__image" />
-                    <button class="cart__button cart__button--list" data-add-product>Add</button>
-                </div>
-
-                <div class="product__title">Apollo Running Short</div>
-                <div class="product__price">$50.00</div>
-                <div class="product__rating">
-                    <div class="rating">
-                        <span class="rating__star"> star </span>
-
-                        <span class="rating__star"> star </span>
-
-                        <span class="rating__star"> star </span>
-
-                        <span class="rating__star"> star </span>
-
-                        <span class="rating__star"> star </span>
-                    </div>
-                    <div class="rating__total">(8)</div>
-                </div>
-            </div>
-
-            <div class="product">
-
-                <div class="product__image">
-                    <img src="Recursos/assets/images/produtos/product-image.webp" class="product__image" />
-                    <button class="cart__button cart__button--list" data-add-product>Add</button>
-                </div>
-
-                <div class="product__title">Apollo Running Short</div>
-                <div class="product__price">$50.00</div>
-                <div class="product__rating">
-                    <div class="rating">
-                        <span class="rating__star"> star </span>
-
-                        <span class="rating__star"> star </span>
-
-                        <span class="rating__star"> star </span>
-
-                        <span class="rating__star"> star </span>
-
-                        <span class="rating__star"> star </span>
-                    </div>
-                    <div class="rating__total">(8)</div>
-                </div>
-            </div>
-
-            <div class="product">
-
-                <div class="product__image">
-                    <img src="Recursos/assets/images/produtos/product-image.webp" class="product__image" />
-                    <button class="cart__button cart__button--list" data-add-product>Add</button>
-                </div>
-
-                <div class="product__title">Apollo Running Short</div>
-                <div class="product__price">$50.00</div>
-                <div class="product__rating">
-                    <div class="rating">
-                        <span class="rating__star"> star </span>
-
-                        <span class="rating__star"> star </span>
-
-                        <span class="rating__star"> star </span>
-
-                        <span class="rating__star"> star </span>
-
-                        <span class="rating__star"> star </span>
-                    </div>
-                    <div class="rating__total">(8)</div>
-                </div>
-            </div>
-        </div> -->
         <!-- End Product List -->
 
         <!-- Cart -->
@@ -632,375 +430,375 @@
                         <div class="featured-item">
                             <div class="product">
                                 <div class="product__image">
-                                    <img src="Recursos/assets/images/card_produtos/produto-1.png" alt="Item 2">
-                                        <button id="addtocart_1"  class="cart__button cart__button--list"
-                                            data-add-product>Adicionar </button>
-                                        <span class="cart-item"></span>
-                                    </div>
-                                    <a href="p/produto_1.php">
-                                        <!-- End Product Image -->
-                                        <h4 class="product__title">Chaveiro Luxo Couro Nissan</h4>
-                                        <div class="product__price">R$65.00</div>
-                                        <div class="product__rating">
-                                            <div class="rating">
-                                                <span class="rating__star"> star </span>
+                                    <img src="Recursos/assets/images/card_produtos/produto-1.png" alt="Item 2"
+                                        data-image="produto-1.png">
 
-                                                <span class="rating__star"> star </span>
-
-                                                <span class="rating__star"> star </span>
-
-                                                <span class="rating__star"> star </span>
-
-                                                <span class="rating__star"> star </span>
-                                            </div>
-                                            <div class="rating__total">(8)</div>
-                                        </div>
-                                    </a>
+                                    <button id="addtocart_1" class="cart__button cart__button--list"
+                                        data-add-product>Adicionar </button>
+                                    <span class="cart-item"></span>
                                 </div>
+                                <a href="p/produto_1.php">
+                                    <!-- End Product Image -->
+                                    <h4 class="product__title">Chaveiro Luxo Couro Nissan</h4>
+                                    <div class="product__price">R$65.00</div>
+                                    <div class="product__rating">
+                                        <div class="rating">
+                                            <span class="rating__star"> star </span>
 
+                                            <span class="rating__star"> star </span>
+
+                                            <span class="rating__star"> star </span>
+
+                                            <span class="rating__star"> star </span>
+
+                                            <span class="rating__star"> star </span>
+                                        </div>
+                                        <div class="rating__total">(8)</div>
+                                    </div>
+                                </a>
                             </div>
 
-
-                            <a href="p/single-2.php">
-                                <div class="featured-item">
-                                    <img src="Recursos/assets/images/card_produtos/produto-2.png" alt="Item 2">
-                                    <h4>Erat odio rhoncus</h4>
-                                    <h6>R$25.00</h6>
-                                </div>
-                            </a>
-                            <a href="p/single-3.php">
-                                <div class="featured-item">
-                                    <img src="Recursos/assets/images/card_produtos/produto-3.png" alt="Item 3">
-                                    <h4>Integer vel turpis</h4>
-                                    <h6>R$35.00</h6>
-                                </div>
-                            </a>
-                            <a href="p/single-4.php">
-                                <div class="featured-item">
-                                    <img src="Recursos/assets/images/card_produtos/produto-4.png" alt="Item 4">
-                                    <h4>Sed purus quam</h4>
-                                    <h6>R$45.00</h6>
-                                </div>
-                            </a>
-                            <a href="p/single-5.php">
-                                <div class="featured-item">
-                                    <img src="Recursos/assets/images/card_produtos/produto-5.png" alt="Item 5">
-                                    <h4>Morbi aliquet</h4>
-                                    <h6>R$55.00</h6>
-                                </div>
-                            </a>
-                            <a href="p/single-6.php">
-                                <div class="featured-item">
-                                    <img src="Recursos/assets/images/card_produtos/produto-6.png" alt="Item 6">
-                                    <h4>Urna ac diam</h4>
-                                    <h6>R$65.00</h6>
-                                </div>
-                            </a>
-                            <a href="p/single-7.php">
-                                <div class="featured-item">
-                                    <img src="Recursos/assets/images/card_produtos/produto-1.png" alt="Item 7">
-                                    <h4>Proin eget imperdiet</h4>
-                                    <h6>R$75.00</h6>
-                                </div>
-                            </a>
-                            <a href="p/single-8.php">
-                                <div class="featured-item">
-                                    <img src="Recursos/assets/images/card_produtos/produto-2.png" alt="Item 8">
-                                    <h4>Nullam risus nisl</h4>
-                                    <h6>R$85.00</h6>
-                                </div>
-                            </a>
-                            <a href="p/single-9.php">
-                                <div class="featured-item">
-                                    <img src="Recursos/assets/images/card_produtos/produto-3.png" alt="Item 9">
-                                    <h4>Cras tempus</h4>
-                                    <h6>R$95.00</h6>
-                                </div>
-                            </a>
                         </div>
+
+
+                        <a href="p/single-2.php">
+                            <div class="featured-item">
+                                <img src="Recursos/assets/images/card_produtos/produto-2.png" alt="Item 2">
+                                <h4>Erat odio rhoncus</h4>
+                                <h6>R$25.00</h6>
+                            </div>
+                        </a>
+                        <a href="p/single-3.php">
+                            <div class="featured-item">
+                                <img src="Recursos/assets/images/card_produtos/produto-3.png" alt="Item 3">
+                                <h4>Integer vel turpis</h4>
+                                <h6>R$35.00</h6>
+                            </div>
+                        </a>
+                        <a href="p/single-4.php">
+                            <div class="featured-item">
+                                <img src="Recursos/assets/images/card_produtos/produto-4.png" alt="Item 4">
+                                <h4>Sed purus quam</h4>
+                                <h6>R$45.00</h6>
+                            </div>
+                        </a>
+                        <a href="p/single-5.php">
+                            <div class="featured-item">
+                                <img src="Recursos/assets/images/card_produtos/produto-5.png" alt="Item 5">
+                                <h4>Morbi aliquet</h4>
+                                <h6>R$55.00</h6>
+                            </div>
+                        </a>
+                        <a href="p/single-6.php">
+                            <div class="featured-item">
+                                <img src="Recursos/assets/images/card_produtos/produto-6.png" alt="Item 6">
+                                <h4>Urna ac diam</h4>
+                                <h6>R$65.00</h6>
+                            </div>
+                        </a>
+                        <a href="p/single-7.php">
+                            <div class="featured-item">
+                                <img src="Recursos/assets/images/card_produtos/produto-1.png" alt="Item 7">
+                                <h4>Proin eget imperdiet</h4>
+                                <h6>R$75.00</h6>
+                            </div>
+                        </a>
+                        <a href="p/single-8.php">
+                            <div class="featured-item">
+                                <img src="Recursos/assets/images/card_produtos/produto-2.png" alt="Item 8">
+                                <h4>Nullam risus nisl</h4>
+                                <h6>R$85.00</h6>
+                            </div>
+                        </a>
+                        <a href="p/single-9.php">
+                            <div class="featured-item">
+                                <img src="Recursos/assets/images/card_produtos/produto-3.png" alt="Item 9">
+                                <h4>Cras tempus</h4>
+                                <h6>R$95.00</h6>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
 
-        <!-- seção de inscrição -->
+    <!-- seção de inscrição -->
 
-        <section class="subscribe_section layout_padding">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <h2>
-                            Assine nosso <br>
-                            <span>
-                                Boletim de Notícias
-                            </span>
-                        </h2>
-                    </div>
-                    <div class="col-md-8">
-                        <form action="https://formsubmit.co/el/hopuja">
-                            <input type="text" placeholder="Inseri seu e-mail">
-                            <button type="submit">
-                                inscrever
-                            </button>
-                        </form>
-                    </div>
+    <section class="subscribe_section layout_padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h2>
+                        Assine nosso <br>
+                        <span>
+                            Boletim de Notícias
+                        </span>
+                    </h2>
+                </div>
+                <div class="col-md-8">
+                    <form action="https://formsubmit.co/el/hopuja">
+                        <input type="text" placeholder="Inseri seu e-mail">
+                        <button type="submit">
+                            inscrever
+                        </button>
+                    </form>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- fim da seção de assinatura -->
+    <!-- fim da seção de assinatura -->
 
-        <!-- seção do cliente -->
+    <!-- seção do cliente -->
 
-        <section class="client_section layout_padding">
-            <div class="container">
-                <div class="custom_heading-container">
-                    <h2 id="clientes">
-                        O QUE DIZEM NOSSOS CLIENTES
-                    </h2>
-                    <hr>
-                </div>
-                <div class="client_container layout_padding-top">
-                    <div id="carouselExample2Controls" class="carousel slide" data-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <div class="box">
-                                    <div class="detail-box">
-                                        <p>
-                                            Eu fiquei muito satisfeito com o serviço prestado, tudo foi feito com muita
-                                            rapidez e eficiência.
-                                            Essa equipe foi incrível, sempre disponível para me ajudar e resolver
-                                            qualquer
-                                            problema.
-                                        </p>
-                                    </div>
-                                    <div class="client-id">
-                                        <div class="img-box">
-                                            <img src="Recursos/assets/images/card_clientes/cliente_1.png" alt="">
-                                        </div>
-                                        <div class="name">
-                                            <h5>
-                                                STEPHANIE
-                                            </h5>
-                                            <h6>
-                                                Advogada
-                                            </h6>
-                                        </div>
-                                    </div>
+    <section class="client_section layout_padding">
+        <div class="container">
+            <div class="custom_heading-container">
+                <h2 id="clientes">
+                    O QUE DIZEM NOSSOS CLIENTES
+                </h2>
+                <hr>
+            </div>
+            <div class="client_container layout_padding-top">
+                <div id="carouselExample2Controls" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="box">
+                                <div class="detail-box">
+                                    <p>
+                                        Eu fiquei muito satisfeito com o serviço prestado, tudo foi feito com muita
+                                        rapidez e eficiência.
+                                        Essa equipe foi incrível, sempre disponível para me ajudar e resolver
+                                        qualquer
+                                        problema.
+                                    </p>
                                 </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="box">
-                                    <div class="detail-box">
-                                        <p>
-                                            A qualidade do serviço foi excepcional, eu recomendo a todos,
-                                            fiquei impressionado com a atenção aos detalhes e a dedicação da equipe,
-                                            mas a equipe foi incansável em me ajudar a entender tudo.
-                                        </p>
+                                <div class="client-id">
+                                    <div class="img-box">
+                                        <img src="Recursos/assets/images/card_clientes/cliente_1.png" alt="">
                                     </div>
-                                    <div class="client-id">
-                                        <div class="img-box">
-                                            <img src="Recursos/assets/images/card_clientes/cliente_2.png" alt="">
-                                        </div>
-                                        <div class="name">
-                                            <h5>
-                                                Kelly Maximiano
-                                            </h5>
-                                            <h6>
-                                                Empresaria
-                                            </h6>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="box">
-                                    <div class="detail-box">
-                                        <p>
-                                            A qualidade do serviço foi excepcional, eu recomendo a todos,
-                                            fiquei impressionado com a atenção aos detalhes e a dedicação da equipe,
-                                            mas a equipe foi incansável em me ajudar a entender tudo.
-                                        </p>
-                                    </div>
-                                    <div class="client-id">
-                                        <div class="img-box">
-                                            <img src="Recursos/assets/images/card_clientes/cliente_4.png" alt="">
-                                        </div>
-                                        <div class="name">
-                                            <h5>
-                                                Suellen Barbosa
-                                            </h5>
-                                            <h6>
-                                                Técnica em Marketing
-                                            </h6>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="box">
-                                    <div class="detail-box">
-                                        <p>
-                                            Eu não poderia estar mais satisfeito com o serviço prestado, tudo foi além
-                                            das
-                                            minhas expectativas,
-                                            a equipe foi incrivelmente profissional e sempre disponível para me ajudar,
-                                            nunca tive um serviço tão bom, eu recomendo a todos.
-                                        </p>
-                                    </div>
-                                    <div class="client-id">
-                                        <div class="img-box">
-                                            <img src="Recursos/assets/images/card_clientes/cliente_3.png" alt="">
-                                        </div>
-                                        <div class="name">
-                                            <h5>
-                                                Edgard Barbosa
-                                            </h5>
-                                            <h6>
-                                                Barbeiro Profissiona
-                                            </h6>
-                                        </div>
+                                    <div class="name">
+                                        <h5>
+                                            STEPHANIE
+                                        </h5>
+                                        <h6>
+                                            Advogada
+                                        </h6>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <a class="carousel-control-prev" href="#carouselExample2Controls" role="button"
-                            data-slide="prev">
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href="#carouselExample2Controls" role="button"
-                            data-slide="next">
-                            <span class="sr-only">Next</span>
-                        </a>
+                        <div class="carousel-item">
+                            <div class="box">
+                                <div class="detail-box">
+                                    <p>
+                                        A qualidade do serviço foi excepcional, eu recomendo a todos,
+                                        fiquei impressionado com a atenção aos detalhes e a dedicação da equipe,
+                                        mas a equipe foi incansável em me ajudar a entender tudo.
+                                    </p>
+                                </div>
+                                <div class="client-id">
+                                    <div class="img-box">
+                                        <img src="Recursos/assets/images/card_clientes/cliente_2.png" alt="">
+                                    </div>
+                                    <div class="name">
+                                        <h5>
+                                            Kelly Maximiano
+                                        </h5>
+                                        <h6>
+                                            Empresaria
+                                        </h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="box">
+                                <div class="detail-box">
+                                    <p>
+                                        A qualidade do serviço foi excepcional, eu recomendo a todos,
+                                        fiquei impressionado com a atenção aos detalhes e a dedicação da equipe,
+                                        mas a equipe foi incansável em me ajudar a entender tudo.
+                                    </p>
+                                </div>
+                                <div class="client-id">
+                                    <div class="img-box">
+                                        <img src="Recursos/assets/images/card_clientes/cliente_4.png" alt="">
+                                    </div>
+                                    <div class="name">
+                                        <h5>
+                                            Suellen Barbosa
+                                        </h5>
+                                        <h6>
+                                            Técnica em Marketing
+                                        </h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="box">
+                                <div class="detail-box">
+                                    <p>
+                                        Eu não poderia estar mais satisfeito com o serviço prestado, tudo foi além
+                                        das
+                                        minhas expectativas,
+                                        a equipe foi incrivelmente profissional e sempre disponível para me ajudar,
+                                        nunca tive um serviço tão bom, eu recomendo a todos.
+                                    </p>
+                                </div>
+                                <div class="client-id">
+                                    <div class="img-box">
+                                        <img src="Recursos/assets/images/card_clientes/cliente_3.png" alt="">
+                                    </div>
+                                    <div class="name">
+                                        <h5>
+                                            Edgard Barbosa
+                                        </h5>
+                                        <h6>
+                                            Barbeiro Profissiona
+                                        </h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-
+                    <a class="carousel-control-prev" href="#carouselExample2Controls" role="button" data-slide="prev">
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExample2Controls" role="button" data-slide="next">
+                        <span class="sr-only">Next</span>
+                    </a>
                 </div>
-            </div>
-        </section>
-        <!-- seção do cliente final -->
 
-        <!-- seção de informações -->
-        <section class="info_section layout_padding">
-            <div class="container">
-                <div class="info_social">
-                    <div>
-                        <a href="https://www.facebook.com/Maximiano.jr">
-                            <img src="Recursos/assets/icon/icon_card_info/fb.png" alt="">
-                        </a>
-                    </div>
-                    <!-- <div>
+            </div>
+        </div>
+    </section>
+    <!-- seção do cliente final -->
+
+    <!-- seção de informações -->
+    <section class="info_section layout_padding">
+        <div class="container">
+            <div class="info_social">
+                <div>
+                    <a href="https://www.facebook.com/Maximiano.jr">
+                        <img src="Recursos/assets/icon/icon_card_info/fb.png" alt="">
+                    </a>
+                </div>
+                <!-- <div>
           <a href="mailto:max.prestacao@gmail.com?subject=Servico de chaves, fechaduras e abertura de automoveis.">
             <img src="Recursos/assets/icon/icon_card_info/gmail.png" alt="">
           </a>
         </div> -->
-                    <div>
-                        <a
-                            href="https://wa.me/5535999853337?text=Serviço%20de%20chaves%20,%20fechaduras%20e%20abertura%20de%20automóveis%20.%20">
-                            <img src="Recursos/assets/icon/icon_card_info/whats.png" alt="">
-                        </a>
-                    </div>
-                    <div>
-                        <a href="https://www.instagram.com/max_chaveiro/">
-                            <img src="Recursos/assets/icon/icon_card_info/insta.png" alt="">
-                        </a>
-                    </div>
+                <div>
+                    <a
+                        href="https://wa.me/5535999853337?text=Serviço%20de%20chaves%20,%20fechaduras%20e%20abertura%20de%20automóveis%20.%20">
+                        <img src="Recursos/assets/icon/icon_card_info/whats.png" alt="">
+                    </a>
                 </div>
                 <div>
-                    <p>
-                        Se você está precisa de uma chave nova para seu carro, vamos te fornecer a marca e modelo do
-                        carro e
-                        tomar as
-                        medidas necessárias para cortar uma nova chave, e uma chave para sua casa, marca da fechadura e
-                        tomar as
-                        medidas necessárias para cortar uma nova chave.
-                    </p>
+                    <a href="https://www.instagram.com/max_chaveiro/">
+                        <img src="Recursos/assets/icon/icon_card_info/insta.png" alt="">
+                    </a>
                 </div>
             </div>
-            <div class="info_social1">
-                <ul>
-                    <!-- <li><a href="#">Inicio</a></li> -->
-                    <li><a href="politica.php">Política de Privacidade</a></li>
-                    <li><a href="termos.php">Termos e Condições</a></li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- Fim seção de informações -->
-
-        <!-- seção de rodapé -->
-        <section class="container-fluid footer_section">
-            <p>
-                Copyright &copy; 2023 Todos os direitos reservados por
-                Max Chaveiro
-            </p>
-
-            <p>
-                Copyright &copy; Desenvolvido por
-                <a href="https://www.instagram.com/samuelbarbosasl/">
-                    Samuel Cauã Barbosa
-                </a>
-            </p>
-        </section>
-
-        <!-- seção de rodapé -->
-
-        <!-- seção de botão ao topo -->
-        <a href="#topo" class="scrollToTop">
-            <img src="Recursos/assets/icon/icon_topo/topo.png" alt="">
-        </a>
-
-
-        <!-- seção de botão ao topo -->
-
-        <!-- seção de cookis -->
-        <div class="wrapper">
-            <img src="Recursos/assets/icon/icon_cookis/cookie.png" alt="">
-            <div class="content">
-                <header>Consentimento de Cookies</header>
-                <p>Este site usa cookies para garantir que você obtenha a melhor experiência em nosso site.</p>
-                <div class="buttons">
-                    <button class="item">Aceitar</button>
-                    <a href="politica.php" class="item">Saiba mais</a>
-                </div>
+            <div>
+                <p>
+                    Se você está precisa de uma chave nova para seu carro, vamos te fornecer a marca e modelo do
+                    carro e
+                    tomar as
+                    medidas necessárias para cortar uma nova chave, e uma chave para sua casa, marca da fechadura e
+                    tomar as
+                    medidas necessárias para cortar uma nova chave.
+                </p>
             </div>
         </div>
+        <div class="info_social1">
+            <ul>
+                <!-- <li><a href="#">Inicio</a></li> -->
+                <li><a href="politica.php">Política de Privacidade</a></li>
+                <li><a href="termos.php">Termos e Condições</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Fim seção de informações -->
+
+    <!-- seção de rodapé -->
+    <section class="container-fluid footer_section">
+        <p>
+            Copyright &copy; 2023 Todos os direitos reservados por
+            Max Chaveiro
+        </p>
+
+        <p>
+            Copyright &copy; Desenvolvido por
+            <a href="https://www.instagram.com/samuelbarbosasl/">
+                Samuel Cauã Barbosa
+            </a>
+        </p>
+    </section>
+
+    <!-- seção de rodapé -->
+
+    <!-- seção de botão ao topo -->
+    <a href="#topo" class="scrollToTop">
+        <img src="Recursos/assets/icon/icon_topo/topo.png" alt="">
+    </a>
 
 
-        <script language="text/Javascript">
-        cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
-        function clearField(t) { //declaring the array outside of the
-            if (!cleared[t.id]) { // function makes it static and global
-                cleared[t.id] = 1; // you could use true and false, but that's more typing
-                t.value = ''; // with more chance of typos
-                t.style.color = '#fff';
-            }
+    <!-- seção de botão ao topo -->
+
+    <!-- seção de cookis -->
+    <div class="wrapper">
+        <img src="Recursos/assets/icon/icon_cookis/cookie.png" alt="">
+        <div class="content">
+            <header>Consentimento de Cookies</header>
+            <p>Este site usa cookies para garantir que você obtenha a melhor experiência em nosso site.</p>
+            <div class="buttons">
+                <button class="item">Aceitar</button>
+                <a href="politica.php" class="item">Saiba mais</a>
+            </div>
+        </div>
+    </div>
+
+
+    <script language="text/Javascript">
+    cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
+    function clearField(t) { //declaring the array outside of the
+        if (!cleared[t.id]) { // function makes it static and global
+            cleared[t.id] = 1; // you could use true and false, but that's more typing
+            t.value = ''; // with more chance of typos
+            t.style.color = '#fff';
         }
-        </script>
+    }
+    </script>
 
 
-        <!-- seção de contador de likes-->
+    <!-- seção de contador de likes-->
 
-        <!-- Bootstrap core JavaScript -->
-        <script src="Recursos/assets/js/js_blibioteca/js/jquery/jquery.min.js"></script>
-        <script type="text/javascript" src="Recursos/assets/js/js_blibioteca/js/jquery/jquery-3.4.1.min.js "></script>
-        <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-        <script type="text/javascript" src="Recursos/assets/js/boostrap/bootstrap.bundle.min.js"></script>
-        <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
-        <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="Recursos/assets/js/js_blibioteca/js/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="Recursos/assets/js/js_blibioteca/js/jquery/jquery-3.4.1.min.js "></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script type="text/javascript" src="Recursos/assets/js/boostrap/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
 
-        <!-- Additional Scripts -->
-        <script src="Recursos/assets/js/preloder.js"></script>
-        <script src="Recursos/assets/js/share.js"></script>
-        <script src="Recursos/assets/js/scrolltopo.js"></script>
-        <script src="Recursos/assets/js/cookis.js "></script>
-        <script src="Recursos/assets/js/app.js"></script>
+    <!-- Additional Scripts -->
+    <script src="Recursos/assets/js/preloder.js"></script>
+    <script src="Recursos/assets/js/share.js"></script>
+    <script src="Recursos/assets/js/scrolltopo.js"></script>
+    <script src="Recursos/assets/js/cookis.js "></script>
+    <script src="Recursos/assets/js/app.js"></script>
 
-        <!-- CArousel de produto -->
-        <script src="Recursos/assets/js/custom.js"></script>
-        <script src="Recursos/assets/js/owl.js"></script>
-        <script src="Recursos/assets/js/isotope.js"></script>
-        <script src="Recursos/assets/js/flex-slider.js"></script>
+    <!-- CArousel de produto -->
+    <script src="Recursos/assets/js/custom.js"></script>
+    <script src="Recursos/assets/js/owl.js"></script>
+    <script src="Recursos/assets/js/isotope.js"></script>
+    <script src="Recursos/assets/js/flex-slider.js"></script>
 
 </body>
 </body>

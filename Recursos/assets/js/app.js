@@ -4,16 +4,15 @@
   const cartButton1 = document.querySelector("button.button-box");
   const closeCartButton = document.querySelector("span.close-icon");
   const closeCartButton1 = document.querySelector("a.produt");
-  const addButtons = document.querySelectorAll("[data-add-product]");
   const cartProducts = document.querySelector(".cart__products");
 
   const createCartItem = (
     item = {
-      color: "white",
-      size: "XS",
-      title: "Cotton dress",
-      price: 50.0,
-      quantity: 1,
+      // color: "white",
+      // size: "XS",
+      // title: "Cotton dress",
+      // price: 60.0,
+      // quantity: 1,
     }
   ) => {
     // Cria todas as divs
@@ -59,15 +58,20 @@
     colorOptionValue.classList.add("option__value");
     sizeOptionValue.classList.add("option__value");
     const image = document.createElement("img");
+    
 
     image.classList.add("cart__product-image");
-    image.src = "Recursos/assets/images/produtos/product-image.webp";
+    image.src = "Recursos/assets/images/card_produtos/" + image.getAttribute('data-image');
+    
+    
 
-    sizeOptionName.innerText = "Size:";
-    sizeOptionValue.innerText = item.size;
+    console.log(image); // Isso imprimirá o valor de 'image' no console do navegador.
 
-    colorOptionName.innerText = "Color:";
-    colorOptionValue.innerText = item.color;
+    // sizeOptionName.innerText = "Size:";
+    // sizeOptionValue.innerText = item.size;
+
+    // colorOptionName.innerText = "Color:";
+    // colorOptionValue.innerText = item.color;product__image
 
     removeIcon.innerText = "remove";
     addIcon.innerText = "add";
@@ -336,89 +340,87 @@
   // animacao de adicao ao carrinho
 
 
-// Função para adicionar ao carrinho e mostrar a animação
-function addToCart(button, item) {
-  // Mostra a animação
-  button.addClass('sendtocart');
-  setTimeout(function () {
-    button.removeClass('sendtocart');
-    var cart = $('#cart');
-    var cartTotal = cart.attr('data-totalitems');
-    var newCartTotal = parseInt(cartTotal) + 1;
-    cart.addClass('shake').attr('data-totalitems', newCartTotal);
+  // Função para adicionar ao carrinho e mostrar a animação
+  function addToCart(button, item) {
+    button.addClass('sendtocart');
     setTimeout(function () {
-      cart.removeClass('shake');
-    }, 500);
-  }, 1000);
+      button.removeClass('sendtocart');
+      var cart = $('#cart');
+      var cartTotal = cart.attr('data-totalitems');
+      var newCartTotal = parseInt(cartTotal) + 1;
+      cart.addClass('shake').attr('data-totalitems', newCartTotal);
+      setTimeout(function () {
+        cart.removeClass('shake');
+      }, 500);
+    }, 1000);
 
-  // Mostra o pop-up de sucesso
-  document.getElementById('successPopup').style.display = 'block';
-  setTimeout(function () {
-    document.getElementById('successPopup').style.display = 'none';
-  }, 10000);
-  
+    document.getElementById('successPopup').style.display = 'block';
+    setTimeout(function () {
+      document.getElementById('successPopup').style.display = 'none';
+    }, 10000);
 
-  // Adiciona um novo produto ao carrinho
-  const newCartItem = createCartItem(item);
-  cartItems.push(newCartItem);
-  cartProducts.appendChild(newCartItem);
-  toggleItems(cartItems);
-  updateTotals(cartItems, item);
-}
+    const newCartItem = createCartItem(item);
+    cartItems.push(newCartItem);
+    cartProducts.appendChild(newCartItem);
+    toggleItems(cartItems);
+    updateTotals(cartItems, item);
+  }
 
-$(document).ready(function () {
-  // Adiciona o ouvinte de evento original
-  $('.cart__button--list').each(function() {
-    const item = {
-      color: "white",
-      size: "XS",
-      title: "Cotton dress",
-      price: 50.0,
-      quantity: 1,
-    };
+  $(document).ready(function () {
+    $('.cart__button--list').each(function () {
+      const button = $(this);
+      const product = button.closest('.product');
+      const image = product.find('.product__image img');
+      const title = product.find('.product__title').text();
+      const price = product.find('.product__price').text().replace('R$', '').trim();
+      const selectedImage = image.attr('src');
 
-    $(this).on('click', function () {
-      addToCart($(this), item);
-    });
-  });
+      image.addClass("cart__product-image");
+      image.attr("src"+ selectedImage);
 
-  // Adiciona novos ouvintes de evento quando os slides são movidos
-  $('.owl-carousel').on('translated.owl.carousel', function (event) {
-    // Remove todos os ouvintes de eventos 'click' dos elementos '.cart__button--list'
-    $('.cart__button--list').off('click');
-
-    // Adiciona novos ouvintes de evento 'click'
-    $('.cart__button--list').each(function() {
       const item = {
-        color: "white",
-        size: "XS",
-        title: "Cotton dress",
-        price: 50.0,
+        image: selectedImage,
+        title: title,
+        price: parseFloat(price),
         quantity: 1,
       };
 
-      $(this).on('click', function () {
-        addToCart($(this), item);
+      button.on('click', function () {
+        addToCart(button, item);
+      });
+    });
+
+    $('.owl-carousel').on('translated.owl.carousel', function (event) {
+      $('.cart__button--list').off('click');
+
+      $('.cart__button--list').each(function () {
+        const button = $(this);
+        const product = button.closest('.product');
+        const image = product.find('.product__image img');
+        const title = product.find('.product__title').text();
+        const price = product.find('.product__price').text().replace('R$', '').trim();
+        const selectedImage = image.attr('src');
+
+        const item = {
+          image: selectedImage,
+          title: title,
+          price: parseFloat(price),
+          quantity: 1,
+        };
+
+        $(this).on('click', function () {
+          addToCart(button, item);
+        });
       });
     });
   });
-});
-
-
 
 
   document.getElementById('aber').addEventListener('click', function () {
     document.getElementById('successPopup').style.display = 'none';
   });
 
-
-
   document.getElementById('closePopup').addEventListener('click', function () {
     document.getElementById('successPopup').style.display = 'none';
   });
-
-
-
-
-
 })();
