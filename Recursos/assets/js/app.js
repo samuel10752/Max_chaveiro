@@ -57,15 +57,26 @@
     sizeOptionName.classList.add("option__name");
     colorOptionValue.classList.add("option__value");
     sizeOptionValue.classList.add("option__value");
-    const image = document.createElement("img");
-    
+    // Crie uma nova imagem
 
-    image.classList.add("cart__product-image");
-    image.src = "Recursos/assets/images/card_produtos/" + image.getAttribute('data-image');
-    
-    
+    // Pegue a imagem existente
+    const existingImage = document.querySelector("#productImage");
 
-    console.log(image); // Isso imprimirá o valor de 'image' no console do navegador.
+    // Clone a imagem existente
+    const newImage = existingImage.cloneNode();
+
+    // Adicione uma classe à nova imagem
+    newImage.classList.add("cart__product-image");
+
+    // Defina a src da nova imagem usando o atributo data-src
+    newImage.src = "Recursos/assets/images/card_produtos/" + newImage.getAttribute('data-src');
+
+    // Adicione a nova imagem ao container desejado
+    document.querySelector('#imageContainer').appendChild(newImage);
+
+
+
+    console.log(newImage); // Isso imprimirá o valor de 'image' no console do navegador.
 
     // sizeOptionName.innerText = "Size:";
     // sizeOptionValue.innerText = item.size;
@@ -102,7 +113,7 @@
 
     cartProduct.appendChild(productRemove);
 
-    productImage.appendChild(image);
+    productImage.appendChild(newImage);
     productImage.appendChild(quantitySelector);
 
     cartProduct.appendChild(productImage);
@@ -369,26 +380,27 @@
   $(document).ready(function () {
     $('.cart__button--list').each(function () {
       const button = $(this);
-      const product = button.closest('.product');
-      const image = product.find('.product__image img');
-      const title = product.find('.product__title').text();
-      const price = product.find('.product__price').text().replace('R$', '').trim();
-      const selectedImage = image.attr('src');
-
-      image.addClass("cart__product-image");
-      image.attr("src"+ selectedImage);
-
-      const item = {
-        image: selectedImage,
-        title: title,
-        price: parseFloat(price),
-        quantity: 1,
-      };
-
       button.on('click', function () {
+        const product = button.closest('.product');
+        const imageElement = product.find('.product__image img'); // get the reference to the image
+        const title = product.find('.product__title').text();
+        const price = product.find('.product__price').text().replace('R$', '').trim();
+        const selectedImage = imageElement.attr('data-image'); // get the value of 'data-image'
+
+        // imageElement.addClass("cart__product-image");
+        // imageElement.attr("src", "Recursos/assets/images/card_produtos/" + selectedImage); // set the 'src' of the image
+
+        const item = {
+          image: selectedImage,
+          title: title,
+          price: parseFloat(price),
+          quantity: 1,
+        };
+
         addToCart(button, item);
       });
     });
+
 
     $('.owl-carousel').on('translated.owl.carousel', function (event) {
       $('.cart__button--list').off('click');
@@ -396,10 +408,13 @@
       $('.cart__button--list').each(function () {
         const button = $(this);
         const product = button.closest('.product');
-        const image = product.find('.product__image img');
+        const imageElement = product.find('.product__image img'); // obter a referência à imagem
         const title = product.find('.product__title').text();
         const price = product.find('.product__price').text().replace('R$', '').trim();
-        const selectedImage = image.attr('src');
+        const selectedImage = imageElement.attr('data-image'); // obter o valor de 'data-image'
+
+        // imageElement.addClass("cart__product-image");
+        // imageElement.attr("src", "Recursos/assets/images/card_produtos/" + selectedImage); // definir o 'src' da imagem
 
         const item = {
           image: selectedImage,

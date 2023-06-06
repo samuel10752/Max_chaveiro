@@ -429,10 +429,9 @@
                         <!-- Product -->
                         <div class="featured-item">
                             <div class="product">
-                                <div class="product__image">
-                                    <img src="Recursos/assets/images/card_produtos/produto-1.png" alt="Item 2"
-                                        data-image="produto-1.png">
-
+                                <div id="imageContainer" class="product__image">
+                                    <img id="productImage" src="Recursos/assets/images/card_produtos/produto-1.png"
+                                        alt="Item 2" data-src="produto-1.png">
                                     <button id="addtocart_1" class="cart__button cart__button--list"
                                         data-add-product>Adicionar </button>
                                     <span class="cart-item"></span>
