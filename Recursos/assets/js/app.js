@@ -59,24 +59,34 @@
     sizeOptionValue.classList.add("option__value");
     // Crie uma nova imagem
 
+    // Seletor do botão de adicionar
+
     // Pegue a imagem existente
-    const existingImage = document.querySelector("#productImage");
+    // Pegue a imagem existente
+    // const existingImage = document.querySelector("#productImage");
 
-    // Clone a imagem existente
-    const newImage = existingImage.cloneNode();
+    // // Clone a imagem existente
+    // const newImage = existingImage.cloneNode();
 
-    // Adicione uma classe à nova imagem
-    newImage.classList.add("cart__product-image");
+    // // Adicione uma classe à nova imagem
+    // newImage.classList.add("cart__product-image");
 
-    // Defina a src da nova imagem usando o atributo data-src
-    newImage.src = "Recursos/assets/images/card_produtos/" + newImage.getAttribute('data-src');
+    // // Defina a src da nova imagem usando o atributo data-src
+    // const dataSrc = existingImage.getAttribute('data-src');
+    // newImage.src = "Recursos/assets/images/card_produtos/" + dataSrc;
 
-    // Adicione a nova imagem ao container desejado
-    document.querySelector('#imageContainer').appendChild(newImage);
+    // // Adicione a nova imagem ao container desejado
+    // document.querySelector('#imageContainer').appendChild(newImage);
 
 
 
-    console.log(newImage); // Isso imprimirá o valor de 'image' no console do navegador.
+    const image = document.createElement("img");
+
+
+    image.classList.add("cart__product-image");
+    image.src = "Recursos/assets/images/card_produtos/" + image.getAttribute('data-src');
+
+    console.log(image); // Isso imprimirá o valor de 'image' no console do navegador.
 
     // sizeOptionName.innerText = "Size:";
     // sizeOptionValue.innerText = item.size;
@@ -113,7 +123,7 @@
 
     cartProduct.appendChild(productRemove);
 
-    productImage.appendChild(newImage);
+    productImage.appendChild(image);
     productImage.appendChild(quantitySelector);
 
     cartProduct.appendChild(productImage);
@@ -173,6 +183,8 @@
     });
 
     return cartProduct;
+
+
   };
 
   const toggleItems = (cartItems) => {
@@ -352,53 +364,52 @@
 
 
   // Função para adicionar ao carrinho e mostrar a animação
-  function addToCart(button, item) {
-    button.addClass('sendtocart');
-    setTimeout(function () {
+// Função para adicionar ao carrinho e mostrar a animação
+function addToCart(button, item) {
+  button.addClass('sendtocart');
+  setTimeout(function() {
       button.removeClass('sendtocart');
       var cart = $('#cart');
       var cartTotal = cart.attr('data-totalitems');
       var newCartTotal = parseInt(cartTotal) + 1;
       cart.addClass('shake').attr('data-totalitems', newCartTotal);
-      setTimeout(function () {
-        cart.removeClass('shake');
+      setTimeout(function() {
+          cart.removeClass('shake');
       }, 500);
-    }, 1000);
+  }, 1000);
 
-    document.getElementById('successPopup').style.display = 'block';
-    setTimeout(function () {
+  document.getElementById('successPopup').style.display = 'block';
+  setTimeout(function() {
       document.getElementById('successPopup').style.display = 'none';
-    }, 10000);
+  }, 10000);
 
-    const newCartItem = createCartItem(item);
-    cartItems.push(newCartItem);
-    cartProducts.appendChild(newCartItem);
-    toggleItems(cartItems);
-    updateTotals(cartItems, item);
-  }
+  const newCartItem = createCartItem(item); // Aqui você precisa implementar createCartItem
+  cartItems.push(newCartItem);
+  cartProducts.appendChild(newCartItem); // E aqui precisa ter uma variável cartProducts definida
+  toggleItems(cartItems); // Implementar toggleItems
+  updateTotals(cartItems, item); // Implementar updateTotals
+}
 
-  $(document).ready(function () {
-    $('.cart__button--list').each(function () {
-      const button = $(this);
-      button.on('click', function () {
-        const product = button.closest('.product');
-        const imageElement = product.find('.product__image img'); // get the reference to the image
-        const title = product.find('.product__title').text();
-        const price = product.find('.product__price').text().replace('R$', '').trim();
-        const selectedImage = imageElement.attr('data-image'); // get the value of 'data-image'
 
-        // imageElement.addClass("cart__product-image");
-        // imageElement.attr("src", "Recursos/assets/images/card_produtos/" + selectedImage); // set the 'src' of the image
-
-        const item = {
-          image: selectedImage,
-          title: title,
-          price: parseFloat(price),
-          quantity: 1,
-        };
-
-        addToCart(button, item);
-      });
+  $(document).ready(function() {
+    $('.cart__button--list').each(function() {
+        const button = $(this);
+        button.on('click', function() {
+            const product = button.closest('.product');
+            const imageElement = product.find('.product__image img'); // obter a referência à imagem
+            const imagePath = imageElement.attr('data-src'); // obter o caminho da imagem de 'data-src'
+            const title = product.find('.product__title').text();
+            const price = product.find('.product__price').text().replace('R$', '').trim();
+            
+            const item = {
+                image: imagePath, // aqui o caminho da imagem é atribuido
+                title: title,
+                price: parseFloat(price),
+                quantity: 1,
+            };
+            
+            addToCart(button, item);
+        });
     });
 
 
@@ -413,11 +424,9 @@
         const price = product.find('.product__price').text().replace('R$', '').trim();
         const selectedImage = imageElement.attr('data-image'); // obter o valor de 'data-image'
 
-        // imageElement.addClass("cart__product-image");
-        // imageElement.attr("src", "Recursos/assets/images/card_produtos/" + selectedImage); // definir o 'src' da imagem
 
         const item = {
-          image: selectedImage,
+          image: imageElement[0], // assign the actual image element
           title: title,
           price: parseFloat(price),
           quantity: 1,

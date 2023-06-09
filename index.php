@@ -428,101 +428,188 @@
                     <div class="owl-carousel owl-theme">
                         <!-- Product -->
                         <div class="featured-item">
-                            <div class="product">
-                                <div id="imageContainer" class="product__image">
-                                    <img id="productImage" src="Recursos/assets/images/card_produtos/produto-1.png"
-                                        alt="Item 2" data-src="produto-1.png">
-                                    <button id="addtocart_1" class="cart__button cart__button--list"
-                                        data-add-product>Adicionar </button>
-                                    <span class="cart-item"></span>
-                                </div>
-                                <a href="p/produto_1.php">
-                                    <!-- End Product Image -->
-                                    <h4 class="product__title">Chaveiro Luxo Couro Nissan</h4>
-                                    <div class="product__price">R$65.00</div>
-                                    <div class="product__rating">
-                                        <div class="rating">
-                                            <span class="rating__star"> star </span>
-
-                                            <span class="rating__star"> star </span>
-
-                                            <span class="rating__star"> star </span>
-
-                                            <span class="rating__star"> star </span>
-
-                                            <span class="rating__star"> star </span>
-                                        </div>
-                                        <div class="rating__total">(8)</div>
+                            <div id="cart-products">
+                                <div class="product">
+                                    <div class="product__image">
+                                        <img src="Recursos/assets/images/card_produtos/produto-1.png" alt="Item 1"
+                                            data-src="produto-1.png">
+                                        <button id="addtocart_1" class="cart__button cart__button--list"
+                                            data-add-product>Adicionar </button>
+                                        <span class="cart-item"></span>
                                     </div>
-                                </a>
+                                    <a href="p/produto_1.php">
+                                        <!-- End Product Image -->
+                                        <h4 class="product__title">Chaveiro Luxo Couro Nissan</h4>
+                                        <div class="product__price">R$65.00</div>
+                                        <div class="product__rating">
+                                            <div class="rating">
+                                                <span class="rating__star"> star </span>
+
+                                                <span class="rating__star"> star </span>
+
+                                                <span class="rating__star"> star </span>
+
+                                                <span class="rating__star"> star </span>
+
+                                                <span class="rating__star"> star </span>
+                                            </div>
+                                            <div class="rating__total">(8)</div>
+                                        </div>
+                                    </a>
+                                </div>
                             </div>
 
                         </div>
 
 
-                        <a href="p/single-2.php">
-                            <div class="featured-item">
-                                <img src="Recursos/assets/images/card_produtos/produto-2.png" alt="Item 2">
-                                <h4>Erat odio rhoncus</h4>
-                                <h6>R$25.00</h6>
+                        <!-- Product -->
+                        <div class="featured-item">
+                            <div id="cart-products">
+                                <div class="product">
+                                    <div class="product__image">
+                                        <img src="Recursos/assets/images/card_produtos/produto-2.png" alt="Item 2"
+                                            data-src="produto-2.png">
+                                        <button id="addtocart_2" class="cart__button cart__button--list"
+                                            data-add-product>Adicionar </button>
+                                        <span class="cart-item"></span>
+                                    </div>
+                                    <a href="p/produto_2.php">
+                                        <h4 class="product__title">Chaveiro Luxo Couro Toyota</h4>
+                                        <div class="product__price">R$70.00</div>
+                                        <div class="product__rating">
+                                            <div class="rating">
+                                                <span class="rating__star"> star </span>
+                                                <span class="rating__star"> star </span>
+                                                <span class="rating__star"> star </span>
+                                                <span class="rating__star"> star </span>
+                                                <span class="rating__star"> star </span>
+                                            </div>
+                                            <div class="rating__total">(10)</div>
+                                        </div>
+                                    </a>
+                                </div>
                             </div>
-                        </a>
-                        <a href="p/single-3.php">
-                            <div class="featured-item">
-                                <img src="Recursos/assets/images/card_produtos/produto-3.png" alt="Item 3">
-                                <h4>Integer vel turpis</h4>
-                                <h6>R$35.00</h6>
+                        </div>
+                        <!-- Product -->
+                        <div class="featured-item">
+                            <div id="cart-products">
+                                <div class="product">
+                                    <div class="product__image">
+                                        <img src="Recursos/assets/images/card_produtos/produto-3.png" alt="Item 3"
+                                            data-src="produto-3.png">
+                                        <button id="addtocart_3" class="cart__button cart__button--list"
+                                            data-add-product>Adicionar </button>
+                                        <span class="cart-item"></span>
+                                    </div>
+                                    <a href="p/produto_3.php">
+                                        <h4 class="product__title">Chaveiro Luxo Couro BMW</h4>
+                                        <div class="product__price">R$75.00</div>
+                                        <div class="product__rating">
+                                            <div class="rating">
+                                                <span class="rating__star"> star </span>
+                                                <span class="rating__star"> star </span>
+                                                <span class="rating__star"> star </span>
+                                                <span class="rating__star"> star </span>
+                                                <span class="rating__star"> star </span>
+                                            </div>
+                                            <div class="rating__total">(9)</div>
+                                        </div>
+                                    </a>
+                                </div>
                             </div>
-                        </a>
-                        <a href="p/single-4.php">
-                            <div class="featured-item">
-                                <img src="Recursos/assets/images/card_produtos/produto-4.png" alt="Item 4">
-                                <h4>Sed purus quam</h4>
-                                <h6>R$45.00</h6>
+                        </div>
+                        <!-- Product -->
+                        <div class="featured-item">
+                            <div id="cart-products">
+                                <div class="product">
+                                    <div class="product__image">
+                                        <img src="Recursos/assets/images/card_produtos/produto-4.png" alt="Item 4"
+                                            data-src="produto-4.png">
+                                        <button id="addtocart_4" class="cart__button cart__button--list"
+                                            data-add-product>Adicionar </button>
+                                        <span class="cart-item"></span>
+                                    </div>
+                                    <a href="p/produto_4.php">
+                                        <h4 class="product__title">Chaveiro Luxo Couro BMW</h4>
+                                        <div class="product__price">R$175.00</div>
+                                        <div class="product__rating">
+                                            <div class="rating">
+                                                <span class="rating__star"> star </span>
+                                                <span class="rating__star"> star </span>
+                                                <span class="rating__star"> star </span>
+                                                <span class="rating__star"> star </span>
+                                                <span class="rating__star"> star </span>
+                                            </div>
+                                            <div class="rating__total">(9)</div>
+                                        </div>
+                                    </a>
+                                </div>
                             </div>
-                        </a>
-                        <a href="p/single-5.php">
-                            <div class="featured-item">
-                                <img src="Recursos/assets/images/card_produtos/produto-5.png" alt="Item 5">
-                                <h4>Morbi aliquet</h4>
-                                <h6>R$55.00</h6>
+
+                        </div>
+                        <!-- Product -->
+                        <div class="featured-item">
+                            <div id="cart-products">
+                                <div class="product">
+                                    <div class="product__image">
+                                        <img src="Recursos/assets/images/card_produtos/produto-5.png" alt="Item 5"
+                                            data-src="produto-5.png">
+                                        <button id="addtocart_5" class="cart__button cart__button--list"
+                                            data-add-product>Adicionar </button>
+                                        <span class="cart-item"></span>
+                                    </div>
+                                    <a href="p/produto_3.php">
+                                        <h4 class="product__title">Chaveiro Luxo Couro BMW</h4>
+                                        <div class="product__price">R$275.00</div>
+                                        <div class="product__rating">
+                                            <div class="rating">
+                                                <span class="rating__star"> star </span>
+                                                <span class="rating__star"> star </span>
+                                                <span class="rating__star"> star </span>
+                                                <span class="rating__star"> star </span>
+                                                <span class="rating__star"> star </span>
+                                            </div>
+                                            <div class="rating__total">(9)</div>
+                                        </div>
+                                    </a>
+                                </div>
                             </div>
-                        </a>
-                        <a href="p/single-6.php">
-                            <div class="featured-item">
-                                <img src="Recursos/assets/images/card_produtos/produto-6.png" alt="Item 6">
-                                <h4>Urna ac diam</h4>
-                                <h6>R$65.00</h6>
+                        </div>
+
+                        <!-- Product -->
+                        <div class="featured-item">
+                            <div id="cart-products">
+                                <div class="product">
+                                    <div class="product__image">
+                                        <img src="Recursos/assets/images/card_produtos/produto-6.png" alt="Item 6"
+                                            data-src="produto-6.png">
+                                        <button id="addtocart_6" class="cart__button cart__button--list"
+                                            data-add-product>Adicionar </button>
+                                        <span class="cart-item"></span>
+                                    </div>
+                                    <a href="p/produto_6.php">
+                                        <h4 class="product__title">Chaveiro Luxo Couro BMW</h4>
+                                        <div class="product__price">R$715.00</div>
+                                        <div class="product__rating">
+                                            <div class="rating">
+                                                <span class="rating__star"> star </span>
+                                                <span class="rating__star"> star </span>
+                                                <span class="rating__star"> star </span>
+                                                <span class="rating__star"> star </span>
+                                                <span class="rating__star"> star </span>
+                                            </div>
+                                            <div class="rating__total">(9)</div>
+                                        </div>
+                                    </a>
+                                </div>
                             </div>
-                        </a>
-                        <a href="p/single-7.php">
-                            <div class="featured-item">
-                                <img src="Recursos/assets/images/card_produtos/produto-1.png" alt="Item 7">
-                                <h4>Proin eget imperdiet</h4>
-                                <h6>R$75.00</h6>
-                            </div>
-                        </a>
-                        <a href="p/single-8.php">
-                            <div class="featured-item">
-                                <img src="Recursos/assets/images/card_produtos/produto-2.png" alt="Item 8">
-                                <h4>Nullam risus nisl</h4>
-                                <h6>R$85.00</h6>
-                            </div>
-                        </a>
-                        <a href="p/single-9.php">
-                            <div class="featured-item">
-                                <img src="Recursos/assets/images/card_produtos/produto-3.png" alt="Item 9">
-                                <h4>Cras tempus</h4>
-                                <h6>R$95.00</h6>
-                            </div>
-                        </a>
+                        </div>
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-
     <!-- seção de inscrição -->
 
     <section class="subscribe_section layout_padding">
@@ -567,9 +654,12 @@
                             <div class="box">
                                 <div class="detail-box">
                                     <p>
-                                        Eu fiquei muito satisfeito com o serviço prestado, tudo foi feito com muita
+                                        Eu fiquei muito satisfeito com o serviço prestado, tudo foi
+                                        feito com
+                                        muita
                                         rapidez e eficiência.
-                                        Essa equipe foi incrível, sempre disponível para me ajudar e resolver
+                                        Essa equipe foi incrível, sempre disponível para me ajudar e
+                                        resolver
                                         qualquer
                                         problema.
                                     </p>
@@ -594,7 +684,8 @@
                                 <div class="detail-box">
                                     <p>
                                         A qualidade do serviço foi excepcional, eu recomendo a todos,
-                                        fiquei impressionado com a atenção aos detalhes e a dedicação da equipe,
+                                        fiquei impressionado com a atenção aos detalhes e a dedicação da
+                                        equipe,
                                         mas a equipe foi incansável em me ajudar a entender tudo.
                                     </p>
                                 </div>
@@ -618,7 +709,8 @@
                                 <div class="detail-box">
                                     <p>
                                         A qualidade do serviço foi excepcional, eu recomendo a todos,
-                                        fiquei impressionado com a atenção aos detalhes e a dedicação da equipe,
+                                        fiquei impressionado com a atenção aos detalhes e a dedicação da
+                                        equipe,
                                         mas a equipe foi incansável em me ajudar a entender tudo.
                                     </p>
                                 </div>
@@ -641,10 +733,14 @@
                             <div class="box">
                                 <div class="detail-box">
                                     <p>
-                                        Eu não poderia estar mais satisfeito com o serviço prestado, tudo foi além
+                                        Eu não poderia estar mais satisfeito com o serviço prestado,
+                                        tudo foi
+                                        além
                                         das
                                         minhas expectativas,
-                                        a equipe foi incrivelmente profissional e sempre disponível para me ajudar,
+                                        a equipe foi incrivelmente profissional e sempre disponível para
+                                        me
+                                        ajudar,
                                         nunca tive um serviço tão bom, eu recomendo a todos.
                                     </p>
                                 </div>
@@ -705,10 +801,12 @@
             </div>
             <div>
                 <p>
-                    Se você está precisa de uma chave nova para seu carro, vamos te fornecer a marca e modelo do
+                    Se você está precisa de uma chave nova para seu carro, vamos te fornecer a marca e
+                    modelo do
                     carro e
                     tomar as
-                    medidas necessárias para cortar uma nova chave, e uma chave para sua casa, marca da fechadura e
+                    medidas necessárias para cortar uma nova chave, e uma chave para sua casa, marca da
+                    fechadura e
                     tomar as
                     medidas necessárias para cortar uma nova chave.
                 </p>
@@ -755,7 +853,8 @@
         <img src="Recursos/assets/icon/icon_cookis/cookie.png" alt="">
         <div class="content">
             <header>Consentimento de Cookies</header>
-            <p>Este site usa cookies para garantir que você obtenha a melhor experiência em nosso site.</p>
+            <p>Este site usa cookies para garantir que você obtenha a melhor experiência em nosso site.
+            </p>
             <div class="buttons">
                 <button class="item">Aceitar</button>
                 <a href="politica.php" class="item">Saiba mais</a>
@@ -780,7 +879,8 @@
 
     <!-- Bootstrap core JavaScript -->
     <script src="Recursos/assets/js/js_blibioteca/js/jquery/jquery.min.js"></script>
-    <script type="text/javascript" src="Recursos/assets/js/js_blibioteca/js/jquery/jquery-3.4.1.min.js "></script>
+    <script type="text/javascript" src="Recursos/assets/js/js_blibioteca/js/jquery/jquery-3.4.1.min.js ">
+    </script>
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
     <script type="text/javascript" src="Recursos/assets/js/boostrap/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
