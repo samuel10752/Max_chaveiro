@@ -437,6 +437,7 @@
                                             data-add-product>Adicionar </button>
                                         <span class="cart-item"></span>
                                     </div>
+
                                     <a href="p/produto_1.php">
                                         <!-- End Product Image -->
                                         <h4 class="product__title">Chaveiro Luxo Couro Nissan</h4>

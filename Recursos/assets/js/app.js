@@ -80,13 +80,18 @@
 
 
 
-    const image = document.createElement("img");
+  // Adicionando as classes apropriadas aos elementos
+  cartProduct.classList.add("cart__product");
+  // ... outras classes para outros elementos
+
+  // Criando o elemento de imagem
+  const imagePath = document.createElement("img");
+  imagePath.classList.add("cart__product-image");
+  // Aqui você deve definir o caminho da imagem corretamente
+  imagePath.src = "./" + item.image; 
 
 
-    image.classList.add("cart__product-image");
-    image.src = "Recursos/assets/images/card_produtos/" + image.getAttribute('data-src');
-
-    console.log(image); // Isso imprimirá o valor de 'image' no console do navegador.
+    console.log(imagePath); // Isso imprimirá o valor de 'image' no console do navegador.
 
     // sizeOptionName.innerText = "Size:";
     // sizeOptionValue.innerText = item.size;
@@ -123,7 +128,7 @@
 
     cartProduct.appendChild(productRemove);
 
-    productImage.appendChild(image);
+    productImage.appendChild(imagePath);
     productImage.appendChild(quantitySelector);
 
     cartProduct.appendChild(productImage);
@@ -364,31 +369,42 @@
 
 
   // Função para adicionar ao carrinho e mostrar a animação
-// Função para adicionar ao carrinho e mostrar a animação
-function addToCart(button, item) {
-  button.addClass('sendtocart');
-  setTimeout(function() {
+  function addToCart(button, item, imagePath) {
+    button.addClass('sendtocart');
+    setTimeout(function () {
       button.removeClass('sendtocart');
       var cart = $('#cart');
       var cartTotal = cart.attr('data-totalitems');
       var newCartTotal = parseInt(cartTotal) + 1;
       cart.addClass('shake').attr('data-totalitems', newCartTotal);
-      setTimeout(function() {
-          cart.removeClass('shake');
+      // Do something with the imagePath such as adding it to the cart
+      console.log(imagePath);
+
+      setTimeout(function () {
+        cart.removeClass('shake');
       }, 500);
-  }, 1000);
+    }, 1000);
 
-  document.getElementById('successPopup').style.display = 'block';
-  setTimeout(function() {
+    document.getElementById('successPopup').style.display = 'block';
+    setTimeout(function () {
       document.getElementById('successPopup').style.display = 'none';
-  }, 10000);
+    }, 10000);
 
-  const newCartItem = createCartItem(item); // Aqui você precisa implementar createCartItem
-  cartItems.push(newCartItem);
-  cartProducts.appendChild(newCartItem); // E aqui precisa ter uma variável cartProducts definida
-  toggleItems(cartItems); // Implementar toggleItems
-  updateTotals(cartItems, item); // Implementar updateTotals
-}
+    // For example, append the image to a cart section
+    const cart = document.getElementById("cart"); // Assumes you have a div with id="cart" for the cart section
+
+    const image = document.createElement("img");
+    image.src = imagePath;
+
+    image.classList.add("cart__product-image");
+
+
+    const newCartItem = createCartItem(item); // Aqui você precisa implementar createCartItem
+    cartItems.push(newCartItem);
+    cartProducts.appendChild(newCartItem); // E aqui precisa ter uma variável cartProducts definida
+    toggleItems(cartItems); // Implementar toggleItems
+    updateTotals(cartItems, item); // Implementar updateTotals
+  }
 
 
   $(document).ready(function() {
@@ -396,19 +412,20 @@ function addToCart(button, item) {
         const button = $(this);
         button.on('click', function() {
             const product = button.closest('.product');
-            const imageElement = product.find('.product__image img'); // obter a referência à imagem
-            const imagePath = imageElement.attr('data-src'); // obter o caminho da imagem de 'data-src'
-            const title = product.find('.product__title').text();
-            const price = product.find('.product__price').text().replace('R$', '').trim();
+            const imageElement = product.find('img');
+            const imagePath = "Recursos/assets/images/card_produtos/" + imageElement.attr('data-src');
             
+            const title = product.find('.product__title').text(); // Assuming you have a product title element
+            const price = product.find('.product__price').text().replace('R$', '').trim(); // Assuming you have a product price element
+
             const item = {
-                image: imagePath, // aqui o caminho da imagem é atribuido
+                image: imagePath,
                 title: title,
                 price: parseFloat(price),
                 quantity: 1,
             };
-            
-            addToCart(button, item);
+
+            addToCart(button, item, imagePath);
         });
     });
 
@@ -419,25 +436,27 @@ function addToCart(button, item) {
       $('.cart__button--list').each(function () {
         const button = $(this);
         const product = button.closest('.product');
-        const imageElement = product.find('.product__image img'); // obter a referência à imagem
-        const title = product.find('.product__title').text();
-        const price = product.find('.product__price').text().replace('R$', '').trim();
-        const selectedImage = imageElement.attr('data-image'); // obter o valor de 'data-image'
+        const imageElement = product.find('img');
+        const imagePath = "Recursos/assets/images/card_produtos/" + imageElement.attr('data-src');
+        
+        const title = product.find('.product__title').text(); // Assuming you have a product title element
+        const price = product.find('.product__price').text().replace('R$', '').trim(); // Assuming you have a product price element
 
 
         const item = {
-          image: imageElement[0], // assign the actual image element
+          image: imagePath,
           title: title,
           price: parseFloat(price),
           quantity: 1,
-        };
+      };
 
         $(this).on('click', function () {
-          addToCart(button, item);
+          addToCart(button, item, imagePath);
         });
       });
     });
   });
+
 
 
   document.getElementById('aber').addEventListener('click', function () {
