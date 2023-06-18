@@ -80,15 +80,15 @@
 
 
 
-  // Adicionando as classes apropriadas aos elementos
-  cartProduct.classList.add("cart__product");
-  // ... outras classes para outros elementos
+    // Adicionando as classes apropriadas aos elementos
+    cartProduct.classList.add("cart__product");
+    // ... outras classes para outros elementos
 
-  // Criando o elemento de imagem
-  const imagePath = document.createElement("img");
-  imagePath.classList.add("cart__product-image");
-  // Aqui você deve definir o caminho da imagem corretamente
-  imagePath.src = "./" + item.image; 
+    // Criando o elemento de imagem
+    const imagePath = document.createElement("img");
+    imagePath.classList.add("cart__product-image");
+    // Aqui você deve definir o caminho da imagem corretamente
+    imagePath.src = "./" + item.image;
 
 
     console.log(imagePath); // Isso imprimirá o valor de 'image' no console do navegador.
@@ -96,8 +96,8 @@
     // sizeOptionName.innerText = "Size:";
     // sizeOptionValue.innerText = item.size;
 
-    // colorOptionName.innerText = "Color:";
-    // colorOptionValue.innerText = item.color;product__image
+    colorOptionName.innerText = "Color:";
+    colorOptionValue.innerText = item.color;
 
     removeIcon.innerText = "remove";
     addIcon.innerText = "add";
@@ -105,7 +105,7 @@
     quantity.innerText = item.quantity;
 
     productTitle.innerHTML = item.title;
-    productPrice.innerHTML = `$${item.price.toFixed(2)}`;
+    productPrice.innerHTML = `R$${item.price.toFixed(2)}`;
 
     colorOption.appendChild(colorOptionName);
     colorOption.appendChild(colorOptionValue);
@@ -246,8 +246,8 @@
 
     totalItems.innerHTML = cartItems.length;
 
-    subTotal.innerText = `$${newSubTotalValue.toFixed(2)}`;
-    grandTotal.innerText = `$${newGrandTotalValue.toFixed(2)}`;
+    subTotal.innerText = `R$${newSubTotalValue.toFixed(2)}`;
+    grandTotal.innerText = `R$${newGrandTotalValue.toFixed(2)}`;
   };
 
   // addButtons.forEach((button) => {
@@ -391,42 +391,46 @@
     }, 10000);
 
     // For example, append the image to a cart section
-    const cart = document.getElementById("cart"); // Assumes you have a div with id="cart" for the cart section
-
-    const image = document.createElement("img");
-    image.src = imagePath;
-
-    image.classList.add("cart__product-image");
 
 
-    const newCartItem = createCartItem(item); // Aqui você precisa implementar createCartItem
-    cartItems.push(newCartItem);
-    cartProducts.appendChild(newCartItem); // E aqui precisa ter uma variável cartProducts definida
-    toggleItems(cartItems); // Implementar toggleItems
-    updateTotals(cartItems, item); // Implementar updateTotals
+      const image = document.createElement("img");
+      image.src = imagePath;
+
+      image.classList.add("cart__product-image");
+
+
+
+      const newCartItem = createCartItem(item); // Aqui você precisa implementar createCartItem
+      cartItems.push(newCartItem);
+      cartProducts.appendChild(newCartItem); // E aqui precisa ter uma variável cartProducts definida
+      toggleItems(cartItems); // Implementar toggleItems
+      updateTotals(cartItems, item); // Implementar updateTotals
   }
 
 
-  $(document).ready(function() {
-    $('.cart__button--list').each(function() {
-        const button = $(this);
-        button.on('click', function() {
-            const product = button.closest('.product');
-            const imageElement = product.find('img');
-            const imagePath = "Recursos/assets/images/card_produtos/" + imageElement.attr('data-src');
-            
-            const title = product.find('.product__title').text(); // Assuming you have a product title element
-            const price = product.find('.product__price').text().replace('R$', '').trim(); // Assuming you have a product price element
+  $(document).ready(function () {
+    $('.cart__button--list').each(function () {
+      const button = $(this);
+      button.on('click', function () {
+        const product = button.closest('.product');
+        const imageElement = product.find('img');
+        const imagePath = "Recursos/assets/images/card_produtos/" + imageElement.attr('data-src');
 
-            const item = {
-                image: imagePath,
-                title: title,
-                price: parseFloat(price),
-                quantity: 1,
-            };
+        const title = product.find('.product__title').text(); // Assuming you have a product title element
+        const price = product.find('.product__price').text().replace('R$', '').trim(); // Assuming you have a product price element
+        const color = product.find('.product__color').text(); // Assuming you have a product title element
 
-            addToCart(button, item, imagePath);
-        });
+
+        const item = {
+          image: imagePath,
+          title: title,
+          price: parseFloat(price),
+          color: color,
+          quantity: 1,
+        };
+
+        addToCart(button, item, imagePath);
+      });
     });
 
 
@@ -438,17 +442,19 @@
         const product = button.closest('.product');
         const imageElement = product.find('img');
         const imagePath = "Recursos/assets/images/card_produtos/" + imageElement.attr('data-src');
-        
+
         const title = product.find('.product__title').text(); // Assuming you have a product title element
         const price = product.find('.product__price').text().replace('R$', '').trim(); // Assuming you have a product price element
+        const color = product.find('.product__color').text(); // Assuming you have a product title element
 
 
         const item = {
           image: imagePath,
           title: title,
           price: parseFloat(price),
+          color: color,
           quantity: 1,
-      };
+        };
 
         $(this).on('click', function () {
           addToCart(button, item, imagePath);

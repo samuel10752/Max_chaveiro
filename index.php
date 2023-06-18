@@ -281,28 +281,28 @@
                         <!-- Summary Item -->
                         <div class="summary__item">
                             <div class="summary__label">Subtotal:</div>
-                            <div class="summary__value" data-subtotal>$0.00</div>
+                            <div class="summary__value" data-subtotal>R$0.00</div>
                         </div>
                         <!-- End Summary Item -->
 
                         <!-- Summary Item -->
                         <div class="summary__item">
                             <div class="summary__label">Envio:</div>
-                            <div class="summary__value">$0.00</div>
+                            <div class="summary__value">R$0.00</div>
                         </div>
                         <!-- End Summary Item -->
 
                         <!-- Summary Item -->
                         <div class="summary__item">
                             <div class="summary__label">Desconto:</div>
-                            <div class="summary__value">$0.0</div>
+                            <div class="summary__value">R$0.0</div>
                         </div>
                         <!-- End Summary Item -->
 
                         <!-- Summary Item -->
                         <div class="summary__item">
                             <div class="summary__label">Total geral:</div>
-                            <div class="summary__value" data-grand-total>$0.00</div>
+                            <div class="summary__value" data-grand-total>R$0.00</div>
                         </div>
                         <!-- End Summary Item -->
                     </div>
@@ -442,6 +442,7 @@
                                         <!-- End Product Image -->
                                         <h4 class="product__title">Chaveiro Luxo Couro Nissan</h4>
                                         <div class="product__price">R$65.00</div>
+                                        <div class="product__color">Azul</div>
                                         <div class="product__rating">
                                             <div class="rating">
                                                 <span class="rating__star"> star </span>
@@ -477,6 +478,7 @@
                                     <a href="p/produto_2.php">
                                         <h4 class="product__title">Chaveiro Luxo Couro Toyota</h4>
                                         <div class="product__price">R$70.00</div>
+                                        <div class="product__color">Prata</div>
                                         <div class="product__rating">
                                             <div class="rating">
                                                 <span class="rating__star"> star </span>
@@ -505,6 +507,7 @@
                                     <a href="p/produto_3.php">
                                         <h4 class="product__title">Chaveiro Luxo Couro BMW</h4>
                                         <div class="product__price">R$75.00</div>
+                                        <div class="product__color">Prata</div>
                                         <div class="product__rating">
                                             <div class="rating">
                                                 <span class="rating__star"> star </span>
@@ -533,6 +536,7 @@
                                     <a href="p/produto_4.php">
                                         <h4 class="product__title">Chaveiro Luxo Couro BMW</h4>
                                         <div class="product__price">R$175.00</div>
+                                        <div class="product__color">Preto</div>
                                         <div class="product__rating">
                                             <div class="rating">
                                                 <span class="rating__star"> star </span>
@@ -562,6 +566,7 @@
                                     <a href="p/produto_3.php">
                                         <h4 class="product__title">Chaveiro Luxo Couro BMW</h4>
                                         <div class="product__price">R$275.00</div>
+                                        <div class="product__color">Preto</div>
                                         <div class="product__rating">
                                             <div class="rating">
                                                 <span class="rating__star"> star </span>
@@ -591,6 +596,7 @@
                                     <a href="p/produto_6.php">
                                         <h4 class="product__title">Chaveiro Luxo Couro BMW</h4>
                                         <div class="product__price">R$715.00</div>
+                                        <div class="product__color">Preto/Azul</div>
                                         <div class="product__rating">
                                             <div class="rating">
                                                 <span class="rating__star"> star </span>

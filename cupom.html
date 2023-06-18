@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Carrinho de Compras</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <style>
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: none;
+            z-index: 9;
+        }
+
+        #pop-up-cupom,
+        #adicionar-cupom,
+        #lista-cupons {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            display: none;
+            z-index: 10;
+        }
+
+        .fechar {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .fechar_button{
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: blue;
+            color: white;
+            border: none;   
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: blue;
+            color: white;
+            border: none;
+        }
+
+        button:hover {
+            background-color: blue;
+        }
+
+        #pop-up-cupom input,
+        #adicionar-cupom input {
+            padding: 10px;
+            margin: 5px;
+            width: calc(100% - 30px);
+        }
+
+        #lista-cupons ul {
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+        }
+
+        #lista-cupons li {
+            margin-bottom: 10px;
+        }
+
+        #lista-cupons li span {
+            font-weight: bold;
+        }
+
+        #lista-cupons li button {
+            margin-left: 10px;
+            padding: 5px 10px;
+            background-color: #ff0000;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="overlay" class="overlay"
+        onclick="$('.overlay').hide(); $('#pop-up-cupom').hide(); $('#adicionar-cupom').hide(); $('#lista-cupons').hide();">
+    </div>
+
+    <div id="carrinho">
+        <button onclick="$('#overlay').show(); $('#pop-up-cupom').show();">Usar Cupom</button>
+        <button onclick="$('#overlay').show(); $('#adicionar-cupom').show();">Adicionar Cupom</button>
+        <button onclick="$('#overlay').show(); mostrarCupons();">Ver Cupons</button>
+    </div>
+
+    <div id="pop-up-cupom">
+        <span class="fechar" onclick="$('#overlay').hide(); $('#pop-up-cupom').hide();">X</span>
+        <input type="text" id="codigo-cupom" placeholder="Código do Cupom">
+        <button onclick="validarCupom()">Aplicar</button>
+        <button class="fechar_button" onclick="$('#overlay').hide(); $('#pop-up-cupom').hide();">Fechar</button>
+    </div>
+
+    <div id="adicionar-cupom">
+        <span class="fechar" onclick="$('#overlay').hide(); $('#adicionar-cupom').hide();">X</span>
+        <input type="text" id="novo-cupom-codigo" placeholder="Novo Código">
+        <input type="number" id="novo-cupom-desconto" placeholder="Desconto (%)">
+        <button onclick="adicionarCupom()">Adicionar</button>
+        <button class="fechar_button" onclick="$('#overlay').hide(); $('#adicionar-cupom').hide();">Fechar</button>
+    </div>
+
+    <div id="lista-cupons">
+        <span class="fechar" onclick="$('#overlay').hide(); $('#lista-cupons').hide();">X</span>
+        <ul id="cupons-lista"></ul>
+    </div>
+
+    <script>
+        var cupons = {};
+        function adicionarCupom() {
+            var codigo = $('#novo-cupom-codigo').val();
+            var desconto = $('#novo-cupom-desconto').val();
+
+            if (!codigo || !desconto) {
+                swal({
+                    title: "Campos Vazios",
+                    text: "Por favor, preencha todos os campos.",
+                    icon: "warning",
+                    timer: 2000
+                }).then(function () {
+                    $('#adicionar-cupom').hide();
+                    $('#overlay').hide();
+                });
+                return;
+            }
+
+            cupons[codigo] = desconto;
+            $('#adicionar-cupom').hide();
+            $('#overlay').hide();
+            localStorage.setItem('cupons', JSON.stringify(cupons));
+
+            swal({
+                title: "Cupom Adicionado",
+                text: "O cupom foi adicionado com sucesso!",
+                icon: "success",
+                timer: 2000
+            });
+        }
+
+
+        function validarCupom() {
+            var codigo = $('#codigo-cupom').val();
+            var desconto = cupons[codigo];
+
+            if (!codigo) {
+                swal({
+                    title: "Cupom Inválido",
+                    text: "Por favor, digite um código de cupom válido.",
+                    icon: "error",
+                    timer: 2000
+                }).then(function () {
+                    $('#pop-up-cupom').hide();
+                    $('#overlay').hide();
+                });
+                return;
+            }
+
+            if (desconto) {
+                var total = parseFloat($('#total').text());
+                var novoTotal = total - (total * desconto / 100);
+
+                $('#total').text(novoTotal.toFixed(2));
+                $('#pop-up-cupom').hide();
+                cupomUsado = true;
+
+                swal({
+                    title: "Desconto Aplicado",
+                    text: "Desconto aplicado com sucesso!",
+                    icon: "success",
+                    timer: 2000
+                }).then(function () {
+                    $('#pop-up-cupom').hide();
+                    $('#overlay').hide();
+                });
+            } else {
+                swal({
+                    title: "Cupom Inválido",
+                    text: "Cupom inválido ou expirado.",
+                    icon: "error",
+                    timer: 2000
+                }).then(function () {
+                    $('#pop-up-cupom').hide();
+                    $('#overlay').hide();
+                });
+            }
+        }
+
+        function mostrarCupons() {
+            var cuponsLista = $('#cupons-lista');
+            cuponsLista.empty();
+
+            for (var codigo in cupons) {
+                cuponsLista.append('<li><span>' + codigo + '</span> (' + cupons[codigo] + '%) <button onclick="excluirCupom(\'' + codigo + '\')">Excluir</button></li>');
+            }
+
+            if (Object.keys(cupons).length > 0) {
+                $('#lista-cupons').show();
+            } else {
+                swal({
+                    title: "Nenhum Cupom",
+                    text: "Nenhum cupom armazenado.",
+                    icon: "warning",
+                    timer: 2000
+                }).then(function () {
+                    $('#overlay').hide();
+                });
+            }
+
+            setTimeout(function () {
+                $('#overlay').hide();
+            }, 2000);
+        }
+
+        function excluirCupom(codigo) {
+            delete cupons[codigo];
+            mostrarCupons();
+            localStorage.setItem('cupons', JSON.stringify(cupons));
+
+            swal({
+                title: "Cupom Excluído",
+                text: "O cupom foi excluído com sucesso!",
+                icon: "success",
+                timer: 2000
+            }).then(function () {
+                $('#lista-cupons').hide();
+                $('#overlay').hide();
+            });
+        }
+
+        var cupomUsado = false;
+        var cupons = JSON.parse(localStorage.getItem('cupons')) || {};
+
+        // Exemplo de elemento de total que será atualizado
+        var totalElement = document.getElementById('total');
+        totalElement.textContent = '100.00';
+    </script>
+
+    <!-- Exemplo de elemento de total que será atualizado -->
+    <div id="resumo-carrinho">
+        <span>Total: </span><span id="total">100.00</span>
+    </div>
+</body>
+
+</html>
