@@ -120,9 +120,11 @@
         <span class="fechar" onclick="$('#overlay').hide(); $('#adicionar-cupom').hide();">X</span>
         <input type="text" id="novo-cupom-codigo" placeholder="Novo Código">
         <input type="number" id="novo-cupom-desconto" placeholder="Desconto (%)">
+        <input type="date" id="novo-cupom-data-validade" placeholder="Data de Validade (YYYY-MM-DD)">
         <button onclick="adicionarCupom()">Adicionar</button>
         <button class="fechar_button" onclick="$('#overlay').hide(); $('#adicionar-cupom').hide();">Fechar</button>
     </div>
+
 
     <div id="lista-cupons">
         <span class="fechar" onclick="$('#overlay').hide(); $('#lista-cupons').hide();">X</span>
@@ -134,8 +136,9 @@
         function adicionarCupom() {
             var codigo = $('#novo-cupom-codigo').val();
             var desconto = $('#novo-cupom-desconto').val();
+            var dataValidade = $('#novo-cupom-data-validade').val();
 
-            if (!codigo || !desconto) {
+            if (!codigo || !desconto || !dataValidade) {
                 swal({
                     title: "Campos Vazios",
                     text: "Por favor, preencha todos os campos.",
@@ -150,7 +153,7 @@
                 return;
             }
 
-            cupons[codigo] = desconto;
+            cupons[codigo] = { desconto: desconto, dataValidade: dataValidade };
             $('#adicionar-cupom').hide();
             $('#overlay').hide();
             localStorage.setItem('cupons', JSON.stringify(cupons));
@@ -163,14 +166,16 @@
             }).then(function () {
                 $('#novo-cupom-codigo').val('');
                 $('#novo-cupom-desconto').val('');
+                $('#novo-cupom-data-validade').val('');
             });
         }
 
+
         function validarCupom() {
             var codigo = $('#codigo-cupom').val();
-            var desconto = cupons[codigo];
+            var cupom = cupons[codigo];
 
-            if (!codigo) {
+            if (!codigo || !cupom) {
                 swal({
                     title: "Cupom Inválido",
                     text: "Por favor, digite um código de cupom válido.",
@@ -184,28 +189,14 @@
                 return;
             }
 
-            if (desconto) {
-                var total = parseFloat($('#total').text());
-                var novoTotal = total - (total * desconto / 100);
+            var desconto = cupom.desconto;
+            var dataValidade = new Date(cupom.dataValidade);
+            var dataAtual = new Date();
 
-                $('#total').text(novoTotal.toFixed(2));
-                $('#pop-up-cupom').hide();
-                cupomUsado = true;
-
+            if (dataAtual > dataValidade) {
                 swal({
-                    title: "Desconto Aplicado",
-                    text: "Desconto aplicado com sucesso!",
-                    icon: "success",
-                    timer: 2000
-                }).then(function () {
-                    $('#pop-up-cupom').hide();
-                    $('#overlay').hide();
-                    $('#codigo-cupom').val('');
-                });
-            } else {
-                swal({
-                    title: "Cupom Inválido",
-                    text: "Cupom inválido ou expirado.",
+                    title: "Cupom Expirado",
+                    text: "Este cupom expirou e não pode ser usado.",
                     icon: "error",
                     timer: 2000
                 }).then(function () {
@@ -213,8 +204,28 @@
                     $('#overlay').hide();
                     $('#codigo-cupom').val('');
                 });
+                return;
             }
+
+            var total = parseFloat($('#total').text());
+            var novoTotal = total - (total * desconto / 100);
+
+            $('#total').text(novoTotal.toFixed(2));
+            $('#pop-up-cupom').hide();
+
+            swal({
+                title: "Desconto Aplicado",
+                text: "Desconto aplicado com sucesso!",
+                icon: "success",
+                timer: 2000
+            }).then(function () {
+                $('#pop-up-cupom').hide();
+                $('#overlay').hide();
+                $('#codigo-cupom').val('');
+            });
         }
+
+
 
 
         function mostrarCupons() {
@@ -222,7 +233,9 @@
             cuponsLista.empty();
 
             for (var codigo in cupons) {
-                var cupomItem = $('<li><span>' + codigo + '</span> (' + cupons[codigo] + '%) <button class="excluir-cupom">Excluir</button></li>');
+                var desconto = cupons[codigo].desconto;
+                var dataValidade = cupons[codigo].dataValidade;
+                var cupomItem = $('<li><span>' + codigo + '</span> (' + desconto + '%) - Válido até: ' + dataValidade + ' <button class="excluir-cupom">Excluir</button></li>');
                 cupomItem.find('.excluir-cupom').click({ codigo: codigo }, excluirCupomPopUp);
                 cuponsLista.append(cupomItem);
             }
@@ -244,6 +257,7 @@
                 $('#overlay').hide();
             }, 2000);
         }
+
 
         function excluirCupomPopUp(event) {
             var codigo = event.data.codigo;
@@ -286,12 +300,11 @@
 
         // Exemplo de elemento de total que será atualizado
         var totalElement = document.getElementById('total');
-        totalElement.textContent = '100.00';
     </script>
 
     <!-- Exemplo de elemento de total que será atualizado -->
     <div id="resumo-carrinho">
-        <span>Total: </span><span id="total">100.00</span>
+        <span>Total: </span><span id="total">65.00</span>
     </div>
 </body>
 

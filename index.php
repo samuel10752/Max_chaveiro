@@ -281,31 +281,43 @@
                         <!-- Summary Item -->
                         <div class="summary__item">
                             <div class="summary__label">Subtotal:</div>
-                            <div class="summary__value" data-subtotal>R$0.00</div>
+                            <div class="summary__value" id="subtotal" data-subtotal>R$0.00</div>
                         </div>
                         <!-- End Summary Item -->
-
-                        <!-- Summary Item -->
                         <div class="summary__item">
                             <div class="summary__label">Envio:</div>
-                            <div class="summary__value">R$0.00</div>
+                            <div class="summary__value" id="subtotal" data-subtotal>R$0.00</div>
                         </div>
-                        <!-- End Summary Item -->
-
                         <!-- Summary Item -->
                         <div class="summary__item">
-                            <div class="summary__label">Desconto:</div>
-                            <div class="summary__value">R$0.0</div>
+                            <div id="carrinho">
+                                <img src="Recursos/assets/icon/icon_cupom/smart-coupon.svg" alt="">
+                                <span class="button_insert"
+                                    onclick="$('#overlay').show(); $('#pop-up-cupom').show();">Inserir código do
+                                    cupom</span>
+                            </div>
+                            <div class="summary__value" id="desconto">R$0.00</div>
                         </div>
                         <!-- End Summary Item -->
 
                         <!-- Summary Item -->
                         <div class="summary__item">
                             <div class="summary__label">Total geral:</div>
-                            <div class="summary__value" data-grand-total>R$0.00</div>
+                            <div class="summary__value" id="totalGeral" data-grand-total>R$0.00</div>
                         </div>
                         <!-- End Summary Item -->
+
+                        <!-- Coupon Input -->
+                        <div id="pop-up-cupom">
+                            <span class="fechar" onclick="$('#overlay').hide(); $('#pop-up-cupom').hide();">X</span>
+                            <input type="text" id="codigo-cupom" placeholder="Código do Cupom">
+                            <button class="button_cupom" onclick="validarCupom()">Aplicar</button>
+                            <button class="fechar_button"
+                                onclick="$('#overlay').hide(); $('#pop-up-cupom').hide();">Fechar</button>
+                        </div>
+                        <!-- End Coupon Input -->
                     </div>
+
                 </div>
                 <!-- End Cart Actions -->
             </div>
@@ -892,6 +904,7 @@
     <script type="text/javascript" src="Recursos/assets/js/boostrap/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
     <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
     <!-- Additional Scripts -->
     <script src="Recursos/assets/js/preloder.js"></script>
@@ -905,6 +918,7 @@
     <script src="Recursos/assets/js/owl.js"></script>
     <script src="Recursos/assets/js/isotope.js"></script>
     <script src="Recursos/assets/js/flex-slider.js"></script>
+    <script src="Recursos/assets/js/api_cupom.js"></script>
 
 </body>
 </body>
