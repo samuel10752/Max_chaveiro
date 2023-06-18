@@ -42,14 +42,14 @@
             font-weight: bold;
         }
 
-        .fechar_button{
+        .fechar_button {
             padding: 10px 20px;
             margin: 10px;
             font-size: 16px;
             cursor: pointer;
             background-color: blue;
             color: white;
-            border: none;   
+            border: none;
         }
 
         button {
@@ -144,6 +144,8 @@
                 }).then(function () {
                     $('#adicionar-cupom').hide();
                     $('#overlay').hide();
+                    $('#novo-cupom-codigo').val('');
+                    $('#novo-cupom-desconto').val('');
                 });
                 return;
             }
@@ -158,9 +160,11 @@
                 text: "O cupom foi adicionado com sucesso!",
                 icon: "success",
                 timer: 2000
+            }).then(function () {
+                $('#novo-cupom-codigo').val('');
+                $('#novo-cupom-desconto').val('');
             });
         }
-
 
         function validarCupom() {
             var codigo = $('#codigo-cupom').val();
@@ -175,6 +179,7 @@
                 }).then(function () {
                     $('#pop-up-cupom').hide();
                     $('#overlay').hide();
+                    $('#codigo-cupom').val('');
                 });
                 return;
             }
@@ -195,6 +200,7 @@
                 }).then(function () {
                     $('#pop-up-cupom').hide();
                     $('#overlay').hide();
+                    $('#codigo-cupom').val('');
                 });
             } else {
                 swal({
@@ -205,16 +211,20 @@
                 }).then(function () {
                     $('#pop-up-cupom').hide();
                     $('#overlay').hide();
+                    $('#codigo-cupom').val('');
                 });
             }
         }
+
 
         function mostrarCupons() {
             var cuponsLista = $('#cupons-lista');
             cuponsLista.empty();
 
             for (var codigo in cupons) {
-                cuponsLista.append('<li><span>' + codigo + '</span> (' + cupons[codigo] + '%) <button onclick="excluirCupom(\'' + codigo + '\')">Excluir</button></li>');
+                var cupomItem = $('<li><span>' + codigo + '</span> (' + cupons[codigo] + '%) <button class="excluir-cupom">Excluir</button></li>');
+                cupomItem.find('.excluir-cupom').click({ codigo: codigo }, excluirCupomPopUp);
+                cuponsLista.append(cupomItem);
             }
 
             if (Object.keys(cupons).length > 0) {
@@ -234,6 +244,26 @@
                 $('#overlay').hide();
             }, 2000);
         }
+
+        function excluirCupomPopUp(event) {
+            var codigo = event.data.codigo;
+
+            swal({
+                title: "Excluir Cupom",
+                text: "Deseja excluir o cupom " + codigo + "?",
+                icon: "warning",
+                buttons: {
+                    cancel: "Cancelar",
+                    confirm: "Excluir"
+                },
+                dangerMode: true
+            }).then(function (confirm) {
+                if (confirm) {
+                    excluirCupom(codigo);
+                }
+            });
+        }
+
 
         function excluirCupom(codigo) {
             delete cupons[codigo];
