@@ -278,17 +278,14 @@
                     </div>
 
                     <div class="cart__summary" data-not-empty-cart>
-                        <!-- Summary Item -->
                         <div class="summary__item">
                             <div class="summary__label">Subtotal:</div>
                             <div class="summary__value" id="subtotal" data-subtotal>R$0.00</div>
                         </div>
-                        <!-- End Summary Item -->
                         <div class="summary__item">
                             <div class="summary__label">Envio:</div>
-                            <div class="summary__value" id="subtotal" data-subtotal>R$0.00</div>
+                            <div class="summary__value" id="envio" data-subtotal>R$0.00</div>
                         </div>
-                        <!-- Summary Item -->
                         <div class="summary__item">
                             <div id="carrinho">
                                 <img src="Recursos/assets/icon/icon_cupom/smart-coupon.svg" alt="">
@@ -298,16 +295,10 @@
                             </div>
                             <div class="summary__value" id="desconto">R$0.00</div>
                         </div>
-                        <!-- End Summary Item -->
-
-                        <!-- Summary Item -->
                         <div class="summary__item">
                             <div class="summary__label">Total geral:</div>
                             <div class="summary__value" id="totalGeral" data-grand-total>R$0.00</div>
                         </div>
-                        <!-- End Summary Item -->
-
-                        <!-- Coupon Input -->
                         <div id="pop-up-cupom">
                             <span class="fechar" onclick="$('#overlay').hide(); $('#pop-up-cupom').hide();">X</span>
                             <input type="text" id="codigo-cupom" placeholder="Código do Cupom">
@@ -315,7 +306,6 @@
                             <button class="fechar_button"
                                 onclick="$('#overlay').hide(); $('#pop-up-cupom').hide();">Fechar</button>
                         </div>
-                        <!-- End Coupon Input -->
                     </div>
 
                 </div>
