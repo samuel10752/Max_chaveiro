@@ -1,5 +1,7 @@
 var cupons = JSON.parse(localStorage.getItem('cupons')) || {};
 var cuponsUsados = JSON.parse(localStorage.getItem('cuponsUsados')) || {};
+var produtosCarrinho = JSON.parse(localStorage.getItem('produtosCarrinho')) || {};
+var subtotal = 0;
 
 function validarCupom() {
     var codigo = $('#codigo-cupom').val();
@@ -16,13 +18,16 @@ function validarCupom() {
     }
 
     if (cupom && cupom.desconto) {
-        var subtotal = parseFloat($('#subtotal').text().replace('R$', ''));
+        var subtotalTemp = parseFloat($('#subtotal').text().replace('R$', ''));
         var descontoPercentual = parseFloat(cupom.desconto);
-        var desconto = subtotal * descontoPercentual / 100;
-        var totalGeral = subtotal - desconto;
+        var desconto = subtotalTemp * descontoPercentual / 100;
+        var totalGeral = subtotalTemp - desconto;
 
         $('#desconto').text(`R$${desconto.toFixed(2)}`);
         $('#totalGeral').text(`R$${totalGeral.toFixed(2)}`);
+
+        subtotal = totalGeral;
+        atualizarSubtotal();
 
         cuponsUsados[codigo] = true;
         localStorage.setItem('cuponsUsados', JSON.stringify(cuponsUsados));
@@ -47,4 +52,30 @@ function validarCupom() {
     }
 }
 
+function adicionarAoCarrinho(id, preco) {
+    if (!produtosCarrinho[id]) {
+        produtosCarrinho[id] = 1;
+    } else {
+        produtosCarrinho[id]++;
+    }
 
+    subtotal += preco;
+    atualizarSubtotal();
+    localStorage.setItem('produtosCarrinho', JSON.stringify(produtosCarrinho));
+}
+
+function atualizarSubtotal() {
+    $('#subtotal').text(`R$${subtotal.toFixed(2)}`);
+}
+
+$(document).ready(function() {
+    $('#addtocart_2').click(function() {
+        adicionarAoCarrinho('produto_2', 70);
+    });
+
+    $('#addtocart_3').click(function() {
+        adicionarAoCarrinho('produto_3', 75);
+    });
+
+    // ... e assim por diante para cada produto
+});
