@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    
+<head>
+    <meta charset="UTF-8">
+    <title>Informações de Envio</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; font-src 'self' data:;">
+    
+</head>
+
+<style>
+    @font-face {
+        font-family: 'DMSans-Regular';
+        src: url('http://localhost:3001/DMSans-Regular.ttf') format('truetype');
+    }
+</style>
+
+<body>
+    <!-- Botão para abrir o modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalEnvio">
+        Preencher informações de envio
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modalEnvio" tabindex="-1" role="dialog" aria-labelledby="modalEnvioLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalEnvioLabel">Informações de envio:</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="automatico">
+                        <input type="text" id="cepOrigem" placeholder="CEP de Origem" class="form-control mb-2">
+                        <input type="text" id="cepDestino" placeholder="CEP de Destino" class="form-control mb-2">
+                        <input type="text" id="peso" placeholder="Peso (em kg)" class="form-control mb-2">
+                        <input type="text" id="comprimento" placeholder="Comprimento (em cm)" class="form-control mb-2">
+                        <input type="text" id="largura" placeholder="Largura (em cm)" class="form-control mb-2">
+                        <input type="text" id="altura" placeholder="Altura (em cm)" class="form-control mb-2">
+                        <input type="text" id="numero" placeholder="Número da casa" class="form-control mb-2">
+                        <input type="text" id="rua" placeholder="Rua" class="form-control mb-2" disabled>
+                        <input type="text" id="bairro" placeholder="Bairro" class="form-control mb-2" disabled>
+                        <input type="text" id="cidade" placeholder="Cidade" class="form-control mb-2" disabled>
+                        <input type="text" id="estado" placeholder="Estado" class="form-control mb-2" disabled>
+                        <select id="opcao-envio" class="form-control mb-2">
+                            <option value="">Selecione uma opção de envio...</option>
+                            <option value="correios">Correios</option>
+                            <option value="motoboy">Motoboy</option>
+                            <option value="retirada">Retirada no local</option>
+                        </select>
+                    </div>
+                    <p id="mensagem"></p>
+                    <p id="valorFrete"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary" onclick="calcularFrete()">Calcular Frete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function buscarEndereco() {
+            var cep = $('#cep').val().replace(/\D/g, '');
+            var numero = $('#numero').val();
+
+            if (cep.length === 8) {
+                $("#mensagem").text("Buscando...");
+
+                $.getJSON("https://viacep.com.br/ws/" + cep + "/json/", function(dados) {
+                    if (!("erro" in dados)) {
+                        $("#rua").val(numero + ' ' + dados.logradouro);
+                        $("#bairro").val(dados.bairro);
+                        $("#cidade").val(dados.localidade);
+                        $("#estado").val(dados.uf);
+                    } else {
+                        $("#mensagem").text("CEP não encontrado.");
+                    }
+                });
+            } else {
+                $("#rua").val("");
+                $("#bairro").val("");
+                $("#cidade").val("");
+                $("#estado").val("");
+                $("#mensagem").text("");
+            }
+        }
+
+        function calcularFrete() {
+            var cepOrigem = $('#cepOrigem').val().replace(/\D/g, '');
+            var cepDestino = $('#cepDestino').val().replace(/\D/g, '');
+            var peso = parseFloat($('#peso').val());
+            var comprimento = parseFloat($('#comprimento').val());
+            var largura = parseFloat($('#largura').val());
+            var altura = parseFloat($('#altura').val());
+
+            if (cepOrigem.length === 8 && cepDestino.length === 8 && peso > 0 && comprimento > 0 && largura > 0 && altura > 0) {
+                $("#valorFrete").text("Calculando...");
+
+                $.ajax({
+                    url: 'http://localhost:3001/calcular-frete',
+                    type: 'POST',
+                    dataType: 'json',
+                    data: JSON.stringify({
+                        cepOrigem: cepOrigem,
+                        cepDestino: cepDestino,
+                        peso: peso,
+                        comprimento: comprimento,
+                        largura: largura,
+                        altura: altura
+                    }),
+                    contentType: 'application/json',
+                    success: function(response) {
+                        if (response.error) {
+                            $("#valorFrete").text("Erro ao calcular o frete.");
+                        } else {
+                            $("#valorFrete").text("Valor do frete: R$ " + response.valorFrete);
+                        }
+                    },
+                    error: function() {
+                        $("#valorFrete").text("Erro ao calcular o frete.");
+                    }
+                });
+            } else {
+                $("#valorFrete").text("");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -68,12 +68,12 @@ function atualizarSubtotal() {
     $('#subtotal').text(`R$${subtotal.toFixed(2)}`);
 }
 
-$(document).ready(function() {
-    $('#addtocart_2').click(function() {
+$(document).ready(function () {
+    $('#addtocart_2').click(function () {
         adicionarAoCarrinho('produto_2', 70);
     });
 
-    $('#addtocart_3').click(function() {
+    $('#addtocart_3').click(function () {
         adicionarAoCarrinho('produto_3', 75);
     });
 

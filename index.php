@@ -435,7 +435,8 @@
                                     <div class="product__image">
                                         <img src="Recursos/assets/images/card_produtos/produto-1.png" alt="Item 1"
                                             data-src="produto-1.png">
-                                            <button id="addtocart_1" class="cart__button cart__button--list" data-add-product>Adicionar</button>
+                                        <button id="addtocart_1" class="cart__button cart__button--list"
+                                            data-add-product>Adicionar</button>
                                         <span class="cart-item"></span>
                                     </div>
 

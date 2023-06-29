@@ -301,24 +301,36 @@
     const btnSuccess = btn.querySelector(".checkout-btn__success");
     const btnFailure = btn.querySelector(".checkout-btn__failure");
 
-    checkoutTL
-      .to(btnText, {
-        opacity: 0,
-        duration: 0.75,
-        ease: "power4.in"
-      })
-      .to(
-        btnIcon,
-        {
-          x: 150,
-          delay: 0.25,
-          duration: 0.75,
+    $('.checkout-btn').click(function () {
+      var envio = parseFloat($('#envio').text().replace('R$', ''));
+      if (envio <= 0) {
+        swal({
+          title: "Envio não selecionado",
+          text: "Por favor, adicione uma opção de envio para continuar.",
+          icon: "error",
+          timer: 10000
+        });
+        return;
+      }
+
+      checkoutTL
+        .to(btnText, {
           opacity: 0,
-          ease: "back.in(1.7)"
-        },
-        "<"
-      );
-    btn.addEventListener("click", () => {
+          duration: 0.75,
+          ease: "power4.in"
+        })
+        .to(
+          btnIcon,
+          {
+            x: 150,
+            delay: 0.25,
+            duration: 0.75,
+            opacity: 0,
+            ease: "back.in(1.7)"
+          },
+          "<"
+        );
+
       if (index === 0) {
         checkoutTL
           .to(btn, {
@@ -365,6 +377,8 @@
     });
   });
 
+
+
   // animacao de adicao ao carrinho
 
 
@@ -393,18 +407,18 @@
     // For example, append the image to a cart section
 
 
-      const image = document.createElement("img");
-      image.src = imagePath;
+    const image = document.createElement("img");
+    image.src = imagePath;
 
-      image.classList.add("cart__product-image");
+    image.classList.add("cart__product-image");
 
 
 
-      const newCartItem = createCartItem(item); // Aqui você precisa implementar createCartItem
-      cartItems.push(newCartItem);
-      cartProducts.appendChild(newCartItem); // E aqui precisa ter uma variável cartProducts definida
-      toggleItems(cartItems); // Implementar toggleItems
-      updateTotals(cartItems, item); // Implementar updateTotals
+    const newCartItem = createCartItem(item); // Aqui você precisa implementar createCartItem
+    cartItems.push(newCartItem);
+    cartProducts.appendChild(newCartItem); // E aqui precisa ter uma variável cartProducts definida
+    toggleItems(cartItems); // Implementar toggleItems
+    updateTotals(cartItems, item); // Implementar updateTotals
   }
 
 
