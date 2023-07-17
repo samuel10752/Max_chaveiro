@@ -5,96 +5,315 @@
     <title>Cadastro de Endereço de Entrega</title>
     <meta charset="utf-8" />
     <style>
-        /* Estilos globais */
-        body {
-            font-family: Arial, sans-serif;
+        /* Estilos para o modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+
         }
 
-        /* Estilos para o botão de abertura do popup */
-        .abrir-popup {
-            padding: 10px 20px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 3px;
+        .modal-content {
+            border-radius: 3%;
+            background-color: #fefefe;
+            margin: 4% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 90%;
+            max-width: 1050px;
+            height: 74%;
+        }
+
+        .close {
+            color: #888;
+            float: right;
+            font-size: 68px;
+            width: 50px;
+            height: 50px;
+            font-weight: bold;
+            margin-right: -2%;
+            margin-top: -2%;
             cursor: pointer;
         }
 
-        .abrir-popup:hover {
-            background-color: #45a049;
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
         }
 
-        /* Estilos para o popup */
-        .popup {
-            position: fixed;
+        .comet-modal-title {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 50px;
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            margin-left: 3%;
+            font-weight: 700;
+        }
+
+        .next-row {
+            margin: 0 -8px;
+        }
+
+        .next-col {
+            padding: 0 8px;
+        }
+
+        .next-form-item {
+            margin-bottom: 20px;
+        }
+
+        .next-input {
+            width: 450px;
+            height: 52px;
+            padding: 8px;
+            margin-left: 3%;
+            border: 1px solid #ccc;
+            border-radius: 7px;
+            box-sizing: border-box;
+        }
+
+        .next-input-dd {
+            width: 75px;
+            height: 52px;
+            padding: 8px;
+            margin-left: 2%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        #warningMessage_dd {
+            width: 400px;
+            margin-left: 48%;
+        }
+
+        #warningMessage_telefone {
+            width: 400px;
+            margin-left: 48%;
+        }
+
+        #warningMessage_nome {
+            width: 400px;
+            margin-left: 4%;
+        }
+
+        .error-input {
+            border: 1px solid red;
+        }
+
+        .next-input-telefone {
+            width: 400px;
+            height: 52px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .next-form-item-help {
+            font-size: 12px;
+            color: #888;
+            margin-top: 5px;
+        }
+
+        .next-form-item-help .help-inner__tip-wrap {
+            font-size: 12px;
+            color: red;
+        }
+
+        .next-checkbox-label {
+            font-size: 14px;
+            color: #888;
+            margin-left: 5px;
+        }
+
+        .form-item-button {
+            position: relative;
+            overflow: hidden;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            width: 180px;
+            height: 54px;
+            cursor: pointer;
+            font-size: 16px;
+            line-height: 24px;
+            border-radius: 22px;
+            transition: all 0.3s ease;
+            margin-left: 5%;
+        }
+
+        .form-item-button span {
+            position: relative;
+            z-index: 1;
+        }
+
+        .form-item-button:before {
+            content: "";
+            position: absolute;
             top: 50%;
             left: 50%;
+            width: 0;
+            height: 100%;
+            background-color: #fff;
+            opacity: 0.2;
             transform: translate(-50%, -50%);
-            width: 400px;
-            padding: 20px;
-            background-color: #f2f2f2;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            display: none;
-            z-index: 9999;
+            transition: all 0.3s ease;
         }
 
-        .popup h2 {
-            margin-top: 0;
-        }
-
-        .popup label {
-            display: block;
-            margin-bottom: 10px;
-        }
-
-        .popup input[type="text"],
-        .popup input[type="email"],
-        .popup input[type="number"] {
+        .form-item-button:hover:before {
             width: 100%;
-            padding: 5px;
-            border: 1px solid #ccc;
-            border-radius: 3px;
         }
 
-        .popup input[type="submit"] {
-            padding: 10px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 3px;
-            cursor: pointer;
-        }
-
-        .popup input[type="submit"]:hover {
-            background-color: #45a049;
-        }
-
-        .popup button {
-            margin-top: 10px;
-        }
-
-        .popup label {
-            margin-bottom: 10px;
-            font-weight: bold;
-            /* tornar os rótulos em negrito */
-        }
-
-        /* Aumentar a altura das caixas de texto e fazer seus cantos um pouco arredondados */
-        .popup input[type="text"],
-        .popup input[type="email"],
-        .popup input[type="number"],
-        .popup input[type="tel"] {
-            height: 30px;
-            border-radius: 5px;
-        }
-
-        /* Adicionar margem superior para o botão de enviar */
-        .popup input[type="submit"] {
-            margin-top: 20px;
+        .form-item-button:hover {
+            color: #007bff;
+            background-color: #fff;
         }
     </style>
+
+    <button id="myBtn">Abrir Modal</button>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="comet-modal-title">Adicionar novo Endereço</div>
+            <div class="comet-modal-body">
+                <form id="enderecoForm" onsubmit="handleSubmit(event)">
+                    <div class="form-section">
+                        <div class="section-title">Nome do contato</div>
+                        <div class="section-body">
+                            <div class="next-row form-row-wrap">
+                                <div class="next-col">
+                                    <div class="next-form-item">
+                                        <input class="next-input" name="nome" placeholder="Nome do contato"
+                                            autocomplete="off" value="" required oninput="validarLetras(this)">
+
+                                        <input class="next-input-dd" height="100%" autocomplete="off" value="+55"
+                                            data-spm-anchor-id="a2g0o.order_list.0.i21.690fcaa4Ni7V12"
+                                            oninput="limitarCaracteres(this, 8)">
+
+                                        <input class="next-input-telefone" name="Telefone"
+                                            placeholder="Número de Celular*" autocomplete="off" value="" required
+                                            oninput="validarTelefone(this)">
+
+                                        <p id="warningMessage_nome" style="color: red;"></p>
+                                        <p id="warningMessage_dd" style="color: red;"></p>
+                                        <p id="warningMessage_telefone" style="color: red;"></p>
+
+
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-section">
+                        <div class="section-title">Endereço</div>
+                        <div class="section-body">
+                            <div class="next-row form-row-wrap">
+                                <div class="next-col">
+                                    <div class="next-form-item">
+                                        <input class="next-input" id="endereco" name="endereco" placeholder="Endereço*"
+                                            autocomplete="off" value="" required oninput="validarLetras(this)">
+                                    </div>
+                                </div>
+                                <div class="next-col">
+                                    <div class="next-form-item">
+                                        <input class="next-input" id="numero" name="numero" placeholder="Número*"
+                                            autocomplete="off" value="" required oninput="validarNumeros(this)">
+                                    </div>
+                                </div>
+                                <div class="next-col">
+                                    <div class="next-form-item">
+                                        <input class="next-input" id="bairro" name="bairro" placeholder="Bairro*"
+                                            autocomplete="off" value="" required oninput="validarLetras(this)">
+                                    </div>
+                                </div>
+                                <div class="next-col">
+                                    <div class="next-form-item">
+
+                                        <input class="next-input" id="cidade" name="cidade" placeholder="Cidade*"
+                                            autocomplete="off" value="" required oninput="validarLetras(this)">
+                                    </div>
+                                </div>
+                                <div class="next-col">
+                                    <div class="next-form-item">
+
+                                        <input class="next-input" id="estado" name="estado" placeholder="Estado*"
+                                            autocomplete="off" value="" required oninput="validarLetras(this)">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-section">
+                        <div class="section-title">CEP</div>
+                        <div class="section-body">
+                            <div class="next-row form-row-wrap">
+                                <div class="next-col">
+                                    <div class="next-form-item">
+
+                                        <input class="next-input" id="cep" name="cep" placeholder="CEP*"
+                                            autocomplete="off" value="" required oninput="validarNumeros(this)"
+                                            onchange="formatarCEP(this)">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-section">
+                        <div class="section-title">E-mail</div>
+                        <div class="section-body">
+                            <div class="next-row form-row-wrap">
+                                <div class="next-col">
+                                    <div class="next-form-item">
+
+                                        <input class="next-input" name="email" placeholder="E-mail" autocomplete="off"
+                                            value="" required type="email">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div id="enderecoPopup" class="modal">
+                    <div class="modal-content">
+                        <div id="enderecoDetalhes"></div>
+                        <button onclick="fecharPopup()">Fechar</button>
+                    </div>
+                </div>
+                <button type="button" onclick="exibirEndereco()"
+                    class="comet-btn comet-btn-primary comet-btn-large form-item-button">
+                    <span>Confirm</span>
+                </button>
+                <button type="button" onclick="fecharPopup()"
+                    class="comet-btn comet-btn-normal comet-btn-large form-item-button">
+                    <span>Cancel</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
     <script>
         // Função para abrir o popup
         function abrirPopup() {
@@ -110,79 +329,6 @@
                 .then(response => response.json())
                 .then(data => preencherEndereco(data))
                 .catch(error => console.log(error));
-        }
-
-        // Função para preencher o endereço no formulário
-        function preencherEndereco(endereco) {
-            const enderecoInput = document.getElementById('endereco');
-
-            if (enderecoInput) {
-                if (endereco.erro) {
-                    enderecoInput.value = 'Endereço não encontrado';
-                } else {
-                    enderecoInput.value = `${endereco.logradouro}, ${endereco.bairro}, ${endereco.localidade} - ${endereco.uf}`;
-                }
-            }
-        }
-
-        // Função para exibir o endereço em um popup
-        function exibirEndereco() {
-            const popup = document.getElementById('enderecoPopup');
-            const form = document.getElementById('enderecoForm');
-            const endereco = document.getElementById('endereco').value;
-
-            form.style.display = 'none'; // Ocultar o formulário
-            popup.style.display = 'block'; // Exibir o popup
-
-            popup.innerHTML = `
-        <h2>Detalhes do Endereço de Entrega</h2>
-        <p><strong>Nome:</strong> ${form.nome.value} ${form.sobrenome.value}</p>
-        <p><strong>Endereço:</strong> ${endereco}</p>
-        <p><strong>Número:</strong> ${form.numero.value}</p>
-        <p><strong>Bairro:</strong> ${form.bairro.value}</p>
-        <p><strong>Cidade:</strong> ${form.cidade.value}</p>
-        <p><strong>Estado:</strong> ${form.estado.value}</p>
-        <p><strong>CEP:</strong> ${form.cep.value}</p>
-        <p><strong>E-mail:</strong> ${form.email.value}</p>
-        <p><strong>Telefone:</strong> ${form.telefone.value}</p>
-        <button onclick="fecharPopup()">Fechar</button>
-      `;
-        }
-
-        // Função para lidar com o envio do formulário
-        function handleSubmit(event) {
-            event.preventDefault(); // Impedir o envio do formulário
-
-            const cep = document.getElementById('cep').value;
-            buscarEndereco(cep);
-        }
-
-        function validarNumeros(input) {
-            var numericos = input.value.replace(/\D/g, ''); // Remove todos os caracteres não numéricos
-            var formatado = numericos.replace(/(\d{2})(\d{4,5})(\d{4})$/, "($1) $2-$3");
-            input.value = formatado;
-        }
-
-        function validarLetras(input) {
-            input.value = input.value.replace(/[^A-Za-z\s]/g, ''); // Remove todos os caracteres que não são letras ou espaços
-        }
-
-        function formatarCEP(input) {
-            const cep = input.value.replace(/\D/g, ''); // Remove todos os caracteres não numéricos
-            const cepFormatado = cep.replace(/(\d{5})(\d{3})/, '$1-$2'); // Formata o CEP para "37557-027"
-            input.value = cepFormatado;
-            buscarEndereco(cep); // Chama a função buscarEndereco() com o valor formatado do CEP
-        }
-
-
-        // Função para fechar o popup
-        function fecharPopup() {
-            const popup = document.getElementById('enderecoPopup');
-            const form = document.getElementById('enderecoForm');
-
-            form.style.display = 'block'; // Exibir o formulário novamente
-            popup.style.display = 'none'; // Ocultar o popup
-            form.reset(); // Limpar os campos do formulário
         }
 
         // Função para preencher o endereço no formulário
@@ -210,58 +356,146 @@
             }
         }
 
+        // Função para exibir o endereço em um popup
+        function exibirEndereco() {
+            const popup = document.getElementById('enderecoPopup');
+            const form = document.getElementById('enderecoForm');
+            const endereco = document.getElementById('endereco').value;
+
+            form.style.display = 'none'; // Ocultar o formulário
+            popup.style.display = 'block'; // Exibir o popup
+
+            const enderecoDetalhes = document.getElementById('enderecoDetalhes');
+            enderecoDetalhes.innerHTML = `
+            <h2>Detalhes do Endereço de Entrega</h2>
+            <p><strong>Nome:</strong> ${form.nome.value} ${form.sobrenome.value}</p>
+            <p><strong>Endereço:</strong> ${endereco}</p>
+            <p><strong>Número:</strong> ${form.numero.value}</p>
+            <p><strong>Bairro:</strong> ${form.bairro.value}</p>
+            <p><strong>Cidade:</strong> ${form.cidade.value}</p>
+            <p><strong>Estado:</strong> ${form.estado.value}</p>
+            <p><strong>CEP:</strong> ${form.cep.value}</p>
+            <p><strong>E-mail:</strong> ${form.email.value}</p>
+            <p><strong>Telefone:</strong> ${form.telefone.value}</p>
+        `;
+        }
+
+        // Função para lidar com o envio do formulário
+        function handleSubmit(event) {
+            event.preventDefault(); // Impedir o envio do formulário
+
+            const cep = document.getElementById('cep').value;
+            buscarEndereco(cep);
+        }
 
 
+        function limitarCaracteres(input, maxLength) {
+            const warningMessage = document.getElementById("warningMessage_dd");
+
+            if (input.value.length > maxLength) {
+                input.value = input.value.slice(0, maxLength); // Limita o número de caracteres
+                warningMessage.innerText = "O número de dígitos deve ser no máximo 8.";
+                input.classList.add("error-input"); // Adiciona a classe CSS para destacar o campo em vermelho
+            } else if (input.value.length === 0) {
+                warningMessage.innerText = "Você deve incluir o código do país."; // Adiciona mensagem de aviso quando a caixa estiver vazia
+                input.classList.add("error-input"); // Adiciona a classe CSS para destacar o campo em vermelho
+            } else {
+                warningMessage.innerText = ""; // Limpa a mensagem de aviso
+                input.classList.remove("error-input"); // Remove a classe CSS caso o valor seja válido
+            }
+        }
+
+        function validarTelefone(input) {
+            const warningMessage = document.getElementById("warningMessage_telefone");
+            const numericValue = input.value.replace(/\D/g, ""); // Remove caracteres não numéricos
+
+            if (numericValue !== input.value) {
+                input.value = numericValue; // Atualiza o valor do campo de input para conter apenas números
+                input.classList.add("error-input"); // Adiciona a classe CSS para destacar o campo em vermelho
+                warningMessage.innerText = "Insira 10 ou 11 dígitos.";
+            } else if (input.value.length === 0) {
+                warningMessage.innerText = "Insira o seu número de celular."; // Adiciona mensagem de aviso quando a caixa estiver vazia
+                input.classList.add("error-input"); // Adiciona a classe CSS para destacar o campo em vermelho
+            } else if (numericValue.length > 8) {
+                input.value = numericValue.slice(0, 9); // Limita o número de dígitos para 8
+                var numericos = input.value.replace(/\D/g, ''); // Remove todos os caracteres não numéricos
+                var formatado = numericos.replace(/(\d{2})(\d{4,5})(\d{4})$/, "($1) $2-$3");
+                input.value = formatado;
+                input.classList.add("error-input"); // Adiciona a classe CSS para destacar o campo em vermelho
+                warningMessage.innerText = "Insira no máximo 9 dígitos.";
+            } else {
+                var numericos = input.value.replace(/\D/g, ''); // Remove todos os caracteres não numéricos
+                var formatado = numericos.replace(/(\d{2})(\d{4,5})(\d{4})$/, "($1) $2-$3");
+                input.value = formatado;
+                input.classList.remove("error-input"); // Remove a classe CSS caso o valor seja válido
+                warningMessage.innerText = ""; // Limpa a mensagem de aviso
+            }
+        }
+
+        function validarLetras(input) {
+            const warningMessage = document.getElementById("warningMessage_nome");
+            const alphaRegex = /^[a-zA-Z\s]*$/; // Expressão regular para letras e espaços
+
+            if (!alphaRegex.test(input.value)) {
+                input.classList.add("error-input"); // Adiciona a classe CSS para destacar o campo em vermelho
+                warningMessage.innerText = "Favor adicionar um nome para contato.";
+            } else if (input.value.length === 0) {
+                warningMessage.innerText = "Este campo é obrigatório."; // Adiciona mensagem de aviso quando a caixa estiver vazia
+                input.classList.add("error-input"); // Adiciona a classe CSS para destacar o campo em vermelho
+            } else {
+                warningMessage.innerText = ""; // Limpa a mensagem de aviso
+                input.classList.remove("error-input"); // Remove a classe CSS caso o valor seja válido
+            }
+        }
+
+
+        function validarNumeros(input) {
+            var numericos = input.value.replace(/\D/g, ''); // Remove todos os caracteres não numéricos
+            var formatado = numericos.replace(/(\d{2})(\d{4,5})(\d{4})$/, "($1) $2-$3");
+            input.value = formatado;
+        }
+
+        function formatarCEP(input) {
+            const cep = input.value.replace(/\D/g, ''); // Remove todos os caracteres não numéricos
+            const cepFormatado = cep.replace(/(\d{5})(\d{3})/, '$1-$2'); // Formata o CEP para "37557-027"
+            input.value = cepFormatado;
+
+            const cepNumerico = cep.replace(/\D/g, ''); // Remove todos os caracteres não numéricos do CEP formatado
+            buscarEndereco(cepNumerico); // Chama a função buscarEndereco() com o valor formatado do CEP
+        }
+
+        // Função para fechar o popup
+        function fecharPopup() {
+            const popup = document.getElementById('enderecoPopup');
+            const form = document.getElementById('enderecoForm');
+
+            form.style.display = 'block'; // Exibir o formulário novamente
+            popup.style.display = 'none'; // Ocultar o popup
+            form.reset(); // Limpar os campos do formulário
+        }
+
+        var modal = document.getElementById("myModal");
+        var btn = document.getElementById("myBtn");
+        var span = document.getElementsByClassName("close")[0];
+
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
 
     </script>
-</head>
-
-<body>
-    <!-- Botão para abrir o popup -->
-    <button class="abrir-popup" onclick="abrirPopup()">Preencher Informações de Entrega</button>
-
-    <!-- Popup para exibir o endereço -->
-    <div id="enderecoPopup" class="popup">
-        <h2>Cadastro de Endereço de Entrega</h2>
-
-        <form id="enderecoForm" onsubmit="handleSubmit(event)">
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" required oninput="validarLetras(this)">
-
-            <label for="sobrenome">Sobrenome:</label>
-            <input type="text" id="sobrenome" name="sobrenome" required oninput="validarLetras(this)">
-
-            <label for="cep">CEP:</label>
-            <input type="text" id="cep" name="cep" required oninput="validarNumeros(this); formatarCEP(this)">
 
 
-            <label for="endereco">Endereço:</label>
-            <input type="text" id="endereco" name="endereco" readonly>
 
-            <label for="numero">Número:</label>
-            <input type="text" id="numero" name="numero" required oninput="validarNumeros(this)">
-
-            <label for="bairro">Bairro:</label>
-            <input type="text" id="bairro" name="bairro" required oninput="validarLetras(this)">
-
-            <label for="cidade">Cidade:</label>
-            <input type="text" id="cidade" name="cidade" required oninput="validarLetras(this)">
-
-            <label for="estado">Estado:</label>
-            <input type="text" id="estado" name="estado" required pattern="[A-Za-z]{2}" oninput="validarLetras(this)">
-
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="telefone">Telefone:</label>
-            <input type="tel" id="telefone" name="telefone" required oninput="validarNumeros(this)">
-
-
-            <input type="submit" value="Enviar">
-        </form>
-
-    </div>
-
-</body>
+    </body>
 
 </html>
