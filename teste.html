@@ -91,8 +91,90 @@
             height: 52px;
             padding: 8px;
             margin-left: 2%;
-            border: 1px solid #ccc;
+            border: 1px solid #06c820;
             border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .next-input-estado {
+            width: 220px;
+            height: 52px;
+            padding: 8px;
+            margin-left: 3%;
+            border: 1px solid #06c820;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .next-input-cidade {
+            width: 225px;
+            height: 52px;
+            padding: 8px;
+            margin-left: 0%;
+            border: 1px solid #06c820;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .next-input-cep {
+            width: 477px;
+            height: 52px;
+            padding: 8px;
+            margin-left: 2%;
+            border: 1px solid #06c820;
+            border-radius: 7px;
+            box-sizing: border-box;
+        }
+
+        .next-input-telefone {
+            width: 400px;
+            height: 52px;
+            padding: 8px;
+            border: 1px solid #06c820;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .next-input-bairro {
+            width: 477px;
+            height: 52px;
+            padding: 8px;
+            margin-top: 10px;
+            margin-left: 2%;
+            border: 1px solid #06c820;
+            border-radius: 7px;
+            box-sizing: border-box;
+        }
+
+        .next-input-endereco {
+            width: 450px;
+            height: 52px;
+            padding: 8px;
+            margin-left: 3%;
+            margin-top: 10px;
+            border: 1px solid #06c820;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .next-input-apto {
+            width: 450px;
+            height: 52px;
+            padding: 8px;
+            margin-left: 3%;
+            border: 1px solid #06c820;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .next-input-numero {
+            width: 477px;
+            height: 52px;
+            padding: 8px;
+            margin-top: 10px;
+            margin-left: 2%;
+            border: 1px solid #06c820;
+            border-radius: 7px;
             box-sizing: border-box;
         }
 
@@ -115,14 +197,6 @@
             border: 1px solid red;
         }
 
-        .next-input-telefone {
-            width: 400px;
-            height: 52px;
-            padding: 8px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-        }
 
         .next-form-item-help {
             font-size: 12px;
@@ -233,54 +307,42 @@
                             <div class="next-row form-row-wrap">
                                 <div class="next-col">
                                     <div class="next-form-item">
-                                        <input class="next-input" id="endereco" name="endereco" placeholder="Endereço*"
+
+                                        <input class="next-input-estado" id="estado" name="estado" placeholder="Estado*"
                                             autocomplete="off" value="" required oninput="validarLetras(this)">
-                                    </div>
-                                </div>
-                                <div class="next-col">
-                                    <div class="next-form-item">
-                                        <input class="next-input" id="numero" name="numero" placeholder="Número*"
+
+
+                                        <input class="next-input-cidade" id="cidade" name="cidade" placeholder="Cidade*"
+                                            autocomplete="off" value="" required oninput="validarLetras(this)">
+
+
+                                        <input class="next-input-cep" id="cep" name="cep" placeholder="CEP*"
+                                            autocomplete="off" value="" required oninput="validarNumeros(this)"
+                                            onchange="formatarCEP(this)">
+
+
+                                        <input class="next-input-endereco" id="endereco" name="endereco"
+                                            placeholder="Endereço*" autocomplete="off" value="" required
+                                            oninput="validarLetras(this)">
+
+
+
+                                        <input class="next-input-bairro" id="bairro" name="bairro" placeholder="Bairro*"
+                                            autocomplete="off" value="" required oninput="validarLetras(this)">
+
+
+                                        <input class="next-input-apto" id="apto" name="apto"
+                                            placeholder="Apto, conjunto, unidade, etc." autocomplete=" off" value=""
+                                            required oninput="validarLetras(this)">
+
+                                        <input class="next-input-numero" id="numero" name="numero" placeholder="Número*"
                                             autocomplete="off" value="" required oninput="validarNumeros(this)">
                                     </div>
                                 </div>
-                                <div class="next-col">
-                                    <div class="next-form-item">
-                                        <input class="next-input" id="bairro" name="bairro" placeholder="Bairro*"
-                                            autocomplete="off" value="" required oninput="validarLetras(this)">
-                                    </div>
-                                </div>
-                                <div class="next-col">
-                                    <div class="next-form-item">
-
-                                        <input class="next-input" id="cidade" name="cidade" placeholder="Cidade*"
-                                            autocomplete="off" value="" required oninput="validarLetras(this)">
-                                    </div>
-                                </div>
-                                <div class="next-col">
-                                    <div class="next-form-item">
-
-                                        <input class="next-input" id="estado" name="estado" placeholder="Estado*"
-                                            autocomplete="off" value="" required oninput="validarLetras(this)">
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="form-section">
-                        <div class="section-title">CEP</div>
-                        <div class="section-body">
-                            <div class="next-row form-row-wrap">
-                                <div class="next-col">
-                                    <div class="next-form-item">
 
-                                        <input class="next-input" id="cep" name="cep" placeholder="CEP*"
-                                            autocomplete="off" value="" required oninput="validarNumeros(this)"
-                                            onchange="formatarCEP(this)">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                     <div class="form-section">
                         <div class="section-title">E-mail</div>
                         <div class="section-body">
