@@ -25,9 +25,9 @@
             margin: 4% auto;
             padding: 20px;
             border: 1px solid #888;
-            width: 90%;
+            width: 53%;
             max-width: 1050px;
-            height: 74%;
+            height: 75%;
         }
 
         .close {
@@ -53,7 +53,7 @@
             text-align: center;
             font-size: 24px;
             font-weight: bold;
-            margin-bottom: 50px;
+            margin-bottom: 20px;
         }
 
         .section-title {
@@ -104,6 +104,7 @@
             border: 1px solid #ccc;
             border-radius: 4px;
             box-sizing: border-box;
+            margin-top: 5px;
         }
 
         .next-input-cidade {
@@ -114,6 +115,7 @@
             border: 1px solid #ccc;
             border-radius: 4px;
             box-sizing: border-box;
+            margin-top: 5px;
         }
 
         .next-input-cep {
@@ -122,8 +124,9 @@
             padding: 8px;
             margin-left: 2%;
             border: 1px solid #ccc;
-            border-radius: 7px;
+            border-radius: 4px;
             box-sizing: border-box;
+            margin-top: 5px;
         }
 
         .next-input-telefone {
@@ -133,6 +136,7 @@
             border: 1px solid #ccc;
             border-radius: 4px;
             box-sizing: border-box;
+            margin-top: 5px;
         }
 
         .next-input-bairro {
@@ -142,8 +146,9 @@
             margin-top: 10px;
             margin-left: 2%;
             border: 1px solid #ccc;
-            border-radius: 7px;
+            border-radius: 4px;
             box-sizing: border-box;
+            margin-top: 5px;
         }
 
         .next-input-endereco {
@@ -155,6 +160,7 @@
             border: 1px solid #ccc;
             border-radius: 4px;
             box-sizing: border-box;
+            margin-top: 5px;
         }
 
         .next-input-apto {
@@ -165,6 +171,7 @@
             border: 1px solid #ccc;
             border-radius: 4px;
             box-sizing: border-box;
+            margin-top: 5px;
         }
 
         .next-input-numero {
@@ -174,39 +181,11 @@
             margin-top: 10px;
             margin-left: 2%;
             border: 1px solid #ccc;
-            border-radius: 7px;
+            border-radius: 4px;
             box-sizing: border-box;
+            margin-top: 5px;
         }
 
-        .next-input-email {
-            width: 477px;
-            height: 52px;
-            padding: 8px;
-            margin-top: 10px;
-            margin-left: 2%;
-            border: 1px solid #ccc;
-            border-radius: 7px;
-            box-sizing: border-box;
-        }
-
-        .next-input-cpf {
-            width: 450px;
-            height: 52px;
-            padding: 8px;
-            margin-top: 10px;
-            margin-left: 3%;
-            border: 1px solid #ccc;
-            border-radius: 7px;
-            box-sizing: border-box;
-        }
-
-        .descricao-cpf {
-            margin-top: 10px;
-            font-size: 14px;
-            font-weight: lighter;
-            max-width: 450px;
-            margin-left: 3%;
-        }
 
         .alertas_1 {
             max-width: 900px;
@@ -219,7 +198,7 @@
         }
 
         #warningMessage_dd {
-            margin-left: 30%;
+            margin-left: 40%;
             margin-top: 10px;
         }
 
@@ -228,7 +207,166 @@
         }
 
 
+        .alertas_2 {
+            max-width: 900px;
+            display: flex;
+        }
 
+        #endereco-error {
+            margin-left: 4%;
+            margin-top: 10px;
+        }
+
+        #bairro-error {
+            margin-left: 34%;
+            margin-top: 10px;
+        }
+
+        .alertas_3 {
+            max-width: 900px;
+            display: flex;
+        }
+
+        #apto-error {
+            margin-left: 4%;
+            margin-top: 10px;
+        }
+
+        #numero-error {
+            margin-left: 34%;
+            margin-top: 10px;
+        }
+
+        .input-checkbox {
+            position: absolute;
+            display: auto;
+            margin-left: 18%;
+            margin-top: 10px;
+            color: #007bff;
+        }
+
+        .checkbox-custom {
+            display: none;
+        }
+
+        .checkbox-custom+label {
+            position: relative;
+            padding-left: 15px;
+            cursor: pointer;
+        }
+
+        .checkbox-custom+label:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 4px;
+            width: 10px;
+            height: 10px;
+            border: 2px solid #007bff;
+            box-sizing: border-box;
+        }
+
+        .checkbox-custom:checked+label:after {
+            content: '';
+            position: absolute;
+            left: 0px;
+            top: 5px;
+            width: 8px;
+            height: 8px;
+            background-color: #007bff;
+        }
+
+        .input-numero {
+            margin-left: 49.5%;
+            margin-top: -57px;
+        }
+
+        .input-apt {
+            margin-left: 0%;
+            margin-top: 0px;
+        }
+
+        .text_nome {
+            margin-left: 4%;
+        }
+
+        .text_cep {
+            margin-left: 41%;
+        }
+
+        .text_linha_1 {
+            max-width: 900px;
+            display: flex;
+        }
+
+        .text_linha_2 {
+            max-width: 800px;
+            display: flex;
+
+        }
+
+        .text_estado {
+            margin-left: 5%;
+        }
+
+        .text_cidade {
+            margin-left: 25%;
+        }
+
+        .text_contato {
+            margin-left: 40%;
+        }
+
+        .text_linha_3 {
+            max-width: 800px;
+            display: flex;
+            margin-top: 15px;
+        }
+
+        .text_endereco {
+            margin-left: 5%;
+        }
+
+        .text_bairro {
+            margin-left: 48%;
+        }
+
+        .text_linha_4 {
+            max-width: 800px;
+            display: flex;
+            margin-top: 20px;
+        }
+
+        .text_apto {
+            margin-left: 5%;
+        }
+
+        .text_numero {
+            margin-left: 39%;
+        }
+
+
+        .text_linha_5 {
+            max-width: 800px;
+            display: flex;
+            margin-top: 10px;
+        }
+
+        .text_info {
+            margin-left: 4%;
+        }
+
+        .next-input-info{
+            width: 953px;
+            height: 52px;
+            padding: 8px;
+            margin-top: 10px;
+            margin-left: 2.8%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 5px;
+        }
 
         .alertas {
             max-width: 900px;
@@ -247,7 +385,7 @@
         }
 
         #cep-error {
-            margin-left: 31%;
+            margin-left: 33%;
             /* isso pode não ser necessário se estiver usando flex */
             margin-top: 10px;
         }
@@ -274,7 +412,27 @@
             margin-left: 5px;
         }
 
-        .form-item-button {
+
+
+
+        .button-confirm{
+            position: relative;
+            overflow: hidden;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            width: 180px;
+            height: 54px;
+            cursor: pointer;
+            font-size: 16px;
+            line-height: 24px;
+            border-radius: 22px;
+            transition: all 0.3s ease;
+            margin-left: 55%;
+            margin-top: 8%;
+        }
+
+        .button-cancel{
             position: relative;
             overflow: hidden;
             background-color: #007bff;
@@ -288,14 +446,15 @@
             border-radius: 22px;
             transition: all 0.3s ease;
             margin-left: 5%;
+            margin-top: 8%;
         }
 
-        .form-item-button span {
+        .button-confirm span {
             position: relative;
             z-index: 1;
         }
 
-        .form-item-button:before {
+        .button-confirm:before {
             content: "";
             position: absolute;
             top: 50%;
@@ -308,17 +467,48 @@
             transition: all 0.3s ease;
         }
 
-        .form-item-button:hover:before {
+        .button-confirm:hover:before {
             width: 100%;
         }
 
-        .form-item-button:hover {
+        .button-confirm:hover {
+            color: #007bff;
+            background-color: #fff;
+        }
+
+        .button-cancel span {
+            position: relative;
+            z-index: 1;
+        }
+
+        .button-cancel:before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 100%;
+            background-color: #fff;
+            opacity: 0.2;
+            transform: translate(-50%, -50%);
+            transition: all 0.3s ease;
+        }
+
+        .button-cancel:hover:before {
+            width: 100%;
+        }
+
+        .button-cancel:hover {
             color: #007bff;
             background-color: #fff;
         }
 
         .form-section-e-mail {
             margin-left: 47%;
+        }
+
+        .form-section_1 {
+            margin-top: 1%;
         }
     </style>
 
@@ -330,27 +520,30 @@
             <div class="comet-modal-title">Adicionar novo Endereço</div>
             <div class="comet-modal-body">
                 <form id="enderecoForm" onsubmit="handleSubmit(event)">
-                    <div class="form-section">
-                        <div class="section-title">Nome do contato</div>
+                    <div class="form-section_1">
+
                         <div class="section-body">
                             <div class="next-row form-row-wrap">
                                 <div class="next-col">
                                     <div class="next-form-item">
-                                        <input class="next-input" name="nome" placeholder="Nome do contato"
-                                            autocomplete="off" value="" required oninput="validarLetras(this)">
 
-                                        <input class="next-input-dd" height="100%" autocomplete="off" value="+55"
-                                            data-spm-anchor-id="a2g0o.order_list.0.i21.690fcaa4Ni7V12"
-                                            oninput="limitarCaracteres(this, 8)">
+                                        <div class="text_linha_1">
+                                            <div class="text_nome"> Nome completo </div>
+                                            <div class="text_cep"> CEP </div>
+                                        </div>
 
-                                        <input class="next-input-telefone" name="Telefone"
-                                            placeholder="Número de Celular*" autocomplete="off" value="" required
-                                            oninput="validarTelefone(this)">
+                                        <input class="next-input" name="nome" placeholder="" autocomplete="off" value=""
+                                            required oninput="validarLetras(this)">
+
+
+                                        <input class="next-input-cep" id="cep" name="cep" placeholder=""
+                                            autocomplete="off" value="" required oninput="validarCEP(this)"
+                                            oninput="validarNumeros(this)" onchange="formatarCEP(this)">
 
                                         <div class="alertas_1">
                                             <div id="warningMessage_nome" style="color: red;"></div>
-                                            <div id="warningMessage_dd" style="color: red;"></div>
-                                            <div id="warningMessage_telefone" style="color: red;"></div>
+                                            <div id="cep-error" style="color: red; display: none;"></div>
+
                                         </div>
 
 
@@ -367,92 +560,113 @@
 
 
                     <div class="form-section">
-                        <div class="section-title">Endereço</div>
+
                         <div class="section-body">
                             <div class="next-row form-row-wrap">
                                 <div class="next-col">
                                     <div class="next-form-item">
 
 
+                                        <div class="text_linha_2">
+                                            <div class="text_estado"> Estado </div>
+                                            <div class="text_cidade"> Cidade </div>
+                                            <div class="text_contato"> Telefone de contato </div>
+                                        </div>
+
                                         <input class="next-input-estado" id="estado" name="estado" placeholder="Estado*"
-                                            autocomplete="off" value="" required oninput="validarEstado(this)"
-                                            oninput="validarLetras(this)">
-
-
+                                            autocomplete="off" value="" required
+                                            oninput="validarEstado(this); validarLetras(this);" disabled>
 
                                         <input class="next-input-cidade" id="cidade" name="cidade" placeholder="Cidade*"
-                                            autocomplete="off" value="" required oninput="validarCidade(this)"
-                                            oninput="validarLetras(this)">
+                                            autocomplete="off" value="" required
+                                            oninput="validarCidade(this); validarLetras(this);" disabled>
 
 
 
-                                        <input class="next-input-cep" id="cep" name="cep" placeholder="CEP*"
-                                            autocomplete="off" value="" required oninput="validarCEP(this)"
-                                            oninput="validarNumeros(this)" onchange="formatarCEP(this)">
+                                        <input class="next-input-dd" id="dd" height="100%" name="dd" placeholder="dd*"
+                                            autocomplete="off" value="" oninput="limitarCaracteres(this, 3)">
+
+                                        <input class="next-input-telefone" name="Telefone"
+                                            placeholder="Número de Celular*" autocomplete="off" value="" required
+                                            oninput="validarTelefone(this)">
 
                                         <div class="alertas">
                                             <div id="estado-error" style="color: red; display: none;"></div>
                                             <div id="cidade-error" style="color: red; display: none;"></div>
-                                            <div id="cep-error" style="color: red; display: none;"></div>
+                                            <div id="warningMessage_dd" style="color: red;"></div>
+                                            <div id="warningMessage_telefone" style="color: red;"></div>
                                         </div>
 
+
+                                        <div class="text_linha_3">
+                                            <div class="text_endereco"> Rua/Avenida </div>
+                                            <div class="text_bairro"> Bairro </div>
+                                        </div>
 
                                         <input class="next-input-endereco" id="endereco" name="endereco"
                                             placeholder="Endereço*" autocomplete="off" value="" required
                                             oninput="validarEndereco(this)" oninput="validarLetras(this)">
-                                        <div id="endereco-error" style="color: red; display: none;"></div>
+
 
 
 
                                         <input class="next-input-bairro" id="bairro" name="bairro" placeholder="Bairro*"
                                             autocomplete="off" value="" required oninput="validarBairro(this)"
                                             oninput="validarLetras(this)">
-                                        <div id="bairro-error" style="color: red; display: none;"></div>
 
 
-                                        <input class="next-input-apto" id="apto" name="apto"
-                                            placeholder="Apto, conjunto, unidade, etc." autocomplete=" off" value=""
-                                            required oninput="validarApto(this)" oninput="validarLetras(this)">
-                                        <div id="apto-error" style="color: red; display: none;"></div>
 
-                                        <input class="next-input-numero" id="numero" name="numero" placeholder="Número*"
-                                            autocomplete="off" value="" required oninput="validarNumero(this)"
-                                            oninput="validarNumeros(this)">
-                                        <div id="numero-error" style="color: red; display: none;"></div>
-
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="form-section-cpf">
-                        <div class="section-title">CPF e E-mail</div>
-                        <div class="section-body">
-                            <div class="next-row form-row-wrap">
-                                <div class="next-col">
-                                    <div class="next-form-item">
-
-                                        <input class="next-input-cpf" id="cpf" name="cpf" placeholder="CPF*"
-                                            autocomplete="off" value="" maxlength="14" required
-                                            oninput="validarNumeros(this); formatarCPF(this)"
-                                            onchange="validarCPF(this)">
-
-                                        <input class="next-input-email" name="email" placeholder="E-mail*"
-                                            autocomplete="off" value="" required type="email">
-
-                                        <div class="descricao-cpf">AliExpress
-                                            respeita sua privacidade e a confidencialidade dos seus dados. Suas
-                                            informações pessoais só serão coletadas, usadas e divulgadas de acordo com
-                                            as ‘Políticas de Privacidade do AliExpress.com’.&nbsp;
+                                        <div class="alertas_2">
+                                            <div id="endereco-error" style="color: red; display: none;"></div>
+                                            <div id="bairro-error" style="color: red; display: none;"></div>
                                         </div>
+
+
+                                        <div class="text_linha_4">
+                                            <div class="text_apto"> Complemento (opcional) </div>
+                                            <div class="text_numero"> Número </div>
+                                        </div>
+
+                                        <div class="input-apt">
+
+                                            <input class="next-input-apto" id="apto" name="apto" placeholder=""
+                                                autocomplete=" off" value="" oninput="validarApto(this)"
+                                                oninput="validarLetras(this)">
+
+                                        </div>
+
+                                        <div style="display: flex; align-items: center;" class="input-numero">
+
+                                            <input class="next-input-numero" id="numero" name="numero"
+                                                placeholder="Número*" autocomplete="off" value="" required
+                                                oninput="validarNumero(this); validarNumeros(this);">
+
+                                            <div class="input-checkbox">
+                                                <input type="checkbox" id="semNumero" class="checkbox-custom"
+                                                    name="semNumero" onclick="verificarSemNumero()">
+                                                <label for="semNumero">Sem número</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="alertas_3">
+                                            <div id="apto-error" style="color: red; display: none;"></div>
+                                            <div id="numero-error" style="color: red; display: none;"></div>
+                                        </div>
+
+                                        <div class="text_linha_5">
+                                            <div class="text_info"> Informações adicionais deste endereço (opcional) </div>
+                                        </div>
+
+                                        <input class="next-input-info" id="info" name="info"
+                                            placeholder="Descrição da fachada, pontos de referência, informações de segurança etc."
+                                            autocomplete="off" value="">
+
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                 </form>
                 <div id="enderecoPopup" class="modal">
                     <div class="modal-content">
@@ -461,11 +675,11 @@
                     </div>
                 </div>
                 <button type="button" onclick="exibirEndereco()"
-                    class="comet-btn comet-btn-primary comet-btn-large form-item-button">
+                    class="comet-btn comet-btn-primary comet-btn-large form-item-button button-confirm">
                     <span>Confirm</span>
                 </button>
                 <button type="button" onclick="fecharPopup()"
-                    class="comet-btn comet-btn-normal comet-btn-large form-item-button">
+                    class="comet-btn comet-btn-normal comet-btn-large form-item-button button-cancel">
                     <span>Cancel</span>
                 </button>
             </div>
@@ -496,6 +710,7 @@
             const bairroInput = document.getElementById('bairro');
             const cidadeInput = document.getElementById('cidade');
             const estadoInput = document.getElementById('estado');
+            const ddInput = document.getElementById('dd');
 
             if (enderecoInput) {
                 if (endereco.erro) {
@@ -504,12 +719,14 @@
                     bairroInput.value = '';
                     cidadeInput.value = '';
                     estadoInput.value = '';
+                    ddInput.value = '';
                 } else {
                     enderecoInput.value = endereco.logradouro || '';
                     numeroInput.value = '';
                     bairroInput.value = endereco.bairro || '';
                     cidadeInput.value = endereco.cidade || '';
                     estadoInput.value = endereco.estado || '';
+                    ddInput.value = endereco.dd || '';
                 }
             }
         }
@@ -533,7 +750,7 @@
             <p><strong>Cidade:</strong> ${form.cidade.value}</p>
             <p><strong>Estado:</strong> ${form.estado.value}</p>
             <p><strong>CEP:</strong> ${form.cep.value}</p>
-            <p><strong>E-mail:</strong> ${form.email.value}</p>
+            <p><strong>DDD:</strong> ${form.dd.value}</p>
             <p><strong>Telefone:</strong> ${form.telefone.value}</p>
         `;
         }
@@ -608,12 +825,16 @@
 
 
         function validarNumeros(input) {
+            var num = input.value.replace(/[^0-9]/g, ''); // Remove todos os caracteres não numéricos
+            input.value = num;
             var numericos = input.value.replace(/\D/g, ''); // Remove todos os caracteres não numéricos
             var formatado = numericos.replace(/(\d{2})(\d{4,5})(\d{4})$/, "($1) $2-$3");
             input.value = formatado;
         }
 
         function formatarCEP(input) {
+            var num = input.value.replace(/[^0-9]/g, ''); // Remove todos os caracteres não numéricos
+            input.value = num;
             const cep = input.value.replace(/\D/g, ''); // Remove todos os caracteres não numéricos
             const cepFormatado = cep.replace(/(\d{5})(\d{3})/, '$1-$2'); // Formata o CEP para "37557-027"
             input.value = cepFormatado;
@@ -623,6 +844,8 @@
         }
 
         function validarNumerosCPF(input) {
+            var num = input.value.replace(/[^0-9]/g, ''); // Remove todos os caracteres não numéricos
+            input.value = num;
             const value = input.value.replace(/[^0-9]/g, '');
             if (value.length > 11) {
                 input.value = value.slice(0, 11);
@@ -631,68 +854,17 @@
             }
         }
         function formatarCPF(input) {
+            var num = input.value.replace(/[^0-9]/g, ''); // Remove todos os caracteres não numéricos
+            input.value = num;
             let cpf = input.value.replace(/\D/g, ''); // Remove todos os caracteres não numéricos
             cpf = cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4'); // Formata o CPF para "000.000.000-00"
             input.value = cpf;
         }
 
-        function validarCPF(input) {
-            let cpf = input.value.replace(/[^\d]+/g, '');
-            if (cpf === '') {
-                alert('CPF inválido');
-                input.value = '';
-                return false;
-            }
-
-            // Elimina CPFs invalidos conhecidos
-            if (cpf.length !== 11 ||
-                cpf === "00000000000" ||
-                cpf === "11111111111" ||
-                cpf === "22222222222" ||
-                cpf === "33333333333" ||
-                cpf === "44444444444" ||
-                cpf === "55555555555" ||
-                cpf === "66666666666" ||
-                cpf === "77777777777" ||
-                cpf === "88888888888" ||
-                cpf === "99999999999") {
-                alert('CPF inválido');
-                input.value = '';
-                return false;
-            }
-
-            // Valida 1o digito
-            let add = 0;
-            for (let i = 0; i < 9; i++)
-                add += parseInt(cpf.charAt(i)) * (10 - i);
-            let rev = 11 - (add % 11);
-            if (rev === 10 || rev === 11)
-                rev = 0;
-            if (rev !== parseInt(cpf.charAt(9))) {
-                alert('CPF inválido');
-                input.value = '';
-                return false;
-            }
-
-            // Valida 2o digito
-            add = 0;
-            for (let i = 0; i < 10; i++)
-                add += parseInt(cpf.charAt(i)) * (11 - i);
-            rev = 11 - (add % 11);
-            if (rev === 10 || rev === 11)
-                rev = 0;
-            if (rev !== parseInt(cpf.charAt(10))) {
-                alert('CPF inválido');
-                input.value = '';
-                return false;
-            }
-
-            alert('CPF válido');
-            return true;
-        }
-
 
         function validarEstado(input) {
+            var letras = input.value.replace(/[^a-zA-Z]/g, ""); // Remove todos os caracteres não alfabéticos
+            input.value = letras;
             const errorDiv = document.getElementById('estado-error');
             if (input.value === '') {
                 errorDiv.style.display = 'block';
@@ -706,6 +878,8 @@
 
 
         function validarCidade(input) {
+            var letras = input.value.replace(/[^a-zA-Z]/g, ""); // Remove todos os caracteres não alfabéticos
+            input.value = letras;
             const errorDiv = document.getElementById('cidade-error');
             if (input.value === '') {
                 errorDiv.style.display = 'block';
@@ -718,6 +892,9 @@
         }
 
         function validarCEP(input) {
+
+            var num = input.value.replace(/[^0-9]/g, ''); // Remove todos os caracteres não numéricos
+            input.value = num;
             const errorDiv = document.getElementById('cep-error');
             if (input.value === '') {
                 errorDiv.style.display = 'block';
@@ -730,6 +907,8 @@
         }
 
         function validarEndereco(input) {
+            var letras = input.value.replace(/[^a-zA-Z]/g, ""); // Remove todos os caracteres não alfabéticos
+            input.value = letras;
             const errorDiv = document.getElementById('endereco-error');
             if (input.value === '') {
                 errorDiv.style.display = 'block';
@@ -742,6 +921,8 @@
         }
 
         function validarBairro(input) {
+            var letras = input.value.replace(/[^a-zA-Z]/g, ""); // Remove todos os caracteres não alfabéticos
+            input.value = letras;
             const errorDiv = document.getElementById('bairro-error');
             if (input.value === '') {
                 errorDiv.style.display = 'block';
@@ -754,6 +935,8 @@
         }
 
         function validarApto(input) {
+            var letras = input.value.replace(/[^a-zA-Z]/g, ""); // Remove todos os caracteres não alfabéticos
+            input.value = letras;
             const errorDiv = document.getElementById('apto-error');
             if (input.value === '') {
                 errorDiv.style.display = 'block';
@@ -766,6 +949,8 @@
         }
 
         function validarNumero(input) {
+            var num = input.value.replace(/[^0-9]/g, ''); // Remove todos os caracteres não numéricos
+            input.value = num;
             const errorDiv = document.getElementById('numero-error');
             if (input.value === '') {
                 errorDiv.style.display = 'block';
@@ -776,6 +961,20 @@
                 input.style.border = '';  // remove a borda vermelha
             }
         }
+
+        function verificarSemNumero() {
+            var checkbox = document.getElementById('semNumero');
+            var numeroInput = document.getElementById('numero');
+
+            if (checkbox.checked) {
+                numeroInput.value = 'S/N';
+                numeroInput.disabled = true;  // Desativa o campo para impedir modificações
+            } else {
+                numeroInput.value = '';
+                numeroInput.disabled = false;  // Reativa o campo para permitir modificações
+            }
+        }
+
 
 
         // Função para fechar o popup

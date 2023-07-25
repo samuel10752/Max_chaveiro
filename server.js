@@ -18,7 +18,8 @@ app.get('/endereco/:cep', async (req, res) => {
         bairro: response.data.bairro,
         cidade: response.data.localidade,
         estado: response.data.uf,
-        cep: response.data.cep
+        cep: response.data.cep,
+        dd: response.data.ddd,
       };
       res.json(endereco);
     } else {
@@ -27,6 +28,7 @@ app.get('/endereco/:cep', async (req, res) => {
   } catch (error) {
     res.status(500).json({ message: 'Erro ao buscar endereço' });
   }
+
 });
 
 // Iniciar o servidor na porta 3000
