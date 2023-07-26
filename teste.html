@@ -356,7 +356,7 @@
             margin-left: 4%;
         }
 
-        .next-input-info{
+        .next-input-info {
             width: 953px;
             height: 52px;
             padding: 8px;
@@ -415,8 +415,8 @@
 
 
 
-        .button-confirm{
-            position: relative;
+        .button-confirm {
+            position: absolute;
             overflow: hidden;
             background-color: #007bff;
             color: #fff;
@@ -428,12 +428,12 @@
             line-height: 24px;
             border-radius: 22px;
             transition: all 0.3s ease;
-            margin-left: 55%;
-            margin-top: 8%;
+            margin-left: 50%;
+            margin-top: -5%;
         }
 
-        .button-cancel{
-            position: relative;
+        .button-cancel {
+            position: absolute;
             overflow: hidden;
             background-color: #007bff;
             color: #fff;
@@ -445,8 +445,8 @@
             line-height: 24px;
             border-radius: 22px;
             transition: all 0.3s ease;
-            margin-left: 5%;
-            margin-top: 8%;
+            margin-left: 75%;
+            margin-top: -5%;
         }
 
         .button-confirm span {
@@ -501,6 +501,71 @@
         .button-cancel:hover {
             color: #007bff;
             background-color: #fff;
+        }
+
+        .andes-form-control {
+            margin-top: 10px;
+            margin-left: 15%;
+            display: flex;
+        }
+
+        .andes-radioGroup {
+            display: flex;
+            margin-top: 25px;
+        }
+
+        .andes-radio--suffix {
+            display: flex;
+        }
+
+        .andes-radio {
+            padding: 5px 16px 5px 0;
+        }
+
+        .andes-radio {
+            -webkit-align-items: center;
+            align-items: center;
+            display: -webkit-flex;
+            display: flex;
+            font-family: Proxima Nova, -apple-system, Roboto, Arial, sans-serif;
+            font-size: 18px;
+            padding: 5px 16px 5px 6px;
+
+        }
+
+
+        .andes-form-control {
+            -webkit-font-smoothing: antialiased;
+            display: block;
+            font-family: Proxima Nova, -apple-system, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+            font-size: 18px;
+            font-weight: 400;
+            padding-top: 1.666667em;
+            position: relative;
+            text-align: left;
+        }
+
+        .andes-radio--suffix .andes-radio__label {
+            -webkit-order: 3;
+            order: 3;
+        }
+
+        .andes-radio__label {
+            -webkit-font-smoothing: antialiased;
+            color: rgba(0, 0, 0, .9);
+            cursor: pointer;
+            display: inline-block;
+            font-weight: 400;
+            margin-bottom: 0;
+            outline: none;
+            padding-left: 2px;
+            position: relative;
+        }
+
+        .andes-radio--suffix .icon-radio {
+            -webkit-order: 2;
+            order: 2;
+            padding: 0 5px 0 4px;
         }
 
         .form-section-e-mail {
@@ -573,21 +638,21 @@
                                             <div class="text_contato"> Telefone de contato </div>
                                         </div>
 
-                                        <input class="next-input-estado" id="estado" name="estado" placeholder="Estado*"
+                                        <input class="next-input-estado" id="estado" name="estado" placeholder=""
                                             autocomplete="off" value="" required
                                             oninput="validarEstado(this); validarLetras(this);" disabled>
 
-                                        <input class="next-input-cidade" id="cidade" name="cidade" placeholder="Cidade*"
+                                        <input class="next-input-cidade" id="cidade" name="cidade" placeholder=""
                                             autocomplete="off" value="" required
                                             oninput="validarCidade(this); validarLetras(this);" disabled>
 
 
 
-                                        <input class="next-input-dd" id="dd" height="100%" name="dd" placeholder="dd*"
+                                        <input class="next-input-dd" id="dd" height="100%" name="dd" placeholder=""
                                             autocomplete="off" value="" oninput="limitarCaracteres(this, 3)">
 
                                         <input class="next-input-telefone" name="Telefone"
-                                            placeholder="Número de Celular*" autocomplete="off" value="" required
+                                            placeholder="" autocomplete="off" value="" required
                                             oninput="validarTelefone(this)">
 
                                         <div class="alertas">
@@ -604,13 +669,13 @@
                                         </div>
 
                                         <input class="next-input-endereco" id="endereco" name="endereco"
-                                            placeholder="Endereço*" autocomplete="off" value="" required
+                                            placeholder="" autocomplete="off" value="" required
                                             oninput="validarEndereco(this)" oninput="validarLetras(this)">
 
 
 
 
-                                        <input class="next-input-bairro" id="bairro" name="bairro" placeholder="Bairro*"
+                                        <input class="next-input-bairro" id="bairro" name="bairro" placeholder=""
                                             autocomplete="off" value="" required oninput="validarBairro(this)"
                                             oninput="validarLetras(this)">
 
@@ -638,7 +703,7 @@
                                         <div style="display: flex; align-items: center;" class="input-numero">
 
                                             <input class="next-input-numero" id="numero" name="numero"
-                                                placeholder="Número*" autocomplete="off" value="" required
+                                                placeholder="" autocomplete="off" value="" required
                                                 oninput="validarNumero(this); validarNumeros(this);">
 
                                             <div class="input-checkbox">
@@ -654,34 +719,75 @@
                                         </div>
 
                                         <div class="text_linha_5">
-                                            <div class="text_info"> Informações adicionais deste endereço (opcional) </div>
+                                            <div class="text_info"> Informações adicionais deste endereço (opcional)
+                                            </div>
                                         </div>
 
                                         <input class="next-input-info" id="info" name="info"
                                             placeholder="Descrição da fachada, pontos de referência, informações de segurança etc."
                                             autocomplete="off" value="">
 
+
+
+
+                                        <div
+                                            class="andes-form-control andes-form-control--error addresses-radio-margin">
+                                            <span class="label-radio-delivery">Este é o seu trabalho ou sua casa?</span>
+                                            <div  required class="andes-radioGroup" role="radiogroup" aria-labelledby="">
+                                                <div  class="andes-radio andes-radio--default andes-radio--inline andes-radio--suffix">
+                                                    <div class="andes-radio-element"><input type="radio"
+                                                            class="andes-radio__input" id="commercial"
+                                                            name="delivery_group" value="commercial">
+                                                        <div class="andes-radio__background">
+                                                            <div class="andes-radio__outer-circle"></div>
+                                                            <div class="andes-radio__inner-circle"></div>
+                                                        </div>
+                                                    </div><label class="andes-radio__label"
+                                                        for="commercial"><span>Trabalho</span></label><i
+                                                        class="icon-radio"> <svg width="14" height="13"
+                                                            viewBox="0 0 14 13" fill="rgba(0, 0, 0, 0.8)"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M13 3.3224H10.7333V0.48388C10.7333 0.216778 10.5093 0 10.2333 0H3.76667C3.49067 0 3.26667 0.216778 3.26667 0.48388V3.3224H1C0.448 3.3224 0 3.75595 0 4.29015V12.0322C0 12.5664 0.448 13 1 13H13C13.552 13 14 12.5664 14 12.0322V4.29015C14 3.75595 13.552 3.3224 13 3.3224ZM9 3.3224H5V1.19282H9V3.3224Z"
+                                                                fill="#4A4A4A"></path>
+                                                        </svg> </i>
+                                                </div>
+                                                <div required class="andes-radio andes-radio--default andes-radio--inline andes-radio--suffix">
+                                                    <div class="andes-radio-element"><input type="radio"
+                                                            class="andes-radio__input" id="residential"
+                                                            name="delivery_group" value="residential">
+                                                        <div class="andes-radio__background">
+                                                            <div class="andes-radio__outer-circle"></div>
+                                                            <div class="andes-radio__inner-circle"></div>
+                                                        </div>
+                                                    </div><label class="andes-radio__label"
+                                                        for="residential"><span>Casa</span></label><i
+                                                        class="icon-radio"> <svg width="14" height="15"
+                                                            viewBox="0 0 14 15" fill="rgba(0, 0, 0, 0.8)"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M13.262 7.828L12.0873 6.82625V15H8.61539V10.2316H5.38462V15H1.85958V6.81021L0.790769 7.828L0 7.08143L7 0L14 7.08143L13.262 7.828Z"
+                                                                fill="#4A4A4A"></path>
+                                                        </svg> </i>
+                                                </div>
+                                            </div>
+
+                                            <button type="button" onclick="exibirEndereco()"
+                                                class="comet-btn comet-btn-primary comet-btn-large form-item-button button-confirm">
+                                                <span>Confirm</span>
+                                            </button>
+                                            <button type="button" onclick="fecharPopup()"
+                                                class="comet-btn comet-btn-normal comet-btn-large form-item-button button-cancel">
+                                                <span>Cancel</span>
+                                            </button>
+                                            
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                 </form>
-                <div id="enderecoPopup" class="modal">
-                    <div class="modal-content">
-                        <div id="enderecoDetalhes"></div>
-                        <button onclick="fecharPopup()">Fechar</button>
-                    </div>
-                </div>
-                <button type="button" onclick="exibirEndereco()"
-                    class="comet-btn comet-btn-primary comet-btn-large form-item-button button-confirm">
-                    <span>Confirm</span>
-                </button>
-                <button type="button" onclick="fecharPopup()"
-                    class="comet-btn comet-btn-normal comet-btn-large form-item-button button-cancel">
-                    <span>Cancel</span>
-                </button>
             </div>
         </div>
     </div>
