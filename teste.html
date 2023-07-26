@@ -23,11 +23,11 @@
             border-radius: 3%;
             background-color: #fefefe;
             margin: 4% auto;
-            padding: 20px;
+            padding: 10px;
             border: 1px solid #888;
             width: 53%;
             max-width: 1050px;
-            height: 75%;
+            height: 85%;
         }
 
         .close {
@@ -119,7 +119,7 @@
         }
 
         .next-input-cep {
-            width: 477px;
+            width: 165px;
             height: 52px;
             padding: 8px;
             margin-left: 2%;
@@ -128,6 +128,31 @@
             box-sizing: border-box;
             margin-top: 5px;
         }
+
+        .next-input-prazo {
+            width: 165px;
+            height: 52px;
+            padding: 8px;
+            margin-top: 10px;
+            margin-left: 0%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 5px;
+        }
+
+        .next-input-frete {
+            width: 137px;
+            height: 52px;
+            padding: 8px;
+            margin-top: 10px;
+            margin-left: 0%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 5px;
+        }
+
 
         .next-input-telefone {
             width: 400px;
@@ -299,6 +324,14 @@
             display: flex;
         }
 
+        .text_frete {
+            margin-left: 15%;
+        }
+
+        .text_prazo {
+            margin-left: 16%;
+        }
+
         .text_linha_2 {
             max-width: 800px;
             display: flex;
@@ -414,6 +447,27 @@
 
 
 
+        .next-input-obs {
+            width: 950px;
+            height: 52px;
+            padding: 8px;
+            margin-top: 10px;
+            margin-left: 3%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 5px;
+        }
+
+        .text_linha_frete {
+            max-width: 900px;
+            margin-top: 10px;
+            display: flex;
+        }
+
+        .text_obs {
+            margin-left: 50%;
+        }
 
         .button-confirm {
             position: absolute;
@@ -505,13 +559,13 @@
 
         .andes-form-control {
             margin-top: 10px;
-            margin-left: 15%;
+            margin-left: 10%;
             display: flex;
         }
 
         .andes-radioGroup {
             display: flex;
-            margin-top: 25px;
+            margin-top: 0px;
         }
 
         .andes-radio--suffix {
@@ -595,21 +649,38 @@
                                         <div class="text_linha_1">
                                             <div class="text_nome"> Nome completo </div>
                                             <div class="text_cep"> CEP </div>
+                                            <div class="text_prazo"> Prazo </div>
+                                            <div class="text_frete"> Frete </div>
                                         </div>
 
                                         <input class="next-input" name="nome" placeholder="" autocomplete="off" value=""
                                             required oninput="validarLetras(this)">
 
-
                                         <input class="next-input-cep" id="cep" name="cep" placeholder=""
-                                            autocomplete="off" value="" required oninput="validarCEP(this)"
-                                            oninput="validarNumeros(this)" onchange="formatarCEP(this)">
+                                            autocomplete="off" value="" required
+                                            oninput="validarCEP(this); validarNumeros(this);"
+                                            onchange="formatarCEP(this); buscarFrete(this.value);">
+
+                                        <input class="next-input-prazo" type="text" id="prazo" name="prazo" disabled
+                                            readonly>
+
+                                        <input class="next-input-frete" type="text" id="frete" name="frete" disabled
+                                            readonly>
+
 
                                         <div class="alertas_1">
                                             <div id="warningMessage_nome" style="color: red;"></div>
                                             <div id="cep-error" style="color: red; display: none;"></div>
 
                                         </div>
+
+                                        <div class="text_linha_frete">
+                                            <div class="text_obs"> Observação </div>
+                                        </div>
+
+
+                                        <input class="next-input-obs" type="text" id="obs" name="obs" disabled readonly>
+
 
 
                                     </div>
@@ -651,9 +722,8 @@
                                         <input class="next-input-dd" id="dd" height="100%" name="dd" placeholder=""
                                             autocomplete="off" value="" oninput="limitarCaracteres(this, 3)">
 
-                                        <input class="next-input-telefone" name="Telefone"
-                                            placeholder="" autocomplete="off" value="" required
-                                            oninput="validarTelefone(this)">
+                                        <input class="next-input-telefone" name="Telefone" placeholder=""
+                                            autocomplete="off" value="" required oninput="validarTelefone(this)">
 
                                         <div class="alertas">
                                             <div id="estado-error" style="color: red; display: none;"></div>
@@ -668,9 +738,9 @@
                                             <div class="text_bairro"> Bairro </div>
                                         </div>
 
-                                        <input class="next-input-endereco" id="endereco" name="endereco"
-                                            placeholder="" autocomplete="off" value="" required
-                                            oninput="validarEndereco(this)" oninput="validarLetras(this)">
+                                        <input class="next-input-endereco" id="endereco" name="endereco" placeholder=""
+                                            autocomplete="off" value="" required oninput="validarEndereco(this)"
+                                            oninput="validarLetras(this)">
 
 
 
@@ -702,8 +772,8 @@
 
                                         <div style="display: flex; align-items: center;" class="input-numero">
 
-                                            <input class="next-input-numero" id="numero" name="numero"
-                                                placeholder="" autocomplete="off" value="" required
+                                            <input class="next-input-numero" id="numero" name="numero" placeholder=""
+                                                autocomplete="off" value="" required
                                                 oninput="validarNumero(this); validarNumeros(this);">
 
                                             <div class="input-checkbox">
@@ -733,8 +803,9 @@
                                         <div
                                             class="andes-form-control andes-form-control--error addresses-radio-margin">
                                             <span class="label-radio-delivery">Este é o seu trabalho ou sua casa?</span>
-                                            <div  required class="andes-radioGroup" role="radiogroup" aria-labelledby="">
-                                                <div  class="andes-radio andes-radio--default andes-radio--inline andes-radio--suffix">
+                                            <div required class="andes-radioGroup" role="radiogroup" aria-labelledby="">
+                                                <div
+                                                    class="andes-radio andes-radio--default andes-radio--inline andes-radio--suffix">
                                                     <div class="andes-radio-element"><input type="radio"
                                                             class="andes-radio__input" id="commercial"
                                                             name="delivery_group" value="commercial">
@@ -752,7 +823,8 @@
                                                                 fill="#4A4A4A"></path>
                                                         </svg> </i>
                                                 </div>
-                                                <div required class="andes-radio andes-radio--default andes-radio--inline andes-radio--suffix">
+                                                <div required
+                                                    class="andes-radio andes-radio--default andes-radio--inline andes-radio--suffix">
                                                     <div class="andes-radio-element"><input type="radio"
                                                             class="andes-radio__input" id="residential"
                                                             name="delivery_group" value="residential">
@@ -780,7 +852,7 @@
                                                 class="comet-btn comet-btn-normal comet-btn-large form-item-button button-cancel">
                                                 <span>Cancel</span>
                                             </button>
-                                            
+
                                         </div>
                                     </div>
                                 </div>
@@ -808,6 +880,62 @@
                 .then(data => preencherEndereco(data))
                 .catch(error => console.log(error));
         }
+
+        // Função para buscar o valor do frete com base no CEP
+
+        function buscarFrete(cep) {
+            const url = `http://localhost:3000/frete/${cep}`;
+
+            fetch(url)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    console.log('Dados processados', data);
+                    exibirFrete(data);
+                })
+                .catch(error => {
+                    console.error('Erro ao buscar frete', error);
+                    exibirFrete({ erro: true }); // Display an error message on the page
+                });
+        }
+
+
+
+        function exibirFrete(data) {
+            const freteInput = document.getElementById('frete');
+            const prazoInput = document.getElementById('prazo');
+            const obsInput = document.getElementById('obs'); // Assuming you have an input field with id 'obs'
+
+            if (freteInput && prazoInput && obsInput) {
+                // Check if there's an error or if the data array is empty
+                if (data.erro || data.length === 0 || !data[0].Valor) {
+                    freteInput.value = 'Frete não encontrado';
+                    prazoInput.value = ''; // Clear the delivery time field in case of an error
+                    obsInput.value = ''; // Clear the 'obsFim' field in case of an error
+                } else {
+                    // Replace commas with dots and convert the string to a number
+                    const freightValue = parseFloat(data[0].Valor.replace(',', '.'));
+                    freteInput.value = 'R$ ' + freightValue.toFixed(2); // Show the value with two decimal places
+
+                    // Set the delivery time
+                    prazoInput.value = data[0].PrazoEntrega + ' dias'; // Append 'days' to the delivery time
+
+                    // Set the 'obsFim' value
+                    obsInput.value = data[0].obsFim;
+
+                    // If 'obsFim' is empty, set a default message
+                    if (data[0].obsFim === '') {
+                        obsInput.value = 'Nenhuma observação adicional.';
+                    }
+                }
+            }
+        }
+
+
 
         // Função para preencher o endereço no formulário
         function preencherEndereco(endereco) {
@@ -998,7 +1126,6 @@
         }
 
         function validarCEP(input) {
-
             var num = input.value.replace(/[^0-9]/g, ''); // Remove todos os caracteres não numéricos
             input.value = num;
             const errorDiv = document.getElementById('cep-error');
@@ -1006,11 +1133,16 @@
                 errorDiv.style.display = 'block';
                 errorDiv.innerText = 'Por favor, insira o CEP.';
                 input.style.border = '1px solid red';  // faz a borda ficar vermelha
+            } else if (input.value.length !== 8) {
+                errorDiv.style.display = 'block';
+                errorDiv.innerText = 'Por favor, insira um CEP válido.';
+                input.style.border = '1px solid red';  // faz a borda ficar vermelha
             } else {
                 errorDiv.style.display = 'none';
                 input.style.border = '';  // remove a borda vermelha
             }
         }
+
 
         function validarEndereco(input) {
             var letras = input.value.replace(/[^a-zA-Z]/g, ""); // Remove todos os caracteres não alfabéticos
