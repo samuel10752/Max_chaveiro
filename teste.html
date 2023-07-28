@@ -631,7 +631,7 @@
         }
     </style>
 
-    <button id="myBtn">Abrir Modal</button>
+    <button id="enderecoPopup">Abrir Modal</button>
 
     <div id="myModal" class="modal">
         <div class="modal-content">
@@ -1268,7 +1268,7 @@
                 bairro === "" ||
                 numero === "" ||
                 commercial === "" ||
-                residential === "" 
+                residential === ""
             ) {
                 alert("Por favor, preencha todos os campos obrigatórios.");
                 return; // Impedir o salvamento e fechamento do modal se algum campo estiver vazio
@@ -1296,7 +1296,7 @@
 
 
         // Evento de clique no botão "Confirmar"
-        document.getElementById("myBtn").onclick = exibirEndereco;
+        document.getElementById("enderecoPopup").onclick = exibirEndereco;
 
         // Evento de clique fora do modal para fechá-lo
         window.onclick = function (event) {
@@ -1305,7 +1305,6 @@
                 fecharPopup();
             }
         }
-
 
     </script>
 
