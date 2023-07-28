@@ -904,6 +904,7 @@
                     console.error('Erro ao buscar frete', error);
                     exibirFrete({ erro: true }); // Display an error message on the page
                 });
+
         }
 
 
@@ -911,33 +912,21 @@
         function exibirFrete(data) {
             const freteInput = document.getElementById('frete');
             const prazoInput = document.getElementById('prazo');
-            const obsInput = document.getElementById('obs'); // Assuming you have an input field with id 'obs'
+            const obsInput = document.getElementById('obs');
 
             if (freteInput && prazoInput && obsInput) {
-                // Check if there's an error or if the data array is empty
-                if (data.erro || data.length === 0 || !data[0].Valor) {
+                if (data.erro || data.length === 0 || !data.Valor) {
                     freteInput.value = 'Frete não encontrado';
                     prazoInput.value = ''; // Clear the delivery time field in case of an error
                     obsInput.value = ''; // Clear the 'obsFim' field in case of an error
                 } else {
-                    // Replace commas with dots and convert the string to a number
-                    const freightValue = parseFloat(data[0].Valor.replace(',', '.'));
+                    const freightValue = parseFloat(data.Valor.replace(',', '.'));
                     freteInput.value = 'R$ ' + freightValue.toFixed(2); // Show the value with two decimal places
-
-                    // Set the delivery time
-                    prazoInput.value = data[0].PrazoEntrega + ' dias'; // Append 'days' to the delivery time
-
-                    // Set the 'obsFim' value
-                    obsInput.value = data[0].obsFim;
-
-                    // If 'obsFim' is empty, set a default message
-                    if (data[0].obsFim === '') {
-                        obsInput.value = 'Nenhuma observação adicional.';
-                    }
+                    prazoInput.value = data[0].DataMaxEntrega ; // Append 'days' to the delivery time
+                    obsInput.value = data[0].obsFim || 'Nenhuma observação adicional.'; // If 'obsFim' is empty, set a default message
                 }
             }
         }
-
 
 
         // Função para preencher o endereço no formulário
