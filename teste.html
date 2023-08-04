@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
+
 
 <head>
     <title>Cadastro de Endereço de Entrega</title>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-        /* Estilos para o modal */
+        /* Estilo do modal */
         .modal {
             display: none;
             position: fixed;
@@ -17,6 +19,36 @@
             overflow: auto;
             background-color: rgba(0, 0, 0, 0.4);
 
+            /* Animação */
+            animation-name: fadeIn;
+            animation-duration: 1s;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .modal.fadeOut {
+            animation-name: fadeOut;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+            /* Isso mantém a última chave da animação */
+        }
+
+        @keyframes fadeOut {
+            from {
+                opacity: 1;
+            }
+
+            to {
+                opacity: 0;
+            }
         }
 
         .modal-content {
@@ -25,11 +57,60 @@
             margin: 4% auto;
             padding: 10px;
             border: 1px solid #888;
-            width: 53%;
-            max-width: 1050px;
-            height: 85%;
+            width: 80%;
+            /* Define o tamanho máximo da altura do conteúdo para evitar a exibição da barra de rolagem vertical */
+            height: 65%;
+            /* Adiciona rolagem vertical quando necessário */
+            overflow-y: auto;
         }
 
+        /* Personaliza a aparência da barra de rolagem */
+        /* Para navegadores baseados no motor WebKit, como Chrome e Safari */
+        .modal-content::-webkit-scrollbar {
+            width: 10px;
+            /* Largura da barra de rolagem vertical */
+        }
+
+        .modal-content::-webkit-scrollbar-thumb {
+            background-color: rgba(0, 0, 0, 0);
+            /* Define uma cor transparente para o polegar da barra de rolagem */
+        }
+
+        .modal-content::-webkit-scrollbar-track {
+            background-color: rgba(0, 0, 0, 0);
+            /* Define uma cor transparente para a pista da barra de rolagem */
+        }
+
+        button#enderecoPopup {
+            /* Cores */
+            background-color: #3498db;
+            color: #fff;
+
+            /* Tamanho e espaço */
+            padding: 10px 20px;
+
+            /* Arredondar as bordas */
+            border-radius: 5px;
+            border: none;
+
+            /* Adicionar sombras */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+
+            /* Tipografia */
+            font-size: 1.1em;
+            font-weight: bold;
+
+            /* Transições */
+            transition: background-color 0.3s ease;
+        }
+
+        /* Efeito hover */
+        button#enderecoPopup:hover {
+            background-color: #2980b9;
+            cursor: pointer;
+        }
+
+        /* Estilo que botão de fecha o poup */
         .close {
             color: #888;
             float: right;
@@ -37,7 +118,7 @@
             width: 50px;
             height: 50px;
             font-weight: bold;
-            margin-right: -2%;
+            margin-right: -1%;
             margin-top: -2%;
             cursor: pointer;
         }
@@ -49,6 +130,13 @@
             cursor: pointer;
         }
 
+        /* formulario  */
+
+        .form-section_1 {
+            margin-top: 0%;
+        }
+
+        /* Estilo dos textos */
         .comet-modal-title {
             text-align: center;
             font-size: 24px;
@@ -56,34 +144,67 @@
             margin-bottom: 20px;
         }
 
-        .section-title {
+        .text_nome {
+            margin-left: 1%;
+        }
+
+        /* Texto Nome */
+        .text_linha_1 {
+            width: 250%;
+            line-height: 20px;
             font-size: 18px;
-            font-weight: bold;
-            margin-bottom: 10px;
-            margin-left: 3%;
             font-weight: 700;
+            margin-bottom: 8px;
+            display: flex;
+            margin-top: 0%;
+            margin-right: 0%;
         }
 
-        .next-row {
-            margin: 0 -8px;
+        /* texto Endereço */
+        .text_linha_2 {
+            width: 250%;
+            line-height: 20px;
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            display: flex;
+            margin-top: 0%;
+            margin-left: -6%;
         }
 
-        .next-col {
-            padding: 0 8px;
+        .text_endereco {
+            margin-left: 3.3%;
         }
+
+        .text_linha_5 {
+            width: 250%;
+            line-height: 20px;
+            font-size: 18px;
+            font-weight: 700;
+            display: flex;
+            margin-top: 0%;
+            margin-left: -4%;
+        }
+
+        .text_info {
+            margin-left: 2.6%;
+        }
+
+        /* Estilo dos inputs */
 
         .next-form-item {
-            margin-bottom: 20px;
+            margin-bottom: 16px;
         }
 
         .next-input {
-            width: 450px;
+            width: 390px;
             height: 52px;
             padding: 8px;
             margin-left: 3%;
             border: 1px solid #ccc;
-            border-radius: 7px;
+            border-radius: 4px;
             box-sizing: border-box;
+            margin-left: 2%;
         }
 
         .next-input-dd {
@@ -96,53 +217,68 @@
             box-sizing: border-box;
         }
 
-        .next-input-estado {
-            width: 220px;
+        .next-input-telefone {
+            width: 339px;
             height: 52px;
             padding: 8px;
-            margin-left: 3%;
             border: 1px solid #ccc;
             border-radius: 4px;
             box-sizing: border-box;
-            margin-top: 5px;
+            margin-top: 0px;
+        }
+
+        /* endereço */
+
+        .next-input-cep {
+            max-width: 140px;
+            height: 52px;
+            padding: 8px;
+            margin-left: 2%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 0px;
+        }
+
+        .next-input-estado {
+            width: 120px;
+            height: 52px;
+            padding: 8px;
+            margin-left: 0%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 0px;
+            cursor: not-allowed;
         }
 
         .next-input-cidade {
-            width: 225px;
+            width: 122px;
             height: 52px;
             padding: 8px;
             margin-left: 0%;
             border: 1px solid #ccc;
             border-radius: 4px;
             box-sizing: border-box;
-            margin-top: 5px;
-        }
-
-        .next-input-cep {
-            width: 165px;
-            height: 52px;
-            padding: 8px;
-            margin-left: 2%;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-            margin-top: 5px;
+            margin-top: 0px;
+            cursor: not-allowed;
         }
 
         .next-input-prazo {
-            width: 165px;
+            max-width: 77px;
             height: 52px;
             padding: 8px;
             margin-top: 10px;
-            margin-left: 0%;
+            margin-left: 2%;
             border: 1px solid #ccc;
             border-radius: 4px;
             box-sizing: border-box;
-            margin-top: 5px;
+            margin-top: 0px;
+            cursor: not-allowed;
         }
 
         .next-input-frete {
-            width: 137px;
+            max-width: 100px;
             height: 52px;
             padding: 8px;
             margin-top: 10px;
@@ -150,123 +286,26 @@
             border: 1px solid #ccc;
             border-radius: 4px;
             box-sizing: border-box;
-            margin-top: 5px;
-        }
-
-
-        .next-input-telefone {
-            width: 400px;
-            height: 52px;
-            padding: 8px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-            margin-top: 5px;
-        }
-
-        .next-input-bairro {
-            width: 477px;
-            height: 52px;
-            padding: 8px;
-            margin-top: 10px;
-            margin-left: 2%;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-            margin-top: 5px;
-        }
-
-        .next-input-endereco {
-            width: 450px;
-            height: 52px;
-            padding: 8px;
-            margin-left: 3%;
-            margin-top: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-            margin-top: 5px;
-        }
-
-        .next-input-apto {
-            width: 450px;
-            height: 52px;
-            padding: 8px;
-            margin-left: 3%;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-            margin-top: 5px;
+            margin-top: 0px;
+            cursor: not-allowed;
         }
 
         .next-input-numero {
-            width: 477px;
+            width: 233px;
             height: 52px;
             padding: 8px;
-            margin-top: 10px;
-            margin-left: 2%;
+            margin-top: 0px;
+            margin-left: 0%;
             border: 1px solid #ccc;
             border-radius: 4px;
             box-sizing: border-box;
-            margin-top: 5px;
-        }
-
-
-        .alertas_1 {
-            max-width: 900px;
-            display: flex;
-        }
-
-        #warningMessage_nome {
-            margin-left: 5%;
-            margin-top: 10px;
-        }
-
-        #warningMessage_dd {
-            margin-left: 40%;
-            margin-top: 10px;
-        }
-
-        #warningMessage_telefone {
-            margin-top: 10px;
-        }
-
-
-        .alertas_2 {
-            max-width: 900px;
-            display: flex;
-        }
-
-        #endereco-error {
-            margin-left: 4%;
-            margin-top: 10px;
-        }
-
-        #bairro-error {
-            margin-left: 34%;
-            margin-top: 10px;
-        }
-
-        .alertas_3 {
-            max-width: 900px;
-            display: flex;
-        }
-
-        #apto-error {
-            margin-left: 4%;
-            margin-top: 10px;
-        }
-
-        #numero-error {
-            margin-left: 34%;
-            margin-top: 10px;
         }
 
         .input-checkbox {
-            position: absolute;
-            display: auto;
-            margin-left: 18%;
-            margin-top: 10px;
+            position: relative;
+            display: flex;
+            margin-left: 94%;
+            margin-top: -35px;
             color: #007bff;
         }
 
@@ -281,7 +320,7 @@
         }
 
         .checkbox-custom+label:before {
-            content: '';
+            content: "";
             position: absolute;
             left: 0;
             top: 4px;
@@ -292,7 +331,7 @@
         }
 
         .checkbox-custom:checked+label:after {
-            content: '';
+            content: "";
             position: absolute;
             left: 0px;
             top: 5px;
@@ -301,125 +340,117 @@
             background-color: #007bff;
         }
 
-        .input-numero {
-            margin-left: 49.5%;
-            margin-top: -57px;
+        .next-checkbox-label {
+            font-size: 14px;
+            color: #888;
+            margin-left: 5px;
         }
 
-        .input-apt {
-            margin-left: 0%;
+        .next-input-obs {
+            width: 829px;
+            height: 52px;
+            padding: 8px;
+            margin-left: 2%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 20px;
+            cursor: not-allowed;
+        }
+
+        .next-input-endereco {
+            width: 140px;
+            height: 52px;
+            padding: 8px;
+            margin-left: 2%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
             margin-top: 0px;
         }
 
-        .text_nome {
-            margin-left: 4%;
-        }
-
-        .text_cep {
-            margin-left: 41%;
-        }
-
-        .text_linha_1 {
-            max-width: 900px;
-            display: flex;
-        }
-
-        .text_frete {
-            margin-left: 15%;
-        }
-
-        .text_prazo {
-            margin-left: 16%;
-        }
-
-        .text_linha_2 {
-            max-width: 800px;
-            display: flex;
-
-        }
-
-        .text_estado {
-            margin-left: 5%;
-        }
-
-        .text_cidade {
-            margin-left: 25%;
-        }
-
-        .text_contato {
-            margin-left: 40%;
-        }
-
-        .text_linha_3 {
-            max-width: 800px;
-            display: flex;
-            margin-top: 15px;
-        }
-
-        .text_endereco {
-            margin-left: 5%;
-        }
-
-        .text_bairro {
-            margin-left: 48%;
-        }
-
-        .text_linha_4 {
-            max-width: 800px;
-            display: flex;
-            margin-top: 20px;
-        }
-
-        .text_apto {
-            margin-left: 5%;
-        }
-
-        .text_numero {
-            margin-left: 39%;
-        }
-
-
-        .text_linha_5 {
-            max-width: 800px;
-            display: flex;
-            margin-top: 10px;
-        }
-
-        .text_info {
-            margin-left: 4%;
-        }
-
-        .next-input-info {
-            width: 953px;
+        .next-input-bairro {
+            width: 248px;
             height: 52px;
             padding: 8px;
-            margin-top: 10px;
-            margin-left: 2.8%;
+            margin-left: 0%;
             border: 1px solid #ccc;
             border-radius: 4px;
             box-sizing: border-box;
             margin-top: 5px;
         }
 
-        .alertas {
-            max-width: 900px;
+        .next-input-apto {
+            width: 418px;
+            height: 52px;
+            padding: 8px;
+            margin-left: 1.7%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 5px;
+        }
+
+        .next-input-info {
+            width: 826px;
+            height: 52px;
+            padding: 8px;
+            margin-left: 2%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 10px;
+        }
+
+        /* Mensagens de Alertas */
+        .alertas_1 {
+            width: 800px;
             display: flex;
         }
 
-        #estado-error {
-            margin-left: 4%;
+        #warningMessage_nome {
+            margin-left: 2%;
             margin-top: 10px;
         }
 
-        #cidade-error {
-            margin-left: 11%;
-            /* isso pode não ser necessário se estiver usando flex */
+        #warningMessage_dd {
+            margin-left: 20%;
             margin-top: 10px;
+        }
+
+        #warningMessage_telefone {
+            margin-left: 5%;
+            margin-top: 10px;
+        }
+
+        .alertas_2 {
+            width: 800px;
+            display: flex;
         }
 
         #cep-error {
-            margin-left: 33%;
-            /* isso pode não ser necessário se estiver usando flex */
+            margin-left: 3%;
+            margin-top: 10px;
+        }
+
+        #numero-error {
+            margin-left: 34%;
+            margin-top: 10px;
+        }
+
+        .alertas_3 {
+            width: 800px;
+            display: flex;
+            margin-bottom: 16px;
+        }
+
+        #endereco-error {
+            margin-left: 2%;
+            margin-top: 10px;
+        }
+
+        #bairro-error {
+            margin-left: 4%;
             margin-top: 10px;
         }
 
@@ -427,50 +458,17 @@
             border: 1px solid red;
         }
 
+        /* Estilos dos Botões Confirmar e Cancelar */
 
-        .next-form-item-help {
-            font-size: 12px;
-            color: #888;
-            margin-top: 5px;
-        }
-
-        .next-form-item-help .help-inner__tip-wrap {
-            font-size: 12px;
-            color: red;
-        }
-
-        .next-checkbox-label {
-            font-size: 14px;
-            color: #888;
-            margin-left: 5px;
-        }
-
-
-
-        .next-input-obs {
-            width: 950px;
-            height: 52px;
-            padding: 8px;
-            margin-top: 10px;
-            margin-left: 3%;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-            margin-top: 5px;
-        }
-
-        .text_linha_frete {
-            max-width: 900px;
-            margin-top: 10px;
+        .buttons {
+            max-width: 1000px;
             display: flex;
-        }
-
-        .text_obs {
             margin-left: 50%;
+            margin-top: -8%;
         }
 
         .button-confirm {
-            position: absolute;
+            position: relative;
             overflow: hidden;
             background-color: #007bff;
             color: #fff;
@@ -482,12 +480,12 @@
             line-height: 24px;
             border-radius: 22px;
             transition: all 0.3s ease;
-            margin-left: 50%;
-            margin-top: -5%;
+            margin-left: 0%;
+            margin-top: 0%;
         }
 
         .button-cancel {
-            position: absolute;
+            position: relative;
             overflow: hidden;
             background-color: #007bff;
             color: #fff;
@@ -499,8 +497,8 @@
             line-height: 24px;
             border-radius: 22px;
             transition: all 0.3s ease;
-            margin-left: 75%;
-            margin-top: -5%;
+            margin-left: 5%;
+            margin-top: 0%;
         }
 
         .button-confirm span {
@@ -557,9 +555,10 @@
             background-color: #fff;
         }
 
+        /* Botão de Seleção */
         .andes-form-control {
-            margin-top: 10px;
-            margin-left: 10%;
+            margin-top: 0px;
+            margin-left: 9%;
             display: flex;
         }
 
@@ -581,17 +580,27 @@
             align-items: center;
             display: -webkit-flex;
             display: flex;
-            font-family: Proxima Nova, -apple-system, Roboto, Arial, sans-serif;
+            font-family:
+                Proxima Nova,
+                -apple-system,
+                Roboto,
+                Arial,
+                sans-serif;
             font-size: 18px;
             padding: 5px 16px 5px 6px;
-
         }
-
 
         .andes-form-control {
             -webkit-font-smoothing: antialiased;
             display: block;
-            font-family: Proxima Nova, -apple-system, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+            font-family:
+                Proxima Nova,
+                -apple-system,
+                Helvetica Neue,
+                Helvetica,
+                Roboto,
+                Arial,
+                sans-serif;
             font-size: 18px;
             font-weight: 400;
             padding-top: 1.666667em;
@@ -606,7 +615,7 @@
 
         .andes-radio__label {
             -webkit-font-smoothing: antialiased;
-            color: rgba(0, 0, 0, .9);
+            color: rgba(0, 0, 0, 0.9);
             cursor: pointer;
             display: inline-block;
             font-weight: 400;
@@ -622,17 +631,946 @@
             padding: 0 5px 0 4px;
         }
 
-        .form-section-e-mail {
-            margin-left: 47%;
+
+        /* responsivel */
+
+        /* CSS para smartphones */
+        @media screen and (max-width: 480px) {
+
+            /* texto */
+            .text_nome {
+                margin-left: -30% !important;
+                width: 155% !important;
+            }
+
+            /* input */
+
+            .next-input {
+                max-width: 95% !important;
+            }
+
+            .next-input-telefone {
+                max-width: 80% !important;
+            }
+
+            .next-input-cep {
+                max-width: 32% !important;
+            }
+
+            .next-input-frete {
+                max-width: 28% !important;
+            }
+
+            .next-input-estado {
+                max-width: 23%;
+            }
+
+            .next-input-cidade {
+                max-width: 39% !important;
+            }
+
+            .next-input-bairro {
+                max-width: 40% !important;
+            }
+
+            .next-input-numero {
+                max-width: 42% !important;
+            }
+
+            .next-input-obs {
+                margin-top: 5% !important;
+                max-width: 97% !important;
+            }
+
+            .next-input-endereco {
+                max-width: 84% !important;
+            }
+
+            .next-input-apto {
+                max-width: 96% !important;
+                margin-left: 2% !important;
+                max-height: 20% !important;
+            }
+
+            .next-input-info {
+                max-width: 110% !important;
+            }
+
+            .semnumero {
+                margin-left: 250%;
+            }
+
+            .andes-form-control {
+                margin-left: -10% !important;
+            }
+
+            .button-confirm {
+                width: 250% !important;
+                top: 30%;
+                left: -15%;
+            }
+
+            .button-cancel {
+                width: 250% !important;
+                top: 30%;
+                left: -15%;
+            }
         }
 
-        .form-section_1 {
-            margin-top: 1%;
+        /* CSS para tablets e dispositivos móveis */
+
+        @media screen and (max-width: 645px) {
+            .modal-content {
+                width: 90%;
+                /* faz o modal ocupar 90% da largura da tela */
+                height: 70%;
+                /* ajusta a altura automaticamente */
+                padding: 20px;
+            }
+
+            /* texto */
+            .text_linha_1 {
+                display: grid;
+                max-width: 200%;
+            }
+
+            .text_nome {
+                padding-right: 3%;
+                max-width: 630%;
+            }
+
+            /* selecao */
+
+            .andes-form-control {
+                margin-left: 1% !important;
+            }
+
+            .semnumero {
+                left: -300%;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+
+            /* texto */
+            .text_nome {
+                margin-left: -10%;
+                width: 130%;
+            }
+
+            /* input */
+
+            .next-input-dd {
+                max-width: 14%;
+                height: 20%;
+            }
+
+            .next-input-cep {
+                max-width: 27%;
+            }
+
+            .next-input-numero {
+                max-width: 25%;
+            }
+
+            .next-input-endereco {
+                max-width: 27%;
+            }
+
+            /* alertas */
+
+            .andes-form-control {
+                left: 10%;
+            }
+
+            .alertas_1 {
+                display: grid;
+            }
+
+            #warningMessage_telefone {
+                margin-top: 5%;
+            }
+        }
+
+        /* CSS para tablets e dispositivos móveis */
+        @media screen and (max-width: 900px) {
+            .modal-content {
+                max-width: 90%;
+                /* faz o modal ocupar 90% da largura da tela */
+                height: 70%;
+                /* ajusta a altura automaticamente */
+                padding: 20px;
+            }
+
+            .close {
+                color: #888;
+                float: right;
+                font-size: 58px;
+                width: 50px;
+                height: 50px;
+                font-weight: bold;
+                margin-right: -6%;
+                margin-top: -6%;
+                cursor: pointer;
+            }
+
+            /* texto */
+            .text_info {
+                margin-left: -16%;
+                width: 150%;
+            }
+
+            /* inputs */
+            .next-input {
+                max-width: 92.5%;
+            }
+
+            .next-input-telefone {
+                max-width: 78%;
+                height: 20%;
+            }
+
+            .next-input-cidade {
+                max-width: 33%;
+                height: 20%;
+            }
+
+            .next-input-obs {
+                max-width: 92%;
+            }
+
+            .next-input-prazo {
+                width: 38%;
+                max-height: 20%;
+            }
+
+            .next-input-numero {
+                max-width: 36%;
+            }
+
+            .next-input-apto {
+                max-width: 32.7%;
+                height: 20%;
+            }
+
+            .next-input-info {
+                max-width: 92%;
+            }
+
+            .input-checkbox {
+                left: -5%;
+            }
+
+            /* selecao */
+
+            .andes-form-control {
+                right: -18%;
+            }
+
+            /* buttons */
+
+            .button-confirm {
+                width: 80%;
+                margin-top: 30%;
+                margin-left: -97%;
+            }
+
+            .button-cancel {
+                width: 80%;
+                margin-top: 30%;
+                margin-left: 2%;
+            }
+
+            /* alertas */
+
+            .alertas_1 {
+                width: 10%;
+                margin-top: 0%;
+            }
+
+            #warningMessage_dd {
+                margin-left: 2%;
+            }
+
+            #warningMessage_telefone {
+                margin-left: 2%;
+            }
+
+            #numero-error {
+                margin-left: 3%;
+            }
+        }
+
+        /* Estilos para tablets */
+        @media screen and (max-width: 992px) {
+            .modal-content {
+                width: 60%;
+            }
+
+            /* texto */
+            .text_linha_1 {
+                margin-left: 35%;
+                width: 35%;
+            }
+
+            .text_linha_2 {
+                margin-left: 38%;
+                width: 20%;
+            }
+
+            .text_linha_5 {
+                margin-left: 15%;
+                width: 73%;
+            }
+
+            /* inputs */
+            .next-input {
+                margin-left: 2%;
+                width: 95%;
+                height: 20%;
+            }
+
+            .next-input-dd {
+                height: 20%;
+            }
+
+            .next-input-telefone {
+                width: 82.5%;
+                margin-top: 1%;
+                margin-left: -1%;
+                height: 20%;
+            }
+
+            .next-input-cep {
+                width: 45%;
+                height: 20%;
+            }
+
+            .next-input-estado {
+                width: 30%;
+                height: 20%;
+            }
+
+            .next-input-cidade {
+                width: 40%;
+                height: 20%;
+            }
+
+            .next-input-prazo {
+                max-width: 24%;
+                margin-left: 2%;
+                height: 20%;
+            }
+
+            .next-input-frete {
+                max-width: 30.3%;
+                height: 20%;
+            }
+
+            .next-input-numero {
+                max-width: 39.9%;
+                margin-top: 1%;
+                height: 20%;
+            }
+
+            .next-input-obs {
+                max-width: 95.5%;
+                margin-top: 2%;
+                height: 20%;
+            }
+
+            .next-input-bairro {
+                max-width: 30.5%;
+                height: 20%;
+            }
+
+            .next-input-endereco {
+                height: 20%;
+            }
+
+            .next-input-apto {
+                max-width: 35%;
+                margin-left: 0%;
+                height: 20%;
+            }
+
+            .next-input-info {
+                width: 95.5%;
+                height: 20%;
+            }
+
+            .input-checkbox {
+                width: 1%;
+                margin-left: 88%;
+                margin-top: -25px;
+            }
+
+            /* selecao */
+
+            .andes-form-control {
+                margin-left: 5%;
+            }
+
+            /* buttons */
+
+            .buttons {
+                width: 40%;
+                margin-top: -12%;
+                margin-left: 57%;
+            }
+
+            /* alertas */
+
+            .alertas_1 {
+                width: 100%;
+                display: grid;
+            }
+
+            #warningMessage_dd {
+                margin-left: 2%;
+            }
+
+            #warningMessage_telefone {
+                margin-top: 2%;
+                margin-left: 2%;
+            }
+
+            .alertas_2 {
+                width: 90%;
+            }
+
+            #numero-error {
+                margin-left: 3%;
+            }
+
+            .alertas_3 {
+                width: 90%;
+            }
+        }
+
+        /* Estilos para desktops/laptops pequenos */
+        @media (min-width: 993px) and (max-width: 1199px) {
+            .modal-content {
+                width: 50%;
+                /* faz o modal ocupar a totalidade da largura da tela */
+                padding: 10px;
+            }
+
+            /* texto */
+            .text_linha_1 {
+                margin-left: 2%;
+                width: 35%;
+            }
+
+            .text_linha_2 {
+                margin-left: 1%;
+                width: 40%;
+            }
+
+            .text_linha_5 {
+                margin-left: 0%;
+                width: 93%;
+            }
+
+            /* inputs */
+            .next-input {
+                width: 45%;
+            }
+
+            .next-input-telefone {
+                width: 35%;
+                margin-left: -1%;
+            }
+
+            .next-input-cep {
+                width: 15%;
+            }
+
+            .next-input-estado {
+                width: 10%;
+            }
+
+            .next-input-frete {
+                width: 11%;
+            }
+
+            .next-input-cidade {
+                width: 19%;
+            }
+
+            .next-input-numero {
+                max-width: 21.8%;
+                margin-right: -50%;
+                margin-top: 1%;
+            }
+
+            .next-input-obs {
+                width: 95.5%;
+                margin-top: 4% !important;
+            }
+
+            .next-input-bairro {
+                max-width: 22%;
+            }
+
+            .next-input-endereco {
+                width: 23%;
+            }
+
+            .next-input-apto {
+                width: 47%;
+                margin-left: 2%;
+            }
+
+            .next-input-info {
+                width: 92.5%;
+            }
+
+            .input-checkbox {
+                width: 1%;
+                right: 6%;
+                margin-top: -35px;
+            }
+
+            /* selecao */
+
+            .andes-form-control {
+                margin-left: 25%;
+                margin-top: -3%;
+            }
+
+            /* buttons */
+
+            .buttons {
+                width: 87%;
+                margin-top: 0%;
+                margin-left: 15%;
+            }
+
+            /* alertas */
+
+            .alertas_1 {
+                width: 100%;
+                display: grid;
+            }
+
+            #warningMessage_dd {
+                margin-left: 2%;
+            }
+
+            #warningMessage_telefone {
+                margin-left: 2%;
+            }
+
+            .alertas_2 {
+                width: 90%;
+                display: flex;
+            }
+
+            #numero-error {
+                margin-left: 3%;
+            }
+
+            .alertas_3 {
+                width: 90%;
+                display: flex;
+            }
+        }
+
+        /* Estilos para desktops/laptops pequenos */
+        @media screen and (min-width: 1200px) {
+            .modal-content {
+                width: 55%;
+                /* faz o modal ocupar a totalidade da largura da tela */
+                padding: 10px;
+            }
+
+            /* texto */
+            .text_linha_1 {
+                margin-left: 2%;
+                width: 35%;
+            }
+
+            .text_linha_2 {
+                margin-left: 1%;
+                width: 40%;
+            }
+
+            .text_linha_5 {
+                margin-left: 0%;
+                width: 93%;
+            }
+
+            /* inputs */
+            .next-input {
+                width: 45%;
+            }
+
+            .next-input-telefone {
+                width: 38%;
+                margin-left: -1%;
+            }
+
+            .next-input-cep {
+                width: 15%;
+            }
+
+            .next-input-estado {
+                width: 10%;
+            }
+
+            .next-input-frete {
+                width: 11%;
+            }
+
+            .next-input-cidade {
+                width: 18.7%;
+            }
+
+            .next-input-numero {
+                width: 25%;
+
+            }
+
+            .next-input-obs {
+                width: 95%;
+                margin-top: 2.5%;
+            }
+
+            .next-input-bairro {
+                width: 31%;
+            }
+
+            .next-input-apto {
+                width: 47.4%;
+                margin-left: 2%;
+            }
+
+            .next-input-info {
+                width: 94.5%;
+            }
+
+            .next-input-endereco {
+                width: 13.5%;
+            }
+
+            .input-checkbox {
+                width: 1%;
+                right: 6%;
+                margin-top: -35px;
+            }
+
+            /* selecao */
+
+            .andes-form-control {
+                margin-left: 10%;
+            }
+
+            /* buttons */
+
+            .buttons {
+                width: 40%;
+                margin-top: -9%;
+                margin-left: 55%;
+            }
+
+
+            /* alertas */
+
+            .alertas_1 {
+                width: 100%;
+            }
+
+            #warningMessage_dd {
+                margin-left: 2%;
+            }
+
+            #warningMessage_telefone {
+                margin-left: 2%;
+            }
+
+            .alertas_2 {
+                width: 90%;
+                display: flex;
+            }
+
+            #numero-error {
+                margin-left: 3%;
+            }
+
+            .alertas_3 {
+                width: 90%;
+                display: flex;
+            }
+        }
+
+        @media screen and (min-width: 1500px) {
+            .modal-content {
+                width: 57%;
+                /* faz o modal ocupar a totalidade da largura da tela */
+                padding: 10px;
+            }
+
+            /* texto */
+            .text_linha_1 {
+                margin-left: 2%;
+                width: 35%;
+            }
+
+            .text_linha_2 {
+                margin-left: 1%;
+                width: 40%;
+            }
+
+            .text_linha_5 {
+                margin-left: 0%;
+                width: 93%;
+            }
+
+            /* inputs */
+            .next-input {
+                width: 44%;
+            }
+
+            .next-input-telefone {
+                width: 40.5%;
+                margin-left: -1%;
+            }
+
+            .next-input-cep {
+                width: 15%;
+            }
+
+            .next-input-estado {
+                width: 10%;
+            }
+
+            .next-input-frete {
+                width: 11%;
+            }
+
+            .next-input-cidade {
+                width: 18.3%;
+            }
+
+            .next-input-prazo {
+                margin-left: 2.2%;
+            }
+
+            .next-input-numero {
+                width: 27%;
+
+            }
+
+            .next-input-obs {
+                width: 94.4%;
+                margin-top: 2.5%;
+            }
+
+            .next-input-bairro {
+                width: 31%;
+            }
+
+            .next-input-apto {
+                width: 47.1%;
+                margin-left: 2%;
+            }
+
+            .next-input-info {
+                width: 94.4%;
+            }
+
+            .next-input-endereco {
+                width: 13.5%;
+            }
+
+            .input-checkbox {
+                width: 1%;
+                right: 5%;
+                margin-top: -35px;
+            }
+
+            /* selecao */
+
+            .andes-form-control {
+                margin-left: 10%;
+            }
+
+            /* buttons */
+
+            .buttons {
+                width: 40%;
+                margin-top: -7%;
+                margin-left: 55%;
+            }
+
+
+            /* alertas */
+
+            .alertas_1 {
+                width: 100%;
+            }
+
+            #warningMessage_dd {
+                margin-left: 2%;
+            }
+
+            #warningMessage_telefone {
+                margin-left: 2%;
+            }
+
+            .alertas_2 {
+                width: 90%;
+                display: flex;
+            }
+
+            #numero-error {
+                margin-left: 3%;
+            }
+
+            .alertas_3 {
+                width: 90%;
+                display: flex;
+            }
+
+        }
+
+        @media screen and (min-width: 1700px) {
+            .modal-content {
+                width: 57%;
+                /* faz o modal ocupar a totalidade da largura da tela */
+                padding: 10px;
+            }
+
+            /* texto */
+            .text_linha_1 {
+                margin-left: 2%;
+                width: 35%;
+            }
+
+            .text_linha_2 {
+                margin-left: 1%;
+                width: 40%;
+            }
+
+            .text_linha_5 {
+                margin-left: 0%;
+                width: 93%;
+            }
+
+            /* inputs */
+            .next-input {
+                width: 46%;
+            }
+
+            .next-input-telefone {
+                width: 40.5%;
+                margin-left: -1%;
+            }
+
+            .next-input-cep {
+                width: 28%;
+            }
+
+            .next-input-estado {
+                width: 10%;
+            }
+
+            .next-input-frete {
+                width: 11%;
+            }
+
+            .next-input-cidade {
+                width: 22%;
+            }
+
+            .next-input-prazo {
+                margin-left: 2.2%;
+            }
+
+            .next-input-numero {
+                width: 29.5%;
+
+            }
+
+            .next-input-obs {
+                width: 95.2%;
+                margin-top: 2.5%;
+            }
+
+            .next-input-bairro {
+                width: 31%;
+            }
+
+            .next-input-apto {
+                width: 48%;
+                margin-left: 2%;
+            }
+
+            .next-input-info {
+                width: 95%;
+            }
+
+            .next-input-endereco {
+                width: 13.5%;
+            }
+
+            .input-checkbox {
+                width: 1%;
+                right: 3%;
+                margin-top: -35px;
+            }
+
+            /* selecao */
+
+            .andes-form-control {
+                margin-left: 10%;
+            }
+
+            /* buttons */
+
+            .buttons {
+                width: 40%;
+                margin-top: -6%;
+                margin-left: 55%;
+            }
+
+
+            /* alertas */
+
+            .alertas_1 {
+                width: 100%;
+            }
+
+            #warningMessage_dd {
+                margin-left: 2%;
+            }
+
+            #warningMessage_telefone {
+                margin-left: 2%;
+            }
+
+            .alertas_2 {
+                width: 90%;
+                display: flex;
+            }
+
+            #numero-error {
+                margin-left: 3%;
+            }
+
+            .alertas_3 {
+                width: 90%;
+                display: flex;
+            }
+
         }
     </style>
 
+    <!-- Botão para abrir o modal -->
     <button id="enderecoPopup">Abrir Modal</button>
 
+    <!-- Modal de Adicionar o Endereço -->
     <div id="myModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="fecharPopup()">&times;</span>
@@ -646,51 +1584,29 @@
                                     <div class="next-form-item">
 
                                         <div class="text_linha_1">
-                                            <div class="text_nome"> Nome completo </div>
-                                            <div class="text_cep"> CEP </div>
-                                            <div class="text_prazo"> Prazo </div>
-                                            <div class="text_frete"> Frete </div>
+                                            <div class="text_nome"> Nome do Contato </div>
                                         </div>
 
-                                        <input class="next-input" id="nome" name="nome" placeholder=""
+                                        <input class="next-input" id="nome" name="nome" placeholder="Nome do Contato*"
                                             autocomplete="off" value="" required oninput="validarLetras(this)">
 
-                                        <input class="next-input-cep" id="cep" name="cep" placeholder=""
-                                            autocomplete="off" value="" required
-                                            oninput="validarCEP(this); validarNumeros(this);"
-                                            onchange="formatarCEP(this); buscarFrete(this.value);">
+                                        <input class="next-input-dd" id="dd" height="100%" name="dd" placeholder="DD*"
+                                            autocomplete="off" value="" oninput="limitarCaracteres(this, 3)">
 
-                                        <input class="next-input-prazo" type="text" id="prazo" name="prazo" disabled
-                                            readonly>
-
-                                        <input class="next-input-frete" type="text" id="frete" name="frete" disabled
-                                            readonly>
-
+                                        <input class="next-input-telefone" id="telefone" name="Telefone"
+                                            placeholder="Numero de Celular*" autocomplete="off" value="" required
+                                            oninput="validarTelefone(this)">
 
                                         <div class="alertas_1">
                                             <div id="warningMessage_nome" style="color: red;"></div>
-                                            <div id="cep-error" style="color: red; display: none;"></div>
-
+                                            <div id="warningMessage_dd" style="color: red;"></div>
+                                            <div id="warningMessage_telefone" style="color: red;"></div>
                                         </div>
-
-                                        <div class="text_linha_frete">
-                                            <div class="text_obs"> Observação </div>
-                                        </div>
-
-
-                                        <input class="next-input-obs" type="text" id="obs" name="obs" disabled readonly>
-
-
 
                                     </div>
-
-
                                 </div>
-
                             </div>
-
                         </div>
-
                     </div>
 
 
@@ -700,96 +1616,75 @@
                             <div class="next-row form-row-wrap">
                                 <div class="next-col">
                                     <div class="next-form-item">
-
-
                                         <div class="text_linha_2">
-                                            <div class="text_estado"> Estado </div>
-                                            <div class="text_cidade"> Cidade </div>
-                                            <div class="text_contato"> Telefone de contato </div>
+                                            <div class="text_endereco"> Endereço </div>
                                         </div>
 
-                                        <input class="next-input-estado" id="estado" name="estado" placeholder=""
+
+                                        <input class="next-input-cep" id="cep" name="cep" placeholder="CEP*"
                                             autocomplete="off" value="" required
+                                            oninput="validarCEP(this); validarNumeros(this);"
+                                            onchange="formatarCEP(this); buscarFrete(this.value);">
+
+                                        <input class="next-input-estado" id="estado" name="estado" placeholder="estado*"
+                                            autocomplete="do-not-autofill" value="" required
                                             oninput="validarEstado(this); validarLetras(this);" disabled>
 
-                                        <input class="next-input-cidade" id="cidade" name="cidade" placeholder=""
-                                            autocomplete="off" value="" required
+                                        <input class="next-input-cidade" id="cidade" name="cidade" placeholder="cidade*"
+                                            autocomplete="do-not-autofill" value="" required
                                             oninput="validarCidade(this); validarLetras(this);" disabled>
 
+                                        <input class="next-input-prazo" type="text" id="prazo" name="prazo"
+                                            placeholder="Prazo" disabled readonly>
+
+                                        <input class="next-input-frete" type="text" id="frete" name="frete"
+                                            placeholder="Frete" disabled readonly>
 
 
-                                        <input class="next-input-dd" id="dd" height="100%" name="dd" placeholder=""
-                                            autocomplete="off" value="" oninput="limitarCaracteres(this, 3)">
+                                        <input class="next-input-numero" id="numero" name="numero" placeholder="Numero*"
+                                            autocomplete="off" value="" required
+                                            oninput="validarNumero(this); validarNumeros(this);">
 
-                                        <input class="next-input-telefone" id="telefone" name="Telefone" placeholder=""
-                                            autocomplete="off" value="" required oninput="validarTelefone(this)">
-
-                                        <div class="alertas">
-                                            <div id="estado-error" style="color: red; display: none;"></div>
-                                            <div id="cidade-error" style="color: red; display: none;"></div>
-                                            <div id="warningMessage_dd" style="color: red;"></div>
-                                            <div id="warningMessage_telefone" style="color: red;"></div>
+                                        <div class="input-checkbox">
+                                            <input type="checkbox" id="semNumero" class="checkbox-custom"
+                                                name="semNumero" onclick="verificarSemNumero()">
+                                            <label class="semnumero" for="semNumero">S/N</label>
                                         </div>
 
 
-                                        <div class="text_linha_3">
-                                            <div class="text_endereco"> Rua/Avenida </div>
-                                            <div class="text_bairro"> Bairro </div>
+
+                                        <input class="next-input-obs" type="text" id="obs" name="obs"
+                                            placeholder="Observação" autocomplete="off" value="" disabled>
+
+                                        <div class="alertas_2">
+                                            <div id="cep-error" style="color: red; display: none;"></div>
+                                            <div id="numero-error" style="color: red; display: none;"></div>
                                         </div>
 
-                                        <input class="next-input-endereco" id="endereco" name="endereco" placeholder=""
-                                            autocomplete="off" value="" required oninput="validarEndereco(this)"
-                                            oninput="validarLetras(this)">
+                                        <input class="next-input-endereco" id="endereco" name="endereço"
+                                            placeholder="Endereco*" autocomplete="off" value="" required
+                                            oninput="validarEndereco(this)" oninput="validarLetras(this)">
 
-
-
-
-                                        <input class="next-input-bairro" id="bairro" name="bairro" placeholder=""
+                                        <input class="next-input-bairro" id="bairro" name="bairro" placeholder="Bairro*"
                                             autocomplete="off" value="" required oninput="validarBairro(this)"
                                             oninput="validarLetras(this)">
 
 
+                                        <input class="next-input-apto" id="apto" name="apto"
+                                            placeholder="Apto, conjunto, unidade, etc. (Complemento)"
+                                            autocomplete=" off" value="" oninput="validarApto(this)"
+                                            oninput="validarLetras(this)">
 
-                                        <div class="alertas_2">
+
+
+                                        <div class="alertas_3">
                                             <div id="endereco-error" style="color: red; display: none;"></div>
                                             <div id="bairro-error" style="color: red; display: none;"></div>
                                         </div>
 
 
-                                        <div class="text_linha_4">
-                                            <div class="text_apto"> Complemento (opcional) </div>
-                                            <div class="text_numero"> Número </div>
-                                        </div>
-
-                                        <div class="input-apt">
-
-                                            <input class="next-input-apto" id="apto" name="apto" placeholder=""
-                                                autocomplete=" off" value="" oninput="validarApto(this)"
-                                                oninput="validarLetras(this)">
-
-                                        </div>
-
-                                        <div style="display: flex; align-items: center;" class="input-numero">
-
-                                            <input class="next-input-numero" id="numero" name="numero" placeholder=""
-                                                autocomplete="off" value="" required
-                                                oninput="validarNumero(this); validarNumeros(this);">
-
-                                            <div class="input-checkbox">
-                                                <input type="checkbox" id="semNumero" class="checkbox-custom"
-                                                    name="semNumero" onclick="verificarSemNumero()">
-                                                <label for="semNumero">Sem número</label>
-                                            </div>
-                                        </div>
-
-                                        <div class="alertas_3">
-                                            <div id="apto-error" style="color: red; display: none;"></div>
-                                            <div id="numero-error" style="color: red; display: none;"></div>
-                                        </div>
-
                                         <div class="text_linha_5">
-                                            <div class="text_info"> Informações adicionais deste endereço (opcional)
-                                            </div>
+                                            <div class="text_info"> Informações adicionais deste endereço</div>
                                         </div>
 
                                         <input class="next-input-info" id="info" name="info"
@@ -797,17 +1692,16 @@
                                             autocomplete="off" value="">
 
 
-
-
                                         <div
                                             class="andes-form-control andes-form-control--error addresses-radio-margin">
-                                            <span class="label-radio-delivery">Este é o seu trabalho ou sua casa?</span>
+                                            <span class="label-radio-delivery">Este é o seu trabalho ou sua
+                                                casa?</span>
                                             <div required class="andes-radioGroup" role="radiogroup" aria-labelledby="">
                                                 <div
                                                     class="andes-radio andes-radio--default andes-radio--inline andes-radio--suffix">
                                                     <div class="andes-radio-element"><input type="radio"
                                                             class="andes-radio__input" id="commercial"
-                                                            name="delivery_group" value="commercial">
+                                                            name="delivery_group" value="commercial required">
                                                         <div class="andes-radio__background">
                                                             <div class="andes-radio__outer-circle"></div>
                                                             <div class="andes-radio__inner-circle"></div>
@@ -822,11 +1716,11 @@
                                                                 fill="#4A4A4A"></path>
                                                         </svg> </i>
                                                 </div>
-                                                <div required
-                                                    class="andes-radio andes-radio--default andes-radio--inline andes-radio--suffix">
+                                                <div class="andes-radio andes-radio--default andes-radio--inline andes-radio--suffix"
+                                                    required>
                                                     <div class="andes-radio-element"><input type="radio"
                                                             class="andes-radio__input" id="residential"
-                                                            name="delivery_group" value="residential">
+                                                            name="delivery_group" value="residential" required>
                                                         <div class="andes-radio__background">
                                                             <div class="andes-radio__outer-circle"></div>
                                                             <div class="andes-radio__inner-circle"></div>
@@ -842,26 +1736,32 @@
                                                         </svg> </i>
                                                 </div>
                                             </div>
-                                            <button type="button" onclick="salvarInformacoes()"
-                                                class="comet-btn comet-btn-primary comet-btn-large form-item-button button-confirm">
-                                                <span>Confirm</span>
-                                            </button>
-                                            <button type="button" onclick="fecharPopup()"
-                                                class="comet-btn comet-btn-normal comet-btn-large form-item-button button-cancel">
-                                                <span>Cancel</span>
-                                            </button>
-
-
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                 </form>
+
+                <div class="buttons">
+                    <button type="button" onclick="salvarInformacoes()"
+                        class="comet-btn comet-btn-primary comet-btn-large form-item-button button-confirm">
+                        <span>Confirm</span>
+                    </button>
+                    <button type="button" onclick="fecharPopup()"
+                        class="comet-btn comet-btn-normal comet-btn-large form-item-button button-cancel">
+                        <span>Cancel</span>
+                    </button>
+                </div>
             </div>
+
         </div>
     </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/sweetalert@2/dist/sweetalert.min.js"></script>
 
     <script>
         // Função para abrir o popup
@@ -870,63 +1770,68 @@
             popup.style.display = 'block'; // Exibir o popup
         }
 
-        // Função para buscar o endereço com base no CEP
-        function buscarEndereco(cep) {
+        // Função que busca o Cep 
+        async function buscarEndereco(cep) {
             const url = `http://localhost:3000/endereco/${cep}`;
 
-            // const baseUrl = ''; // Deixe em branco para usar uma URL relativa
-            // const url = `${baseUrl}/endereco/${cep}`;
-
-            fetch(url)
-                .then(response => response.json())
-                .then(data => preencherEndereco(data))
-                .catch(error => console.log(error));
+            try {
+                const response = await fetch(url);
+                const data = await response.json();
+                preencherEndereco(data);
+            } catch (error) {
+                console.log(error);
+            }
         }
 
-
-        // Função para buscar o valor do frete com base no CEP
-
-        function buscarFrete(cep) {
+        // função que calcula o frete depois que buscado o cep
+        async function buscarFrete(cep) {
             const url = `http://localhost:3000/frete/${cep}`;
 
-            fetch(url)
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok');
-                    }
-                    return response.json();
-                })
-                .then(data => {
-                    console.log('Dados processados', data);
-                    exibirFrete(data);
-                })
-                .catch(error => {
-                    console.error('Erro ao buscar frete', error);
-                    exibirFrete({ erro: true }); // Display an error message on the page
-                });
-
+            try {
+                const response = await fetch(url);
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                const data = await response.json();
+                console.log('Dados processados', data);
+                exibirFrete(data);
+            } catch (error) {
+                console.error('Erro ao buscar frete', error);
+                exibirFrete({ erro: true });
+            }
         }
 
-
-
+        // Função ele exibi o frete e preencha os inputs indicados
         function exibirFrete(data) {
             const freteInput = document.getElementById('frete');
             const prazoInput = document.getElementById('prazo');
-            const obsInput = document.getElementById('obs');
+            const obsInput = document.getElementById('obs'); // Assuming you have an input field with id 'obs'
 
             if (freteInput && prazoInput && obsInput) {
-                if (data.erro || data.length === 0 || !data.Valor) {
+                // Check if there's an error or if the data array is empty
+                if (data.erro || data.length === 0 || !data[0].Valor) {
                     freteInput.value = 'Frete não encontrado';
                     prazoInput.value = ''; // Clear the delivery time field in case of an error
                     obsInput.value = ''; // Clear the 'obsFim' field in case of an error
                 } else {
-                    const freightValue = parseFloat(data.Valor.replace(',', '.'));
+                    // Replace commas with dots and convert the string to a number
+                    const freightValue = parseFloat(data[0].Valor.replace(',', '.'));
                     freteInput.value = 'R$ ' + freightValue.toFixed(2); // Show the value with two decimal places
-                    prazoInput.value = data[0].DataMaxEntrega ; // Append 'days' to the delivery time
-                    obsInput.value = data[0].obsFim || 'Nenhuma observação adicional.'; // If 'obsFim' is empty, set a default message
+
+                    // Set the delivery time
+                    prazoInput.value = data[0].PrazoEntrega + ' dias'; // Append 'days' to the delivery time
+
+                    // Set the 'obsFim' value
+                    obsInput.value = data[0].obsFim;
+
+                    // If 'obsFim' is empty, set a default message
+                    if (data[0].obsFim === '') {
+                        obsInput.value = 'Nenhuma observação adicional.';
+                    }
                 }
             }
         }
+
 
 
         // Função para preencher o endereço no formulário
@@ -967,7 +1872,7 @@
             buscarEndereco(cep);
         }
 
-
+        // Função que limita os caracteres do dd para celular
         function limitarCaracteres(input, maxLength) {
             const warningMessage = document.getElementById("warningMessage_dd");
 
@@ -984,6 +1889,7 @@
             }
         }
 
+        // Função que verificada o numero inserido é valido e não pode colocar mais de 12 digitos
         function validarTelefone(input) {
             const warningMessage = document.getElementById("warningMessage_telefone");
             const numericValue = input.value.replace(/\D/g, ""); // Remove caracteres não numéricos
@@ -1011,6 +1917,7 @@
             }
         }
 
+        // função de letra para que preenchar o campo
         function validarLetras(input) {
             const warningMessage = document.getElementById("warningMessage_nome");
             const alphaRegex = /^[a-zA-Z\s]*$/; // Expressão regular para letras e espaços
@@ -1027,7 +1934,7 @@
             }
         }
 
-
+        // Função que ele valida o numero do celular inserido e que também so pode entrar numeros no input
         function validarNumeros(input) {
             var num = input.value.replace(/[^0-9]/g, ''); // Remove todos os caracteres não numéricos
             input.value = num;
@@ -1036,6 +1943,7 @@
             input.value = formatado;
         }
 
+        // Função que ele formata como é inserido o CEP (EX:11111-111) e que também so pode entrar numeros no input
         function formatarCEP(input) {
             var num = input.value.replace(/[^0-9]/g, ''); // Remove todos os caracteres não numéricos
             input.value = num;
@@ -1047,25 +1955,30 @@
             buscarEndereco(cepNumerico); // Chama a função buscarEndereco() com o valor formatado do CEP
         }
 
-        function validarNumerosCPF(input) {
-            var num = input.value.replace(/[^0-9]/g, ''); // Remove todos os caracteres não numéricos
-            input.value = num;
-            const value = input.value.replace(/[^0-9]/g, '');
-            if (value.length > 11) {
-                input.value = value.slice(0, 11);
-            } else {
-                input.value = value;
-            }
-        }
-        function formatarCPF(input) {
-            var num = input.value.replace(/[^0-9]/g, ''); // Remove todos os caracteres não numéricos
-            input.value = num;
-            let cpf = input.value.replace(/\D/g, ''); // Remove todos os caracteres não numéricos
-            cpf = cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4'); // Formata o CPF para "000.000.000-00"
-            input.value = cpf;
-        }
+        // Foi descontinuadao pois não havia nescessidade.
 
+        // Função que ele valida o CPF inserido e que também so pode entrar numeros no input
+        // function validarNumerosCPF(input) {
+        //     var num = input.value.replace(/[^0-9]/g, ''); // Remove todos os caracteres não numéricos
+        //     input.value = num;
+        //     const value = input.value.replace(/[^0-9]/g, '');
+        //     if (value.length > 11) {
+        //         input.value = value.slice(0, 11);
+        //     } else {
+        //         input.value = value;
+        //     }
+        // }
 
+        // Função que ele formata como é inserido o CPF (EX:111.111.111-11) e que também so pode entrar numeros no input
+        // function formatarCPF(input) {
+        //     var num = input.value.replace(/[^0-9]/g, ''); // Remove todos os caracteres não numéricos
+        //     input.value = num;
+        //     let cpf = input.value.replace(/\D/g, ''); // Remove todos os caracteres não numéricos
+        //     cpf = cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4'); // Formata o CPF para "000.000.000-00"
+        //     input.value = cpf;
+        // }
+
+        // Função que ele valida o Estado inserido e que também so pode entrar lentras no input
         function validarEstado(input) {
             var letras = input.value.replace(/[^a-zA-Z]/g, ""); // Remove todos os caracteres não alfabéticos
             input.value = letras;
@@ -1080,7 +1993,7 @@
             }
         }
 
-
+        // Função que ele valida o Cidade inserido e que também so pode entrar letras no input
         function validarCidade(input) {
             var letras = input.value.replace(/[^a-zA-Z]/g, ""); // Remove todos os caracteres não alfabéticos
             input.value = letras;
@@ -1095,6 +2008,7 @@
             }
         }
 
+        // Função que ele valida o CEP inserido e que também so pode entrar numeros no input
         function validarCEP(input) {
             var num = input.value.replace(/[^0-9]/g, ''); // Remove todos os caracteres não numéricos
             input.value = num;
@@ -1113,7 +2027,7 @@
             }
         }
 
-
+        // Função que ele valida o Endereço inserido e que também so pode entrar letras no input
         function validarEndereco(input) {
             var letras = input.value.replace(/[^a-zA-Z]/g, ""); // Remove todos os caracteres não alfabéticos
             input.value = letras;
@@ -1128,6 +2042,7 @@
             }
         }
 
+        // Função que ele valida o Bairro inserido e que também so pode entrar letras no input
         function validarBairro(input) {
             var letras = input.value.replace(/[^a-zA-Z]/g, ""); // Remove todos os caracteres não alfabéticos
             input.value = letras;
@@ -1142,6 +2057,7 @@
             }
         }
 
+        // Função que ele valida o Apto (Complementos) inserido e que também so pode entrar letras no input
         function validarApto(input) {
             var letras = input.value.replace(/[^a-zA-Z]/g, ""); // Remove todos os caracteres não alfabéticos
             input.value = letras;
@@ -1156,20 +2072,36 @@
             }
         }
 
+        // Função que ele valida o Numero da Casa inserido e que também so pode entrar numeros no input
         function validarNumero(input) {
-            var num = input.value.replace(/[^0-9]/g, ''); // Remove todos os caracteres não numéricos
-            input.value = num;
+            var checkbox = document.getElementById('semNumero');
             const errorDiv = document.getElementById('numero-error');
-            if (input.value === '') {
-                errorDiv.style.display = 'block';
-                errorDiv.innerText = 'Por favor, insira o número.';
-                input.style.border = '1px solid red';  // faz a borda ficar vermelha
-            } else {
+
+            // Verifica se o campo de número está desabilitado
+            if (input.disabled) {
                 errorDiv.style.display = 'none';
                 input.style.border = '';  // remove a borda vermelha
+            } else {
+                var num = input.value.replace(/[^0-9]/g, ''); // Remove todos os caracteres não numéricos
+                input.value = num;
+                if (input.value === '') {
+                    // Exibe a mensagem de erro se o campo de número estiver vazio e o checkbox não estiver marcado
+                    if (!checkbox.checked) {
+                        errorDiv.style.display = 'block';
+                        errorDiv.innerText = 'Por favor, insira o número.';
+                        input.style.border = '1px solid red';  // faz a borda ficar vermelha
+                    } else {
+                        errorDiv.style.display = 'none';
+                        input.style.border = '';  // remove a borda vermelha
+                    }
+                } else {
+                    errorDiv.style.display = 'none';
+                    input.style.border = '';  // remove a borda vermelha
+                }
             }
         }
 
+        // Função que desabilita o input para inserir número da casa e coloca como não tem número S/N
         function verificarSemNumero() {
             var checkbox = document.getElementById('semNumero');
             var numeroInput = document.getElementById('numero');
@@ -1177,10 +2109,14 @@
             if (checkbox.checked) {
                 numeroInput.value = 'S/N';
                 numeroInput.disabled = true;  // Desativa o campo para impedir modificações
+                numeroInput.removeAttribute('required');  // Remove o atributo 'required'
             } else {
                 numeroInput.value = '';
                 numeroInput.disabled = false;  // Reativa o campo para permitir modificações
+                numeroInput.setAttribute('required', '');  // Adiciona novamente o atributo 'required'
             }
+            // Chamada para validarNumero para atualizar a borda e o texto de erro
+            validarNumero(numeroInput);
         }
 
 
@@ -1192,6 +2128,7 @@
 
         // Função para fechar o modal e limpar os inputs
         function fecharPopup() {
+
             var modals = document.getElementsByClassName("modal");
             for (var i = 0; i < modals.length; i++) {
                 modals[i].style.display = "none";
@@ -1203,9 +2140,9 @@
             }
 
             // Limpar os campos de input
+            // Adicione aqui o código para limpar os outros campos de input
             document.getElementById("nome").value = "";
             document.getElementById("cep").value = "";
-            // Adicione aqui o código para limpar os outros campos de input
             document.getElementById("prazo").value = "";
             document.getElementById("frete").value = "";
             document.getElementById("obs").value = "";
@@ -1259,8 +2196,10 @@
                 commercial === "" ||
                 residential === ""
             ) {
-                alert("Por favor, preencha todos os campos obrigatórios.");
-                return; // Impedir o salvamento e fechamento do modal se algum campo estiver vazio
+                // mensagem de alerta personalizado
+                swal("Por favor, preencha todos os campos obrigatórios.");
+                return;
+
             }
 
             // Salvar as informações localmente usando o localStorage
@@ -1283,16 +2222,26 @@
             fecharPopup();
         }
 
+        document.getElementById("enderecoPopup").onclick = function () {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "block";
+        };
 
-        // Evento de clique no botão "Confirmar"
-        document.getElementById("enderecoPopup").onclick = exibirEndereco;
-
-        // Evento de clique fora do modal para fechá-lo
         window.onclick = function (event) {
             var modal = document.getElementById("myModal");
             if (event.target == modal) {
                 fecharPopup();
             }
+        }
+
+        function fecharPopup() {
+            var modal = document.getElementById("myModal");
+            modal.classList.add("fadeOut");
+
+            setTimeout(function () {
+                modal.style.display = "none";
+                modal.classList.remove("fadeOut");
+            }, 100); // Esperar 1 segundo (o mesmo tempo que a animação de desvanecimento)
         }
 
     </script>
